@@ -1,0 +1,68 @@
+{
+  "window_frames": 30,
+  "first": {
+    "type": "actual65",
+    "ms": 107837,
+    "pulses": [
+      2065,
+      2075,
+      1753,
+      1916,
+      2073,
+      1420
+    ]
+  },
+  "last": {
+    "type": "actual65",
+    "ms": 111712,
+    "pulses": [
+      2065,
+      2075,
+      1753,
+      1916,
+      2073,
+      1420
+    ]
+  },
+  "axis_ranges": [
+    [
+      2065,
+      2065
+    ],
+    [
+      2075,
+      2075
+    ],
+    [
+      1753,
+      1753
+    ],
+    [
+      1916,
+      1916
+    ],
+    [
+      2073,
+      2074
+    ],
+    [
+      1420,
+      1420
+    ]
+  ],
+  "frame_length_valid": true,
+  "frame_checksum_valid": true,
+  "wire_id": 6,
+  "wire_cmd": 3,
+  "wire_register": 41,
+  "wire_goal": 1412,
+  "evidence_repeats_identical": true,
+  "operator_observation": "User corrected earlier observation: no visible movement; initial impression was mistaken.",
+  "execution_passed": false,
+  "delayed_read_log": "readonly_after_20261006_001522.log",
+  "delayed_id6_range": [
+    1418,
+    1419
+  ],
+  "target_reached_verified": false
+}

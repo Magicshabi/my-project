@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "port": "COM9",
+  "variant": "r7",
+  "bytes": 11073,
+  "self_test": true,
+  "oled_found": true,
+  "protocol_boundary_test": true,
+  "ready_count": 1,
+  "panic": false,
+  "counts": {
+    "teach_record": 4,
+    "key_pins": 19,
+    "actual65": 73,
+    "rx_health": 3
+  },
+  "errors": [],
+  "last_positions": [
+    1968,
+    2158,
+    1749,
+    2444,
+    2069,
+    1398
+  ],
+  "last_key_pins": {
+    "type": "key_pins",
+    "ms": 19730,
+    "pressed_mask": 2,
+    "gpio0": 1,
+    "gpio2": 0,
+    "armed": false,
+    "stable_mask": 0,
+    "pending_mask": 0,
+    "blocked": false
+  },
+  "last_record": {
+    "version": 1,
+    "valid_mask": 0,
+    "complete": false,
+    "playback_validated": false,
+    "poses": [],
+    "firmware": "nexarm-teach-record-r7",
+    "namespace": "handle_free",
+    "saved_without_lock": true,
+    "live_servo_feedback_verified": false,
+    "physical_path_validated": false
+  },
+  "external_servo_power": "disconnected, confirmed by user",
+  "physical_buttons_tested": false,
+  "live_servo_feedback_verified": false
+}

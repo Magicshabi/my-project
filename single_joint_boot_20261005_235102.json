@@ -1,0 +1,20 @@
+{
+  "log": "A:\\NEXarm\\Claude\\single_joint_boot_20261005_235102.log",
+  "self_test": true,
+  "ready_count": 1,
+  "record_matches": true,
+  "actual65_count": 137,
+  "goals_at_boot": [],
+  "faults": [],
+  "states_idle": true,
+  "last_state": {
+    "type": "single_probe_state",
+    "phase": 0,
+    "spent": false,
+    "key_mask": 0
+  },
+  "json_errors": [],
+  "panic": false,
+  "hardware_movement_verified": false,
+  "ok": true
+}

@@ -1,0 +1,23 @@
+{
+  "log_sha256": "384bfdb9fa051ff1c73aa2fa6ff67649364340769d1d947184b854a3a7dfe0ae",
+  "at32_reported_version": "1.0.2",
+  "raw_id6_reply_count": 0,
+  "board_supply_estimated_mv": [
+    12441,
+    12463
+  ],
+  "id6_max_torque_register48": 1000,
+  "id6_baud_register6": 0,
+  "cmd77_raw_payload": "060101",
+  "cmd77_static_image_registers": [
+    26,
+    27
+  ],
+  "cmd77_interpretation": "CW/CCW deadband, NOT physical angle limits; names in factory wrapper misleading",
+  "raw_torque40_read_verified": false,
+  "raw_goal42_read_verified": false,
+  "record_matches": true,
+  "motion_commands_sent_this_run": false,
+  "physical_current_state": "operator answer pending; software does not measure supported/empty/alarms",
+  "root_cause_confirmed": false
+}

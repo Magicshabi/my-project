@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "A:\\NEXarm\\Claude\\.arduino-build-readonly-r1\\NexArm_ReadOnly.ino.bin",
+    "SHA256": "CFCB8B6285F848B7DFA2A9BE3A5951D7F0DB1DFD8A2B2E162E6FDB927FBF1CD7",
+    "Bytes": 265104
+  },
+  {
+    "Path": "A:\\NEXarm\\Claude\\.arduino-build-readonly-r1\\NexArm_ReadOnly.ino.bootloader.bin",
+    "SHA256": "3D97B71A61331EBADDEF2A74E090C35299650F395F1387F85130010E84E46563",
+    "Bytes": 18992
+  },
+  {
+    "Path": "A:\\NEXarm\\Claude\\.arduino-build-readonly-r1\\NexArm_ReadOnly.ino.partitions.bin",
+    "SHA256": "148B959CBFF1C38AA8E1D5C0BA9D612C54997B945E56A63F41223EEF650653A1",
+    "Bytes": 3072
+  },
+  {
+    "Path": "A:\\NEXarm\\Claude\\readonly_diagnostic_20260922\\NexArm_ReadOnly\\NexArm_ReadOnly.ino",
+    "SHA256": "7FAECF29A19FC3E80118E1231D4A9F33C33ECADB49880E8CA0761EA4C46C07CC",
+    "Bytes": 3664
+  }
+]

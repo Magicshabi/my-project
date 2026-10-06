@@ -1,0 +1,25 @@
+# Findings
+
+- 项目已有 `Preferences`，使用 `robot_cfg` 命名空间保存配置。
+- `load_config()` 在 `servo.begin()` 之前执行，不能在其中直接发送 PID。
+- `AT32_OTA::check_and_update()` 在串口初始化后执行；PID 首次下发应放在 OTA 完成之后。
+- PID 设置命令为 `CMD_SET_PID_PARAM`，恢复出厂已有 P=32、I=0、D=32、min_force=25 的逻辑。
+- BLE RX 已经把二进制帧交给统一的 `func_ctrl_callback()`，底盘运动命令无需新增协议。
+- BLE 断开回调当前只重启广播，没有停车。
+- 当前底盘命令没有失联/超时停车逻辑。
+- BLE 库回调上下文不适合直接执行可能阻塞的 I2C 电机操作，适合设置停车请求后由系统循环处理。
+- USB、ESP-NOW 和 BLE 当前共用 `func_ctrl_callback()`；需使用来源包装回调，防止 BLE 超时误停由 USB/ESP-NOW 接管的底盘。
+- 有效的非 BLE 底盘命令应解除 BLE 控制权；有效 BLE 非零运动命令应启动 500 ms 看门狗。
+- `CMD_MECANUM_CONTROL` 和 `CMD_TANK_CONTROL` 当前缺少参数长度检查，修改时一并补齐。
+- BLE 连接状态回调仅提出停车请求，实际 `motor.stop()` 由 `system_loop_handler()` 执行。
+- `func_ctrl_callback` 在 9 处被直接注册；USB 和 ESP-NOW 应统一替换为非 BLE 包装，BLE 单独注册 BLE 包装。
+- 恢复出厂 PID 代码可直接替换为新的统一默认写入函数，成功后更新同一 NVS 版本键。
+- 恢复出厂应先把 PID 版本写为 0；若中途失败，下次启动才能重新尝试初始化。
+- BLE 连接状态回调应在 `begin()` 开始广播前注册，避免连接发生在回调注册之前。
+- PATH 和常见 IDE 目录中未找到 `arduino-cli`，但 Arduino15 已安装 ESP32 core 2.0.12。
+- 用户 Arduino libraries 中存在项目所需的常见依赖（含 ArduinoJson、MultiButton、PS3 Controller Host 等）。
+- Arduino15 包含 ESP32 交叉编译器，但未安装/未找到 Arduino 构建前端和可复用的 Nex_Arm 构建缓存。
+- 2026-07-27 用户确认 App 每次动作只发送一帧；BLE 非零命令必须锁定运动，零速/停止帧或断连才停车。
+- 当前工程已迁移到 `D:\nexarm\nex0725\nex0725\Nex_Arm`；此前生成的 BLE 协议文档当前不在工程中。
+- 已移除 `BLE_CHASSIS_TIMEOUT_MS`、最后命令时间戳和超时停车分支。
+- 当前 BLE 控制状态：非零命令锁定运动；零速/停止命令解除锁定并停车；断连时由主循环停车；其他通道命令会解除 BLE 控制权。

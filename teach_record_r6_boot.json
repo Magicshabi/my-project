@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "bytes": 7871,
+  "self_test": true,
+  "oled_found": true,
+  "ready_count": 1,
+  "panic": false,
+  "counts": {
+    "teach_record": 4,
+    "actual65": 73
+  },
+  "errors": [],
+  "last_positions": [
+    2060,
+    2033,
+    1866,
+    1911,
+    2052,
+    1600
+  ],
+  "last_record": {
+    "version": 1,
+    "valid_mask": 0,
+    "complete": false,
+    "playback_validated": false,
+    "poses": [],
+    "firmware": "nexarm-teach-record-r6",
+    "namespace": "handle_free",
+    "saved_without_lock": true,
+    "live_servo_feedback_verified": false,
+    "physical_path_validated": false
+  },
+  "external_servo_power": "disconnected, confirmed by user",
+  "physical_buttons_tested": false,
+  "live_servo_feedback_verified": false
+}

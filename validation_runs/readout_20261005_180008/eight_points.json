@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "valid_mask": 255,
+  "complete": true,
+  "playback_validated": false,
+  "poses": [
+    {
+      "slot": 0,
+      "stage": "red_above_open",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        2043,
+        2169,
+        1798,
+        2076,
+        2106,
+        1399
+      ]
+    },
+    {
+      "slot": 1,
+      "stage": "red_down_open",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        1697,
+        1534,
+        3020,
+        3577,
+        2738,
+        1400
+      ]
+    },
+    {
+      "slot": 2,
+      "stage": "red_down_grip",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        1694,
+        1356,
+        3120,
+        3566,
+        2738,
+        1933
+      ]
+    },
+    {
+      "slot": 3,
+      "stage": "red_lift_grip",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        2075,
+        1878,
+        2853,
+        3764,
+        3099,
+        1975
+      ]
+    },
+    {
+      "slot": 4,
+      "stage": "t0_above_grip",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        2342,
+        1641,
+        2823,
+        3545,
+        2368,
+        1968
+      ]
+    },
+    {
+      "slot": 5,
+      "stage": "t0_down_grip",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        2353,
+        1477,
+        2767,
+        3387,
+        2427,
+        1967
+      ]
+    },
+    {
+      "slot": 6,
+      "stage": "t0_down_open",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        2344,
+        1483,
+        2781,
+        3387,
+        2396,
+        1097
+      ]
+    },
+    {
+      "slot": 7,
+      "stage": "t0_clear_open",
+      "joint_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "encoder_positions": [
+        2131,
+        2074,
+        1734,
+        1916,
+        2074,
+        1098
+      ]
+    }
+  ],
+  "firmware": "nexarm-teach-record-r7k2",
+  "namespace": "handle_free",
+  "saved_without_lock": true,
+  "live_servo_feedback_verified": false,
+  "physical_path_validated": false
+}

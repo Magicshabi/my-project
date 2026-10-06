@@ -1,0 +1,67 @@
+[
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\CommProtocol.cpp",
+    "bytes": 5014,
+    "sha256": "ff814f58f72b5452892dd1e7b6ba6e2bf87f7741d97633b0ca895a0a971ebb2e"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\CommProtocol.h",
+    "bytes": 2658,
+    "sha256": "a3f5e41d08a07d30a7374074bf4579042f5053e48b0e75d9a4a8b1b23da55a19"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\HandleTeachRecord.h",
+    "bytes": 2731,
+    "sha256": "b52ab8036621691b85edf7225d0370200442dfaa78a5ebcfd2e7f9e6a85f0b3e"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\NexArm_Execution_Preflight.ino",
+    "bytes": 9250,
+    "sha256": "a41346056d6d6cb3327a317aa48b7ad52051804e54a4312247b8270627c6a9ec"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\ProbePolicy.h",
+    "bytes": 1661,
+    "sha256": "1f31ef08cf6844db9c70434474b4039649caedf2baeb8fc54e0b762f5dd5648a"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\ProtocolSelfTest.h",
+    "bytes": 2476,
+    "sha256": "bec5c5419b071be24818edef36fb0ce9b43930f31392ec45b70108c8871e21bb"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\RealJointFeedback.h",
+    "bytes": 1638,
+    "sha256": "56dbf6d677053c1166198d945f543300f61826901fdc02843369cc86f164d75c"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\RecordJson.h",
+    "bytes": 1185,
+    "sha256": "9bb638b01d9ed39c03fc32b7c06b80b622975866fe025cd06e2a2e28b8ad5e32"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\execution_preflight_20261005\\NexArm_Execution_Preflight\\TeachKeys.h",
+    "bytes": 3942,
+    "sha256": "216347325189e742c763aa169f2101a34673e0ddcfc6021b86c31e6019b6e008"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-execution-preflight-r1\\NexArm_Execution_Preflight.ino.bin",
+    "bytes": 301024,
+    "sha256": "0fdf7c4b763918ee890684042f5f954749e9982a07a3e976140c85a7fab4b052"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-execution-preflight-r1\\NexArm_Execution_Preflight.ino.bootloader.bin",
+    "bytes": 18992,
+    "sha256": "3d97b71a61331ebaddef2a74e090c35299650f395f1387f85130010e84e46563"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-execution-preflight-r1\\NexArm_Execution_Preflight.ino.partitions.bin",
+    "bytes": 3072,
+    "sha256": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\partitions\\boot_app0.bin",
+    "bytes": 8192,
+    "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0"
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "version": "nexarm-id6-torque-probe-r3",
+  "backup": "A:\\NEXarm\\Claude\\backups\\before_id6_torque_r3_20261006",
+  "partition_unchanged": true,
+  "files": [
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\CommProtocol.cpp",
+      "sha256": "ff814f58f72b5452892dd1e7b6ba6e2bf87f7741d97633b0ca895a0a971ebb2e",
+      "size": 5014
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\CommProtocol.h",
+      "sha256": "a3f5e41d08a07d30a7374074bf4579042f5053e48b0e75d9a4a8b1b23da55a19",
+      "size": 2658
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\HandleTeachRecord.h",
+      "sha256": "b52ab8036621691b85edf7225d0370200442dfaa78a5ebcfd2e7f9e6a85f0b3e",
+      "size": 2731
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\NexArm_ID6_Torque_Probe.ino",
+      "sha256": "0220bdbd9df7a5f74f12e9127f1a147dab3b3b86572fe6fd424ccf7296ba9749",
+      "size": 9408
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\ProtocolSelfTest.h",
+      "sha256": "bec5c5419b071be24818edef36fb0ce9b43930f31392ec45b70108c8871e21bb",
+      "size": 2476
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\RealJointFeedback.h",
+      "sha256": "56dbf6d677053c1166198d945f543300f61826901fdc02843369cc86f164d75c",
+      "size": 1638
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\RecordJson.h",
+      "sha256": "9bb638b01d9ed39c03fc32b7c06b80b622975866fe025cd06e2a2e28b8ad5e32",
+      "size": 1185
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\SingleJointPolicy.h",
+      "sha256": "9d6d1c5b96e078b45fc66a940148e5fd00db3ef5828373d33f603e3c9e0f677d",
+      "size": 3176
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\TeachCapture.h",
+      "sha256": "9f88e35f5b536ffb2659c8d8f1e27d58b5856b76e64b191d837dc81b127da871",
+      "size": 3115
+    },
+    {
+      "path": "id6_torque_probe_20261006\\NexArm_ID6_Torque_Probe\\TorquePolicy.h",
+      "sha256": "7b9352dc047a6716dcf67f38b80836d1c045e81374cc0d66bf4a60e31c42e78c",
+      "size": 1884
+    },
+    {
+      "path": ".arduino-build-id6-torque-probe-r3\\NexArm_ID6_Torque_Probe.ino.bin",
+      "sha256": "b7f55af7851f434c7a55353ddc3e02521cf4874df8c710f7d5ff09555f93da6c",
+      "size": 303472
+    },
+    {
+      "path": ".arduino-build-id6-torque-probe-r3\\NexArm_ID6_Torque_Probe.ino.bootloader.bin",
+      "sha256": "3d97b71a61331ebaddef2a74e090c35299650f395f1387f85130010e84e46563",
+      "size": 18992
+    },
+    {
+      "path": ".arduino-build-id6-torque-probe-r3\\NexArm_ID6_Torque_Probe.ino.partitions.bin",
+      "sha256": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1",
+      "size": 3072
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "log": "A:\\NEXarm\\Claude\\single_joint_trial_20261006_001256.log",
+  "host_commands_sent": false,
+  "goals": [
+    {
+      "type": "single_goal_sent",
+      "id": 6,
+      "baseline": 1420,
+      "goal": 1412,
+      "delta": -8,
+      "acc": 5,
+      "speed": 30,
+      "torque_command_sent": false
+    }
+  ],
+  "results": [
+    {
+      "type": "single_probe_result",
+      "movement_observed": false,
+      "stable": true,
+      "actual_delta": 0,
+      "frames": 30,
+      "ack_seen": false,
+      "goal_register_readback": false,
+      "playback_validated": false
+    }
+  ],
+  "faults": [],
+  "evidence": [
+    {
+      "type": "single_probe_evidence",
+      "firmware": "nexarm-single-joint-probe-r1b",
+      "available": true,
+      "goal_attempted": true,
+      "goal_sent": true,
+      "baseline_valid": true,
+      "baseline": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "final": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "goal": 1412,
+      "wire_hex": "ffff060a032905840500001e0017",
+      "stable": true,
+      "movement_observed": false,
+      "frames": 30,
+      "ack_seen": false,
+      "reason": "no_resolved_motion",
+      "goal_register_readback": false,
+      "torque_command_sent": false,
+      "playback_validated": false,
+      "survives_reset": false
+    },
+    {
+      "type": "single_probe_evidence",
+      "firmware": "nexarm-single-joint-probe-r1b",
+      "available": true,
+      "goal_attempted": true,
+      "goal_sent": true,
+      "baseline_valid": true,
+      "baseline": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "final": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "goal": 1412,
+      "wire_hex": "ffff060a032905840500001e0017",
+      "stable": true,
+      "movement_observed": false,
+      "frames": 30,
+      "ack_seen": false,
+      "reason": "no_resolved_motion",
+      "goal_register_readback": false,
+      "torque_command_sent": false,
+      "playback_validated": false,
+      "survives_reset": false
+    },
+    {
+      "type": "single_probe_evidence",
+      "firmware": "nexarm-single-joint-probe-r1b",
+      "available": true,
+      "goal_attempted": true,
+      "goal_sent": true,
+      "baseline_valid": true,
+      "baseline": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "final": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "goal": 1412,
+      "wire_hex": "ffff060a032905840500001e0017",
+      "stable": true,
+      "movement_observed": false,
+      "frames": 30,
+      "ack_seen": false,
+      "reason": "no_resolved_motion",
+      "goal_register_readback": false,
+      "torque_command_sent": false,
+      "playback_validated": false,
+      "survives_reset": false
+    },
+    {
+      "type": "single_probe_evidence",
+      "firmware": "nexarm-single-joint-probe-r1b",
+      "available": true,
+      "goal_attempted": true,
+      "goal_sent": true,
+      "baseline_valid": true,
+      "baseline": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "final": [
+        2065,
+        2075,
+        1753,
+        1916,
+        2073,
+        1420
+      ],
+      "goal": 1412,
+      "wire_hex": "ffff060a032905840500001e0017",
+      "stable": true,
+      "movement_observed": false,
+      "frames": 30,
+      "ack_seen": false,
+      "reason": "no_resolved_motion",
+      "goal_register_readback": false,
+      "torque_command_sent": false,
+      "playback_validated": false,
+      "survives_reset": false
+    }
+  ],
+  "actual65_count": 466,
+  "json_errors": [],
+  "operator_observation": "User corrected earlier observation: no visible movement; initial impression was mistaken.",
+  "full_playback_validated": false
+}

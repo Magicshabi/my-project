@@ -1,0 +1,724 @@
+diff --git "a/A:\\NEXarm\\NexArm_Match\\Color_Sorting\\system_task_handle.cpp" "b/A:\\NEXarm\\Claude\\calibration_firmware\\Color_Sorting\\system_task_handle.cpp"
+index 1148e6e..41cb707 100644
+--- "a/A:\\NEXarm\\NexArm_Match\\Color_Sorting\\system_task_handle.cpp"
++++ "b/A:\\NEXarm\\Claude\\calibration_firmware\\Color_Sorting\\system_task_handle.cpp"
+@@ -16,116 +16,105 @@ static TimerHandle_t TIMER;
+ static esp_event_loop_handle_t loop_with_sys_task;
+ static CommProtocol_t at32_protocol;
+ static Preferences prefs;
+ static bool is_downloading = false;
+ 
+ static int16_t g_last_servo_positions[6] = {2048, 2048, 2048, 2048, 2048, 2048};
+ static uint32_t g_last_servo_feedback_ms = 0;
+ 
++static const uint8_t SERVO_COUNT = 6;
++static const int16_t POSE_STABLE_SPAN = 18;
++static const int16_t POSE_LOCK_VERIFY_DELTA = 35;
++static const int16_t HOME_RESTORE_MAX_DELTA = 350;
++static const int16_t HOME_RESTORE_SPEED = 180;
++static bool s_pose_calibration_active = false;
++static bool s_home_pose_valid = false;
++static int16_t s_home_servo_positions[SERVO_COUNT] = {2048, 2048, 2048, 2048, 2048, 2048};
++
+ uint8_t global_channel = 2;
+ uint8_t global_acc = 245;
+ 
+ static float arm_kin[9] = {
+     110.45f, 225.00f, 36.97f, 145.00f, 0.0f, 130.23f, 0.0f, 50.0f, 70.5f
+ };
+ 
+ ESP_EVENT_DEFINE_BASE(SYS_TIMING_EVENTS);
+ 
+ /* KEY1 = User(GPIO2) id 1 选色；KEY2 = Boot(GPIO0) id 0 启动分拣（本版不按 Boot 重启） */
+-/* 赛题要求红/蓝/黄/绿四色。注意：K230 侧是否认 "yellow" 必须实机验证，
+- * 若认不出会走坐标兜底或第 4 色替换策略，此处先按 4 色开放按键循环。 */
+-#define KEY_COLOR_COUNT 4
+-static const char* kProtoColors[] = {"red", "green", "blue", "yellow"};
+-static const char* kOledColor[]  = {"RED", "GREEN", "BLUE", "YELLOW"};
++static const char* kProtoColors[] = {"red", "green", "blue"};
++static const char* kOledColor[]  = {"RED", "GREEN", "BLUE"};
+ 
+ static uint8_t  s_color_sel_idx = 0;
+ static bool     s_key1_used_since_idle = false;
+ static bool     s_was_grabber_busy = false;
+ 
+ static void apply_oled_standby_screen(void)
+ {
+     arm.board.oled.set_custom_text(0, "Color Sorting");
+-    if (colorGrabber.isBusy()) {
++    if (s_pose_calibration_active) {
++        arm.board.oled.set_custom_text(1, "Torque: OFF");
++        arm.board.oled.set_custom_text(2, "Adjust all joints");
++        arm.board.oled.set_custom_text(3, "KEY1: save+lock");
++    } else if (colorGrabber.isBusy()) {
+         arm.board.oled.set_custom_text(1, "Running...");
+         arm.board.oled.set_custom_text(2, "");
+         arm.board.oled.set_custom_text(3, "Please wait");
+     } else {
+         if (s_key1_used_since_idle) {
+             arm.board.oled.set_custom_text(1, "KEY1: Run this");
+         } else {
+             arm.board.oled.set_custom_text(1, "KEY1: Run(def RED)");
+         }
+         String line2 = "KEY2:";
+-        line2 += kOledColor[s_color_sel_idx % KEY_COLOR_COUNT];
++        line2 += kOledColor[s_color_sel_idx % 3];
+         arm.board.oled.set_custom_text(2, line2);
+         arm.board.oled.set_custom_text(3, "Idle");
+     }
+     arm.board.oled.show_custom();
+ }
+ 
+-static void perform_arm_poweron_reset(void)
+-{
+-    arm.board.oled.set_custom_text(0, "Color Sorting");
+-    arm.board.oled.set_custom_text(1, "Arm homing...");
+-    arm.board.oled.set_custom_text(2, "Please wait");
+-    arm.board.oled.set_custom_text(3, "");
+-    arm.board.oled.show_custom();
+-
+-    arm.reset_all(2500);
+-    uint32_t t0 = millis();
+-    while (millis() - t0 < 2600) {
+-        pump_at32_feedback();
+-        delay(20);
+-    }
+-    for (int i = 0; i < 8; i++) {
+-        arm.update_status();
+-        delay(50);
+-        while (servo.uart->available()) {
+-            uint8_t c = servo.uart->read();
+-            at32_protocol.parsing(&c, 1);
+-        }
+-    }
+-    Serial.println("[ColorSort] Power-on arm reset done");
+-}
+-
+ static void on_key1_select_color(void)
+ {
+     if (colorGrabber.isBusy()) return;
+-    s_color_sel_idx = (uint8_t)((s_color_sel_idx + 1) % KEY_COLOR_COUNT);
++    s_color_sel_idx = (uint8_t)((s_color_sel_idx + 1) % 3);
+     s_key1_used_since_idle = true;
+     arm.board.buzzer.set(30, 30, 1, 2500);
+     apply_oled_standby_screen();
+-    Serial.printf("[ColorSort] KEY1 -> next color %s\n", kProtoColors[s_color_sel_idx % KEY_COLOR_COUNT]);
++    Serial.printf("[ColorSort] KEY1 -> next color %s\n", kProtoColors[s_color_sel_idx % 3]);
+ }
+ 
+ static void on_key2_start_sorting(void)
+ {
+     if (colorGrabber.isBusy()) {
+         Serial.println("[ColorSort] Busy, ignore KEY2");
+         return;
+     }
+     const char* cname = "red";
+     if (s_key1_used_since_idle) {
+-        cname = kProtoColors[s_color_sel_idx % KEY_COLOR_COUNT];
++        cname = kProtoColors[s_color_sel_idx % 3];
+     }
+     const char* colors[] = {cname};
+     colorGrabber.start(colors, 1);
+     arm.board.buzzer.set(100, 100, 2, 2000);
+     apply_oled_standby_screen();
+     Serial.printf("[ColorSort] KEY2 -> start '%s' (key1_used=%d)\n", cname, (int)s_key1_used_since_idle);
+ }
+ 
+ void save_config(void)
+ {
+     prefs.begin("robot_cfg", false);
+     prefs.putUChar("channel", global_channel);
+     prefs.putUChar("acc", global_acc);
+     prefs.putBytes("arm_kin", arm_kin, sizeof(arm_kin));
+     prefs.putFloat("grab_z_adj", colorGrabber.getGrabZAdjust());
++    if (s_home_pose_valid) {
++        prefs.putBytes("home_pos", s_home_servo_positions, sizeof(s_home_servo_positions));
++        prefs.putBool("home_valid", true);
++    }
+     prefs.end();
+ }
+ 
+ void load_config(void)
+ {
+     prefs.begin("robot_cfg", true);
+     global_channel = prefs.getUChar("channel", 2);
+     global_acc = prefs.getUChar("acc", 245);
+@@ -138,90 +127,217 @@ void load_config(void)
+ 
+     if (prefs.isKey("arm_kin")) {
+         float saved_kin[9];
+         prefs.getBytes("arm_kin", saved_kin, sizeof(saved_kin));
+         if (fabsf(saved_kin[0] - arm_kin[0]) < 0.01f) {
+             memcpy(arm_kin, saved_kin, sizeof(arm_kin));
+         }
+     }
++
++    s_home_pose_valid = false;
++    if (prefs.getBool("home_valid", false) &&
++        prefs.getBytesLength("home_pos") == sizeof(s_home_servo_positions)) {
++        size_t read_len = prefs.getBytes("home_pos", s_home_servo_positions,
++                                         sizeof(s_home_servo_positions));
++        s_home_pose_valid = (read_len == sizeof(s_home_servo_positions));
++        for (uint8_t i = 0; i < SERVO_COUNT && s_home_pose_valid; ++i) {
++            if (s_home_servo_positions[i] < 0 || s_home_servo_positions[i] > 4095) {
++                s_home_pose_valid = false;
++            }
++        }
++    }
+     prefs.end();
+ }
+ 
+-/* ── 放置槽位坐标表的掉电保存 ──
+- * 必须放在 colorGrabber.begin() 之后调用，否则会被 begin() 里的默认值覆盖。
+- * 有了它，标定只需串口下发一次，不用每次改坐标都重新烧固件。 */
+-static void save_place_slots(void)
++static bool request_fresh_servo_positions(int16_t out_pos[SERVO_COUNT], uint32_t timeout_ms)
+ {
+-    prefs.begin("robot_cfg", false);
+-    prefs.putBytes("place_tab", (const uint8_t*)colorGrabber.placeTableRaw(),
+-                   colorGrabber.placeTableBytes());
+-    prefs.end();
++    uint32_t previous_feedback_ms = g_last_servo_feedback_ms;
++    arm.update_status();
++    uint32_t start = millis();
++
++    while (millis() - start < timeout_ms) {
++        serial_port.rec_handler();
++        pump_at32_feedback();
++        if (g_last_servo_feedback_ms != 0 &&
++            g_last_servo_feedback_ms != previous_feedback_ms) {
++            memcpy(out_pos, g_last_servo_positions, sizeof(g_last_servo_positions));
++            return true;
++        }
++        delay(2);
++    }
++    return false;
+ }
+ 
+-static void load_place_slots(void)
++static bool capture_stable_servo_pose(int16_t out_pos[SERVO_COUNT])
+ {
+-    prefs.begin("robot_cfg", true);
+-    size_t n = prefs.getBytesLength("place_tab");
+-    if (n == (size_t)colorGrabber.placeTableBytes()) {
+-        prefs.getBytes("place_tab", (void*)colorGrabber.placeTableRaw(), n);
+-        Serial.println("[ColorSort] place slots loaded from NVS");
+-    } else {
+-        Serial.println("[ColorSort] no saved place slots -> using defaults");
++    const uint8_t sample_count = 5;
++    int16_t min_pos[SERVO_COUNT];
++    int16_t max_pos[SERVO_COUNT];
++    int32_t sum_pos[SERVO_COUNT] = {0, 0, 0, 0, 0, 0};
++
++    for (uint8_t sample = 0; sample < sample_count; ++sample) {
++        int16_t current[SERVO_COUNT];
++        if (!request_fresh_servo_positions(current, 350)) {
++            return false;
++        }
++
++        for (uint8_t i = 0; i < SERVO_COUNT; ++i) {
++            if (current[i] < 0 || current[i] > 4095) {
++                return false;
++            }
++            if (sample == 0) {
++                min_pos[i] = current[i];
++                max_pos[i] = current[i];
++            } else {
++                if (current[i] < min_pos[i]) min_pos[i] = current[i];
++                if (current[i] > max_pos[i]) max_pos[i] = current[i];
++            }
++            sum_pos[i] += current[i];
++        }
++        delay(40);
+     }
+-    prefs.end();
+ 
+-    for (uint8_t s = 0; s < ColorGrabber::PLACE_SLOTS; s++) {
+-        float x = 0, y = 0, z = 0;
+-        colorGrabber.getPlaceSlot(s, &x, &y, &z);
+-        Serial.printf("[ColorSort]   slot %d = (%.1f, %.1f, %.1f)\n", s, x, y, z);
++    for (uint8_t i = 0; i < SERVO_COUNT; ++i) {
++        if (max_pos[i] - min_pos[i] > POSE_STABLE_SPAN) {
++            return false;
++        }
++        out_pos[i] = (int16_t)(sum_pos[i] / sample_count);
+     }
++    return true;
+ }
+ 
+-/* ── 抓取源坐标表的掉电保存 ──
+- * 同样必须在 colorGrabber.begin() 之后调用。
+- * 「是否已示教」(pick_val) 也一起存，未示教的颜色不会触发视觉降级。 */
+-static void save_pick_table(void)
++static void write_all_servo_targets(const int16_t positions[SERVO_COUNT], int16_t speed)
+ {
+-    prefs.begin("robot_cfg", false);
+-    prefs.putBytes("pick_tab", (const uint8_t*)colorGrabber.pickTableRaw(),
+-                   colorGrabber.pickTableBytes());
+-    prefs.putBytes("pick_val", colorGrabber.pickValidRaw(),
+-                   colorGrabber.pickValidBytes());
+-    prefs.putUChar("pick_mode", colorGrabber.getPickMode());
+-    prefs.end();
++    uint8_t ids[SERVO_COUNT] = {1, 2, 3, 4, 5, 6};
++    int16_t targets[SERVO_COUNT];
++    memcpy(targets, positions, sizeof(targets));
++    servo.sync_write_pos_speed(ids, targets, speed, SERVO_COUNT);
+ }
+ 
+-static void load_pick_table(void)
++static void enter_pose_calibration(const char* reason)
+ {
+-    static const char* kPickNames[] = {"red", "green", "blue", "yellow"};
++    arm.set_torque(false);
++    delay(80);
++    s_pose_calibration_active = true;
++    apply_oled_standby_screen();
++    Serial.printf("[PoseCal] Torque OFF: %s\n", reason ? reason : "manual calibration");
++    Serial.println("[PoseCal] Support the arm, adjust all joints, then press KEY1");
++}
+ 
+-    prefs.begin("robot_cfg", true);
+-    size_t n1 = prefs.getBytesLength("pick_tab");
+-    size_t n2 = prefs.getBytesLength("pick_val");
+-    if (n1 == (size_t)colorGrabber.pickTableBytes() &&
+-        n2 == (size_t)colorGrabber.pickValidBytes()) {
+-        prefs.getBytes("pick_tab", (void*)colorGrabber.pickTableRaw(), n1);
+-        prefs.getBytes("pick_val", (void*)colorGrabber.pickValidRaw(), n2);
+-        Serial.println("[ColorSort] pick table loaded from NVS");
+-    } else {
+-        Serial.println("[ColorSort] no saved pick table (纯视觉，不降级)");
++static bool verify_pose_near(const int16_t target[SERVO_COUNT], int16_t max_delta)
++{
++    int16_t actual[SERVO_COUNT];
++    if (!request_fresh_servo_positions(actual, 500)) return false;
++    for (uint8_t i = 0; i < SERVO_COUNT; ++i) {
++        if (abs((int32_t)actual[i] - (int32_t)target[i]) > max_delta) {
++            return false;
++        }
+     }
+-    colorGrabber.setPickMode(prefs.getUChar("pick_mode", 0));
+-    prefs.end();
++    return true;
++}
++
++static bool save_and_lock_manual_pose(void)
++{
++    arm.board.oled.set_custom_text(0, "Pose calibration");
++    arm.board.oled.set_custom_text(1, "Release KEY1");
++    arm.board.oled.set_custom_text(2, "Hold arm still");
++    arm.board.oled.set_custom_text(3, "Reading...");
++    arm.board.oled.show_custom();
++
++    uint32_t settle_start = millis();
++    while (millis() - settle_start < 700) {
++        pump_at32_feedback();
++        arm.board.button.update();
++        delay(5);
++    }
++
++    int16_t captured[SERVO_COUNT];
++    if (!capture_stable_servo_pose(captured)) {
++        arm.board.oled.set_custom_text(1, "Read unstable");
++        arm.board.oled.set_custom_text(2, "Hold arm still");
++        arm.board.oled.set_custom_text(3, "KEY1: retry");
++        arm.board.oled.show_custom();
++        arm.board.buzzer.set(180, 80, 2, 900);
++        Serial.println("[PoseCal] Capture failed or unstable; torque remains OFF");
++        return false;
++    }
++
++    // Set the goal registers before enabling torque so no servo returns to an old goal.
++    write_all_servo_targets(captured, 80);
++    delay(100);
++    arm.set_torque(true);
++    delay(300);
++
++    if (!verify_pose_near(captured, POSE_LOCK_VERIFY_DELTA)) {
++        arm.set_torque(false);
++        arm.board.oled.set_custom_text(1, "Lock check failed");
++        arm.board.oled.set_custom_text(2, "Torque remains OFF");
++        arm.board.oled.set_custom_text(3, "KEY1: retry");
++        arm.board.oled.show_custom();
++        arm.board.buzzer.set(200, 100, 3, 700);
++        Serial.println("[PoseCal] Lock verification failed; torque switched OFF");
++        return false;
++    }
++
++    memcpy(s_home_servo_positions, captured, sizeof(s_home_servo_positions));
++    s_home_pose_valid = true;
++    save_config();
++    s_pose_calibration_active = false;
++    arm.board.buzzer.set(80, 60, 2, 2600);
++    Serial.printf("[PoseCal] Saved+locked: %d,%d,%d,%d,%d,%d\n",
++                  captured[0], captured[1], captured[2],
++                  captured[3], captured[4], captured[5]);
++    apply_oled_standby_screen();
++    return true;
++}
++
++static bool restore_saved_home_pose(void)
++{
++    if (!s_home_pose_valid) return false;
++
++    int16_t actual[SERVO_COUNT];
++    if (!request_fresh_servo_positions(actual, 600)) {
++        Serial.println("[PoseCal] Cannot read startup pose");
++        return false;
++    }
++
++    int32_t max_delta = 0;
++    for (uint8_t i = 0; i < SERVO_COUNT; ++i) {
++        int32_t delta = abs((int32_t)actual[i] - (int32_t)s_home_servo_positions[i]);
++        if (delta > max_delta) max_delta = delta;
++    }
++    if (max_delta > HOME_RESTORE_MAX_DELTA) {
++        Serial.printf("[PoseCal] Startup pose too far from saved home: %ld ticks\n", (long)max_delta);
++        return false;
++    }
++
++    write_all_servo_targets(s_home_servo_positions, HOME_RESTORE_SPEED);
++    delay(100);
++    arm.set_torque(true);
+ 
+-    for (uint8_t i = 0; i < ColorGrabber::PICK_COLORS; i++) {
+-        float x = 0, y = 0, z = 0;
+-        colorGrabber.getPickSlot(i, &x, &y, &z);
+-        Serial.printf("[ColorSort]   pick %-6s = (%.1f, %.1f, %.1f) %s\n",
+-                      kPickNames[i], x, y, z,
+-                      colorGrabber.isPickValid(i) ? "" : "<- 未示教");
++    uint32_t wait_ms = (uint32_t)(max_delta * 1000L / HOME_RESTORE_SPEED) + 800;
++    if (wait_ms > 5000) wait_ms = 5000;
++    uint32_t start = millis();
++    while (millis() - start < wait_ms) {
++        pump_at32_feedback();
++        delay(10);
++    }
++
++    if (!verify_pose_near(s_home_servo_positions, POSE_LOCK_VERIFY_DELTA)) {
++        arm.set_torque(false);
++        Serial.println("[PoseCal] Saved-home verification failed; torque switched OFF");
++        return false;
+     }
+-    Serial.printf("[ColorSort] pickmode = %d (0=视觉优先 1=强制坐标 2=强制视觉)\n",
+-                  colorGrabber.getPickMode());
++
++    Serial.printf("[PoseCal] Restored saved home: %d,%d,%d,%d,%d,%d\n",
++                  s_home_servo_positions[0], s_home_servo_positions[1],
++                  s_home_servo_positions[2], s_home_servo_positions[3],
++                  s_home_servo_positions[4], s_home_servo_positions[5]);
++    return true;
+ }
+ 
+ static void sys_timer_post_callback(TimerHandle_t xTimer)
+ {
+     if (is_downloading) return;
+ 
+     static uint32_t count = 0;
+     if (count % BUZZER_UPDATE_PERIOD == 0) {
+@@ -328,216 +444,27 @@ static void func_ctrl_callback(PacketTypeDef* self)
+                 if (sw == 0) {
+                     colorGrabber.stop();
+                     arm.board.buzzer.off();
+                 } else {
+                     const char* cName = "";
+                     if (color_id == 1) cName = "red";
+                     else if (color_id == 2) cName = "green";
+                     else if (color_id == 3) cName = "blue";
+-                    else if (color_id == 4) cName = "yellow";
+                     if (strlen(cName) > 0) {
+                         colorGrabber.stop();
+                         delay(100);
+                         const char* colors[] = {cName};
+                         colorGrabber.start(colors, 1);
+                         arm.board.buzzer.set(100, 100, 2, 2000);
+                     }
+                 }
+             }
+             break;
+ 
+-        /* ── 比赛适配 ①：一次下发整个颜色序列 + 每个颜色的放置槽位 ──
+-         * payload: [count] + count x { [nameLen][name...][placeSlot] }
+-         * count == 0 表示停止。
+-         * 例：任务二 口令 蓝-红-黄 → count=3, {3,"blue",1}{3,"red",2}{6,"yellow",3}
+-         * 例：任务一 抓红色放 T0  → count=1, {3,"red",0} */
+-        case CMD_COLOR_GRAB_SEQ: {
+-            uint16_t alen = (uint16_t)(self->elements.length - 2);
+-            if (alen < 1) break;
+-
+-            uint8_t n = self->elements.args[0];
+-            if (n == 0) {
+-                colorGrabber.stop();
+-                arm.board.buzzer.off();
+-                Serial.println("[ColorSort] SEQ stop");
+-                break;
+-            }
+-            if (n > 8) n = 8;
+-
+-            static char        namebuf[8][16];
+-            static uint8_t     slots[8];
+-            static const char* names[8];
+-
+-            uint16_t off = 1;
+-            uint8_t  got = 0;
+-            bool     bad = false;
+-
+-            for (uint8_t i = 0; i < n; i++) {
+-                if (off + 1 > alen) { bad = true; break; }
+-                uint8_t nl = self->elements.args[off++];
+-                if (nl == 0 || nl > 15 || (uint32_t)off + nl + 1 > alen) { bad = true; break; }
+-                memcpy(namebuf[i], &self->elements.args[off], nl);
+-                namebuf[i][nl] = '\0';
+-                off += nl;
+-                slots[i] = (uint8_t)(self->elements.args[off++] & 0x07);
+-                names[i] = namebuf[i];
+-                got++;
+-            }
+-
+-            if (bad || got != n) {
+-                Serial.printf("[ColorSort] SEQ payload invalid (n=%d got=%d)\n", n, got);
+-                arm.board.buzzer.set(60, 200, 1, 1500);
+-                break;
+-            }
+-
+-            colorGrabber.stop();
+-            delay(100);
+-            colorGrabber.startSeq(names, slots, n);
+-            arm.board.buzzer.set(100, 100, 2, 2000);
+-        } break;
+-
+-        /* ── 比赛适配 ②：设置某个放置槽位的坐标（立即写入 Flash）──
+-         * payload: [slot:u8][x:f32][y:f32][z:f32] 全部小端 */
+-        case CMD_COLOR_SET_PLACE: {
+-            uint16_t alen = (uint16_t)(self->elements.length - 2);
+-            if (alen >= 13) {
+-                uint8_t slot = (uint8_t)(self->elements.args[0] & 0x07);
+-                float x = 0, y = 0, z = 0;
+-                memcpy(&x, &self->elements.args[1], 4);
+-                memcpy(&y, &self->elements.args[5], 4);
+-                memcpy(&z, &self->elements.args[9], 4);
+-                colorGrabber.setPlaceSlot(slot, x, y, z);
+-                save_place_slots();
+-                arm.board.buzzer.set(60, 40, 1, 3000);
+-                Serial.printf("[ColorSort] SET_PLACE slot %d = (%.1f, %.1f, %.1f)\n", slot, x, y, z);
+-            }
+-        } break;
+-
+-        /* ── 比赛适配 ③：读回全部 8 个放置槽位 ──
+-         * 返回 8 槽 x (x,y,z) 的 float32 小端 = 96 字节 */
+-        case CMD_COLOR_GET_PLACE: {
+-            static uint8_t pbuf[8 * 3 * 4];
+-            memcpy(pbuf, (const uint8_t*)colorGrabber.placeTableRaw(), sizeof(pbuf));
+-            len = serial_port.protocol.tx_packet_complete(0xFF, CMD_COLOR_GET_PLACE, pbuf, sizeof(pbuf));
+-            serial_port.uart->write((const uint8_t*)&serial_port.protocol.tx_packet, len);
+-        } break;
+-
+-        /* ── 比赛适配 ④：示教某颜色的“抓取源坐标” ──
+-         * payload: [nameLen:u8][name...][x:f32][y:f32][z:f32]
+-         * 坐标含义 = 夹爪夹住电池时末端应该在的位置（抓取点），不是相机居中的位置。
+-         * 颜色名固定支持 red / green / blue / yellow。 */
+-        case CMD_COLOR_SET_PICK: {
+-            uint16_t alen = (uint16_t)(self->elements.length - 2);
+-            if (alen >= 14) {
+-                uint8_t nl = self->elements.args[0];
+-                if (nl >= 1 && nl <= 15 && (uint32_t)1 + nl + 12 <= alen) {
+-                    char nm[16];
+-                    memcpy(nm, &self->elements.args[1], nl);
+-                    nm[nl] = '\0';
+-                    float x = 0, y = 0, z = 0;
+-                    memcpy(&x, &self->elements.args[1 + nl], 4);
+-                    memcpy(&y, &self->elements.args[5 + nl], 4);
+-                    memcpy(&z, &self->elements.args[9 + nl], 4);
+-                    if (colorGrabber.setPickSlot(nm, x, y, z)) {
+-                        save_pick_table();
+-                        arm.board.buzzer.set(60, 40, 1, 3000);
+-                        Serial.printf("[ColorSort] SET_PICK %s = (%.1f, %.1f, %.1f)\n", nm, x, y, z);
+-                    } else {
+-                        Serial.printf("[ColorSort] SET_PICK 未知颜色 '%s'\n", nm);
+-                        arm.board.buzzer.set(60, 200, 1, 1500);
+-                    }
+-                }
+-            }
+-        } break;
+-
+-        /* ── 比赛适配 ⑤：读回 4 个颜色的抓取源坐标（固定顺序 red,green,blue,yellow）──
+-         * 返回 4 x (x,y,z) float32 小端 = 48 字节 */
+-        case CMD_COLOR_GET_PICK: {
+-            static uint8_t kbuf[4 * 3 * 4];
+-            memcpy(kbuf, (const uint8_t*)colorGrabber.pickTableRaw(), sizeof(kbuf));
+-            len = serial_port.protocol.tx_packet_complete(0xFF, CMD_COLOR_GET_PICK, kbuf, sizeof(kbuf));
+-            serial_port.uart->write((const uint8_t*)&serial_port.protocol.tx_packet, len);
+-        } break;
+-
+-        /* ── 比赛适配 ⑥：设置抓取模式 ── payload: [mode:u8]
+-         * 0 = 视觉优先，超时降级到坐标（默认）
+-         * 1 = 强制走坐标，不用视觉
+-         * 2 = 强制只用视觉，不降级 */
+-        case CMD_COLOR_SET_PICKMODE: {
+-            if (self->elements.length >= 3) {
+-                colorGrabber.setPickMode(self->elements.args[0]);
+-                save_pick_table();
+-                arm.board.buzzer.set(60, 40, 1, 3000);
+-                Serial.printf("[ColorSort] pickmode = %d\n", colorGrabber.getPickMode());
+-            }
+-        } break;
+-
+-        /* ── 比赛适配 ⑦：读回当前末端位姿（标定时看实时 XYZ）──
+-         * 无参；返回 6 x f32 = 24 字节：x, y, z, pitch, roll, claw
+-         * 说明：原固件根本没有向主机暴露位姿，所以这里自己加。 */
+-        case CMD_COLOR_GET_POSE: {
+-            arm.update_status();
+-            uint32_t t0 = millis();
+-            while (millis() - t0 < 150) {          // 等 AT32 回包刷新 current_pose
+-                pump_at32_feedback();
+-                delay(5);
+-            }
+-            float pv[6];
+-            pv[0] = arm.current_pose.x;
+-            pv[1] = arm.current_pose.y;
+-            pv[2] = arm.current_pose.z;
+-            pv[3] = arm.current_pose.pitch;
+-            pv[4] = arm.current_pose.roll;
+-            pv[5] = arm.current_pose.claw;
+-            uint8_t pb[sizeof(pv)];
+-            memcpy(pb, pv, sizeof(pv));
+-            len = serial_port.protocol.tx_packet_complete(0xFF, CMD_COLOR_GET_POSE, pb, sizeof(pb));
+-            serial_port.uart->write((const uint8_t*)&serial_port.protocol.tx_packet, len);
+-        } break;
+-
+-        /* ── 比赛适配 ⑧：相对点动（标定微调用）──
+-         * payload: [dx][dy][dz][dpitch][droll][dclaw] 共 6 个 f32 = 24 字节
+-         * 实现方式：先刷新当前位姿，再做“当前位置 + 增量”的绝对运动。
+-         * 走的是 CMD_COORDINATE_SET（已被 ColorGrabber 大量验证可用），
+-         * 比直接用 AT32 的相对运动指令 CMD_ARM_MOVE_INC 更稳妥。
+-         * 会夹到 Robot_Arm 的坐标限位内。回返回新的目标位姿 6 x f32。 */
+-        case CMD_COLOR_JOG: {
+-            uint16_t alen = (uint16_t)(self->elements.length - 2);
+-            if (alen >= 24) {
+-                float d[6];
+-                memcpy(d, self->elements.args, sizeof(d));
+-
+-                arm.update_status();
+-                uint32_t t0 = millis();
+-                while (millis() - t0 < 120) {
+-                    pump_at32_feedback();
+-                    delay(5);
+-                }
+-
+-                float nx = constrain(arm.current_pose.x + d[0], arm.limit_x_min, arm.limit_x_max);
+-                float ny = constrain(arm.current_pose.y + d[1], arm.limit_y_min, arm.limit_y_max);
+-                float nz = constrain(arm.current_pose.z + d[2], arm.limit_z_min, arm.limit_z_max);
+-                float np = arm.current_pose.pitch + d[3];
+-                float nr = arm.current_pose.roll + d[4];
+-                float nc = constrain(arm.current_pose.claw + d[5], -80.0f, 60.0f);
+-
+-                arm.move(nx, ny, nz, np, nr, nc, 400);
+-
+-                float pv[6] = { nx, ny, nz, np, nr, nc };
+-                uint8_t pb[sizeof(pv)];
+-                memcpy(pb, pv, sizeof(pv));
+-                len = serial_port.protocol.tx_packet_complete(0xFF, CMD_COLOR_JOG, pb, sizeof(pb));
+-                serial_port.uart->write((const uint8_t*)&serial_port.protocol.tx_packet, len);
+-
+-                Serial.printf("[ColorSort] JOG -> (%.1f, %.1f, %.1f) p=%.1f r=%.1f c=%.1f\n",
+-                              nx, ny, nz, np, nr, nc);
+-            }
+-        } break;
+-
+         default:
+             break;
+     }
+ }
+ 
+ void at32_packet_callback(PacketTypeDef* rx_packet)
+ {
+     if (is_downloading) return;
+@@ -655,29 +582,40 @@ bool sync_teach_handle_master_packet(uint32_t seq, const int16_t master_position
+ }
+ 
+ void system_loop_handler(void)
+ {
+     if (!is_downloading) {
+         serial_port.rec_handler();
+         pump_at32_feedback();
+ 
++        arm.board.button.update();
++        arm.board.buzzer.update();
++
++        if (s_pose_calibration_active) {
++            if (arm.board.button.is_clicked(1)) {
++                save_and_lock_manual_pose();
++            }
++            return;
++        }
++
+         colorGrabber.update();
+ 
+         bool busy_now = colorGrabber.isBusy();
+         if (s_was_grabber_busy && !busy_now) {
+             s_key1_used_since_idle = false;
+             Serial.println("[ColorSort] Run finished, idle (KEY1 pick / KEY2 start)");
+         }
+         s_was_grabber_busy = busy_now;
+ 
+-        arm.board.button.update();
+-        arm.board.buzzer.update();
+-
+         if (!busy_now) {
++            if (arm.board.button.is_long_clicked(1)) {
++                enter_pose_calibration("KEY1 long press");
++                return;
++            }
+             if (arm.board.button.is_clicked(1)) {
+                 on_key1_select_color();
+             }
+             if (arm.board.button.is_clicked(0)) {
+                 on_key2_start_sorting();
+             }
+         }
+     } else {
+@@ -709,38 +647,30 @@ void register_system_task(esp_event_loop_handle_t *event_loop)
+         arm.board.oled.show_icon();
+         delay(100);
+     }
+ 
+     AT32_OTA::check_and_update(serial_port.protocol, *servo.uart, arm.board.oled);
+ 
+     servo.tx_frame_write(0xFF, CMD_SET_KINEMATICS_PARAM, (uint8_t*)arm_kin, sizeof(arm_kin));
+     delay(50);
+-    arm.set_torque(true);
+-    delay(100);
+-    arm.update_status();
+ 
+     at32_protocol.begin();
+     at32_protocol.register_success_callback(at32_packet_callback);
+ 
+-    perform_arm_poweron_reset();
+-
+     colorGrabber.begin();
+-    load_place_slots();
+-    load_pick_table();
+ 
+-    apply_oled_standby_screen();
++    // Always start with all six servos released. Goals are written before torque is enabled.
++    arm.set_torque(false);
++    delay(100);
+ 
+-    for (int i = 0; i < 10; i++) {
+-        arm.update_status();
+-        delay(50);
+-        while (servo.uart->available()) {
+-            uint8_t c = servo.uart->read();
+-            at32_protocol.parsing(&c, 1);
+-        }
++    if (!restore_saved_home_pose()) {
++        enter_pose_calibration(s_home_pose_valid ? "startup restore failed" : "no saved home");
++    } else {
++        apply_oled_standby_screen();
+     }
+ 
+     esp_event_handler_instance_register_with(loop_with_sys_task, SYS_TIMING_EVENTS, ESP_EVENT_ANY_ID,
+                                              sys_timer_sub_handler, NULL, NULL);
+ 
+     TIMER = xTimerCreate("sys_timing", pdMS_TO_TICKS(TIMER_PERIOD), pdTRUE, NULL, sys_timer_post_callback);
+     xTimerStart(TIMER, 0);
+ 

@@ -1,0 +1,93 @@
+{
+  "firmware": "nexarm-teach-record-r7k2",
+  "port": "COM9",
+  "received_snapshot_count": 2,
+  "all_snapshots_identical": true,
+  "crc_valid": true,
+  "valid_mask": 127,
+  "complete": false,
+  "missing_points": [
+    8
+  ],
+  "record_sha256": "55ff83b906375e446207eff73eaa2121d6888abf60702aee2dd90eac1b026fc3",
+  "user_reported_six_axis_following_passed": true,
+  "user_reported_saving_no_jerk_or_alarm": true,
+  "axis_test_report_available": false,
+  "restart_comparison_verified": false,
+  "playback_validated": false,
+  "adjacent_deltas_raw_ticks": [
+    {
+      "from_point": 1,
+      "to_point": 2,
+      "delta_by_id": [
+        -346,
+        -635,
+        1222,
+        1501,
+        632,
+        1
+      ]
+    },
+    {
+      "from_point": 2,
+      "to_point": 3,
+      "delta_by_id": [
+        -3,
+        -178,
+        100,
+        -11,
+        0,
+        533
+      ]
+    },
+    {
+      "from_point": 3,
+      "to_point": 4,
+      "delta_by_id": [
+        381,
+        522,
+        -267,
+        198,
+        361,
+        42
+      ]
+    },
+    {
+      "from_point": 4,
+      "to_point": 5,
+      "delta_by_id": [
+        267,
+        -237,
+        -30,
+        -219,
+        -731,
+        -7
+      ]
+    },
+    {
+      "from_point": 5,
+      "to_point": 6,
+      "delta_by_id": [
+        11,
+        -164,
+        -56,
+        -158,
+        59,
+        -1
+      ]
+    },
+    {
+      "from_point": 6,
+      "to_point": 7,
+      "delta_by_id": [
+        -9,
+        6,
+        14,
+        0,
+        -31,
+        -870
+      ]
+    }
+  ],
+  "note": "Raw encoder differences are review evidence, not a determination of Cartesian path, mechanical limits or safety."
+}

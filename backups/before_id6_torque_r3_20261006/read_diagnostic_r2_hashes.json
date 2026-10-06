@@ -1,0 +1,63 @@
+{
+  "version": "nexarm-read-diagnostic-r2",
+  "backup": "A:\\NEXarm\\Claude\\backups\\before_read_diag_r2_20261006",
+  "backup_type": "verified local r1b build/source and eight-point record; full flash remains in before_execution_preflight_20261005_182226",
+  "partition_unchanged": true,
+  "files": [
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\CommProtocol.cpp",
+      "sha256": "ff814f58f72b5452892dd1e7b6ba6e2bf87f7741d97633b0ca895a0a971ebb2e",
+      "size": 5014
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\CommProtocol.h",
+      "sha256": "a3f5e41d08a07d30a7374074bf4579042f5053e48b0e75d9a4a8b1b23da55a19",
+      "size": 2658
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\HandleTeachRecord.h",
+      "sha256": "b52ab8036621691b85edf7225d0370200442dfaa78a5ebcfd2e7f9e6a85f0b3e",
+      "size": 2731
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\NexArm_Read_Diagnostic.ino",
+      "sha256": "17dd9c8258811261a491645769d3d908e496b354e393c5577c6c2d9a5ff93873",
+      "size": 6059
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\ProtocolSelfTest.h",
+      "sha256": "bec5c5419b071be24818edef36fb0ce9b43930f31392ec45b70108c8871e21bb",
+      "size": 2476
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\ReadPolicy.h",
+      "sha256": "d70dd408e0d7d63a6438280cb333b3d2657a955383afd03769fe3acea460821c",
+      "size": 1719
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\RealJointFeedback.h",
+      "sha256": "56dbf6d677053c1166198d945f543300f61826901fdc02843369cc86f164d75c",
+      "size": 1638
+    },
+    {
+      "path": "read_diagnostic_20261006\\NexArm_Read_Diagnostic\\RecordJson.h",
+      "sha256": "9bb638b01d9ed39c03fc32b7c06b80b622975866fe025cd06e2a2e28b8ad5e32",
+      "size": 1185
+    },
+    {
+      "path": ".arduino-build-read-diagnostic-r2\\NexArm_Read_Diagnostic.ino.bin",
+      "sha256": "2301dea8ecb6bcc3090b5c173fceda03ab3644ccb76d1f19c53ae625be6aa39b",
+      "size": 304240
+    },
+    {
+      "path": ".arduino-build-read-diagnostic-r2\\NexArm_Read_Diagnostic.ino.bootloader.bin",
+      "sha256": "3d97b71a61331ebaddef2a74e090c35299650f395f1387f85130010e84e46563",
+      "size": 18992
+    },
+    {
+      "path": ".arduino-build-read-diagnostic-r2\\NexArm_Read_Diagnostic.ino.partitions.bin",
+      "sha256": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1",
+      "size": 3072
+    }
+  ]
+}

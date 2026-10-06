@@ -1,0 +1,16 @@
+esptool.py v4.5.1
+Serial port COM9
+Connecting.....
+Chip is ESP32-D0WD (revision v1.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 68:09:47:7b:9f:64
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Manufacturer: 46
+Device: 4016
+Detected flash size: 4MB
+Staying in bootloader.

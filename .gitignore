@@ -1,0 +1,22 @@
+# 工具链与第三方库（体积大，可重新获取）
+.toolchains/
+match_compile_libraries/
+factory_compile_libraries/
+NexArm_SDK/
+
+# Arduino 编译产物
+.arduino-build/
+.arduino-build-*/
+.factory-build*/
+.gcc-temp-*/
+*.elf
+*.map
+
+# Python 缓存与测试临时目录
+__pycache__/
+*.pyc
+.test-output-r7/
+
+# 系统杂项
+Thumbs.db
+.DS_Store

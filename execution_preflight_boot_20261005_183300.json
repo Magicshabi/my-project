@@ -1,0 +1,308 @@
+{
+  "port": "COM9",
+  "log": "A:\\NEXarm\\Claude\\execution_preflight_boot_20261005_183300.log",
+  "self_test": true,
+  "ready_count": 1,
+  "oled_ack": true,
+  "panic": false,
+  "snapshots_match_original_eight_points": true,
+  "original_record_sha256": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22",
+  "actual65_count": 63,
+  "register_reads": [],
+  "register_timeouts": [
+    {
+      "type": "register_timeout",
+      "round": 0,
+      "id": 6,
+      "requested_register": 3,
+      "rx_bytes": 780,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 0,
+      "id": 6,
+      "requested_register": 33,
+      "rx_bytes": 930,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 0,
+      "id": 6,
+      "requested_register": 40,
+      "rx_bytes": 1080,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 0,
+      "id": 6,
+      "requested_register": 56,
+      "rx_bytes": 1230,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 1,
+      "id": 6,
+      "requested_register": 3,
+      "rx_bytes": 1380,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 1,
+      "id": 6,
+      "requested_register": 33,
+      "rx_bytes": 1530,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 1,
+      "id": 6,
+      "requested_register": 40,
+      "rx_bytes": 1680,
+      "parse_errors": 0
+    },
+    {
+      "type": "register_timeout",
+      "round": 1,
+      "id": 6,
+      "requested_register": 56,
+      "rx_bytes": 1830,
+      "parse_errors": 0
+    }
+  ],
+  "other_frames": [
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    },
+    {
+      "type": "other_frame",
+      "id": 90,
+      "command_or_status": 11,
+      "payload_size": 24
+    }
+  ],
+  "probe_results": [
+    {
+      "type": "probe_result",
+      "read_path_candidate": false,
+      "complete": false,
+      "identity": false,
+      "consistent": true,
+      "plausible": false,
+      "actual65_agrees": false,
+      "target_write_verified": false,
+      "motion_enabled": false
+    }
+  ],
+  "json_errors": [],
+  "motion_sent": false,
+  "target_write_verified": false,
+  "physical_power_cycle_verified": false,
+  "boot_ok": true
+}

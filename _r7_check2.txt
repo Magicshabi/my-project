@@ -1,0 +1,3 @@
+HandleTeachRecord.h identical=True
+RealJointFeedback.h identical=True
+TeachCapture.h identical=True

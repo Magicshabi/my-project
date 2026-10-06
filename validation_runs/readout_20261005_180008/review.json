@@ -1,0 +1,33 @@
+{
+  "firmware": "nexarm-teach-record-r7k2",
+  "snapshot_count": 2,
+  "all_snapshots_identical": true,
+  "crc_valid": true,
+  "valid_mask": 255,
+  "complete": true,
+  "first_seven_unchanged": true,
+  "sha256": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22",
+  "user_reported_six_axis_following_passed": true,
+  "user_reported_saving_no_jerk_or_alarm": true,
+  "restart_verified": false,
+  "target_write_verified": false,
+  "playback_validated": false,
+  "review_points": {
+    "1_to_2": [
+      -346,
+      -635,
+      1222,
+      1501,
+      632,
+      1
+    ],
+    "7_to_8": [
+      -213,
+      591,
+      -1047,
+      -1471,
+      -322,
+      1
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "bytes": 13097,
+  "self_test": true,
+  "ready_count": 1,
+  "panic": false,
+  "counts": {
+    "actual65": 25,
+    "status11": 140
+  },
+  "first_examples": {
+    "actual65": {
+      "type": "actual65",
+      "ms": 853,
+      "pulses": [
+        1998,
+        2060,
+        1868,
+        1916,
+        2071,
+        1139
+      ]
+    },
+    "status11": {
+      "type": "status11",
+      "ms": 1353,
+      "pulses": [
+        1998,
+        2060,
+        1868,
+        1916,
+        2071,
+        1139
+      ]
+    }
+  },
+  "external_servo_power": "disconnected, confirmed by user"
+}

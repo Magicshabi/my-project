@@ -1,0 +1,11 @@
+{
+  "log": "A:\\NEXarm\\Claude\\single_joint_trial_20261005_235142.log",
+  "host_commands_sent": false,
+  "goals": [],
+  "results": [],
+  "faults": [],
+  "actual65_count": 2250,
+  "json_errors": [],
+  "operator_observation": "pending",
+  "full_playback_validated": false
+}

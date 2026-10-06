@@ -1,0 +1,45 @@
+{
+  "bytes": 13479,
+  "self_test": true,
+  "ready_count": 1,
+  "panic": false,
+  "counts": {
+    "actual65": 25,
+    "status11": 139,
+    "goal_read_request": 8,
+    "invalid_json": 1
+  },
+  "first_examples": {
+    "actual65": {
+      "type": "actual65",
+      "ms": 853,
+      "pulses": [
+        2030,
+        2033,
+        1867,
+        1911,
+        2052,
+        1600
+      ]
+    },
+    "status11": {
+      "type": "status11",
+      "ms": 1353,
+      "pulses": [
+        2030,
+        2033,
+        1867,
+        1911,
+        2052,
+        1600
+      ]
+    },
+    "goal_read_request": {
+      "type": "goal_read_request",
+      "id": 4,
+      "reg": 42,
+      "count": 2
+    }
+  },
+  "external_servo_power": "disconnected, confirmed by user"
+}

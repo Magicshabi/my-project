@@ -1,0 +1,30 @@
+﻿LOG_SIZE=17514126
+Using library U8g2 at version 2.36.19 in folder: A:\NEXarm\Claude\match_compile_libraries\U8g2 
+Using library Preferences at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Preferences 
+Using library SPI at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\SPI 
+"A:\\NEXarm\\Claude\\.toolchains\\xtensa-clean-20260919\\xtensa-esp32-elf/bin/xtensa-esp32-elf-size" -A "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r7/NexArm_Teach_Record.ino.elf"
+Sketch uses 304245 bytes (23%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 24896 bytes (7%) of dynamic memory, leaving 302784 bytes for local variables. Maximum is 327680 bytes.
+
+Used library Version Path
+Wire         2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Wire
+U8g2         2.36.19 A:\NEXarm\Claude\match_compile_libraries\U8g2
+Preferences  2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Preferences
+SPI          2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\SPI
+
+Used platform Version Path
+esp32:esp32   2.0.17  C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17
+====TESTS====
+python.exe : ..............................
+所在位置 行:445 字符: 396
++ ... xt'; $out = & 'C:\Users\1\.workbuddy\binaries\python\versions\3.13.12 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (..............................:St 
+   ring) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+----------------------------------------------------------------------
+Ran 30 tests in 0.089s
+
+OK
+

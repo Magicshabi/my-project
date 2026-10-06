@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "valid_mask": 0,
+  "complete": false,
+  "playback_validated": false,
+  "poses": [],
+  "firmware": "nexarm-teach-record-r6",
+  "namespace": "handle_free",
+  "saved_without_lock": true,
+  "live_servo_feedback_verified": false,
+  "physical_path_validated": false
+}

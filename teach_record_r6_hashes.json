@@ -1,0 +1,32 @@
+[
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_record_20260923\\NexArm_Teach_Record\\NexArm_Teach_Record.ino",
+    "bytes": 10924,
+    "sha256": "81078CFE7BF04CB5D2925D2FC1396B1AFFCF821C8AD264686F31B8874CCE9293"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_record_20260923\\NexArm_Teach_Record\\TeachCapture.h",
+    "bytes": 3115,
+    "sha256": "9F88E35F5B536FFB2659C8D8F1E27D58B5856B76E64B191D837DC81B127DA871"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_record_20260923\\NexArm_Teach_Record\\TeachKeys.h",
+    "bytes": 1796,
+    "sha256": "DD886CA5E88E36D81D0D1A55E58D5FD12102E7B79CB53C0DBF41CA8B7468A40B"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r6\\NexArm_Teach_Record.ino.bin",
+    "bytes": 301200,
+    "sha256": "EF09C9F6EEC573CF424CA1C3D84745175B329D84F5D3036E22600B9D53E4CABD"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r6\\NexArm_Teach_Record.ino.bootloader.bin",
+    "bytes": 18992,
+    "sha256": "3D97B71A61331EBADDEF2A74E090C35299650F395F1387F85130010E84E46563"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r6\\NexArm_Teach_Record.ino.partitions.bin",
+    "bytes": 3072,
+    "sha256": "148B959CBFF1C38AA8E1D5C0BA9D612C54997B945E56A63F41223EEF650653A1"
+  }
+]

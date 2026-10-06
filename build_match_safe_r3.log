@@ -1,0 +1,483 @@
+FQBN: esp32:esp32:esp32
+Using board 'esp32' from platform in folder: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17
+Using core 'esp32' from platform in folder: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17
+
+cmd /c if exist "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting\\partitions.csv" COPY /y "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting\\partitions.csv" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\partitions.csv"
+cmd /c if not exist "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\partitions.csv" if exist "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\variants\\esp32\\partitions.csv" COPY "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\variants\\esp32\\partitions.csv" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\partitions.csv"
+cmd /c if not exist "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\partitions.csv" COPY "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\partitions\\default.csv" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\partitions.csv"
+cmd /c IF EXIST "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting\\bootloader.bin" ( COPY /y "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting\\bootloader.bin" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\Color_Sorting.ino.bootloader.bin" ) ELSE ( IF EXIST "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\variants\\esp32\\bootloader.bin" ( COPY "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\variants\\esp32\\bootloader.bin" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\Color_Sorting.ino.bootloader.bin" ) ELSE ( "A:\\NEXarm\\Claude\\.toolchains\\python-wrappers\\esptool.cmd" --chip esp32 elf2image --flash_mode dio --flash_freq 80m --flash_size 4MB -o "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\Color_Sorting.ino.bootloader.bin" "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\sdk\\esp32\\bin\\bootloader_qio_80m.elf" ) )
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+cmd /c if exist "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting\\build_opt.h" COPY /y "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting\\build_opt.h" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\build_opt.h"
+cmd /c if not exist "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\build_opt.h" type nul > "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\build_opt.h"
+cmd /c type nul > "A:\\NEXarm\\Claude\\.arduino-build-match-r3/file_opts"
+Detecting libraries used...
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Color_Sorting.ino.cpp.merged
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\AT32_OTA.cpp
+Alternatives for PinButton.h: [MultiButton@1.3.0 MultiButton@1.3.0]
+ResolveLibrary(PinButton.h)
+  -> candidates: [MultiButton@1.3.0 MultiButton@1.3.0]
+Alternatives for FS.h: [FS@2.0.0 FS@2.0.0]
+ResolveLibrary(FS.h)
+  -> candidates: [FS@2.0.0 FS@2.0.0]
+Alternatives for LittleFS.h: [LittleFS@2.0.0 LittleFS@2.0.0]
+ResolveLibrary(LittleFS.h)
+  -> candidates: [LittleFS@2.0.0 LittleFS@2.0.0]
+Alternatives for Wire.h: [Wire@2.0.0 Wire@2.0.0]
+ResolveLibrary(Wire.h)
+  -> candidates: [Wire@2.0.0 Wire@2.0.0]
+Alternatives for WiFi.h: [WiFi@2.0.0 WiFi@2.0.0]
+ResolveLibrary(WiFi.h)
+  -> candidates: [WiFi@2.0.0 WiFi@2.0.0]
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\ColorGrabber.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\CommProtocol.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Conveyor_Belt.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\HX_30HM.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Motor_I2C.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Nex_Arm_Board.cpp
+Alternatives for U8g2lib.h: [U8g2@2.36.19 U8g2@2.36.19]
+ResolveLibrary(U8g2lib.h)
+  -> candidates: [U8g2@2.36.19 U8g2@2.36.19]
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\ProtocolSelfTest.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Robot_Arm.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Stepper_Strip.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\system_task_handle.cpp
+Alternatives for Preferences.h: [Preferences@2.0.0 Preferences@2.0.0]
+ResolveLibrary(Preferences.h)
+  -> candidates: [Preferences@2.0.0 Preferences@2.0.0]
+Using cached library dependencies for file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\usb_ctrl.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\FS\src\FS.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\FS\src\vfs_api.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\LittleFS\src\LittleFS.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Wire\src\Wire.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFi.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiAP.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiClient.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiGeneric.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiMulti.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiSTA.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiScan.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiServer.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi\src\WiFiUdp.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\U8g2lib.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\U8x8lib.cpp
+Alternatives for SPI.h: [SPI@2.0.0 SPI@2.0.0]
+ResolveLibrary(SPI.h)
+  -> candidates: [SPI@2.0.0 SPI@2.0.0]
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\mui.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\mui_u8g2.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_arc.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_bitmap.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_box.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_buffer.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_button.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_circle.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_cleardisplay.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_d_memory.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_d_setup.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_font.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_fonts.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_hvline.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_input_value.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_intersection.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_kerning.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_line.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_ll_hvline.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_message.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_polygon.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_selection_list.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8g2_setup.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8log.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8log_u8g2.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8log_u8x8.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_8x8.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_byte.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_cad.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_capture.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_a2printer.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ch1120.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_gp1247ai.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_gp1287ai.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_gp1294ai.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_gu800.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_hd44102.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_il3820_296x128.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ist3020.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ist3088.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ist7920.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ks0108.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_lc7981.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ld7032_60x32.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ls013b7dh03.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_max7219.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_pcd8544_84x48.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_pcf8812.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_pcf8814_hx1230.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_s1d15300.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_s1d15721.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_s1d15e06.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sbn1661.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sed1330.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sh1106_64x32.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sh1106_72x40.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sh1107.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sh1108.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_sh1122.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1305.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_128x32.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_128x64_noname.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_2040x16.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_48x64.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_64x32.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_64x48.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_72x40.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_96x16.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1306_96x40.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1309.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1312.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1315_128x64_noname.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1316.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1317.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1318.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1320.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1322.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1325.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1326.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1327.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1329.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1362.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1362z.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1363.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1606_172x72.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_ssd1607_200x200.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7301.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7302.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7305.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7511.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st75160.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st75161.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st75256.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7528.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st75320.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7539.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7565.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7567.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7571.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_erc240160.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_jlx320160.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_jlx384160.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_md240128.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_pe24064.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_s028hn118a.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7586s_ymc240160.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7588.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_st7920.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_t6963.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1601.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1604.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1608.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1609.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1610.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1611.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1617.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1628.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1638.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1698.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1701_dogs102.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_d_uc1701_mini12864.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_debounce.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_display.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_fonts.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_gpio.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_input_value.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_message.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_selection_list.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_setup.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_string.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_u16toa.c
+Using cached library dependencies for file: A:\NEXarm\Claude\match_compile_libraries\U8g2\src\clib\u8x8_u8toa.c
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Preferences\src\Preferences.cpp
+Using cached library dependencies for file: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\SPI\src\SPI.cpp
+Generating function prototypes...
+Using cached sketch with function prototypes.
+Compiling sketch...
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\AT32_OTA.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\ColorGrabber.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Color_Sorting.ino.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\CommProtocol.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Conveyor_Belt.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\HX_30HM.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Motor_I2C.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Nex_Arm_Board.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\ProtocolSelfTest.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Robot_Arm.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\Stepper_Strip.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\system_task_handle.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\sketch\usb_ctrl.cpp.o
+Compiling libraries...
+Compiling library "MultiButton"
+Compiling library "FS"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\FS\FS.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\FS\vfs_api.cpp.o
+Compiling library "LittleFS"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\LittleFS\LittleFS.cpp.o
+Compiling library "Wire"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\Wire\Wire.cpp.o
+Compiling library "WiFi"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFi.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiAP.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiClient.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiGeneric.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiMulti.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiSTA.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiScan.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiServer.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\WiFi\WiFiUdp.cpp.o
+Compiling library "U8g2"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\U8g2lib.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\U8x8lib.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\mui.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\mui_u8g2.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_arc.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_bitmap.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_box.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_buffer.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_button.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_circle.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_cleardisplay.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_d_memory.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_d_setup.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_font.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_fonts.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_hvline.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_input_value.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_intersection.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_kerning.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_line.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_ll_hvline.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_message.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_polygon.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_selection_list.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8g2_setup.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8log.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8log_u8g2.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8log_u8x8.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_8x8.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_byte.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_cad.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_capture.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_a2printer.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ch1120.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_gp1247ai.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_gp1287ai.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_gp1294ai.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_gu800.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_hd44102.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_il3820_296x128.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ist3020.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ist3088.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ist7920.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ks0108.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_lc7981.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ld7032_60x32.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ls013b7dh03.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_max7219.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_pcd8544_84x48.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_pcf8812.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_pcf8814_hx1230.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_s1d15300.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_s1d15721.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_s1d15e06.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sbn1661.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sed1330.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sh1106_64x32.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sh1106_72x40.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sh1107.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sh1108.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_sh1122.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1305.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_128x32.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_128x64_noname.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_2040x16.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_48x64.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_64x32.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_64x48.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_72x40.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_96x16.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1306_96x40.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1309.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1312.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1315_128x64_noname.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1316.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1317.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1318.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1320.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1322.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1325.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1326.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1327.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1329.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1362.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1362z.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1363.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1606_172x72.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_ssd1607_200x200.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7301.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7302.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7305.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7511.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st75160.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st75161.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st75256.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7528.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st75320.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7539.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7565.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7567.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7571.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_erc240160.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_jlx320160.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_jlx384160.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_md240128.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_pe24064.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_s028hn118a.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7586s_ymc240160.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7588.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_st7920.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_t6963.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1601.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1604.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1608.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1609.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1610.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1611.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1617.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1628.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1638.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1698.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1701_dogs102.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_d_uc1701_mini12864.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_debounce.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_display.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_fonts.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_gpio.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_input_value.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_message.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_selection_list.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_setup.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_string.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_u16toa.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\U8g2\clib\u8x8_u8toa.c.o
+Compiling library "Preferences"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\Preferences\Preferences.cpp.o
+Compiling library "SPI"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\libraries\SPI\SPI.cpp.o
+Compiling core...
+cmd /c echo -DARDUINO_CORE_BUILD > "A:\\NEXarm\\Claude\\.arduino-build-match-r3/file_opts"
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\Esp.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\FirmwareMSC.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\FunctionalInterrupt.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\HWCDC.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\HardwareSerial.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\IPAddress.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\IPv6Address.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\MD5Builder.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\Print.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\Stream.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\StreamString.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\Tone.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\USB.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\USBCDC.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\USBMSC.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\WMath.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\WString.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\base64.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\cbuf.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-adc.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-bt.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-cpu.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-dac.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-gpio.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-i2c-slave.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-i2c.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-ledc.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-matrix.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-misc.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-psram.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-rgb-led.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-rmt.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-sigmadelta.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-spi.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-time.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-timer.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-tinyusb.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-touch.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\esp32-hal-uart.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\firmware_msc_fat.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\libb64\cdecode.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\libb64\cencode.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\main.cpp.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\stdlib_noniso.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\wiring_pulse.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\wiring_shift.c.o
+Using previously compiled file: A:\NEXarm\Claude\.arduino-build-match-r3\core\core.a
+cmd /c type nul > "A:\\NEXarm\\Claude\\.arduino-build-match-r3/file_opts"
+Linking everything together...
+"A:\\NEXarm\\Claude\\.toolchains\\xtensa-clean-20260919\\xtensa-esp32-elf/bin/xtensa-esp32-elf-g++" "-Wl,--Map=A:\\NEXarm\\Claude\\.arduino-build-match-r3/Color_Sorting.ino.map" "-LA:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\sdk\\esp32/lib" "-LA:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\sdk\\esp32/ld" "-LA:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\sdk\\esp32/qio_qspi" -T esp32.rom.redefined.ld -T memory.ld -T sections.ld -T esp32.rom.ld -T esp32.rom.api.ld -T esp32.rom.libgcc.ld -T esp32.rom.newlib-data.ld -T esp32.rom.syscalls.ld -T esp32.peripherals.ld -mlongcalls -Wno-frame-address -Wl,--cref -Wl,--gc-sections -fno-rtti -fno-lto -Wl,--wrap=esp_log_write -Wl,--wrap=esp_log_writev -Wl,--wrap=log_printf -u ld_include_hli_vectors_bt -u _Z5setupv -u _Z4loopv -u esp_app_desc -u pthread_include_pthread_impl -u pthread_include_pthread_cond_var_impl -u pthread_include_pthread_local_storage_impl -u pthread_include_pthread_rwlock_impl -u include_esp_phy_override -u ld_include_highint_hdl -u start_app -u start_app_other_cores -u __ubsan_include -Wl,--wrap=longjmp -u __assert_func -u vfs_include_syscalls_impl -Wl,--undefined=uxTopUsedPriority -u app_main -u newlib_include_heap_impl -u newlib_include_syscalls_impl -u newlib_include_pthread_impl -u newlib_include_assert_impl -u __cxa_guard_dummy -DESP32 -DCORE_DEBUG_LEVEL=0 -DARDUINO_RUNNING_CORE=1 -DARDUINO_EVENT_RUNNING_CORE=1 -DARDUINO_USB_CDC_ON_BOOT=0 -Wl,--start-group "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\AT32_OTA.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\ColorGrabber.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\Color_Sorting.ino.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\CommProtocol.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\Conveyor_Belt.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\HX_30HM.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\Motor_I2C.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\Nex_Arm_Board.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\ProtocolSelfTest.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\Robot_Arm.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\Stepper_Strip.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\system_task_handle.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\sketch\\usb_ctrl.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\FS\\FS.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\FS\\vfs_api.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\LittleFS\\LittleFS.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\Wire\\Wire.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFi.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiAP.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiClient.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiGeneric.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiMulti.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiSTA.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiScan.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiServer.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\WiFi\\WiFiUdp.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\U8g2lib.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\U8x8lib.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\mui.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\mui_u8g2.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_arc.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_bitmap.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_box.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_buffer.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_button.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_circle.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_cleardisplay.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_d_memory.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_d_setup.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_font.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_fonts.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_hvline.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_input_value.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_intersection.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_kerning.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_line.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_ll_hvline.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_message.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_polygon.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_selection_list.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8g2_setup.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8log.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8log_u8g2.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8log_u8x8.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_8x8.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_byte.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_cad.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_capture.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_a2printer.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ch1120.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_gp1247ai.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_gp1287ai.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_gp1294ai.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_gu800.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_hd44102.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_il3820_296x128.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ist3020.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ist3088.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ist7920.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ks0108.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_lc7981.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ld7032_60x32.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ls013b7dh03.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_max7219.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_pcd8544_84x48.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_pcf8812.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_pcf8814_hx1230.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_s1d15300.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_s1d15721.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_s1d15e06.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sbn1661.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sed1330.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sh1106_64x32.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sh1106_72x40.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sh1107.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sh1108.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_sh1122.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1305.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_128x32.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_128x64_noname.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_2040x16.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_48x64.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_64x32.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_64x48.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_72x40.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_96x16.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1306_96x40.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1309.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1312.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1315_128x64_noname.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1316.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1317.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1318.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1320.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1322.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1325.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1326.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1327.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1329.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1362.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1362z.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1363.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1606_172x72.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_ssd1607_200x200.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7301.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7302.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7305.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7511.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st75160.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st75161.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st75256.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7528.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st75320.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7539.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7565.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7567.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7571.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_erc240160.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_jlx320160.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_jlx384160.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_md240128.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_pe24064.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_s028hn118a.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7586s_ymc240160.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7588.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_st7920.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_t6963.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1601.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1604.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1608.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1609.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1610.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1611.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1617.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1628.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1638.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1698.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1701_dogs102.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_d_uc1701_mini12864.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_debounce.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_display.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_fonts.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_gpio.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_input_value.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_message.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_selection_list.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_setup.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_string.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_u16toa.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\U8g2\\clib\\u8x8_u8toa.c.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\Preferences\\Preferences.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\SPI\\SPI.cpp.o" "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\core\\core.a" -lesp_ringbuf -lefuse -lesp_ipc -ldriver -lesp_pm -lmbedtls -lapp_update -lbootloader_support -lspi_flash -lnvs_flash -lpthread -lesp_gdbstub -lespcoredump -lesp_phy -lesp_system -lesp_rom -lhal -lvfs -lesp_eth -ltcpip_adapter -lesp_netif -lesp_event -lwpa_supplicant -lesp_wifi -lconsole -llwip -llog -lheap -lsoc -lesp_hw_support -lxtensa -lesp_common -lesp_timer -lfreertos -lnewlib -lcxx -lapp_trace -lasio -lbt -lcbor -lunity -lcmock -lcoap -lnghttp -lesp-tls -lesp_adc_cal -lesp_hid -ltcp_transport -lesp_http_client -lesp_http_server -lesp_https_ota -lesp_https_server -lesp_lcd -lprotobuf-c -lprotocomm -lmdns -lesp_local_ctrl -lsdmmc -lesp_serial_slave_link -lesp_websocket_client -lexpat -lwear_levelling -lfatfs -lfreemodbus -ljsmn -ljson -llibsodium -lmqtt -lopenssl -lperfmon -lspiffs -lulp -lwifi_provisioning -lrmaker_common -lesp_diagnostics -lrtc_store -lesp_insights -ljson_parser -ljson_generator -lesp_schedule -lespressif__esp_secure_cert_mgr -lesp_rainmaker -lgpio_button -lqrcode -lws2812_led -lesp32-camera -lesp_littlefs -lespressif__esp-dsp -lfb_gfx -lasio -lcmock -lunity -lcoap -lesp_lcd -lesp_websocket_client -lexpat -lfreemodbus -ljsmn -llibsodium -lperfmon -lesp_adc_cal -lesp_hid -lfatfs -lwear_levelling -lopenssl -lspiffs -lesp_insights -lcbor -lesp_diagnostics -lrtc_store -lesp_rainmaker -lesp_local_ctrl -lesp_https_server -lwifi_provisioning -lprotocomm -lbt -lbtdm_app -lprotobuf-c -lmdns -ljson -ljson_parser -ljson_generator -lesp_schedule -lespressif__esp_secure_cert_mgr -lqrcode -lrmaker_common -lmqtt -lcat_face_detect -lhuman_face_detect -lcolor_detect -lmfn -ldl -lesp_ringbuf -lefuse -lesp_ipc -ldriver -lesp_pm -lmbedtls -lapp_update -lbootloader_support -lspi_flash -lnvs_flash -lpthread -lesp_gdbstub -lespcoredump -lesp_phy -lesp_system -lesp_rom -lhal -lvfs -lesp_eth -ltcpip_adapter -lesp_netif -lesp_event -lwpa_supplicant -lesp_wifi -lconsole -llwip -llog -lheap -lsoc -lesp_hw_support -lxtensa -lesp_common -lesp_timer -lfreertos -lnewlib -lcxx -lapp_trace -lnghttp -lesp-tls -ltcp_transport -lesp_http_client -lesp_http_server -lesp_https_ota -lsdmmc -lesp_serial_slave_link -lulp -lmbedtls_2 -lmbedcrypto -lmbedx509 -lcoexist -lcore -lespnow -lmesh -lnet80211 -lpp -lsmartconfig -lwapi -lesp_ringbuf -lefuse -lesp_ipc -ldriver -lesp_pm -lmbedtls -lapp_update -lbootloader_support -lspi_flash -lnvs_flash -lpthread -lesp_gdbstub -lespcoredump -lesp_phy -lesp_system -lesp_rom -lhal -lvfs -lesp_eth -ltcpip_adapter -lesp_netif -lesp_event -lwpa_supplicant -lesp_wifi -lconsole -llwip -llog -lheap -lsoc -lesp_hw_support -lxtensa -lesp_common -lesp_timer -lfreertos -lnewlib -lcxx -lapp_trace -lnghttp -lesp-tls -ltcp_transport -lesp_http_client -lesp_http_server -lesp_https_ota -lsdmmc -lesp_serial_slave_link -lulp -lmbedtls_2 -lmbedcrypto -lmbedx509 -lcoexist -lcore -lespnow -lmesh -lnet80211 -lpp -lsmartconfig -lwapi -lesp_ringbuf -lefuse -lesp_ipc -ldriver -lesp_pm -lmbedtls -lapp_update -lbootloader_support -lspi_flash -lnvs_flash -lpthread -lesp_gdbstub -lespcoredump -lesp_phy -lesp_system -lesp_rom -lhal -lvfs -lesp_eth -ltcpip_adapter -lesp_netif -lesp_event -lwpa_supplicant -lesp_wifi -lconsole -llwip -llog -lheap -lsoc -lesp_hw_support -lxtensa -lesp_common -lesp_timer -lfreertos -lnewlib -lcxx -lapp_trace -lnghttp -lesp-tls -ltcp_transport -lesp_http_client -lesp_http_server -lesp_https_ota -lsdmmc -lesp_serial_slave_link -lulp -lmbedtls_2 -lmbedcrypto -lmbedx509 -lcoexist -lcore -lespnow -lmesh -lnet80211 -lpp -lsmartconfig -lwapi -lesp_ringbuf -lefuse -lesp_ipc -ldriver -lesp_pm -lmbedtls -lapp_update -lbootloader_support -lspi_flash -lnvs_flash -lpthread -lesp_gdbstub -lespcoredump -lesp_phy -lesp_system -lesp_rom -lhal -lvfs -lesp_eth -ltcpip_adapter -lesp_netif -lesp_event -lwpa_supplicant -lesp_wifi -lconsole -llwip -llog -lheap -lsoc -lesp_hw_support -lxtensa -lesp_common -lesp_timer -lfreertos -lnewlib -lcxx -lapp_trace -lnghttp -lesp-tls -ltcp_transport -lesp_http_client -lesp_http_server -lesp_https_ota -lsdmmc -lesp_serial_slave_link -lulp -lmbedtls_2 -lmbedcrypto -lmbedx509 -lcoexist -lcore -lespnow -lmesh -lnet80211 -lpp -lsmartconfig -lwapi -lesp_ringbuf -lefuse -lesp_ipc -ldriver -lesp_pm -lmbedtls -lapp_update -lbootloader_support -lspi_flash -lnvs_flash -lpthread -lesp_gdbstub -lespcoredump -lesp_phy -lesp_system -lesp_rom -lhal -lvfs -lesp_eth -ltcpip_adapter -lesp_netif -lesp_event -lwpa_supplicant -lesp_wifi -lconsole -llwip -llog -lheap -lsoc -lesp_hw_support -lxtensa -lesp_common -lesp_timer -lfreertos -lnewlib -lcxx -lapp_trace -lnghttp -lesp-tls -ltcp_transport -lesp_http_client -lesp_http_server -lesp_https_ota -lsdmmc -lesp_serial_slave_link -lulp -lmbedtls_2 -lmbedcrypto -lmbedx509 -lcoexist -lcore -lespnow -lmesh -lnet80211 -lpp -lsmartconfig -lwapi -lphy -lrtc -lesp_phy -lphy -lrtc -lesp_phy -lphy -lrtc -lxt_hal -lc -lm -lnewlib -lstdc++ -lpthread -lgcc -lcxx -Wl,--end-group -Wl,-EL -o "A:\\NEXarm\\Claude\\.arduino-build-match-r3/Color_Sorting.ino.elf"
+"A:\\NEXarm\\Claude\\.toolchains\\python-wrappers/esptool.cmd" --chip esp32 elf2image --flash_mode dio --flash_freq 80m --flash_size 4MB --elf-sha256-offset 0xb0 -o "A:\\NEXarm\\Claude\\.arduino-build-match-r3/Color_Sorting.ino.bin" "A:\\NEXarm\\Claude\\.arduino-build-match-r3/Color_Sorting.ino.elf"
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+"A:\\NEXarm\\Claude\\.toolchains\\python-wrappers\\gen_esp32part.cmd" -q "A:\\NEXarm\\Claude\\.arduino-build-match-r3/partitions.csv" "A:\\NEXarm\\Claude\\.arduino-build-match-r3/Color_Sorting.ino.partitions.bin"
+cmd /c if exist "A:\\NEXarm\\Claude\\.arduino-build-match-r3\\libraries\\Insights" "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\gen_insights_package.exe" "A:\\NEXarm\\Claude\\.arduino-build-match-r3" Color_Sorting.ino "A:\\NEXarm\\Claude\\competition_integrated_20260919\\Color_Sorting"
+Multiple libraries were found for "PinButton.h"
+  Used: A:\NEXarm\Claude\match_compile_libraries\MultiButton
+  Not used: C:\Users\1\Documents\Arduino\libraries\MultiButton
+Multiple libraries were found for "FS.h"
+  Used: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\FS
+  Not used: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\libraries\FS
+Multiple libraries were found for "LittleFS.h"
+  Used: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\LittleFS
+  Not used: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\libraries\LittleFS
+Multiple libraries were found for "Wire.h"
+  Used: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Wire
+  Not used: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\libraries\Wire
+Multiple libraries were found for "WiFi.h"
+  Used: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi
+  Not used: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\libraries\WiFi
+Multiple libraries were found for "U8g2lib.h"
+  Used: A:\NEXarm\Claude\match_compile_libraries\U8g2
+  Not used: C:\Users\1\Documents\Arduino\libraries\U8g2
+Multiple libraries were found for "Preferences.h"
+  Used: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Preferences
+  Not used: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\libraries\Preferences
+Multiple libraries were found for "SPI.h"
+  Used: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\SPI
+  Not used: C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\libraries\SPI
+Using library MultiButton at version 1.3.0 in folder: A:\NEXarm\Claude\match_compile_libraries\MultiButton 
+Using library FS at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\FS 
+Using library LittleFS at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\LittleFS 
+Using library Wire at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Wire 
+Using library WiFi at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi 
+Using library U8g2 at version 2.36.19 in folder: A:\NEXarm\Claude\match_compile_libraries\U8g2 
+Using library Preferences at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Preferences 
+Using library SPI at version 2.0.0 in folder: A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\SPI 
+"A:\\NEXarm\\Claude\\.toolchains\\xtensa-clean-20260919\\xtensa-esp32-elf/bin/xtensa-esp32-elf-size" -A "A:\\NEXarm\\Claude\\.arduino-build-match-r3/Color_Sorting.ino.elf"
+Sketch uses 414977 bytes (31%) of program storage space. Maximum is 1310720 bytes.
+Global variables use 25416 bytes (7%) of dynamic memory, leaving 302264 bytes for local variables. Maximum is 327680 bytes.
+
+Used library Version Path
+MultiButton  1.3.0   A:\NEXarm\Claude\match_compile_libraries\MultiButton
+FS           2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\FS
+LittleFS     2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\LittleFS
+Wire         2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Wire
+WiFi         2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\WiFi
+U8g2         2.36.19 A:\NEXarm\Claude\match_compile_libraries\U8g2
+Preferences  2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\Preferences
+SPI          2.0.0   A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries\SPI
+
+Used platform Version Path
+esp32:esp32   2.0.17  C:\Users\1\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17

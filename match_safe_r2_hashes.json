@@ -1,0 +1,17 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "86B7762DE558A607CE7DA1D8FF97BD8DC3A81BBF87DF2C61465FD136F1DE7626",
+    "Path": "A:\\NEXarm\\Claude\\.arduino-build-match-r2\\Color_Sorting.ino.bin"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3D97B71A61331EBADDEF2A74E090C35299650F395F1387F85130010E84E46563",
+    "Path": "A:\\NEXarm\\Claude\\.arduino-build-match-r2\\Color_Sorting.ino.bootloader.bin"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "148B959CBFF1C38AA8E1D5C0BA9D612C54997B945E56A63F41223EEF650653A1",
+    "Path": "A:\\NEXarm\\Claude\\.arduino-build-match-r2\\Color_Sorting.ino.partitions.bin"
+  }
+]

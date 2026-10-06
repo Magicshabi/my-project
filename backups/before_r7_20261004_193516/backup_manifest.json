@@ -1,0 +1,10 @@
+{
+  "device_mac": "68:09:47:7b:9f:64",
+  "port": "COM9",
+  "size": 4194304,
+  "sha256": "120b018ce4e101efd130e50cff688780e294aa1c6cf2f8ed07ab99b5c5d4ddcc",
+  "device_digest_verified": true,
+  "r7_partition_matches_device": true,
+  "app0_matches_r6": true,
+  "nvs_sha256": "e71dd40c3e304d651c46743da6d15eae39385aa0e8da7f89188000e442b227db"
+}

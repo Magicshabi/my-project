@@ -1,0 +1,78 @@
+{
+  "version": "nexarm-single-joint-probe-r1b",
+  "partition_unchanged": true,
+  "motion_policy_byte_identical": true,
+  "backup": "backups/before_single_probe_r1b_20261006",
+  "files": [
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\CommProtocol.cpp",
+      "size": 5014,
+      "sha256": "ff814f58f72b5452892dd1e7b6ba6e2bf87f7741d97633b0ca895a0a971ebb2e"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\CommProtocol.h",
+      "size": 2658,
+      "sha256": "a3f5e41d08a07d30a7374074bf4579042f5053e48b0e75d9a4a8b1b23da55a19"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\HandleTeachRecord.h",
+      "size": 2731,
+      "sha256": "b52ab8036621691b85edf7225d0370200442dfaa78a5ebcfd2e7f9e6a85f0b3e"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\NexArm_Single_Joint_Probe.ino",
+      "size": 10317,
+      "sha256": "cac6793368d046375199f8e28299972c6f103b85e791a973f3016dc5dab5788d"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\ProtocolSelfTest.h",
+      "size": 2476,
+      "sha256": "bec5c5419b071be24818edef36fb0ce9b43930f31392ec45b70108c8871e21bb"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\RealJointFeedback.h",
+      "size": 1638,
+      "sha256": "56dbf6d677053c1166198d945f543300f61826901fdc02843369cc86f164d75c"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\RecordJson.h",
+      "size": 1185,
+      "sha256": "9bb638b01d9ed39c03fc32b7c06b80b622975866fe025cd06e2a2e28b8ad5e32"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\SingleJointPolicy.h",
+      "size": 3176,
+      "sha256": "9d6d1c5b96e078b45fc66a940148e5fd00db3ef5828373d33f603e3c9e0f677d"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\TeachCapture.h",
+      "size": 3115,
+      "sha256": "9f88e35f5b536ffb2659c8d8f1e27d58b5856b76e64b191d837dc81b127da871"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\TeachKeys.h",
+      "size": 3942,
+      "sha256": "216347325189e742c763aa169f2101a34673e0ddcfc6021b86c31e6019b6e008"
+    },
+    {
+      "path": "single_joint_probe_r1b_20261006\\NexArm_Single_Joint_Probe\\TrialEvidence.h",
+      "size": 3374,
+      "sha256": "1a693cca119d6df9dd9f4c35bb4adcae35bd9debb1b487f36e867ed781aaf2da"
+    },
+    {
+      "path": ".arduino-build-single-joint-probe-r1b\\NexArm_Single_Joint_Probe.ino.bin",
+      "size": 304240,
+      "sha256": "556f1f1639569673c23b1a20f9b8eda90e65bcfca89a9e30a2472cc45d30bf64"
+    },
+    {
+      "path": ".arduino-build-single-joint-probe-r1b\\NexArm_Single_Joint_Probe.ino.bootloader.bin",
+      "size": 18992,
+      "sha256": "3d97b71a61331ebaddef2a74e090c35299650f395f1387f85130010e84e46563"
+    },
+    {
+      "path": ".arduino-build-single-joint-probe-r1b\\NexArm_Single_Joint_Probe.ino.partitions.bin",
+      "size": 3072,
+      "sha256": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "bytes": 12872,
+  "self_test": true,
+  "oled_found": true,
+  "ready_count": 1,
+  "panic": false,
+  "counts": {
+    "status11": 138,
+    "actual65": 23
+  },
+  "first_examples": {
+    "status11": {
+      "type": "status11",
+      "ms": 1880,
+      "pulses": [
+        2060,
+        2033,
+        1866,
+        1911,
+        2052,
+        1600
+      ]
+    },
+    "actual65": {
+      "type": "actual65",
+      "ms": 2222,
+      "pulses": [
+        2060,
+        2033,
+        1866,
+        1911,
+        2052,
+        1601
+      ]
+    }
+  },
+  "external_servo_power": "disconnected, confirmed by user"
+}

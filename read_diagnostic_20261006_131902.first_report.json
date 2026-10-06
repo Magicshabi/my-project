@@ -1,0 +1,1913 @@
+{
+  "log": "A:\\NEXarm\\Claude\\read_diagnostic_20261006_131902.log",
+  "firmware": "nexarm-read-diagnostic-r2",
+  "self_test": true,
+  "ready_count": 1,
+  "record_matches": true,
+  "queries": [
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 0,
+      "id": 255,
+      "cmd": 94,
+      "args": []
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 1,
+      "id": 255,
+      "cmd": 11,
+      "args": []
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 2,
+      "id": 255,
+      "cmd": 75,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 3,
+      "id": 255,
+      "cmd": 77,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 4,
+      "id": 255,
+      "cmd": 73,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 5,
+      "id": 255,
+      "cmd": 71,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 6,
+      "id": 6,
+      "cmd": 1,
+      "args": []
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 7,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        40,
+        1
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 8,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        42,
+        2
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 9,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        33,
+        1
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 0,
+      "slot": 10,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        56,
+        2
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 0,
+      "id": 255,
+      "cmd": 94,
+      "args": []
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 1,
+      "id": 255,
+      "cmd": 11,
+      "args": []
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 2,
+      "id": 255,
+      "cmd": 75,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 3,
+      "id": 255,
+      "cmd": 77,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 4,
+      "id": 255,
+      "cmd": 73,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 5,
+      "id": 255,
+      "cmd": 71,
+      "args": [
+        6
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 6,
+      "id": 6,
+      "cmd": 1,
+      "args": []
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 7,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        40,
+        1
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 8,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        42,
+        2
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 9,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        33,
+        1
+      ]
+    },
+    {
+      "type": "diag_query",
+      "round": 1,
+      "slot": 10,
+      "id": 6,
+      "cmd": 2,
+      "args": [
+        56,
+        2
+      ]
+    }
+  ],
+  "query_ends": [
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 0,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 1,
+      "candidate_frames": 5
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 2,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 3,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 4,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 5,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 6,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 7,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 8,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 9,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 0,
+      "slot": 10,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 0,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 1,
+      "candidate_frames": 5
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 2,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 3,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 4,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 5,
+      "candidate_frames": 1
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 6,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 7,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 8,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 9,
+      "candidate_frames": 0
+    },
+    {
+      "type": "diag_window_end",
+      "round": 1,
+      "slot": 10,
+      "candidate_frames": 0
+    }
+  ],
+  "raw_replies": [
+    {
+      "type": "diag_rx",
+      "ms": 1876,
+      "id": 90,
+      "cmd_or_status": 94,
+      "hex": "010002",
+      "round": 0,
+      "slot": 0,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 1877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 2063,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 2263,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 2463,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 2663,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 1,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 2785,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 2877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 0,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 3063,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 3263,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 3463,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 3663,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 0,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 3735,
+      "id": 90,
+      "cmd_or_status": 75,
+      "hex": "06e803",
+      "round": 0,
+      "slot": 2,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 3877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 4064,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 4264,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 4464,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 4664,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 4685,
+      "id": 90,
+      "cmd_or_status": 77,
+      "hex": "060101",
+      "round": 0,
+      "slot": 3,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 4877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 5064,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 5264,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 5464,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 5635,
+      "id": 90,
+      "cmd_or_status": 73,
+      "hex": "0600",
+      "round": 0,
+      "slot": 4,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 5664,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 5877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 6064,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 6264,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 6464,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 6585,
+      "id": 90,
+      "cmd_or_status": 71,
+      "hex": "06143214",
+      "round": 0,
+      "slot": 5,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 6665,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 6877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 7065,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 7265,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 7465,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 7685,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 7877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 8065,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 8265,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 8465,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 8665,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 8877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 9065,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 9265,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 0,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 9465,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 9666,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 9877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 0,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 10066,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 10266,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 10466,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 10666,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 10877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 11066,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 11266,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 0,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 11466,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 11666,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 11877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 0,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 12066,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 12267,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 12285,
+      "id": 90,
+      "cmd_or_status": 94,
+      "hex": "010002",
+      "round": 1,
+      "slot": 0,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 12467,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 12667,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 12877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 13067,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 1,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 13235,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 13267,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 13467,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 13667,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 13877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 1,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 14067,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 14185,
+      "id": 90,
+      "cmd_or_status": 75,
+      "hex": "06e803",
+      "round": 1,
+      "slot": 2,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 14267,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 14467,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 14667,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 14877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 2,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 15068,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 15135,
+      "id": 90,
+      "cmd_or_status": 77,
+      "hex": "060101",
+      "round": 1,
+      "slot": 3,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 15268,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 15468,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 15668,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 3,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 15878,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 16068,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 16085,
+      "id": 90,
+      "cmd_or_status": 73,
+      "hex": "0600",
+      "round": 1,
+      "slot": 4,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 16268,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 16468,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 16668,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 4,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 16877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 17035,
+      "id": 90,
+      "cmd_or_status": 71,
+      "hex": "06143214",
+      "round": 1,
+      "slot": 5,
+      "within_query_window": true
+    },
+    {
+      "type": "diag_rx",
+      "ms": 17068,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 17268,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 17468,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 17669,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088805",
+      "round": 1,
+      "slot": 5,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 17877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 18089,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 18269,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 18469,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 18669,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 6,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 18877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 19069,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 19269,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 19469,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 7,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 19669,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 19877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 20069,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 20270,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 20470,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 8,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 20670,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 20877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 21070,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 1,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 21270,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 21470,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 1,
+      "slot": 9,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 21670,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 21877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 22070,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 22270,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 22470,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 1,
+      "slot": 10,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 22670,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 22877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 23071,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 23271,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 23471,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 23671,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 23877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 24071,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 24271,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 24471,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 24671,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 24877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 25071,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071b088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 25272,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 25472,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 25672,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 25877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 26072,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 26272,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 26472,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 26672,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 26877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 27072,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 27273,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 27473,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 27673,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 27877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 28073,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 28273,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 28473,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 28673,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 28877,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 29073,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 29273,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 29473,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088805",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    },
+    {
+      "type": "diag_rx",
+      "ms": 29674,
+      "id": 90,
+      "cmd_or_status": 11,
+      "hex": "2001f8fffb0088ff0200c8ff12081b08d8067c071a088705",
+      "round": 2,
+      "slot": 0,
+      "within_query_window": false
+    }
+  ],
+  "last_state": {
+    "type": "diag_state",
+    "done": true,
+    "round": 2,
+    "slot": 0,
+    "rx_bytes": 5880,
+    "parse_errors": 0,
+    "motion_enabled": false
+  },
+  "supply_estimate_range_mv": [
+    12441,
+    12463
+  ],
+  "supply_last": {
+    "type": "supply_estimate",
+    "raw": 3290,
+    "raw_min": 3285,
+    "raw_max": 3295,
+    "pin_mv": 1132,
+    "estimated_board_mv": 12452,
+    "calibration_method": 0,
+    "divider_from_factory": 11,
+    "servo_terminal_voltage_measured": false
+  },
+  "actual65_count": 51,
+  "json_errors": [
+    "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+  ],
+  "fault": false,
+  "host_commands_sent": false,
+  "motor_motion_tested": false,
+  "capture_ok": false
+}

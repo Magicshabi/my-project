@@ -1,0 +1,57 @@
+[
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\CommProtocol.cpp",
+    "bytes": 4097,
+    "sha256": "2CCA768F5DC842DF218BDB021213F392118604B0EC9EF02EA8A7A496D677C68F"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\CommProtocol.h",
+    "bytes": 1585,
+    "sha256": "A21AEF5AA6D0B04A02DF7B09587D8E3558CA0614643C4B2F2D5E12BBC9AEE6BB"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\HandleTeachRecord.h",
+    "bytes": 2731,
+    "sha256": "B52AB8036621691B85EDF7225D0370200442DFAA78A5EBCFD2E7F9E6A85F0B3E"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\NexArm_Teach_Record.ino",
+    "bytes": 12547,
+    "sha256": "BEFD295306567919745A254E0B3804C92280232CF84EAF782E9F3580A20C0B0C"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\RealJointFeedback.h",
+    "bytes": 1638,
+    "sha256": "56DBF6D677053C1166198D945F543300F61826901FDC02843369CC86F164D75C"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\TeachCapture.h",
+    "bytes": 3115,
+    "sha256": "9F88E35F5B536FFB2659C8D8F1E27D58B5856B76E64B191D837DC81B127DA871"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\handle_teach_keydiag_20261004\\NexArm_Teach_Record\\TeachKeys.h",
+    "bytes": 2664,
+    "sha256": "25ECE6732FFFBCB0B08A429BB0BE49B2DFC8D71824E1E79D78BEE71D77DF633C"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r6k1\\NexArm_Teach_Record.ino.bin",
+    "bytes": 301904,
+    "sha256": "03D395161E32E2FC71E820BE1B41E548841D3B9955D3D0B7454CAC04D2064010"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r6k1\\NexArm_Teach_Record.ino.bootloader.bin",
+    "bytes": 18992,
+    "sha256": "3D97B71A61331EBADDEF2A74E090C35299650F395F1387F85130010E84E46563"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.arduino-build-teach-record-r6k1\\NexArm_Teach_Record.ino.partitions.bin",
+    "bytes": 3072,
+    "sha256": "148B959CBFF1C38AA8E1D5C0BA9D612C54997B945E56A63F41223EEF650653A1"
+  },
+  {
+    "path": "A:\\NEXarm\\Claude\\.toolchains\\esp32-core-clean-20260919\\esp32-2.0.17\\tools\\partitions\\boot_app0.bin",
+    "bytes": 8192,
+    "sha256": "F94C5D786A7A8FAB06AC5D10E33BF37711A6697636DC037559EA19CC410A17F0"
+  }
+]
