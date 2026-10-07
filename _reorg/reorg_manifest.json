@@ -1,0 +1,1123 @@
+{
+  "moved": [
+    {
+      "from": "01 AI视觉玩法.pdf",
+      "to": "reference\\01 AI视觉玩法.pdf"
+    },
+    {
+      "from": "01 ESP32开发基础.pdf",
+      "to": "reference\\01 ESP32开发基础.pdf"
+    },
+    {
+      "from": "01 WonderMK大模型玩法.pdf",
+      "to": "reference\\01 WonderMK大模型玩法.pdf"
+    },
+    {
+      "from": "01 外设控制基础.pdf",
+      "to": "reference\\01 外设控制基础.pdf"
+    },
+    {
+      "from": "01 外部主控二次开发.pdf",
+      "to": "reference\\01 外部主控二次开发.pdf"
+    },
+    {
+      "from": "1. 快速入门.pdf",
+      "to": "reference\\1. 快速入门.pdf"
+    },
+    {
+      "from": "3. 运动控制教程.pdf",
+      "to": "reference\\3. 运动控制教程.pdf"
+    },
+    {
+      "from": "KEY1无响应排查_20261004.md",
+      "to": "docs\\notes\\KEY1无响应排查_20261004.md"
+    },
+    {
+      "from": "KEY2极性修正_20261004.md",
+      "to": "docs\\notes\\KEY2极性修正_20261004.md"
+    },
+    {
+      "from": "_r7_check.txt",
+      "to": "artifacts\\checks\\_r7_check.txt"
+    },
+    {
+      "from": "_r7_check2.txt",
+      "to": "artifacts\\checks\\_r7_check2.txt"
+    },
+    {
+      "from": "build_at32_force_reflash_r1.log",
+      "to": "logs\\build\\build_at32_force_reflash_r1.log"
+    },
+    {
+      "from": "build_at32_force_reflash_r2.log",
+      "to": "logs\\build\\build_at32_force_reflash_r2.log"
+    },
+    {
+      "from": "build_at32_force_reflash_r3.log",
+      "to": "logs\\build\\build_at32_force_reflash_r3.log"
+    },
+    {
+      "from": "build_execution_preflight_r1.log",
+      "to": "logs\\build\\build_execution_preflight_r1.log"
+    },
+    {
+      "from": "build_execution_preflight_r1.ps1",
+      "to": "scripts\\build\\build_execution_preflight_r1.ps1"
+    },
+    {
+      "from": "build_id6_torque_probe_r3.log",
+      "to": "logs\\build\\build_id6_torque_probe_r3.log"
+    },
+    {
+      "from": "build_id6_torque_probe_r3.ps1",
+      "to": "scripts\\build\\build_id6_torque_probe_r3.ps1"
+    },
+    {
+      "from": "build_k230_link_probe_r1.log",
+      "to": "logs\\build\\build_k230_link_probe_r1.log"
+    },
+    {
+      "from": "build_k230_link_probe_r2.log",
+      "to": "logs\\build\\build_k230_link_probe_r2.log"
+    },
+    {
+      "from": "build_k230_link_probe_r3.log",
+      "to": "logs\\build\\build_k230_link_probe_r3.log"
+    },
+    {
+      "from": "build_k230_link_probe_r4.log",
+      "to": "logs\\build\\build_k230_link_probe_r4.log"
+    },
+    {
+      "from": "build_k230_link_probe_r5.log",
+      "to": "logs\\build\\build_k230_link_probe_r5.log"
+    },
+    {
+      "from": "build_match_handle_r4.log",
+      "to": "logs\\build\\build_match_handle_r4.log"
+    },
+    {
+      "from": "build_match_handle_r4.ps1",
+      "to": "scripts\\build\\build_match_handle_r4.ps1"
+    },
+    {
+      "from": "build_match_handle_r5.log",
+      "to": "logs\\build\\build_match_handle_r5.log"
+    },
+    {
+      "from": "build_match_handle_r5.ps1",
+      "to": "scripts\\build\\build_match_handle_r5.ps1"
+    },
+    {
+      "from": "build_match_readonly_goal_r2.log",
+      "to": "logs\\build\\build_match_readonly_goal_r2.log"
+    },
+    {
+      "from": "build_match_readonly_goal_r2.ps1",
+      "to": "scripts\\build\\build_match_readonly_goal_r2.ps1"
+    },
+    {
+      "from": "build_match_readonly_oled_r3.log",
+      "to": "logs\\build\\build_match_readonly_oled_r3.log"
+    },
+    {
+      "from": "build_match_readonly_oled_r3.ps1",
+      "to": "scripts\\build\\build_match_readonly_oled_r3.ps1"
+    },
+    {
+      "from": "build_match_readonly_r1.log",
+      "to": "logs\\build\\build_match_readonly_r1.log"
+    },
+    {
+      "from": "build_match_readonly_r1.ps1",
+      "to": "scripts\\build\\build_match_readonly_r1.ps1"
+    },
+    {
+      "from": "build_match_safe_r2.log",
+      "to": "logs\\build\\build_match_safe_r2.log"
+    },
+    {
+      "from": "build_match_safe_r2.ps1",
+      "to": "scripts\\build\\build_match_safe_r2.ps1"
+    },
+    {
+      "from": "build_match_safe_r2_verified.log",
+      "to": "logs\\build\\build_match_safe_r2_verified.log"
+    },
+    {
+      "from": "build_match_safe_r3.log",
+      "to": "logs\\build\\build_match_safe_r3.log"
+    },
+    {
+      "from": "build_match_safe_r3.ps1",
+      "to": "scripts\\build\\build_match_safe_r3.ps1"
+    },
+    {
+      "from": "build_match_teach_record_r6.log",
+      "to": "logs\\build\\build_match_teach_record_r6.log"
+    },
+    {
+      "from": "build_match_teach_record_r6.ps1",
+      "to": "scripts\\build\\build_match_teach_record_r6.ps1"
+    },
+    {
+      "from": "build_match_teach_record_r6k1.log",
+      "to": "logs\\build\\build_match_teach_record_r6k1.log"
+    },
+    {
+      "from": "build_match_teach_record_r6k1.ps1",
+      "to": "scripts\\build\\build_match_teach_record_r6k1.ps1"
+    },
+    {
+      "from": "build_match_teach_record_r7.log",
+      "to": "logs\\build\\build_match_teach_record_r7.log"
+    },
+    {
+      "from": "build_match_teach_record_r7.ps1",
+      "to": "scripts\\build\\build_match_teach_record_r7.ps1"
+    },
+    {
+      "from": "build_match_teach_record_r7k2.log",
+      "to": "logs\\build\\build_match_teach_record_r7k2.log"
+    },
+    {
+      "from": "build_match_teach_record_r7k2.ps1",
+      "to": "scripts\\build\\build_match_teach_record_r7k2.ps1"
+    },
+    {
+      "from": "build_match_teach_record_r7k2_attempt1.log",
+      "to": "logs\\build\\build_match_teach_record_r7k2_attempt1.log"
+    },
+    {
+      "from": "build_match_teach_record_r7k2_attempt2.log",
+      "to": "logs\\build\\build_match_teach_record_r7k2_attempt2.log"
+    },
+    {
+      "from": "build_match_teach_record_r7k2_link_failure.log",
+      "to": "logs\\build\\build_match_teach_record_r7k2_link_failure.log"
+    },
+    {
+      "from": "build_read_diagnostic_r2.log",
+      "to": "logs\\build\\build_read_diagnostic_r2.log"
+    },
+    {
+      "from": "build_read_diagnostic_r2.ps1",
+      "to": "scripts\\build\\build_read_diagnostic_r2.ps1"
+    },
+    {
+      "from": "build_read_diagnostic_r2_first_failed.log",
+      "to": "logs\\build\\build_read_diagnostic_r2_first_failed.log"
+    },
+    {
+      "from": "build_single_joint_probe_r1.log",
+      "to": "logs\\build\\build_single_joint_probe_r1.log"
+    },
+    {
+      "from": "build_single_joint_probe_r1.ps1",
+      "to": "scripts\\build\\build_single_joint_probe_r1.ps1"
+    },
+    {
+      "from": "build_single_joint_probe_r1b.log",
+      "to": "logs\\build\\build_single_joint_probe_r1b.log"
+    },
+    {
+      "from": "build_single_joint_probe_r1b.ps1",
+      "to": "scripts\\build\\build_single_joint_probe_r1b.ps1"
+    },
+    {
+      "from": "build_vision_color_sorting.log",
+      "to": "logs\\build\\build_vision_color_sorting.log"
+    },
+    {
+      "from": "build_wrapped_move_probe_r4.log",
+      "to": "logs\\build\\build_wrapped_move_probe_r4.log"
+    },
+    {
+      "from": "build_wrapped_move_probe_r4.ps1",
+      "to": "scripts\\build\\build_wrapped_move_probe_r4.ps1"
+    },
+    {
+      "from": "build_wrapped_move_probe_r4_bash.log",
+      "to": "logs\\build\\build_wrapped_move_probe_r4_bash.log"
+    },
+    {
+      "from": "capture_execution_preflight.py",
+      "to": "scripts\\capture\\capture_execution_preflight.py"
+    },
+    {
+      "from": "capture_factory_boot.ps1",
+      "to": "scripts\\tools\\capture_factory_boot.ps1"
+    },
+    {
+      "from": "capture_factory_dual_baud.ps1",
+      "to": "scripts\\tools\\capture_factory_dual_baud.ps1"
+    },
+    {
+      "from": "capture_id6_torque_probe.py",
+      "to": "scripts\\capture\\capture_id6_torque_probe.py"
+    },
+    {
+      "from": "capture_joint_diagnostics.py",
+      "to": "scripts\\capture\\capture_joint_diagnostics.py"
+    },
+    {
+      "from": "capture_match_boot.py",
+      "to": "scripts\\capture\\capture_match_boot.py"
+    },
+    {
+      "from": "capture_read_diagnostic.py",
+      "to": "scripts\\capture\\capture_read_diagnostic.py"
+    },
+    {
+      "from": "capture_readonly_boot.py",
+      "to": "scripts\\capture\\capture_readonly_boot.py"
+    },
+    {
+      "from": "capture_readonly_goal_boot.py",
+      "to": "scripts\\capture\\capture_readonly_goal_boot.py"
+    },
+    {
+      "from": "capture_readonly_oled_boot.py",
+      "to": "scripts\\capture\\capture_readonly_oled_boot.py"
+    },
+    {
+      "from": "capture_readonly_snapshot.py",
+      "to": "scripts\\capture\\capture_readonly_snapshot.py"
+    },
+    {
+      "from": "capture_single_joint_boot.py",
+      "to": "scripts\\capture\\capture_single_joint_boot.py"
+    },
+    {
+      "from": "capture_single_joint_trial.py",
+      "to": "scripts\\capture\\capture_single_joint_trial.py"
+    },
+    {
+      "from": "capture_teach_record_r6_boot.py",
+      "to": "scripts\\capture\\capture_teach_record_r6_boot.py"
+    },
+    {
+      "from": "capture_wrapped_move_probe.py",
+      "to": "scripts\\capture\\capture_wrapped_move_probe.py"
+    },
+    {
+      "from": "execution_preflight_backup_path.txt",
+      "to": "artifacts\\checks\\execution_preflight_backup_path.txt"
+    },
+    {
+      "from": "execution_preflight_boot_20261005_183000.bin",
+      "to": "runs\\execution_preflight\\execution_preflight_boot_20261005_183000.bin"
+    },
+    {
+      "from": "execution_preflight_boot_20261005_183000.json",
+      "to": "runs\\execution_preflight\\execution_preflight_boot_20261005_183000.json"
+    },
+    {
+      "from": "execution_preflight_boot_20261005_183000.log",
+      "to": "runs\\execution_preflight\\execution_preflight_boot_20261005_183000.log"
+    },
+    {
+      "from": "execution_preflight_boot_20261005_183300.bin",
+      "to": "runs\\execution_preflight\\execution_preflight_boot_20261005_183300.bin"
+    },
+    {
+      "from": "execution_preflight_boot_20261005_183300.json",
+      "to": "runs\\execution_preflight\\execution_preflight_boot_20261005_183300.json"
+    },
+    {
+      "from": "execution_preflight_boot_20261005_183300.log",
+      "to": "runs\\execution_preflight\\execution_preflight_boot_20261005_183300.log"
+    },
+    {
+      "from": "execution_preflight_r1_flash.log",
+      "to": "logs\\flash\\execution_preflight_r1_flash.log"
+    },
+    {
+      "from": "execution_preflight_r1_hashes.json",
+      "to": "logs\\manifest\\execution_preflight_r1_hashes.json"
+    },
+    {
+      "from": "execution_preflight_r1b_flash.log",
+      "to": "logs\\flash\\execution_preflight_r1b_flash.log"
+    },
+    {
+      "from": "execution_preflight_r1b_hashes.json",
+      "to": "logs\\manifest\\execution_preflight_r1b_hashes.json"
+    },
+    {
+      "from": "factory_app_recovered.bin",
+      "to": "artifacts\\firmware\\factory_app_recovered.bin"
+    },
+    {
+      "from": "factory_boot_capture.bin",
+      "to": "artifacts\\firmware\\factory_boot_capture.bin"
+    },
+    {
+      "from": "factory_boot_capture_115200.bin",
+      "to": "artifacts\\firmware\\factory_boot_capture_115200.bin"
+    },
+    {
+      "from": "factory_huge_app.bin",
+      "to": "artifacts\\firmware\\factory_huge_app.bin"
+    },
+    {
+      "from": "factory_huge_app.csv",
+      "to": "artifacts\\firmware\\factory_huge_app.csv"
+    },
+    {
+      "from": "find-locking-process.ps1",
+      "to": "scripts\\tools\\find-locking-process.ps1"
+    },
+    {
+      "from": "find_file_lock.ps1",
+      "to": "scripts\\tools\\find_file_lock.ps1"
+    },
+    {
+      "from": "find_file_locker.ps1",
+      "to": "scripts\\tools\\find_file_locker.ps1"
+    },
+    {
+      "from": "gcc_probe.o",
+      "to": "artifacts\\misc\\gcc_probe.o"
+    },
+    {
+      "from": "handle_teach_r4_boot.bin",
+      "to": "runs\\handle_teach_r4\\handle_teach_r4_boot.bin"
+    },
+    {
+      "from": "handle_teach_r4_boot.log",
+      "to": "runs\\handle_teach_r4\\handle_teach_r4_boot.log"
+    },
+    {
+      "from": "handle_teach_r4_flash.log",
+      "to": "logs\\flash\\handle_teach_r4_flash.log"
+    },
+    {
+      "from": "handle_teach_r4_hashes.json",
+      "to": "logs\\manifest\\handle_teach_r4_hashes.json"
+    },
+    {
+      "from": "handle_teach_r4_initial_record.bin",
+      "to": "runs\\handle_teach_r4\\handle_teach_r4_initial_record.bin"
+    },
+    {
+      "from": "handle_teach_r4_initial_record.json",
+      "to": "runs\\handle_teach_r4\\handle_teach_r4_initial_record.json"
+    },
+    {
+      "from": "id6_torque_boot_20261006_180042.bin",
+      "to": "runs\\id6_torque\\id6_torque_boot_20261006_180042.bin"
+    },
+    {
+      "from": "id6_torque_boot_20261006_180042.json",
+      "to": "runs\\id6_torque\\id6_torque_boot_20261006_180042.json"
+    },
+    {
+      "from": "id6_torque_boot_20261006_180042.log",
+      "to": "runs\\id6_torque\\id6_torque_boot_20261006_180042.log"
+    },
+    {
+      "from": "id6_torque_boot_20261006_182334.bin",
+      "to": "runs\\id6_torque\\id6_torque_boot_20261006_182334.bin"
+    },
+    {
+      "from": "id6_torque_boot_20261006_182334.json",
+      "to": "runs\\id6_torque\\id6_torque_boot_20261006_182334.json"
+    },
+    {
+      "from": "id6_torque_boot_20261006_182334.log",
+      "to": "runs\\id6_torque\\id6_torque_boot_20261006_182334.log"
+    },
+    {
+      "from": "id6_torque_probe_r3_flash.log",
+      "to": "logs\\flash\\id6_torque_probe_r3_flash.log"
+    },
+    {
+      "from": "id6_torque_probe_r3_hashes.json",
+      "to": "logs\\manifest\\id6_torque_probe_r3_hashes.json"
+    },
+    {
+      "from": "id6_torque_run_20261006_180146.bin",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_180146.bin"
+    },
+    {
+      "from": "id6_torque_run_20261006_180146.json",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_180146.json"
+    },
+    {
+      "from": "id6_torque_run_20261006_180146.log",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_180146.log"
+    },
+    {
+      "from": "id6_torque_run_20261006_182420.bin",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_182420.bin"
+    },
+    {
+      "from": "id6_torque_run_20261006_182420.json",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_182420.json"
+    },
+    {
+      "from": "id6_torque_run_20261006_182420.log",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_182420.log"
+    },
+    {
+      "from": "id6_torque_run_20261006_182420_analysis.json",
+      "to": "runs\\id6_torque\\id6_torque_run_20261006_182420_analysis.json"
+    },
+    {
+      "from": "match_safe_r2_boot.bin",
+      "to": "runs\\match_safe\\match_safe_r2_boot.bin"
+    },
+    {
+      "from": "match_safe_r2_boot.log",
+      "to": "runs\\match_safe\\match_safe_r2_boot.log"
+    },
+    {
+      "from": "match_safe_r2_flash.log",
+      "to": "logs\\flash\\match_safe_r2_flash.log"
+    },
+    {
+      "from": "match_safe_r2_hashes.json",
+      "to": "logs\\manifest\\match_safe_r2_hashes.json"
+    },
+    {
+      "from": "match_safe_r2_verified.bin",
+      "to": "runs\\match_safe\\match_safe_r2_verified.bin"
+    },
+    {
+      "from": "match_safe_r3_boot.bin",
+      "to": "runs\\match_safe\\match_safe_r3_boot.bin"
+    },
+    {
+      "from": "match_safe_r3_boot.log",
+      "to": "runs\\match_safe\\match_safe_r3_boot.log"
+    },
+    {
+      "from": "match_safe_r3_flash.log",
+      "to": "logs\\flash\\match_safe_r3_flash.log"
+    },
+    {
+      "from": "match_safe_r3_hashes.json",
+      "to": "logs\\manifest\\match_safe_r3_hashes.json"
+    },
+    {
+      "from": "r3_1824结果与r4独立审查_20261006.md",
+      "to": "docs\\reviews\\r3_1824结果与r4独立审查_20261006.md"
+    },
+    {
+      "from": "r4_independent_review_20261006.json",
+      "to": "docs\\reviews\\r4_independent_review_20261006.json"
+    },
+    {
+      "from": "r4代码审查_20261006.md",
+      "to": "docs\\reviews\\r4代码审查_20261006.md"
+    },
+    {
+      "from": "r7优化与验证_20261004.md",
+      "to": "docs\\reviews\\r7优化与验证_20261004.md"
+    },
+    {
+      "from": "read_diagnostic_20261006_131902.bin",
+      "to": "runs\\read_diagnostic\\read_diagnostic_20261006_131902.bin"
+    },
+    {
+      "from": "read_diagnostic_20261006_131902.csv",
+      "to": "runs\\read_diagnostic\\read_diagnostic_20261006_131902.csv"
+    },
+    {
+      "from": "read_diagnostic_20261006_131902.first_report.json",
+      "to": "runs\\read_diagnostic\\read_diagnostic_20261006_131902.first_report.json"
+    },
+    {
+      "from": "read_diagnostic_20261006_131902.json",
+      "to": "runs\\read_diagnostic\\read_diagnostic_20261006_131902.json"
+    },
+    {
+      "from": "read_diagnostic_20261006_131902.log",
+      "to": "runs\\read_diagnostic\\read_diagnostic_20261006_131902.log"
+    },
+    {
+      "from": "read_diagnostic_20261006_131902_findings.json",
+      "to": "runs\\read_diagnostic\\read_diagnostic_20261006_131902_findings.json"
+    },
+    {
+      "from": "read_diagnostic_r2_flash.log",
+      "to": "logs\\flash\\read_diagnostic_r2_flash.log"
+    },
+    {
+      "from": "read_diagnostic_r2_hashes.json",
+      "to": "logs\\manifest\\read_diagnostic_r2_hashes.json"
+    },
+    {
+      "from": "read_handle_teach.py",
+      "to": "scripts\\tools\\read_handle_teach.py"
+    },
+    {
+      "from": "read_teach_record_r6.py",
+      "to": "scripts\\tools\\read_teach_record_r6.py"
+    },
+    {
+      "from": "readonly_after_20260922_130459.bin",
+      "to": "runs\\readonly\\readonly_after_20260922_130459.bin"
+    },
+    {
+      "from": "readonly_after_20260922_130459.json",
+      "to": "runs\\readonly\\readonly_after_20260922_130459.json"
+    },
+    {
+      "from": "readonly_after_20260922_130459.log",
+      "to": "runs\\readonly\\readonly_after_20260922_130459.log"
+    },
+    {
+      "from": "readonly_after_20260923_154855.bin",
+      "to": "runs\\readonly\\readonly_after_20260923_154855.bin"
+    },
+    {
+      "from": "readonly_after_20260923_154855.json",
+      "to": "runs\\readonly\\readonly_after_20260923_154855.json"
+    },
+    {
+      "from": "readonly_after_20260923_154855.log",
+      "to": "runs\\readonly\\readonly_after_20260923_154855.log"
+    },
+    {
+      "from": "readonly_after_20260923_160820.bin",
+      "to": "runs\\readonly\\readonly_after_20260923_160820.bin"
+    },
+    {
+      "from": "readonly_after_20260923_160820.json",
+      "to": "runs\\readonly\\readonly_after_20260923_160820.json"
+    },
+    {
+      "from": "readonly_after_20260923_160820.log",
+      "to": "runs\\readonly\\readonly_after_20260923_160820.log"
+    },
+    {
+      "from": "readonly_after_20261004_141208.bin",
+      "to": "runs\\readonly\\readonly_after_20261004_141208.bin"
+    },
+    {
+      "from": "readonly_after_20261004_141208.json",
+      "to": "runs\\readonly\\readonly_after_20261004_141208.json"
+    },
+    {
+      "from": "readonly_after_20261004_141208.log",
+      "to": "runs\\readonly\\readonly_after_20261004_141208.log"
+    },
+    {
+      "from": "readonly_after_20261004_195403.bin",
+      "to": "runs\\readonly\\readonly_after_20261004_195403.bin"
+    },
+    {
+      "from": "readonly_after_20261004_195403.json",
+      "to": "runs\\readonly\\readonly_after_20261004_195403.json"
+    },
+    {
+      "from": "readonly_after_20261004_195403.log",
+      "to": "runs\\readonly\\readonly_after_20261004_195403.log"
+    },
+    {
+      "from": "readonly_after_20261006_000010.bin",
+      "to": "runs\\readonly\\readonly_after_20261006_000010.bin"
+    },
+    {
+      "from": "readonly_after_20261006_000010.json",
+      "to": "runs\\readonly\\readonly_after_20261006_000010.json"
+    },
+    {
+      "from": "readonly_after_20261006_000010.log",
+      "to": "runs\\readonly\\readonly_after_20261006_000010.log"
+    },
+    {
+      "from": "readonly_after_20261006_001522.bin",
+      "to": "runs\\readonly\\readonly_after_20261006_001522.bin"
+    },
+    {
+      "from": "readonly_after_20261006_001522.json",
+      "to": "runs\\readonly\\readonly_after_20261006_001522.json"
+    },
+    {
+      "from": "readonly_after_20261006_001522.log",
+      "to": "runs\\readonly\\readonly_after_20261006_001522.log"
+    },
+    {
+      "from": "readonly_before_20260922_130251.bin",
+      "to": "runs\\readonly\\readonly_before_20260922_130251.bin"
+    },
+    {
+      "from": "readonly_before_20260922_130251.json",
+      "to": "runs\\readonly\\readonly_before_20260922_130251.json"
+    },
+    {
+      "from": "readonly_before_20260922_130251.log",
+      "to": "runs\\readonly\\readonly_before_20260922_130251.log"
+    },
+    {
+      "from": "readonly_before_20260923_154433.bin",
+      "to": "runs\\readonly\\readonly_before_20260923_154433.bin"
+    },
+    {
+      "from": "readonly_before_20260923_154433.json",
+      "to": "runs\\readonly\\readonly_before_20260923_154433.json"
+    },
+    {
+      "from": "readonly_before_20260923_154433.log",
+      "to": "runs\\readonly\\readonly_before_20260923_154433.log"
+    },
+    {
+      "from": "readonly_before_20261004_141017.bin",
+      "to": "runs\\readonly\\readonly_before_20261004_141017.bin"
+    },
+    {
+      "from": "readonly_before_20261004_141017.json",
+      "to": "runs\\readonly\\readonly_before_20261004_141017.json"
+    },
+    {
+      "from": "readonly_before_20261004_141017.log",
+      "to": "runs\\readonly\\readonly_before_20261004_141017.log"
+    },
+    {
+      "from": "readonly_before_20261004_195238.bin",
+      "to": "runs\\readonly\\readonly_before_20261004_195238.bin"
+    },
+    {
+      "from": "readonly_before_20261004_195238.json",
+      "to": "runs\\readonly\\readonly_before_20261004_195238.json"
+    },
+    {
+      "from": "readonly_before_20261004_195238.log",
+      "to": "runs\\readonly\\readonly_before_20261004_195238.log"
+    },
+    {
+      "from": "readonly_goal_r2_boot.bin",
+      "to": "runs\\readonly_goal\\readonly_goal_r2_boot.bin"
+    },
+    {
+      "from": "readonly_goal_r2_boot.json",
+      "to": "runs\\readonly_goal\\readonly_goal_r2_boot.json"
+    },
+    {
+      "from": "readonly_goal_r2_boot.log",
+      "to": "runs\\readonly_goal\\readonly_goal_r2_boot.log"
+    },
+    {
+      "from": "readonly_goal_r2_flash.log",
+      "to": "logs\\flash\\readonly_goal_r2_flash.log"
+    },
+    {
+      "from": "readonly_oled_r3_boot.bin",
+      "to": "runs\\readonly_oled\\readonly_oled_r3_boot.bin"
+    },
+    {
+      "from": "readonly_oled_r3_boot.json",
+      "to": "runs\\readonly_oled\\readonly_oled_r3_boot.json"
+    },
+    {
+      "from": "readonly_oled_r3_boot.log",
+      "to": "runs\\readonly_oled\\readonly_oled_r3_boot.log"
+    },
+    {
+      "from": "readonly_oled_r3_flash.log",
+      "to": "logs\\flash\\readonly_oled_r3_flash.log"
+    },
+    {
+      "from": "readonly_r1_boot.bin",
+      "to": "runs\\readonly_r1\\readonly_r1_boot.bin"
+    },
+    {
+      "from": "readonly_r1_boot.json",
+      "to": "runs\\readonly_r1\\readonly_r1_boot.json"
+    },
+    {
+      "from": "readonly_r1_boot.log",
+      "to": "runs\\readonly_r1\\readonly_r1_boot.log"
+    },
+    {
+      "from": "readonly_r1_flash.log",
+      "to": "logs\\flash\\readonly_r1_flash.log"
+    },
+    {
+      "from": "readonly_r1_hashes.json",
+      "to": "logs\\manifest\\readonly_r1_hashes.json"
+    },
+    {
+      "from": "reorg_claude.py",
+      "to": "scripts\\tools\\reorg_claude.py"
+    },
+    {
+      "from": "single_joint_boot_20261005_235102.bin",
+      "to": "runs\\single_joint\\single_joint_boot_20261005_235102.bin"
+    },
+    {
+      "from": "single_joint_boot_20261005_235102.json",
+      "to": "runs\\single_joint\\single_joint_boot_20261005_235102.json"
+    },
+    {
+      "from": "single_joint_boot_20261005_235102.log",
+      "to": "runs\\single_joint\\single_joint_boot_20261005_235102.log"
+    },
+    {
+      "from": "single_joint_boot_20261006_001224.bin",
+      "to": "runs\\single_joint\\single_joint_boot_20261006_001224.bin"
+    },
+    {
+      "from": "single_joint_boot_20261006_001224.json",
+      "to": "runs\\single_joint\\single_joint_boot_20261006_001224.json"
+    },
+    {
+      "from": "single_joint_boot_20261006_001224.log",
+      "to": "runs\\single_joint\\single_joint_boot_20261006_001224.log"
+    },
+    {
+      "from": "single_joint_probe_r1_flash.log",
+      "to": "logs\\flash\\single_joint_probe_r1_flash.log"
+    },
+    {
+      "from": "single_joint_probe_r1_hashes.json",
+      "to": "logs\\manifest\\single_joint_probe_r1_hashes.json"
+    },
+    {
+      "from": "single_joint_probe_r1b_flash.log",
+      "to": "logs\\flash\\single_joint_probe_r1b_flash.log"
+    },
+    {
+      "from": "single_joint_probe_r1b_hashes.json",
+      "to": "logs\\manifest\\single_joint_probe_r1b_hashes.json"
+    },
+    {
+      "from": "single_joint_trial_20261005_235142.bin",
+      "to": "runs\\single_joint\\single_joint_trial_20261005_235142.bin"
+    },
+    {
+      "from": "single_joint_trial_20261005_235142.json",
+      "to": "runs\\single_joint\\single_joint_trial_20261005_235142.json"
+    },
+    {
+      "from": "single_joint_trial_20261005_235142.log",
+      "to": "runs\\single_joint\\single_joint_trial_20261005_235142.log"
+    },
+    {
+      "from": "single_joint_trial_20261006_001256.bin",
+      "to": "runs\\single_joint\\single_joint_trial_20261006_001256.bin"
+    },
+    {
+      "from": "single_joint_trial_20261006_001256.json",
+      "to": "runs\\single_joint\\single_joint_trial_20261006_001256.json"
+    },
+    {
+      "from": "single_joint_trial_20261006_001256.log",
+      "to": "runs\\single_joint\\single_joint_trial_20261006_001256.log"
+    },
+    {
+      "from": "single_joint_trial_20261006_001256_analysis.json",
+      "to": "runs\\single_joint\\single_joint_trial_20261006_001256_analysis.json"
+    },
+    {
+      "from": "system_match_to_calibration.diff",
+      "to": "artifacts\\diff\\system_match_to_calibration.diff"
+    },
+    {
+      "from": "teach_record_r6_boot.bin",
+      "to": "runs\\teach_record_r6\\teach_record_r6_boot.bin"
+    },
+    {
+      "from": "teach_record_r6_boot.json",
+      "to": "runs\\teach_record_r6\\teach_record_r6_boot.json"
+    },
+    {
+      "from": "teach_record_r6_boot.log",
+      "to": "runs\\teach_record_r6\\teach_record_r6_boot.log"
+    },
+    {
+      "from": "teach_record_r6_flash.log",
+      "to": "logs\\flash\\teach_record_r6_flash.log"
+    },
+    {
+      "from": "teach_record_r6_hashes.json",
+      "to": "logs\\manifest\\teach_record_r6_hashes.json"
+    },
+    {
+      "from": "teach_record_r6_initial_record.bin",
+      "to": "runs\\teach_record_r6\\teach_record_r6_initial_record.bin"
+    },
+    {
+      "from": "teach_record_r6_initial_record.json",
+      "to": "runs\\teach_record_r6\\teach_record_r6_initial_record.json"
+    },
+    {
+      "from": "teach_record_r6_initial_record.log",
+      "to": "runs\\teach_record_r6\\teach_record_r6_initial_record.log"
+    },
+    {
+      "from": "teach_record_r6_status_20261004.bin",
+      "to": "runs\\teach_record_r6\\teach_record_r6_status_20261004.bin"
+    },
+    {
+      "from": "teach_record_r6_status_20261004.json",
+      "to": "runs\\teach_record_r6\\teach_record_r6_status_20261004.json"
+    },
+    {
+      "from": "teach_record_r6_status_20261004.log",
+      "to": "runs\\teach_record_r6\\teach_record_r6_status_20261004.log"
+    },
+    {
+      "from": "teach_record_r6k1_hashes.json",
+      "to": "logs\\manifest\\teach_record_r6k1_hashes.json"
+    },
+    {
+      "from": "teach_record_r7_boot.bin",
+      "to": "runs\\teach_record_r7\\teach_record_r7_boot.bin"
+    },
+    {
+      "from": "teach_record_r7_boot.json",
+      "to": "runs\\teach_record_r7\\teach_record_r7_boot.json"
+    },
+    {
+      "from": "teach_record_r7_boot.log",
+      "to": "runs\\teach_record_r7\\teach_record_r7_boot.log"
+    },
+    {
+      "from": "teach_record_r7_flash.log",
+      "to": "logs\\flash\\teach_record_r7_flash.log"
+    },
+    {
+      "from": "teach_record_r7_hashes.json",
+      "to": "logs\\manifest\\teach_record_r7_hashes.json"
+    },
+    {
+      "from": "teach_record_r7k2_boot.bin",
+      "to": "runs\\teach_record_r7k2\\teach_record_r7k2_boot.bin"
+    },
+    {
+      "from": "teach_record_r7k2_boot.json",
+      "to": "runs\\teach_record_r7k2\\teach_record_r7k2_boot.json"
+    },
+    {
+      "from": "teach_record_r7k2_boot.log",
+      "to": "runs\\teach_record_r7k2\\teach_record_r7k2_boot.log"
+    },
+    {
+      "from": "teach_record_r7k2_flash.log",
+      "to": "logs\\flash\\teach_record_r7k2_flash.log"
+    },
+    {
+      "from": "teach_record_r7k2_hashes.json",
+      "to": "logs\\manifest\\teach_record_r7k2_hashes.json"
+    },
+    {
+      "from": "teach_validation_r7.py",
+      "to": "scripts\\tools\\teach_validation_r7.py"
+    },
+    {
+      "from": "test_execution_preflight.py",
+      "to": "scripts\\test\\test_execution_preflight.py"
+    },
+    {
+      "from": "test_handle_teach_reader.py",
+      "to": "scripts\\test\\test_handle_teach_reader.py"
+    },
+    {
+      "from": "test_joint_diagnostics.py",
+      "to": "scripts\\test\\test_joint_diagnostics.py"
+    },
+    {
+      "from": "test_single_joint_probe.py",
+      "to": "scripts\\test\\test_single_joint_probe.py"
+    },
+    {
+      "from": "test_teach_record_r6.py",
+      "to": "scripts\\test\\test_teach_record_r6.py"
+    },
+    {
+      "from": "test_teach_validation_r7.py",
+      "to": "scripts\\test\\test_teach_validation_r7.py"
+    },
+    {
+      "from": "test_wrapped_move_probe.py",
+      "to": "scripts\\test\\test_wrapped_move_probe.py"
+    },
+    {
+      "from": "vision_color_sorting_flash_20261007.log",
+      "to": "runs\\misc\\vision_color_sorting_flash_20261007.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_200729.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_200729.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_200729.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_200729.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_200729.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_200729.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_201537.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_201537.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_201537.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_201537.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_201537.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_201537.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202122.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202122.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202122.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202122.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202122.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202122.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202216.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202216.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202216.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202216.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202216.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202216.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202801.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202801.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202801.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202801.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_202801.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_202801.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_205113.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_205113.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_205113.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_205113.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_205113.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_205113.log"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_205654.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_205654.bin"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_205654.json",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_205654.json"
+    },
+    {
+      "from": "wrapped_move_boot_20261006_205654.log",
+      "to": "runs\\wrapped_move\\wrapped_move_boot_20261006_205654.log"
+    },
+    {
+      "from": "wrapped_move_probe_r4_flash.log",
+      "to": "logs\\flash\\wrapped_move_probe_r4_flash.log"
+    },
+    {
+      "from": "wrapped_move_run_20261006_200815.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_200815.bin"
+    },
+    {
+      "from": "wrapped_move_run_20261006_200815.json",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_200815.json"
+    },
+    {
+      "from": "wrapped_move_run_20261006_200815.log",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_200815.log"
+    },
+    {
+      "from": "wrapped_move_run_20261006_201623.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_201623.bin"
+    },
+    {
+      "from": "wrapped_move_run_20261006_201623.json",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_201623.json"
+    },
+    {
+      "from": "wrapped_move_run_20261006_201623.log",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_201623.log"
+    },
+    {
+      "from": "wrapped_move_run_20261006_204739.bin",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_204739.bin"
+    },
+    {
+      "from": "wrapped_move_run_20261006_204739.json",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_204739.json"
+    },
+    {
+      "from": "wrapped_move_run_20261006_204739.log",
+      "to": "runs\\wrapped_move\\wrapped_move_run_20261006_204739.log"
+    },
+    {
+      "from": "八点记录读取验收_20261005.md",
+      "to": "docs\\notes\\八点记录读取验收_20261005.md"
+    },
+    {
+      "from": "出厂恢复与抓取实现方案_20260919.md",
+      "to": "docs\\notes\\出厂恢复与抓取实现方案_20260919.md"
+    },
+    {
+      "from": "单关节执行验证_20261005.md",
+      "to": "docs\\notes\\单关节执行验证_20261005.md"
+    },
+    {
+      "from": "四号舵机锁定偏移排查_20260921.md",
+      "to": "docs\\notes\\四号舵机锁定偏移排查_20260921.md"
+    },
+    {
+      "from": "提手物块手动示教_20260920.md",
+      "to": "docs\\notes\\提手物块手动示教_20260920.md"
+    },
+    {
+      "from": "故障排查运行记录_20261006.md",
+      "to": "docs\\notes\\故障排查运行记录_20261006.md"
+    },
+    {
+      "from": "机械臂视觉抓取项目_对话总结与规划.md",
+      "to": "docs\\notes\\机械臂视觉抓取项目_对话总结与规划.md"
+    },
+    {
+      "from": "机械臂项目_固件改造说明与标定手册.md",
+      "to": "docs\\notes\\机械臂项目_固件改造说明与标定手册.md"
+    },
+    {
+      "from": "烧录排查进度_20260920.md",
+      "to": "docs\\notes\\烧录排查进度_20260920.md"
+    },
+    {
+      "from": "示教只记录修改验证_20260923.md",
+      "to": "docs\\notes\\示教只记录修改验证_20260923.md"
+    }
+  ],
+  "kept": [
+    {
+      "name": ".gitignore",
+      "reason": "根目录入口文件，保留"
+    },
+    {
+      "name": "PROJECT_STATE.md",
+      "reason": "根目录入口文件，保留"
+    },
+    {
+      "name": "README.md",
+      "reason": "根目录入口文件，保留"
+    }
+  ],
+  "errors": []
+}
