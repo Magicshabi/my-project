@@ -8,20 +8,21 @@
 分类依据与逐项归属见根目录 `INDEX.md`；全量 old→new 映射见 `_reorg/reorg_plan.txt`。
 
 **⚠️ 绝对路径强耦合——以下路径禁止移动或改名**：
-- `scripts/build/*.ps1`（**17 个全部**）内部把这三处写成**绝对路径**
-  （`A:\NEXarm\Claude\.gcc-temp-*`、`.arduino-build-*`、`.toolchains\...`），
-  移动即导致所有构建脚本断链。arduino-cli 的 `--build-path` / `--libraries` 参数同理。
-- 各实验目录（`handle_teach_*`、`k230_link_probe_*`、`vision_route_*` 等）同样被构建脚本以绝对路径引用。
+- `scripts/build/*.ps1`（**17 个全部**）内部把路径写成**绝对路径**（`A:\NEXarm\Claude\...`），
+  arduino-cli 的 `--build-path` / `--libraries` 参数同理。移动任何被引用的目录，
+  **必须同步改写这 17 个脚本**，否则构建断链（已用 `migrate_build_cache.py` 做过一次，流程可复用）。
+- 各实验目录（`handle_teach_*`、`k230_link_probe_*`、`vision_route_*` 等）被构建脚本以绝对路径引用 → **勿移动**。
 - `.workbuddy/`（记忆与工具数据）不可迁移。
 
-**缓存目录现状**（可重建，被 `.gitignore` 排除，勿在整理中"顺手清理"）：
-| 前缀 | 个数 | 大小 | 备注 |
+**缓存目录现状**（2026-10-07 B 方案迁移后）：
+| 路径 | 个数 | 大小 | 备注 |
 |---|---|---|---|
-| `.toolchains/` | 1 | 1.57 GB | **必须保留**，重装需联网且耗时 |
-| `.arduino-build-*/` | 32 | 1.39 GB | 删除后下次编译重生成（实测约 2~3 分钟） |
-| `.factory-build-*/` | 6 | 137 MB | 同上 |
-| `.gcc-temp-*/` | 31 | 0.2 MB | 其中 **30 个是空目录**；脚本用 `New-Item -Force` 自动重建 |
-| `.test-output-r7/` | 1 | ~0 | |
+| `.build-cache/.arduino-build-*` | 32 | 1.39 GB | 原在根目录，已收拢；**17 个脚本已改写指向此处** |
+| `.build-cache/.factory-build-*` | 6 | 137 MB | 同上，无脚本引用 |
+| `.toolchains/` | 1 | 1.57 GB | **原地不动**，不可再生（重装需联网+耗时） |
+| `.gcc-temp-*/` | 31 | 0.2 MB | **原地不动**，脚本 `New-Item -Force` 自动重建（30 个为空） |
+
+`scripts/build/*.ps1` 运行时会把日志写回**根目录**（脚本内是绝对路径），跑完请把日志移入 `logs/build/`。
 
 ## 二、机械臂操作红线
 
