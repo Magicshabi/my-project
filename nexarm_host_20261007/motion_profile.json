@@ -1,0 +1,129 @@
+{
+  "schema": "nexarm.motion_profile/1",
+  "generated_at": "2026-10-07T20:26:00+08:00",
+  "source_evidence": {
+    "read_only_probe": "logs/status_probe_20261007_2010.txt",
+    "motion_probe": "logs/motion_staged_20261007_2018.txt",
+    "tri_channel_check": "examples/05_verify_real_motion.py",
+    "offline_selftest": "tests/test_codec.py (34 checks, all pass)",
+    "spec": "MOTION_LOGIC_SPEC.md"
+  },
+
+  "entities": {
+    "HOST": "PC 上位机/本库；只表达意图，不做 IK",
+    "MCU": "ESP32；帧路由与状态机，不产生运动",
+    "CTRL": "AT32；IK + 10ms 插补 + 限位执行 + 内部记账",
+    "ACT": "6x HX-30HM 总线舵机；角度执行与位置反馈"
+  },
+
+  "transport": {
+    "serial": { "baudrate": 1000000, "databits": 8, "parity": "none", "stopbits": 1 },
+    "tcp_alt": { "port": 8080 },
+    "exclusive_note": "NexArm.exe 独占 COM 口，占用时打开会 PermissionError"
+  },
+
+  "frame": {
+    "bytes": "FF FF ID LENGTH CMD ARGS CHECKSUM",
+    "id_host_to_ctrl": 255,
+    "id_ctrl_reply": 90,
+    "id_act_passthrough": "舵机号 1..6（本固件不回推）",
+    "length_rule": "LENGTH = 2 + len(ARGS)",
+    "checksum_rule": "(~sum(ID,LENGTH,CMD,ARGS)) & 0xFF  # 不含两个 0xFF 帧头",
+    "max_args": 250,
+    "forbidden": "帧间禁止 0xFF 填充：会被解析为下一帧的 ID/LENGTH 从而吞掉整帧"
+  },
+
+  "commands": {
+    "COORDINATE_SET": { "cmd": 8,  "struct": "<hhhhhhH", "fields": ["pitch_x10", "x", "y", "z", "roll", "claw", "time_ms_u16"], "kind": "absolute" },
+    "ARM_MOVE_INC":    { "cmd": 50, "struct": "<hhhhhhH", "fields": ["dx", "dy", "dz", "dpitch_x10", "droll", "dclaw", "time_ms_u16"], "kind": "incremental" },
+    "GET_CUR_COORDS":  { "cmd": 11, "reply_len": 24, "reply_fields": ["x","y","z","pitch_x10","roll","claw","p1","p2","p3","p4","p5","p6"], "reply_id": 90 },
+    "GET_REAL_JOINT_ANGLES": { "cmd": 65, "reply_len": 24, "reply_layout": "6 * (pulse_i16, angle_x10_i16)", "reply_id": 90 },
+    "GET_REAL_TCP_POSE": { "cmd": 66, "reply_len": 14, "reply_fields": ["x","y","z","yaw_x10","pitch_x10","roll_x10","claw_x10"] },
+    "ARM_RESET":       { "cmd": 54, "struct": "<H", "fields": ["duration_ms"] },
+    "SET_TORQUE":      { "cmd": 61, "struct": "<B", "fields": ["enable_0_1"], "role": "力矩闸门 T2" },
+    "SET_MOVE_ACC":    { "cmd": 56, "struct": "<B", "fields": ["acc_0_254"], "semantics": "0=最快/无缓冲, 254=最平滑（依厂商 SDK 注释，未实机标定）" },
+    "SET_GLOBAL_ACC":  { "cmd": 31, "struct": "<B", "fields": ["acc"] },
+    "SET_COORD_LIMITS":{ "cmd": 79, "struct": "<hhhhhhhhhhhh", "note": "x/y/z 是 mm；roll/claw 是度；**仅下标 6,7 (pmin,pmax) 为 0.1 度单位**", "reply_cmd": 80 },
+    "GET_COORD_LIMITS":{ "cmd": 80, "reply_len": 24 },
+    "SET_KINEMATICS_PARAM": { "cmd": 63, "struct": "<9f", "bytes": 36 },
+    "GET_KINEMATICS_PARAM": { "cmd": 64, "reply_len": 36 },
+    "ACTION_GROUP_RUN":{ "cmd": 3, "struct": "<B", "fields": ["group_id"] },
+    "ACTION_GROUP_DOWNLOAD": { "cmd": 5, "fields": ["group_id", "total_frames", "frame_index", "blob..."], "note": "frame_index==1 时建文件，其后追加；.rob 帧内部结构未解码" },
+    "BUZZER_SET":      { "cmd": 9, "struct": "<IIHH", "fields": ["on_ms","off_ms","repeat","freq"] }
+  },
+
+  "units": {
+    "tick_per_rev": 4096,
+    "deg_per_tick": 0.087890625,
+    "pitch_wire_scale": 10,
+    "angle_from_pulse": "deg = pulse * 360 / 4096"
+  },
+
+  "triggers_required_all": [
+    "T1 链路可用（有回包且 checksum_errors==0）",
+    "T2 力矩 ON（当前实机为诊断版固件：需扶臂摆位后短按 KEY1；或刷厂商原版自动开力矩）",
+    "T3 CTRL 应用运行（cmd 11 返回合理位姿）",
+    "T4 帧合法（长度/校验/无 0xFF 填充）",
+    "T5 目标在真机限位内",
+    "T6 MCU 状态机未独占臂",
+    "T7 主机侧安全闸门已开"
+  ],
+
+  "measured_on_machine": {
+    "firmware": { "esp": "1.0.2", "at32": "1.0.42" },
+    "battery_mv": 12330,
+    "coord_limits": {
+      "raw": [100, 400, -450, 450, 20, 500, -980, 120, -90, 90, -100, 83],
+      "decoded": { "x_mm": [100, 400], "y_mm": [-450, 450], "z_mm": [20, 500],
+                   "pitch_deg": [-98.0, 12.0], "roll_deg": [-90, 90], "claw_deg": [-100, 83] },
+      "note": "限位只约束新指令，不约束既有状态（实测当前 pitch=-102.6 已低于下限）"
+    },
+    "kinematics_9f": [110.45, 225.0, 36.97, 145.0, 0.0, 130.23, 0.0, 50.0, 70.5],
+    "servo_position_offsets": { "1": 46, "2": 66, "3": -625, "4": -669, "5": -11, "6": 51 }
+  },
+
+  "ctrl_behavior_model": {
+    "loop_period_ms": 10,
+    "ik_location": "CTRL（主机不得自行做 IK）",
+    "increment_model": "关节空间再解算，非严格笛卡尔增量",
+    "measured_residual_mm": { "dz_+10": 8, "dx_+30": 40, "dx_-30": -32, "magnitude": "约 ±10mm，方向相关" },
+    "measured_crosstalk_deg": { "commanded": "dz=+10 only", "pitch_changed_deg": 3.4 },
+    "chanel_independence": {
+      "cmd11_vs_cmd65": "逐字节完全相同（含 1-tick 抖动）= 同源",
+      "conclusion": "两者都不构成舵机实际动作的证据",
+      "actuator_direct_read": "cmd=2 reg=56 无回包（本固件不透传）"
+    },
+    "arrival_judgement": { "channels": ["x","y","z"], "tol_mm_default": 8.0, "timeout_s_default": 8.0 }
+  },
+
+  "reproduce_checklist": [
+    "1 打开串口（先关 NexArm.exe）",
+    "2 cmd 1 读版本",
+    "3 cmd 2 读电压",
+    "4 cmd 11 连读两次确认稳定",
+    "5 cmd 80 同步限位",
+    "6 cmd 64 同步机构参数",
+    "7 确保力矩 ON（KEY1 或厂商固件）",
+    "8 cmd 50 dz=+10 → 物理观测是否上抬 8~10mm（唯一可信的写路径验收）",
+    "9 cmd 8 绝对移动 + cmd 11 轮询 tol=8mm 到位",
+    "10 全程 checksum_errors==0 且 resyncs==0"
+  ],
+
+  "unverified_do_not_invent": [
+    "ACT 实际位置真值（需固件支持透传或物理观测）",
+    "cmd 8 的重复定位精度（未标定）",
+    "SET_MOVE_ACC / SET_GLOBAL_ACC 精确语义（仅注释）",
+    "动作组 .rob 帧内部结构（未解码，勿自行构造）",
+    "cmd 89 SET_INTERP_MODE（上位机有、出厂固件无实现，勿发）",
+    "相机→机械臂单应 H 与抓取 Z 常量（未标定）"
+  ],
+
+  "anti_patterns": [
+    "用 cmd11/cmd65 的一致性当作执行器已动作的证据",
+    "按 (x,y,z,pitch,...) 顺序打包 cmd 8（正确顺序是 pitch 打头）",
+    "把限位数组里所有字段都按度处理（只有 pmin/pmax 是 ×10）",
+    "用增量指令累加当作已知位置",
+    "在帧之间插 0xFF 填充",
+    "在主机侧自实现 IK 或直接发关节角流"
+  ]
+}
