@@ -1,0 +1,38 @@
+A:\NEXarm\Claude 结构快照
+生成时间: 2026-10-07 20:37:17
+
+根目录散落文件: 4 个（整理前为 278 个）
+   .gitignore       347 B
+   INDEX.md         5303 B
+   PROJECT_STATE.md 21374 B
+   README.md        1902 B
+
+分类夹文件数:
+   docs/         16
+   reference/     7
+   scripts/      47
+   logs/         62
+   runs/        135
+   artifacts/    10
+   _reorg/        3
+   合计           280
+
+runs/ 子目录:
+   execution_preflight        6
+   handle_teach_r4            4
+   id6_torque                13
+   match_safe                 5
+   misc                       1
+   read_diagnostic            6
+   readonly                  33
+   readonly_goal              3
+   readonly_oled              3
+   readonly_r1                3
+   single_joint              13
+   teach_record_r6            9
+   teach_record_r7            3
+   teach_record_r7k2          3
+   wrapped_move              30
+
+原地保留的目录（被构建脚本绝对路径引用，勿移动）:
+   _pdf_pages、at32_force_reflash_20261006、backup_before_pose_calibration_20260916、backups、calibration_firmware、competition_integrated_20260919、eight_point_mvp_20261007、execution_preflight_20261005、factory_compile_libraries、factory_restore_work_20260919、handle_teach_20260920、handle_teach_fix_20260921、handle_teach_keydiag_20261004、handle_teach_r7_20261004、handle_teach_r7k2_20261004、handle_teach_record_20260923、id6_torque_probe_20261006、k230_link_probe_20261007、match_compile_libraries、nexarm_exe_re_20261007、read_diagnostic_20261006、readonly_diagnostic_20260922、readonly_goal_probe_20260923、readonly_oled_20260923、single_joint_probe_20261005、single_joint_probe_r1b_20261006、tmp、validation_runs、vision_route_20261006、wrapped_move_probe_20261006、舵机基础运行逻辑
