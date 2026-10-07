@@ -318,5 +318,39 @@ class ArmController:
     def stepper_run(self, steps: int) -> None:
         self.transport.send(int(C.Cmd.STEPPER_RUN), C.pack_stepper_run(steps))
 
+    # ---------------------------------------------- 舵机总线直读（第三通道）
+    SERVO_CMD_READ = 2            # 舵机帧的 cmd：2=读寄存器 3=写寄存器
+    SERVO_CMD_WRITE = 3
+    SERVO_REG_TORQUE = 40
+    SERVO_REG_GOAL_POS = 42
+    SERVO_REG_PRESENT_POS = 56
+
+    def read_servo_raw(self, servo_id: int, reg: int, length: int = 2,
+                       timeout: float = 0.25):
+        """直接读舵机寄存器（回包 id = 舵机号），返回原始 args 字节。
+
+        注意：这条通道依赖固件把舵机透传数据回推到 USB。若返回 None，说明当前
+        固件不支持该透传，属预期情况，不影响 cmd 11/65 两条通道。
+        """
+        frame = self.transport.request_from(servo_id, self.SERVO_CMD_READ,
+                                            bytes([reg, length]), timeout=timeout)
+        return None if frame is None else frame.args
+
+    def read_servo_positions(self, first: int = 1, last: int = 6, gap: float = 0.03):
+        """逐舵机直读当前位置（reg 56）。返回 {id: (原始args, 两种可能解析)}。"""
+        out = {}
+        for sid in range(first, last + 1):
+            raw = self.read_servo_raw(sid, self.SERVO_REG_PRESENT_POS, 2)
+            if raw is not None:
+                import struct
+                cand = {}
+                if len(raw) >= 2:
+                    cand["args0_1"] = struct.unpack("<h", raw[0:2])[0]
+                if len(raw) >= 3:
+                    cand["args1_2"] = struct.unpack("<h", raw[1:3])[0]
+                out[sid] = (raw.hex(), cand)
+            time.sleep(gap)
+        return out
+
     def stats(self) -> dict:
         return self.transport.stats()

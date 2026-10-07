@@ -44,6 +44,7 @@ class Transport:
         self.rx_frames = 0
         self.rx_bytes = 0
         self.tx_frames = 0
+        self.other_id_frames = 0
 
     # ---------------------------------------------------------------- connect
     @property
@@ -145,7 +146,8 @@ class Transport:
 
     def _dispatch(self, frame: Frame) -> None:
         if frame.id not in (SYS_HEAD, AT32_SYS_ID):
-            self._log("忽略非本机回包 id=0x%02X cmd=%d" % (frame.id, frame.cmd))
+            # 舵机总线透传回包的 id 就是舵机号，这里不当作异常，只计数
+            self.other_id_frames += 1
         for cb in list(self._subs.get(frame.cmd, ())):
             try:
                 cb(frame)
@@ -203,9 +205,30 @@ class Transport:
         finally:
             self.off(reply_cmd, _cb)
 
+    def request_from(self, target_id: int, cmd: int, args: bytes = b"",
+                     timeout: float = 0.3) -> Optional[Frame]:
+        """按 **目标 ID** 过滤的回包等待（舵机总线透传用，回包 id = 舵机号）。"""
+        box: List[Frame] = []
+        done = threading.Event()
+
+        def _cb(frame: Frame) -> None:
+            if frame.id == target_id:
+                box.append(frame)
+                done.set()
+
+        self.on(cmd, _cb)
+        try:
+            self.send(cmd, args, target_id=target_id)
+            if done.wait(timeout):
+                return box[0]
+            return None
+        finally:
+            self.off(cmd, _cb)
+
     def stats(self) -> dict:
         return {"connected": self.connected, "type": self.connection_type,
                 "rx_frames": self.rx_frames, "rx_bytes": self.rx_bytes,
                 "tx_frames": self.tx_frames,
+                "other_id_frames": self.other_id_frames,
                 "checksum_errors": self._parser.checksum_errors,
                 "resyncs": self._parser.header_resyncs}
