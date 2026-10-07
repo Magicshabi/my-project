@@ -6,9 +6,12 @@
 
 动作序列刻意做小：回中 -> 抬 Z 20mm -> 前进 30mm -> 回中。
 """
+import os
 import sys
 
-from nexarm import ArmController
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from nexarm import ArmController  # noqa: E402
 
 
 def main(argv) -> int:

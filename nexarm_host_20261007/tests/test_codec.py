@@ -10,8 +10,9 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from nexarm import (Cmd, FrameParser, build_frame, checksum_inv8, decode_battery_mv,
-                    decode_current_coords, decode_pos_offset, decode_real_tcp_pose,
-                    pack_coord, pack_coord_limits, pack_kinematics, pack_move_inc)
+                    decode_coord_limits, decode_current_coords, decode_pos_offset,
+                    decode_real_tcp_pose, pack_coord, pack_coord_limits,
+                    pack_kinematics, pack_move_inc)
 from nexarm.commands import pack_buzzer
 from nexarm.arm import ArmController
 from nexarm.safety import SafetyError
@@ -62,6 +63,15 @@ check("pack_move_inc(10,0,0,5,0,0,600)",
 
 # 4) 其它载荷
 check("pack_coord_limits 24 字节", len(pack_coord_limits(*range(12))), 24)
+# 限位量纲：pitch 走 0.1°，其余原样（GUI set_coord_limits 对下标 6/7 ×10）
+check("pack_coord_limits pitch ×10（入参是度）",
+      pack_coord_limits(50, 450, -350, 350, 0, 500, -90, 12, -90, 90, -60, 30),
+      struct.pack("<hhhhhhhhhhhh", 50, 450, -350, 350, 0, 500,
+                  -900, 120, -90, 90, -60, 30))
+check("decode_coord_limits pitch 还原为度",
+      decode_coord_limits(struct.pack("<hhhhhhhhhhhh", 100, 400, -450, 450, 20,
+                                       500, -980, 120, -90, 90, -100, 83))[6:8],
+      [-98.0, 12.0])
 check("pack_kinematics 36 字节", len(pack_kinematics([1.5] * 9)), 36)
 check("pack_kinematics float32 校验",
       pack_kinematics([110.45] * 9)[:4], struct.pack("<f", 110.45))

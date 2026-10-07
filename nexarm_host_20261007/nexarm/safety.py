@@ -20,7 +20,12 @@ class SafetyError(RuntimeError):
 
 @dataclass
 class WorkspaceLimits:
-    """固件侧默认工作空间（mm / 度）。改动前先用 get_coord_limits() 读真机值。"""
+    """工作空间盒，**统一用 mm 与度**（协议里 pitch 限位是 0.1°，库内已换算）。
+
+    默认值取自固件 Robot_Arm.h 的 limit_* 初值；上位机界面允许的输入范围略宽
+    （X 50~450、Y ±350、Z 0~500、Pitch ±90、Roll ±90、Claw -60~30），
+    两者都不等于你机器上真实的标定值——动手前先 get_coord_limits() 读真机。
+    """
 
     x: Tuple[float, float] = (100.0, 400.0)
     y: Tuple[float, float] = (-450.0, 450.0)

@@ -121,7 +121,7 @@ arm.close()
 | ARM_RESET | 54 | `<H` 时长 ms | 无 |
 | SET_TORQUE | 61 | `<B` 0/1 | 无 |
 | SET_MOVE_ACC | 56 | `<B` 0~254 | 原样回执 |
-| SET_COORD_LIMITS | 79 | `<hhhhhhhhhhhh` | 无 |
+| SET_COORD_LIMITS | 79 | `<hhhhhhhhhhhh`（x/y/z=mm，**pitch=0.1°**，roll/claw=度） | 无 |
 | SET/GET_KINEMATICS_PARAM | 63/64 | 9×float32 | 36B |
 | SET_POS_OFFSET | 57 | `<Bh` (id, offset) | 3B |
 | SET_PID_PARAM | 59 | `<BBBBH` | 5B |
@@ -130,10 +130,13 @@ arm.close()
 | ACTION_GROUP_RUN | 3 | `<B` 组号 | 无 |
 | ACTION_GROUP_DOWNLOAD | 5 | `[组号, 总帧, 帧序号, 数据…]` | 无 |
 
-**两个最常踩的坑**（库已内置，写别的代码时务必注意）：
+**三个最常踩的坑**（库已内置，写别的代码时务必注意）：
 1. `COORDINATE_SET` 是 `(pitch, x, y, z, …)`，**不是** `(x, y, z, pitch, …)`；而
    `ARM_MOVE_INC` 又是 `(dx, dy, dz, dpitch, …)`——两条命令字段顺序不一样。
-2. 帧之间**绝不能夹 0xFF 填充**：`FF FF` 会被当成下一帧的 ID/LENGTH，吞掉一整帧
+2. **限位里的 pitch 是 0.1° 单位**（其余是 mm / 度）：出厂固件回包 `[-980, 120]` 对应
+   UI 上的 `-98.0 / 12.0`。`pack_coord_limits` 入参用度、内部 ×10；`decode_coord_limits`
+   出来就是度。差 10 倍会让限位形同虚设或把臂锁死。
+3. 帧之间**绝不能夹 0xFF 填充**：`FF FF` 会被当成下一帧的 ID/LENGTH，吞掉一整帧
    （`tests/test_codec.py` 里有专门用例）。
 
 ---
@@ -151,8 +154,9 @@ arm.close()
 | 项 | 状态 |
 |---|---|
 | 帧格式、校验、命令号 | ✅ 三处独立来源一致 + 离线用例逐字节比对 |
-| 坐标/增量载荷、回包解析 | ✅ exe 反编译与厂商 SDK 一致 |
-| `ARM_MOVE_INC` 字段顺序 | ⚠️ 依厂商 SDK 记载；**首次使用请只给 ±10mm 试探** |
+| **读路径**（版本/电压/位姿/关节/TCP/限位/偏差/运动学） | ✅ **已实机验证**（`logs/status_probe_20261007_2010.txt`，rx 15 帧 0 校验错） |
+| **写路径**（坐标/增量/加速度/力矩） | ⚠️ 尚未跑实动作；首次用 ±10mm 小步试探 |
+| `ARM_MOVE_INC` 字段顺序 | ⚠️ 依厂商 SDK 与 exe 一致推导 |
 | `SET_MOVE_ACC` 语义（0 最快） | ⚠️ 仅来自厂商 SDK 注释 |
 | 动作组 `.rob` 帧内部结构 | ⚠️ 未解码，`action_group_run/erase` 可用，下载分片需自行拼 |
 | `CMD_SET_INTERP_MODE=89` | ⚠️ 上位机有，出厂固件未见实现 |

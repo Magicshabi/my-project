@@ -7,11 +7,14 @@
 识别源（K230 颜色分拣 / AprilTag / 自研视觉）只提供 (u, v) 像素中心，
 抓取流程本身不再关心视觉细节。标定好 4 个点后填进 Homography 即可闭环。
 """
+import os
 import sys
 from dataclasses import dataclass
 from typing import Callable, Optional, Sequence, Tuple
 
-from nexarm import ArmController
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from nexarm import ArmController  # noqa: E402
 
 # 与固件一致的抓取高度（mm）：先抬到 APPROACH_Z，再下到 GRAB_Z，抓完抬回
 APPROACH_Z = 140.0

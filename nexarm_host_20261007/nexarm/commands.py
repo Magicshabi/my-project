@@ -155,10 +155,19 @@ def pack_pid(servo_id: int, p: int, i: int, d: int, threshold: int) -> bytes:
 
 def pack_coord_limits(x_min, x_max, y_min, y_max, z_min, z_max,
                       p_min, p_max, r_min, r_max, c_min, c_max) -> bytes:
-    """cmd 79 SET_COORD_LIMITS：12 × int16。[GUI] SystemTab.set_coord_limits"""
-    return struct.pack("<hhhhhhhhhhhh", *(int(v) for v in (
-        x_min, x_max, y_min, y_max, z_min, z_max,
-        p_min, p_max, r_min, r_max, c_min, c_max)))
+    """cmd 79 SET_COORD_LIMITS：12 × int16。
+
+    单位混用，务必注意：x/y/z 是 **mm**，**pitch 是 0.1°（×10）**，roll/claw 是**度**。
+    [GUI] SystemTab.set_coord_limits：打包前对下标 6、7（pmin/pmax）乘以 10；
+          update_coord_limits 显示时再除以 10，UI 输入框范围 Pitch ±90°。
+          实测回包 [-980, 120, -90, 90, -100, 83] ↔ UI 显示 -98.0 / 12.0。
+    本函数入参统一用**度**，内部完成 ×10。
+    """
+    return struct.pack("<hhhhhhhhhhhh",
+                       int(x_min), int(x_max), int(y_min), int(y_max),
+                       int(z_min), int(z_max),
+                       int(round(p_min * 10)), int(round(p_max * 10)),
+                       int(r_min), int(r_max), int(c_min), int(c_max))
 
 
 def pack_kinematics(arm_kin) -> bytes:
@@ -282,10 +291,16 @@ def decode_fw_version(args: bytes):
 
 
 def decode_coord_limits(args: bytes):
-    """cmd 80 → 12 个 int16 限位。[GUI] SystemTab / [SDK]"""
+    """cmd 80 → 12 个限位，**pitch 已由 0.1° 换算回度**，其余原样。
+
+    即返回 (xmin,xmax,ymin,ymax,zmin,zmax,pmin°,pmax°,rmin,rmax,cmin,cmax)。
+    """
     if len(args) < 24:
         return None
-    return list(struct.unpack("<hhhhhhhhhhhh", args[:24]))
+    v = list(struct.unpack("<hhhhhhhhhhhh", args[:24]))
+    v[6] /= 10.0
+    v[7] /= 10.0
+    return v
 
 
 def decode_kinematics(args: bytes):

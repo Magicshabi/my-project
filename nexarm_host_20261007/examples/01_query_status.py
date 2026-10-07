@@ -5,9 +5,12 @@
 
 先跑这个再谈运动：确认版本、电压、当前位姿、坐标限位、舵机偏差都读得回来。
 """
+import os
 import sys
 
-from nexarm import ArmController
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from nexarm import ArmController  # noqa: E402
 
 
 def main(port: str) -> int:
