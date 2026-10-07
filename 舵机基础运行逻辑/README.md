@@ -1,9 +1,27 @@
-# nexarm — NexArm 六轴机械臂主机侧运动控制库
+# 舵机基础运行逻辑 — NexArm 六轴机械臂主机侧运动控制库
 
 从 `NexArm.exe`（PyInstaller + PyQt5 上位机）与 ESP32 出厂固件双向校对出来的协议，
 封装成一套**能直接复用的 Python 运动控制层**。只依赖 `pyserial`，纯 Python 3.8+。
 
 > 本目录是**新增**的独立实现，没有改动 `出厂程序/`、`视觉识别源码/`、`busservo_control/` 里的任何既有文件。
+
+---
+
+## 0. 目录导读（交接时先看这里）
+
+| 想干什么 | 打开哪个文件 |
+|---|---|
+| **搞清楚"机械臂到底怎么动起来"**（触发条件/状态更新/计算/每步流程/边界终止） | **`MOTION_LOGIC_SPEC.md`** ← 权威行为规格，人读 |
+| **让程序/agent 直接消费同一份规格**（无歧义、可校验） | **`motion_profile.json`** ← 机器可读孪生文件 |
+| 知道这些结论是怎么来的、验证到什么程度 | `DECODE_REPORT.md`（NexArm.exe 解码 + 实机验证） |
+| 只想让它动起来 | §3 快速开始（本文件） |
+| 看每次实机跑出来的原始数据 | `logs/` |
+| 排错：数值变了但臂不动 / 方向不对 / 走到一半停 | `MOTION_LOGIC_SPEC.md` §10 假象对照表 |
+| 复现给别的实现者 | `MOTION_LOGIC_SPEC.md` §8 复现检查清单 + `motion_profile.json` |
+
+**规格的两条硬规则（先记住，能省掉大部分排错）**
+1. **力矩必须 ON**，否则所有读数照变、臂一动不动（`MOTION_LOGIC_SPEC.md` §3.1）。
+2. `cmd 11` 与 `cmd 65` **同源**，不能用来证明舵机真的动了（§4.4），判据必须来自物理观测。
 
 ---
 
@@ -26,7 +44,10 @@ PC/脚本 ──USB 1,000,000bps──> ESP32 ──串口──> AT32(运动控
 ## 2. 目录结构（可复用结构）
 
 ```
-nexarm_host_20261007/
+舵机基础运行逻辑/
+├─ MOTION_LOGIC_SPEC.md    ★ 运动逻辑权威规格（术语/模块/触发/状态/流程/边界）
+├─ motion_profile.json     ★ 同上的机器可读版（帧规则、命令表、实测值、勿编造项）
+├─ DECODE_REPORT.md          NexArm.exe 解码报告 + 实机验证记录
 ├─ nexarm/
 │  ├─ frames.py       帧格式 + 流式解析器（跨 read 边界、坏帧重同步）
 │  ├─ commands.py     Cmd 命令表 + 全部 pack_*/decode_* 载荷编解码
@@ -37,7 +58,10 @@ nexarm_host_20261007/
 │  ├─ 01_query_status.py     只读体检（零风险，先跑这个）
 │  ├─ 02_jog_and_home.py     干跑预览 → 加 --go 才真动
 │  └─ 03_vision_pick_loop.py 视觉抓取骨架（标定接口，未标定直接拒绝执行）
-├─ tests/test_codec.py       32 项离线自检（不接硬件）
+├─ tests/test_codec.py       34 项离线自检（不接硬件）
+│  └─ 04~06：04 分级运动检查 / 05 三通道真伪对照 / 06 肉眼可辨演示
+├─ logs/                     实机原始输出留档（只读体检 + 运动验证）
+
 └─ README.md
 ```
 
@@ -49,12 +73,18 @@ nexarm_host_20261007/
 
 ## 3. 快速开始
 
+**前置**：关掉 `NexArm.exe`（它独占 COM 口）；并确认力矩已开 —— 当前实测机所烧固件是
+诊断版，**上电不会自动开力矩**，需扶臂摆位后短按 KEY1（详见 `MOTION_LOGIC_SPEC.md` §3.1）。
+
 ```bash
 pip install pyserial
-python tests/test_codec.py                 # 32 项自检，全绿再往下
-python examples/01_query_status.py COM9    # 只读体检
-python examples/02_jog_and_home.py COM9    # 干跑，打印动作计划
+python tests/test_codec.py                 # 34 项自检，全绿再往下（不接硬件）
+python examples/01_query_status.py COM9    # 只读体检：版本/电压/位姿/限位/偏差
+python examples/02_jog_and_home.py COM9    # 干跑，打印动作计划（不发帧）
 python examples/02_jog_and_home.py COM9 --go
+python examples/04_staged_motion_check.py COM9 --go   # 分级运动：先抬10mm判定写路径
+python examples/05_verify_real_motion.py COM9 --go    # 三通道对照：证明舵机是否真动
+python examples/06_visible_demo.py COM9 --go          # 肉眼可辨：夹爪开合×3 + 垂直90mm
 ```
 
 ```python
