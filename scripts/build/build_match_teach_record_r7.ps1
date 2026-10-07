@@ -5,7 +5,7 @@ New-Item -ItemType Directory -Force -Path $env:TEMP | Out-Null
 $cliArgs = @(
     '--log', '--log-level', 'debug', 'compile', '-v', '--jobs', '1', '--fqbn', 'esp32:esp32:esp32',
     '--libraries', 'A:\NEXarm\Claude\match_compile_libraries',
-    '--build-path', 'A:\NEXarm\Claude\.arduino-build-teach-record-r7',
+    '--build-path', 'A:\NEXarm\Claude\.build-cache\.arduino-build-teach-record-r7',
     '--libraries', 'A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\libraries',
     '--build-property', 'build.core.path=A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\cores\esp32',
     '--build-property', 'build.variant.path=A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\variants\esp32',

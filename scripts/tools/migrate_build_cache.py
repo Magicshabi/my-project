@@ -55,12 +55,13 @@ def find_cache_dirs():
 
 def find_code_files():
     out = []
+    me = os.path.basename(os.path.abspath(__file__))
     for base in ("scripts",):
         root = os.path.join(ROOT, base)
         for cur, dirs, files in os.walk(root):
             dirs[:] = [d for d in dirs if d != "__pycache__"]
             for f in files:
-                if f.endswith(REWRITABLE_EXT):
+                if f.endswith(REWRITABLE_EXT) and f != me:
                     out.append(os.path.join(cur, f))
     return out
 

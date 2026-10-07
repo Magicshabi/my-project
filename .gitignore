@@ -20,3 +20,6 @@ __pycache__/
 # 系统杂项
 Thumbs.db
 .DS_Store
+
+# 构建缓存（2026-10-07 从根目录收拢至此）
+.build-cache/
