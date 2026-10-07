@@ -18,9 +18,9 @@ $cliArgs = @(
     '--build-property', 'compiler.sdk.path=A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\tools\sdk\esp32',
     'A:\NEXarm\Claude\readonly_diagnostic_20260922\NexArm_ReadOnly'
 )
-& 'A:\NEXarm\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' @cliArgs *> 'A:\NEXarm\Claude\build_match_readonly_r1.log'
+& 'A:\NEXarm\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' @cliArgs *> 'A:\NEXarm\Claude\logs\build\build_match_readonly_r1.log'
 $result = $LASTEXITCODE
-Get-Content 'A:\NEXarm\Claude\build_match_readonly_r1.log' -Tail 24 | Where-Object { $_.Length -lt 1200 }
+Get-Content 'A:\NEXarm\Claude\logs\build\build_match_readonly_r1.log' -Tail 24 | Where-Object { $_.Length -lt 1200 }
 exit $result
 
 

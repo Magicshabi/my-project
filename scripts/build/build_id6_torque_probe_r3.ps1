@@ -19,9 +19,9 @@ $cliArgs = @(
     '--build-property', 'compiler.sdk.path=A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\tools\sdk\esp32',
     'A:\NEXarm\Claude\id6_torque_probe_20261006\NexArm_ID6_Torque_Probe'
 )
-& 'A:\NEXarm\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' @cliArgs *> 'A:\NEXarm\Claude\build_id6_torque_probe_r3.log'
+& 'A:\NEXarm\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' @cliArgs *> 'A:\NEXarm\Claude\logs\build\build_id6_torque_probe_r3.log'
 $result = $LASTEXITCODE
-Get-Content 'A:\NEXarm\Claude\build_id6_torque_probe_r3.log' -Tail 24 | Where-Object { $_.Length -lt 1200 }
+Get-Content 'A:\NEXarm\Claude\logs\build\build_id6_torque_probe_r3.log' -Tail 24 | Where-Object { $_.Length -lt 1200 }
 exit $result
 
 

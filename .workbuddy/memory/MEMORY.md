@@ -22,7 +22,8 @@
 | `.toolchains/` | 1 | 1.57 GB | **原地不动**，不可再生（重装需联网+耗时） |
 | `.gcc-temp-*/` | 31 | 0.2 MB | **原地不动**，脚本 `New-Item -Force` 自动重建（30 个为空） |
 
-`scripts/build/*.ps1` 运行时会把日志写回**根目录**（脚本内是绝对路径），跑完请把日志移入 `logs/build/`。
+`scripts/build/*.ps1` 的**日志输出路径已改到 `logs\build\`**（2026-10-07），跑完不会再污染根目录；
+更早的历史日志已归档在 `logs\build\historical\`，不会被覆盖。
 
 ## 二、机械臂操作红线
 

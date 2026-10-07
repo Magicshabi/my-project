@@ -1,21 +1,21 @@
 A:\NEXarm\Claude 结构快照
-生成时间: 2026-10-07 20:59:35
+生成时间: 2026-10-07 21:03:00
 
 根目录散落文件: 4 个（整理前为 278 个）
    .gitignore       418 B
-   INDEX.md         6026 B
+   INDEX.md         6309 B
    PROJECT_STATE.md 21374 B
    README.md        1902 B
 
 分类夹文件数:
    docs/         16
    reference/     7
-   scripts/      48
-   logs/         64
+   scripts/      49
+   logs/         65
    runs/        135
    artifacts/    10
-   _reorg/        7
-   合计           287
+   _reorg/        8
+   合计           290
 
 runs/ 子目录:
    execution_preflight        6

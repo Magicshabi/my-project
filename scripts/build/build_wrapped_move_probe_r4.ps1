@@ -19,7 +19,7 @@ $cliArgs = @(
     '--build-property', 'compiler.sdk.path=A:\NEXarm\Claude\.toolchains\esp32-core-clean-20260919\esp32-2.0.17\tools\sdk\esp32',
     'A:\NEXarm\Claude\wrapped_move_probe_20261006\NexArm_Wrapped_Move_Probe'
 )
-& 'A:\NEXarm\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' @cliArgs *> 'A:\NEXarm\Claude\build_wrapped_move_probe_r4.log'
+& 'A:\NEXarm\Arduino IDE\resources\app\lib\backend\resources\arduino-cli.exe' @cliArgs *> 'A:\NEXarm\Claude\logs\build\build_wrapped_move_probe_r4.log'
 $result = $LASTEXITCODE
-Get-Content 'A:\NEXarm\Claude\build_wrapped_move_probe_r4.log' -Tail 24 | Where-Object { $_.Length -lt 1200 }
+Get-Content 'A:\NEXarm\Claude\logs\build\build_wrapped_move_probe_r4.log' -Tail 24 | Where-Object { $_.Length -lt 1200 }
 exit $result

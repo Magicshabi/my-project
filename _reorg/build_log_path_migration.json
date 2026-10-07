@@ -1,0 +1,42 @@
+{
+  "rewritten_scripts": [
+    "build_execution_preflight_r1.ps1",
+    "build_id6_torque_probe_r3.ps1",
+    "build_match_handle_r4.ps1",
+    "build_match_handle_r5.ps1",
+    "build_match_readonly_goal_r2.ps1",
+    "build_match_readonly_oled_r3.ps1",
+    "build_match_readonly_r1.ps1",
+    "build_match_safe_r2.ps1",
+    "build_match_safe_r3.ps1",
+    "build_match_teach_record_r6.ps1",
+    "build_match_teach_record_r6k1.ps1",
+    "build_match_teach_record_r7.ps1",
+    "build_match_teach_record_r7k2.ps1",
+    "build_read_diagnostic_r2.ps1",
+    "build_single_joint_probe_r1.ps1",
+    "build_single_joint_probe_r1b.ps1",
+    "build_wrapped_move_probe_r4.ps1"
+  ],
+  "archived_logs": [
+    "build_execution_preflight_r1.log",
+    "build_id6_torque_probe_r3.log",
+    "build_match_handle_r4.log",
+    "build_match_handle_r5.log",
+    "build_match_readonly_goal_r2.log",
+    "build_match_readonly_oled_r3.log",
+    "build_match_readonly_r1.log",
+    "build_match_safe_r2.log",
+    "build_match_safe_r3.log",
+    "build_match_teach_record_r6.log",
+    "build_match_teach_record_r6k1.log",
+    "build_match_teach_record_r7.log",
+    "build_match_teach_record_r7k2.log",
+    "build_read_diagnostic_r2.log",
+    "build_single_joint_probe_r1.log",
+    "build_single_joint_probe_r1b.log",
+    "build_wrapped_move_probe_r4.log"
+  ],
+  "historical_dir": "logs\\build\\historical",
+  "note": "还原：把脚本里的 A:\\NEXarm\\Claude\\logs\\build\\ 前缀去掉，并把 historical/ 下的日志移回 logs\\build\\"
+}

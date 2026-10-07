@@ -39,7 +39,8 @@
 | `scripts/capture/` | `^capture_*.py` | 13 | 串口采集脚本（输出写在脚本同级目录） |
 | `scripts/test/` | `^test_*.py` | 7 | 离线自检脚本 |
 | `scripts/tools/` | 其余 `*.py`、`*lock*.ps1`、`capture_factory_*.ps1` | 9 | 一次性工具与排障脚本 |
-| `logs/build/` | `^build_*.log` | 32 | 编译日志 |
+| `logs/build/` | `^build_*.log` | 18 | 编译日志（脚本现在**直接写到这里**） |
+| `logs/build/historical/` | 迁移前归档 | 17 | 2026-10-07 之前的历史编译日志（不被覆盖） |
 | `logs/flash/` | `*_flash.log` | 16 | 烧录日志 |
 | `logs/manifest/` | `*_hashes.json` | 14 | 烧录哈希清单（校验产物） |
 | `runs/` | `*.bin`、`*.json`、`*.log`、`*.csv` | 135 | 每次实验的采集三元组，按实验分 15 个子目录 |
@@ -95,3 +96,5 @@
 
 **约定**：`runs/` 与 `logs/` 是**只增不改的存档**，不要在里面生成新文件；
 新实验请建 `runs/<新实验名>/` 或在对应实验目录内新建。
+`scripts/build/*.ps1` 的日志已改为直接写入 `logs\build\`（2026-10-07 起），
+根目录不会再出现 `build_*.log`。
