@@ -1,0 +1,68 @@
+{
+  "log": "A:\\NEXarm\\Claude\\wrapped_move_run_20261006_201623.log",
+  "start_sent": true,
+  "stop_request_sent": false,
+  "record_matches": true,
+  "tx": [
+    {
+      "type": "wrapped_probe_tx",
+      "permit": 2,
+      "uart_complete": true,
+      "wire_hex": "ffffff1032000000000500000000000000d007e2",
+      "ms": 47649
+    },
+    {
+      "type": "wrapped_probe_tx",
+      "permit": 3,
+      "uart_complete": true,
+      "wire_hex": "ffffff103200000000fbff000000000000d007ed",
+      "ms": 53650
+    }
+  ],
+  "last_state": {
+    "type": "wrapped_probe_state",
+    "firmware": "nexarm-wrapped-move-probe-r4b",
+    "self_test_passed": true,
+    "phase": 7,
+    "spent": true,
+    "up_sent": true,
+    "up_uart_complete": true,
+    "down_sent": true,
+    "down_uart_complete": true,
+    "moved": true,
+    "returned": false,
+    "max_delta": [
+      0,
+      0,
+      6,
+      22,
+      1,
+      1
+    ],
+    "baseline": [
+      2040,
+      2003,
+      1762,
+      1939,
+      2071,
+      1414
+    ],
+    "final": [
+      2040,
+      2003,
+      1762,
+      1948,
+      2071,
+      1415
+    ],
+    "frames": 110,
+    "reason": "wrapped_motion_observed_return_unverified",
+    "playback_validated": false
+  },
+  "actual65_count": 166,
+  "json_errors": [],
+  "trailing_fragment_bytes": 1,
+  "operator_observation": "pending",
+  "full_playback_validated": false,
+  "capture_ok": true
+}

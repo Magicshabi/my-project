@@ -1,0 +1,50 @@
+{
+  "log": "A:\\NEXarm\\Claude\\id6_torque_boot_20261006_180042.log",
+  "start_sent": false,
+  "stop_request_sent": false,
+  "record_matches": true,
+  "tx": [],
+  "last_state": {
+    "type": "torque_probe_state",
+    "firmware": "nexarm-id6-torque-probe-r3",
+    "self_test_passed": true,
+    "phase": 0,
+    "spent": false,
+    "preloaded": false,
+    "enable_attempted": false,
+    "enable_uart_complete": false,
+    "step_sent": false,
+    "release_attempted": false,
+    "release_uart_complete": false,
+    "baseline": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "final": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "goal": -1,
+    "stable": false,
+    "step_observed": false,
+    "frames": 0,
+    "reason": "waiting_host",
+    "torque_register_readback": false,
+    "goal_register_readback": false,
+    "playback_validated": false
+  },
+  "actual65_count": 181,
+  "json_errors": [],
+  "trailing_fragment_bytes": 0,
+  "operator_observation": "pending",
+  "full_playback_validated": false,
+  "capture_ok": true
+}

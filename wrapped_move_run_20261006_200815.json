@@ -1,0 +1,55 @@
+{
+  "log": "A:\\NEXarm\\Claude\\wrapped_move_run_20261006_200815.log",
+  "start_sent": true,
+  "stop_request_sent": true,
+  "record_matches": true,
+  "tx": [],
+  "last_state": {
+    "type": "wrapped_probe_state",
+    "firmware": "nexarm-wrapped-move-probe-r4",
+    "self_test_passed": true,
+    "phase": 0,
+    "spent": false,
+    "up_sent": false,
+    "up_uart_complete": false,
+    "down_sent": false,
+    "down_uart_complete": false,
+    "moved": false,
+    "returned": false,
+    "max_delta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "baseline": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "final": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "frames": 0,
+    "reason": "waiting_host",
+    "playback_validated": false
+  },
+  "actual65_count": 286,
+  "json_errors": [
+    "Invalid control character at: line 1 column 106 (char 105)"
+  ],
+  "trailing_fragment_bytes": 1,
+  "operator_observation": "pending",
+  "full_playback_validated": false,
+  "capture_ok": false
+}

@@ -1,0 +1,145 @@
+{
+  "source": "id6_torque_run_20261006_182420.log",
+  "raw_sha256": "d838c8d5a7b7848f2c386403ddbbd81fb8eef78b0c0b599d29d300c2cf35c20d",
+  "frames": [
+    {
+      "permit": 1,
+      "id": 6,
+      "cmd": 3,
+      "args": [
+        41,
+        5,
+        137,
+        5,
+        0,
+        0,
+        30,
+        0
+      ],
+      "length_ok": true,
+      "checksum_ok": true,
+      "uart_complete": true,
+      "ms": 47894
+    },
+    {
+      "permit": 2,
+      "id": 6,
+      "cmd": 3,
+      "args": [
+        40,
+        1
+      ],
+      "length_ok": true,
+      "checksum_ok": true,
+      "uart_complete": true,
+      "ms": 48596
+    },
+    {
+      "permit": 3,
+      "id": 6,
+      "cmd": 3,
+      "args": [
+        41,
+        5,
+        129,
+        5,
+        0,
+        0,
+        30,
+        0
+      ],
+      "length_ok": true,
+      "checksum_ok": true,
+      "uart_complete": true,
+      "ms": 49396
+    },
+    {
+      "permit": 4,
+      "id": 6,
+      "cmd": 3,
+      "args": [
+        40,
+        0
+      ],
+      "length_ok": true,
+      "checksum_ok": true,
+      "uart_complete": true,
+      "ms": 53397
+    }
+  ],
+  "expected_order": true,
+  "actual_count": 102,
+  "step_count": 40,
+  "step_ranges": [
+    {
+      "id": 1,
+      "min": 2043,
+      "max": 2043
+    },
+    {
+      "id": 2,
+      "min": 2004,
+      "max": 2004
+    },
+    {
+      "id": 3,
+      "min": 1753,
+      "max": 1753
+    },
+    {
+      "id": 4,
+      "min": 1917,
+      "max": 1917
+    },
+    {
+      "id": 5,
+      "min": 2074,
+      "max": 2074
+    },
+    {
+      "id": 6,
+      "min": 1417,
+      "max": 1417
+    }
+  ],
+  "last_state": {
+    "type": "torque_probe_state",
+    "firmware": "nexarm-id6-torque-probe-r3",
+    "self_test_passed": true,
+    "phase": 5,
+    "spent": true,
+    "preloaded": true,
+    "enable_attempted": true,
+    "enable_uart_complete": true,
+    "step_sent": true,
+    "release_attempted": true,
+    "release_uart_complete": true,
+    "baseline": [
+      2043,
+      2004,
+      1753,
+      1917,
+      2074,
+      1417
+    ],
+    "final": [
+      2043,
+      2004,
+      1753,
+      1917,
+      2074,
+      1417
+    ],
+    "goal": 1409,
+    "stable": true,
+    "step_observed": false,
+    "frames": 40,
+    "reason": "target_not_verified",
+    "torque_register_readback": false,
+    "goal_register_readback": false,
+    "playback_validated": false
+  },
+  "operator_observation": "User confirmed gripper did not move; no abnormality observed. OLED text not reported.",
+  "release_sent_not_readback_verified": true,
+  "full_playback_validated": false
+}

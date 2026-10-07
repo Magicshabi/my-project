@@ -1,0 +1,79 @@
+{
+  "log": "A:\\NEXarm\\Claude\\id6_torque_run_20261006_182420.log",
+  "start_sent": true,
+  "stop_request_sent": false,
+  "record_matches": true,
+  "tx": [
+    {
+      "type": "torque_probe_tx",
+      "permit": 1,
+      "uart_complete": true,
+      "wire_hex": "ffff060a032905890500001e0012",
+      "ms": 47894
+    },
+    {
+      "type": "torque_probe_tx",
+      "permit": 2,
+      "uart_complete": true,
+      "wire_hex": "ffff0604032801c9",
+      "ms": 48596
+    },
+    {
+      "type": "torque_probe_tx",
+      "permit": 3,
+      "uart_complete": true,
+      "wire_hex": "ffff060a032905810500001e001a",
+      "ms": 49396
+    },
+    {
+      "type": "torque_probe_tx",
+      "permit": 4,
+      "uart_complete": true,
+      "wire_hex": "ffff0604032800ca",
+      "ms": 53397
+    }
+  ],
+  "last_state": {
+    "type": "torque_probe_state",
+    "firmware": "nexarm-id6-torque-probe-r3",
+    "self_test_passed": true,
+    "phase": 5,
+    "spent": true,
+    "preloaded": true,
+    "enable_attempted": true,
+    "enable_uart_complete": true,
+    "step_sent": true,
+    "release_attempted": true,
+    "release_uart_complete": true,
+    "baseline": [
+      2043,
+      2004,
+      1753,
+      1917,
+      2074,
+      1417
+    ],
+    "final": [
+      2043,
+      2004,
+      1753,
+      1917,
+      2074,
+      1417
+    ],
+    "goal": 1409,
+    "stable": true,
+    "step_observed": false,
+    "frames": 40,
+    "reason": "target_not_verified",
+    "torque_register_readback": false,
+    "goal_register_readback": false,
+    "playback_validated": false
+  },
+  "actual65_count": 102,
+  "json_errors": [],
+  "trailing_fragment_bytes": 0,
+  "operator_observation": "pending",
+  "full_playback_validated": false,
+  "capture_ok": true
+}

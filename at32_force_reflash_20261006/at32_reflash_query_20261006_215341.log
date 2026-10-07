@@ -1,0 +1,2 @@
+{"type":"ota_query","stage":"manual","got":true,"ver":"1.0.42"}
+{"type":"app_probe","cmd":65,"got":false,"args_len":0}

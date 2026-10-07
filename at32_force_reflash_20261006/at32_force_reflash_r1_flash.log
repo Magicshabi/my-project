@@ -1,0 +1,31 @@
+AT32 官方固件强制重刷探针 r1 留档
+================================
+目的：设备 AT32 已是 1.0.2 但运动执行管道损坏（幻象轨迹、不写舵机），
+      用出厂程序内嵌的官方 1.0.2 镜像强制重刷修复。
+
+镜像来源：A:\NEXarm\出厂程序\Nex_Arm\at32_firmware.h
+  版本 1.0.2, 21848 bytes, 171 packets (128B/pkt)
+  头文件 SHA256 = be9d0163aa83932d4171043edb05ce154d55fc724b60ca9d52e736158a619308
+  固件二进制 SHA256 = 76d1234e563a6ee6202c520cbfa4b794d8ef3c2e626baf72647a1ee5fd63bc2b
+  固件二进制 CRC32  = 0x3B2178B8（固件开机自检比对）
+
+ESP32 探针固件：nexarm-at32-force-reflash-r1
+  sketch 290513B, app bin 290880B, sha256[:16]=e2adecf4e069a666
+  编译：Bash 通道 arduino-cli, exit=0, build log = ../build_at32_force_reflash_r1.log
+  烧录：esptool.py 4.5.1 via .toolchains/esptool-py-4.5.1 (PYTHONPATH -m esptool),
+        port COM9, baud 230400, write_flash 0x10000
+        Wrote 290880 bytes (165303 compressed) in 7.3s; Hash of data verified
+        flashed 2026-10-06 21:18
+  烧录后只读验证：QUERY_VER -> {"got":true,"ver":"1.0.2"}（AT32 在线，刷前版本 1.0.2）
+
+流程（全程串口可见）：
+  PRE_QUERY(CMD94 查当前版本) -> 5s 中止窗口(KEY2/ABORT_REFLASH)
+  -> CMD90 进 Bootloader(3s) -> Bootloader 就绪确认
+  -> CMD91 擦除(10s 超时)【此后中止禁用，必须保持供电】
+  -> CMD92 x171 包写入(128B/包, 4 对齐补 0xFF, 15ms 间隔)
+  -> CMD93 完成(3s) -> CMD94 验证版本==1.0.2
+保护：ESP32 brownout 检测在 OTA 期间禁用、结束恢复；一次性额度(spent)；
+      固件自检（镜像 CRC32 + 帧构造器）不过则 UART 禁用。
+触发：capture_at32_reflash.py --reflash-once（门禁：确认探针存活才发 FORCE_REFLASH_ONCE）
+
+风险：擦除/写入窗口（约 15s）断电可致 AT32 变砖，需官方工具救回。

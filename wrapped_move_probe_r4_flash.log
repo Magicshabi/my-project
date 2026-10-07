@@ -1,0 +1,8 @@
+esptool.py 4.5.1 via .toolchains/esptool-py-4.5.1, port COM9, baud 230400
+write_flash 0x10000 .arduino-build-wrapped-move-probe-r4/NexArm_Wrapped_Move_Probe.ino.bin
+app bin: 302080 bytes, sha256[:16]=268dec33c4a958c7
+Wrote 302080 bytes (172198 compressed) in 7.7s; Hash of data verified; Hard resetting via RTS pin
+flashed at 2026-10-06 20:07:29 by same esptool invocation pattern as id6_torque_probe_r3_flash.log
+r4b (hex buffer fix): app bin 302080 bytes, sha256[:16]=2a7d9587e37eb93b
+Wrote at 0x10000, Hash of data verified; flashed 2026-10-06 20:16:23
+r5 (dz=±30mm/3000ms): sketch 301733B, app bin 302096B, sha256[:16]=b3ae93bcdab10b0f, flashed 2026-10-06 20:28:00

@@ -1,0 +1,7 @@
+{
+  "reviewed_source": "wrapped_move_probe_20261006\\NexArm_Wrapped_Move_Probe\\NexArm_Wrapped_Move_Probe.ino",
+  "sha256": "e09fb2697e1103766ff77b3e3aa040ca9eede96b051461c8073aa993f86310d1",
+  "mtime_ns": 1791282014486691800,
+  "review": "r3_1824结果与r4独立审查_20261006.md",
+  "scope": "read-only source review; no COM access or firmware edit after user confirmed concurrent assistant"
+}
