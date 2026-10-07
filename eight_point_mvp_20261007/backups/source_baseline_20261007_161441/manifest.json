@@ -1,0 +1,191 @@
+{
+  "kind": "local source and artifact snapshot; NOT live device flash backup",
+  "device_matches_artifact": null,
+  "files": [
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\at32_firmware.h",
+      "backup": "vision_source\\at32_firmware.h",
+      "sha256": "ef5626074426bb453278e6700b95194a3e620b8eb215bf6e21f944346ad0b48c"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\AT32_OTA.cpp",
+      "backup": "vision_source\\AT32_OTA.cpp",
+      "sha256": "78d28b1034a2bd21e979b5c86b2b353198ee043dbde4b20d14c4999ace42dab2"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\AT32_OTA.h",
+      "backup": "vision_source\\AT32_OTA.h",
+      "sha256": "f027c887ecdcb3fbfbbc608b42bae70a82195c8bf270146cb0a2e92291259519"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\ColorGrabber.cpp",
+      "backup": "vision_source\\ColorGrabber.cpp",
+      "sha256": "d6beaf715bfc06b8d22ce736077c5df24528d4ac17382c7e1ddfb1fe5f5f7bcf"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\ColorGrabber.h",
+      "backup": "vision_source\\ColorGrabber.h",
+      "sha256": "3855e4ff1ba3014a8d74cf876e75cb7f5ae71c912df60fff43261aeacd6be896"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Color_Sorting.ino",
+      "backup": "vision_source\\Color_Sorting.ino",
+      "sha256": "137abbc8cfe9c9fcd0b0e555b3e6e33af4763dd25e88c9514f951de4a2b79950"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\CommProtocol.cpp",
+      "backup": "vision_source\\CommProtocol.cpp",
+      "sha256": "2cca768f5dc842df218bdb021213f392118604b0ec9ef02ea8a7a496d677c68f"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\CommProtocol.h",
+      "backup": "vision_source\\CommProtocol.h",
+      "sha256": "a21aef5aa6d0b04a02df7b09587d8e3558ca0614643c4b2f2d5e12bbc9aee6bb"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Conveyor_Belt.cpp",
+      "backup": "vision_source\\Conveyor_Belt.cpp",
+      "sha256": "22e56437a90cad1d330d47499af1d70f3e806a134e54838edaeb0986e725eb09"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Conveyor_Belt.h",
+      "backup": "vision_source\\Conveyor_Belt.h",
+      "sha256": "330c087abcd6a4eb66f8a70b2bda1f6d412f4c9dba78e2fa6661ac0f96aec28e"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Global.h",
+      "backup": "vision_source\\Global.h",
+      "sha256": "03f473417b1ea19241796254e8fc664aa089457d33f809cb114073d5271cdc36"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\HandleTeachRecord.h",
+      "backup": "vision_source\\HandleTeachRecord.h",
+      "sha256": "b52ab8036621691b85edf7225d0370200442dfaa78a5ebcfd2e7f9e6a85f0b3e"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\HX_30HM.cpp",
+      "backup": "vision_source\\HX_30HM.cpp",
+      "sha256": "1ec72196970d67e2b6e46dad4566e8c0517867d4ba5affc2dfd47d0c40f0455c"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\HX_30HM.h",
+      "backup": "vision_source\\HX_30HM.h",
+      "sha256": "4016b06e6d9867efc75af8818990ea24b839fc5a3146b80c4c7d3df24d9f40a2"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\HX_30HM_Def.h",
+      "backup": "vision_source\\HX_30HM_Def.h",
+      "sha256": "390dacc2acf6299b70e895887d45bf3a4a05ee3f7f77f35b92ce8643d0ae6ad5"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Mecanum_Chassis.h",
+      "backup": "vision_source\\Mecanum_Chassis.h",
+      "sha256": "45340d374df6528c723286201cf420c73708f823885b6bd7b99bcfada00a8da8"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Motor_I2C.cpp",
+      "backup": "vision_source\\Motor_I2C.cpp",
+      "sha256": "6eacab8903d2001d3aad2dbc7624be1b36ef93a1cb62a572f33b9a6db45fcbef"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Motor_I2C.h",
+      "backup": "vision_source\\Motor_I2C.h",
+      "sha256": "72c271f77d4e433d3c7427746d3373f2b5ecd6df86031cc8e09cf7da08d51114"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Nex_Arm_Board.cpp",
+      "backup": "vision_source\\Nex_Arm_Board.cpp",
+      "sha256": "fe44f616cf9775cd8167920456ccd7953a3390eb7bae0d3543a7e692db7359e1"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Nex_Arm_Board.h",
+      "backup": "vision_source\\Nex_Arm_Board.h",
+      "sha256": "179d96c6a536e1c855f8ba768b130ea7ef7f4cad1a9ac98fe87cbe1aa232c807"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\offset_config.json",
+      "backup": "vision_source\\offset_config.json",
+      "sha256": "b2c43c5a77fae303a545cb65aa093c77d3674246a0e2d38e152bbf73938b2df2"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\ProtocolSelfTest.cpp",
+      "backup": "vision_source\\ProtocolSelfTest.cpp",
+      "sha256": "a74338a44210e0b71c7de0ec56eb4770391331f2f4d590137bf19f76f5cb92fc"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\ProtocolSelfTest.h",
+      "backup": "vision_source\\ProtocolSelfTest.h",
+      "sha256": "5fffd71efce708a6948a4bc4e2dea8e83883f9a081ef863a242ee0e3a015d8de"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\RealJointFeedback.h",
+      "backup": "vision_source\\RealJointFeedback.h",
+      "sha256": "56dbf6d677053c1166198d945f543300f61826901fdc02843369cc86f164d75c"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Robot_Arm.cpp",
+      "backup": "vision_source\\Robot_Arm.cpp",
+      "sha256": "1b3dc7530b293361d18c4d5fd5e0bfea2d2995ee38efb2da425f0dff6ded2def"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Robot_Arm.h",
+      "backup": "vision_source\\Robot_Arm.h",
+      "sha256": "28b15ec7f944ecac883f22dcbb3b1582ab6756c2ed8acf2677f95b7c446b86d0"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Stepper_Strip.cpp",
+      "backup": "vision_source\\Stepper_Strip.cpp",
+      "sha256": "57478ed709d3126cd95cf3313aa074ef9c31f10cb04efcf574124f6c64d489a7"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Stepper_Strip.h",
+      "backup": "vision_source\\Stepper_Strip.h",
+      "sha256": "acb6ed0dc5c298c71154d5a17b2e10b1eb37976c710b987e0ebdb51a5438143c"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\system_task_handle.cpp",
+      "backup": "vision_source\\system_task_handle.cpp",
+      "sha256": "eed3ec34fbcb48bec9f1c02c13b51ad08084466d0c24de25b22d4b0fe780d2ac"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\system_task_handle.h",
+      "backup": "vision_source\\system_task_handle.h",
+      "sha256": "c0351b6e2c34ef8a9355dbd800a36af489a8ab17dd66fda07eb6f14afa6d74b5"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\Tank_Chassis.h",
+      "backup": "vision_source\\Tank_Chassis.h",
+      "sha256": "a117c4d9b2062f5b7c2001dd3177e845a6d993bf0e925d74ac63def29b874cf4"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\usb_ctrl.cpp",
+      "backup": "vision_source\\usb_ctrl.cpp",
+      "sha256": "4e236e84ef726170c7102c12787e9549fe5af8399b017ee3d398be6c062b4fa3"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_route_20261006\\Color_Sorting\\usb_ctrl.h",
+      "backup": "vision_source\\usb_ctrl.h",
+      "sha256": "b0424659af5874b4a8b09eca64f35b61981ae636af1f45ea0a5e577ab9a6e6d0"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\.arduino-build-vision-color-sorting\\Color_Sorting.ino.bin",
+      "backup": "Color_Sorting.ino.bin",
+      "sha256": "ff8138c06c2534d5733e56c3c37fa11ba5ac7863f5ec7449623c601b2ae661fc"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\.arduino-build-vision-color-sorting\\Color_Sorting.ino.partitions.bin",
+      "backup": "Color_Sorting.ino.partitions.bin",
+      "sha256": "aaae2888c5a6a348004b5b436f47abb25ae32e72d9003902955a998eda723edd"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\vision_color_sorting_flash_20261007.log",
+      "backup": "vision_color_sorting_flash_20261007.log",
+      "sha256": "b34735d214684aa021a2cad97ed1e7b904a308a2a36efc2a45a630c3e49410e7"
+    },
+    {
+      "source": "A:\\NEXarm\\Claude\\validation_runs\\readout_20261005_180008\\eight_points.bin",
+      "backup": "eight_points.bin",
+      "sha256": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22"
+    }
+  ]
+}

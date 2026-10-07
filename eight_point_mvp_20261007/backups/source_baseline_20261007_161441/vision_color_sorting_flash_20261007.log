@@ -1,0 +1,12 @@
+视觉分支固件烧录留档 2026-10-07 15:19
+====================================
+固件：vision_route_20261006/Color_Sorting（视觉开发基线，含示教修复）
+编译：Bash 通道 arduino-cli, fqbn esp32:esp32:esp32:PartitionScheme=huge_app
+      exit=0, 用时 2m27s, build log = build_vision_color_sorting.log
+      sketch 414985B (13% of 3145728), globals 25544B
+烧录：esptool.py 4.5.1 (PYTHONPATH -m esptool), COM9, 230400, write_flash 0x10000
+      app bin 415344B, sha256[:16]=ff8138c06c2534d5
+      Wrote 415344 bytes (242626 compressed) in 10.7s; Hash of data verified
+注意：烧录前须关闭「NexArm 上位机」app（独占 COM9 致 esptool 误报 port doesn't exist）
+验证：烧录后 USB 串口(1M)持续输出周期性上位机协议帧（约10Hz 状态广播），固件运行正常
+分区：设备分区表为 huge_app（此前 IDE 烧出厂程序时写入），与本次编译方案一致；NVS(0x9000) 未动

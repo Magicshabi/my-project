@@ -1,0 +1,2 @@
+{"type": "session", "monotonic": 162286.1132733, "port": "COM9", "source_sha256": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22"}
+{"type": "aborted", "monotonic": 162296.1418207, "error": "No stable five-frame CMD65 baseline"}

@@ -1,0 +1,71 @@
+{
+  "port": "COM9",
+  "chip_mac": "68:09:47:7b:9f:64",
+  "bytes": 4194304,
+  "partitions": [
+    {
+      "type": 1,
+      "subtype": 2,
+      "offset": 36864,
+      "size": 20480,
+      "name": "nvs",
+      "flags": 0
+    },
+    {
+      "type": 1,
+      "subtype": 0,
+      "offset": 57344,
+      "size": 8192,
+      "name": "otadata",
+      "flags": 0
+    },
+    {
+      "type": 0,
+      "subtype": 16,
+      "offset": 65536,
+      "size": 3145728,
+      "name": "app0",
+      "flags": 0
+    },
+    {
+      "type": 1,
+      "subtype": 130,
+      "offset": 3211264,
+      "size": 917504,
+      "name": "spiffs",
+      "flags": 0
+    },
+    {
+      "type": 1,
+      "subtype": 3,
+      "offset": 4128768,
+      "size": 65536,
+      "name": "coredump",
+      "flags": 0
+    }
+  ],
+  "sha256": {
+    "flash_full_4MB.bin": "205de663904f59eef34d14cc78e6ff5fbc24cfcccdaa6074fc3b6b205e036b40",
+    "nvs_before.bin": "7b332d94d13640995283f6a29837845a3d345e1f608a32c37756e149e2b16525",
+    "partitions_before.bin": "c798c1173b1d0175c33f06340268885c4385ff5129206d90bda416ad99ea8ddd",
+    "official_motion_candidate.bin": "8dbe55e19f495e9469fe945aca1ad19757991501a6cbf208af3b5f91bdf59dc9",
+    "eight_points.bin": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22"
+  },
+  "device_backup_verified": true,
+  "candidate_internal_checksum_verified": true,
+  "flash_performed": true,
+  "note": "User confirmed external servo power disconnected. Restored ESP32 application only; boot and hardware validation tracked separately.",
+  "verification_log": "verify_backup.log",
+  "flash_address": 65536,
+  "flash_bytes": 1771136,
+  "application_write_digest_verified": true,
+  "partitions_and_nvs_preserved_before_first_boot": true,
+  "flash_log": "write_motion.log",
+  "preservation_log": "verify_preserved.log",
+  "boot_capture": "restored_boot.json",
+  "at32_update_performed": false,
+  "esp32_version": "1.0.2",
+  "at32_version": "1.0.42",
+  "post_restore_inspection": "../../runs/20261007_191109_dc6479/result.json",
+  "motion_validation": "pending external servo power and ID6 probe"
+}

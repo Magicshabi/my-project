@@ -1,0 +1,626 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.8.0 (3413)
+#   Disassembled from CPython Python 3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]
+# Timestamp in code: 0 (1970-01-01 08:00:00)
+# Source code size mod 2**32: 0 bytes
+# Method Name:       <module>
+# Filename:          nexarm_qt\constants.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        1
+# Flags:             0x00000040 (NOFREE)
+# First Line:        2
+# Constants:
+#    0: 255
+#    1: 1
+#    2: 2
+#    3: 3
+#    4: 4
+#    5: 5
+#    6: 6
+#    7: 7
+#    8: 8
+#    9: 9
+#   10: 10
+#   11: 11
+#   12: 12
+#   13: 13
+#   14: 14
+#   15: 15
+#   16: 16
+#   17: 17
+#   18: 18
+#   19: 19
+#   20: 22
+#   21: 23
+#   22: 30
+#   23: 31
+#   24: 33
+#   25: 34
+#   26: 35
+#   27: 36
+#   28: 40
+#   29: 41
+#   30: 42
+#   31: 43
+#   32: 44
+#   33: 45
+#   34: 46
+#   35: 47
+#   36: 48
+#   37: 49
+#   38: 50
+#   39: 51
+#   40: 52
+#   41: 53
+#   42: 54
+#   43: 55
+#   44: 56
+#   45: 57
+#   46: 58
+#   47: 59
+#   48: 60
+#   49: 61
+#   50: 62
+#   51: 63
+#   52: 64
+#   53: 65
+#   54: 66
+#   55: 68
+#   56: 69
+#   57: 70
+#   58: 71
+#   59: 72
+#   60: 73
+#   61: 74
+#   62: 75
+#   63: 76
+#   64: 77
+#   65: 78
+#   66: 79
+#   67: 80
+#   68: 88
+#   69: 89
+#   70: 120
+#   71: 121
+#   72: 122
+#   73: 123
+#   74: 124
+#   75: 125
+#   76: 126
+#   77: 127
+#   78: 128
+#   79: 129
+#   80: 130
+#   81: 131
+#   82: 132
+#   83: 133
+#   84: 134
+#   85: 135
+#   86: 90
+#   87: 91
+#   88: 92
+#   89: 93
+#   90: 94
+#   91: 81
+#   92: 82
+#   93: 83
+#   94: 84
+#   95: 85
+#   96: 86
+#   97: 87
+#   98: None
+# Names:
+#    0: CMD_SYS_HEAD
+#    1: CMD_FIRMWARE_VERSION_CHECK
+#    2: CMD_CHECK_BAT_LEVEL_CHECK
+#    3: CMD_ACTION_GROUP_RUN
+#    4: CMD_ACTION_GROUP_STOP
+#    5: CMD_ACTION_GROUP_DOWNLOAD
+#    6: CMD_FKINE_RESULT_GET
+#    7: CMD_IKINE_RESULT_GET
+#    8: CMD_COORDINATE_SET
+#    9: CMD_BUZZER_SET
+#   10: CMD_OLED_SET
+#   11: CMD_GET_CUR_COORDS
+#   12: CMD_OLED_ICON
+#   13: CMD_SET_SINGLE_MOTOR
+#   14: CMD_STOP_ALL_MOTOR
+#   15: CMD_SET_MOTOR_SPEED
+#   16: CMD_CONVEYOR_SET
+#   17: CMD_STEPPER_RESET
+#   18: CMD_STEPPER_DIV
+#   19: CMD_STEPPER_RUN
+#   20: CMD_BUTTON_EVENT
+#   21: CMD_ACTION_GROUP_ERASE
+#   22: CMD_SET_ESPNOW_CHANNEL
+#   23: CMD_SET_GLOBAL_ACC
+#   24: CMD_ESPNOW_SYNC_CTRL
+#   25: CMD_MECANUM_CONTROL
+#   26: CMD_TANK_CONTROL
+#   27: CMD_SET_PEER_MAC
+#   28: CMD_COLOR_TRACK
+#   29: CMD_FACE_TRACK
+#   30: CMD_SELF_LEARN_TRACK
+#   31: CMD_APRILTAG_TRACK
+#   32: CMD_APRILTAG_GRAB
+#   33: CMD_APRILTAG_SET_OFFSET
+#   34: CMD_COLOR_GRAB
+#   35: CMD_LLM_CONTROL
+#   36: CMD_GARBAGE_GRAB
+#   37: CMD_CALIBRATION
+#   38: CMD_ARM_MOVE_INC
+#   39: CMD_ARM_SERVO_SINGLE
+#   40: CMD_SET_SERVO_ID
+#   41: CMD_SET_SERVO_MODE
+#   42: CMD_ARM_RESET
+#   43: CMD_READ_ALL_SERVOS
+#   44: CMD_SET_MOVE_ACC
+#   45: CMD_SET_POS_OFFSET
+#   46: CMD_GET_POS_OFFSET
+#   47: CMD_SET_PID_PARAM
+#   48: CMD_GET_PID_PARAM
+#   49: CMD_SET_TORQUE
+#   50: CMD_SET_BT_MODE
+#   51: CMD_SET_KINEMATICS_PARAM
+#   52: CMD_GET_KINEMATICS_PARAM
+#   53: CMD_GET_REAL_JOINT_ANGLES
+#   54: CMD_GET_REAL_TCP_POSE
+#   55: CMD_LEROBOT_MODE
+#   56: CMD_PC_SYNC_TEACH
+#   57: CMD_SYNC_WRITE_SERVOS
+#   58: CMD_SERVO_READ_OVERLOAD
+#   59: CMD_SERVO_WRITE_OVERLOAD
+#   60: CMD_SERVO_READ_BAUD
+#   61: CMD_SERVO_WRITE_BAUD
+#   62: CMD_SERVO_READ_MAX_TORQUE
+#   63: CMD_SERVO_WRITE_MAX_TORQUE
+#   64: CMD_SERVO_READ_ANGLE_LIMIT
+#   65: CMD_SERVO_WRITE_ANGLE_LIMIT
+#   66: CMD_SET_COORD_LIMITS
+#   67: CMD_GET_COORD_LIMITS
+#   68: CMD_SERVO_CALI_POS
+#   69: CMD_SET_INTERP_MODE
+#   70: CMD_ACTION_EDIT_ENTER
+#   71: CMD_ACTION_EDIT_EXIT
+#   72: CMD_ACTION_EDIT_START
+#   73: CMD_ACTION_EDIT_STOP
+#   74: CMD_ACTION_EDIT_PLAY
+#   75: CMD_ACTION_EDIT_PLAY_STOP
+#   76: CMD_ACTION_EDIT_CLEAR
+#   77: CMD_ACTION_EDIT_QUERY
+#   78: CMD_SYNC_TEACH_ENTER
+#   79: CMD_SYNC_TEACH_EXIT
+#   80: CMD_SYNC_TEACH_REC_START
+#   81: CMD_SYNC_TEACH_REC_STOP
+#   82: CMD_SYNC_TEACH_PLAY
+#   83: CMD_SYNC_TEACH_PLAY_STOP
+#   84: CMD_SYNC_TEACH_CLEAR
+#   85: CMD_SYNC_TEACH_QUERY
+#   86: CMD_FIRMWARE_UPDATE
+#   87: CMD_FW_START
+#   88: CMD_FW_DATA
+#   89: CMD_FW_END
+#   90: CMD_FW_QUERY
+#   91: CMD_GESTURE_TRACK
+#   92: CMD_MOVE_INC
+#   93: CMD_SET_PS3_MAC
+#   94: CMD_FACTORY_RESET
+#   95: CMD_SET_CHASSIS_CONFIG
+#   96: CMD_GET_CHASSIS_CONFIG
+#   97: CMD_SCAN_WIFI_CHANNELS
+#   98: CMD_MOTOR_STOP
+#   99: CMD_MECANUM_RUN
+#  100: CMD_TANK_RUN
+#  101: CMD_ESPNOW_SET_CHANNEL
+#  102: CMD_ESPNOW_SET_ACC
+#  103: CMD_ESPNOW_SET_ROLE
+#  104: CMD_ESPNOW_ENABLE
+#  105: CMD_ESPNOW_SYNC
+#  106: CMD_ESPNOW_SET_MAC
+#  107: CMD_ESPNOW_SCAN
+#  108: CMD_ESPNOW_SCAN_CHANNEL
+#  109: CMD_STEPPER_SET_DIV
+#  110: CMD_PS3_SET_MAC
+#  111: CMD_SYNC_MOVE_SERVOS
+#  112: CMD_READ_OVERLOAD
+#  113: CMD_SET_OVERLOAD
+#  114: CMD_READ_BAUD
+#  115: CMD_SET_BAUD
+#  116: CMD_READ_MAX_TORQUE
+#  117: CMD_SET_MAX_TORQUE
+#  118: CMD_READ_ANGLE_LIMIT
+#  119: CMD_SET_ANGLE_LIMIT
+#  120: AT32_SYS_ID
+#  121: SERVO_CMD_READ
+#  122: SERVO_CMD_WRITE
+#  123: SERVO_REG_TORQUE
+#  124: SERVO_REG_ACC
+#  125: SERVO_REG_GOAL_POS
+#  126: SERVO_REG_PRESENT_POS
+
+  2:           0 LOAD_CONST           (255)
+               2 STORE_NAME           (CMD_SYS_HEAD)
+
+  5:           4 LOAD_CONST           (1)
+               6 STORE_NAME           (CMD_FIRMWARE_VERSION_CHECK)
+
+  6:           8 LOAD_CONST           (2)
+              10 STORE_NAME           (CMD_CHECK_BAT_LEVEL_CHECK)
+
+  7:          12 LOAD_CONST           (3)
+              14 STORE_NAME           (CMD_ACTION_GROUP_RUN)
+
+  8:          16 LOAD_CONST           (4)
+              18 STORE_NAME           (CMD_ACTION_GROUP_STOP)
+
+  9:          20 LOAD_CONST           (5)
+              22 STORE_NAME           (CMD_ACTION_GROUP_DOWNLOAD)
+
+ 10:          24 LOAD_CONST           (6)
+              26 STORE_NAME           (CMD_FKINE_RESULT_GET)
+
+ 11:          28 LOAD_CONST           (7)
+              30 STORE_NAME           (CMD_IKINE_RESULT_GET)
+
+ 12:          32 LOAD_CONST           (8)
+              34 STORE_NAME           (CMD_COORDINATE_SET)
+
+ 13:          36 LOAD_CONST           (9)
+              38 STORE_NAME           (CMD_BUZZER_SET)
+
+ 14:          40 LOAD_CONST           (10)
+              42 STORE_NAME           (CMD_OLED_SET)
+
+ 15:          44 LOAD_CONST           (11)
+              46 STORE_NAME           (CMD_GET_CUR_COORDS)
+
+ 16:          48 LOAD_CONST           (12)
+              50 STORE_NAME           (CMD_OLED_ICON)
+
+ 17:          52 LOAD_CONST           (13)
+              54 STORE_NAME           (CMD_SET_SINGLE_MOTOR)
+
+ 18:          56 LOAD_CONST           (14)
+              58 STORE_NAME           (CMD_STOP_ALL_MOTOR)
+
+ 19:          60 LOAD_CONST           (15)
+              62 STORE_NAME           (CMD_SET_MOTOR_SPEED)
+
+ 22:          64 LOAD_CONST           (16)
+              66 STORE_NAME           (CMD_CONVEYOR_SET)
+
+ 23:          68 LOAD_CONST           (17)
+              70 STORE_NAME           (CMD_STEPPER_RESET)
+
+ 24:          72 LOAD_CONST           (18)
+              74 STORE_NAME           (CMD_STEPPER_DIV)
+
+ 25:          76 LOAD_CONST           (19)
+              78 STORE_NAME           (CMD_STEPPER_RUN)
+
+ 27:          80 LOAD_CONST           (22)
+              82 STORE_NAME           (CMD_BUTTON_EVENT)
+
+ 28:          84 LOAD_CONST           (23)
+              86 STORE_NAME           (CMD_ACTION_GROUP_ERASE)
+
+ 31:          88 LOAD_CONST           (30)
+              90 STORE_NAME           (CMD_SET_ESPNOW_CHANNEL)
+
+ 32:          92 LOAD_CONST           (31)
+              94 STORE_NAME           (CMD_SET_GLOBAL_ACC)
+
+ 33:          96 LOAD_CONST           (33)
+              98 STORE_NAME           (CMD_ESPNOW_SYNC_CTRL)
+
+ 36:         100 LOAD_CONST           (34)
+             102 STORE_NAME           (CMD_MECANUM_CONTROL)
+
+ 37:         104 LOAD_CONST           (35)
+             106 STORE_NAME           (CMD_TANK_CONTROL)
+
+ 38:         108 LOAD_CONST           (36)
+             110 STORE_NAME           (CMD_SET_PEER_MAC)
+
+ 41:         112 LOAD_CONST           (40)
+             114 STORE_NAME           (CMD_COLOR_TRACK)
+
+ 42:         116 LOAD_CONST           (41)
+             118 STORE_NAME           (CMD_FACE_TRACK)
+
+ 43:         120 LOAD_CONST           (42)
+             122 STORE_NAME           (CMD_SELF_LEARN_TRACK)
+
+ 44:         124 LOAD_CONST           (43)
+             126 STORE_NAME           (CMD_APRILTAG_TRACK)
+
+ 45:         128 LOAD_CONST           (44)
+             130 STORE_NAME           (CMD_APRILTAG_GRAB)
+
+ 46:         132 LOAD_CONST           (45)
+             134 STORE_NAME           (CMD_APRILTAG_SET_OFFSET)
+
+ 47:         136 LOAD_CONST           (46)
+             138 STORE_NAME           (CMD_COLOR_GRAB)
+
+ 48:         140 LOAD_CONST           (47)
+             142 STORE_NAME           (CMD_LLM_CONTROL)
+
+ 49:         144 LOAD_CONST           (48)
+             146 STORE_NAME           (CMD_GARBAGE_GRAB)
+
+ 50:         148 LOAD_CONST           (49)
+             150 STORE_NAME           (CMD_CALIBRATION)
+
+ 53:         152 LOAD_CONST           (50)
+             154 STORE_NAME           (CMD_ARM_MOVE_INC)
+
+ 54:         156 LOAD_CONST           (51)
+             158 STORE_NAME           (CMD_ARM_SERVO_SINGLE)
+
+ 57:         160 LOAD_CONST           (52)
+             162 STORE_NAME           (CMD_SET_SERVO_ID)
+
+ 58:         164 LOAD_CONST           (53)
+             166 STORE_NAME           (CMD_SET_SERVO_MODE)
+
+ 59:         168 LOAD_CONST           (54)
+             170 STORE_NAME           (CMD_ARM_RESET)
+
+ 60:         172 LOAD_CONST           (55)
+             174 STORE_NAME           (CMD_READ_ALL_SERVOS)
+
+ 61:         176 LOAD_CONST           (56)
+             178 STORE_NAME           (CMD_SET_MOVE_ACC)
+
+ 62:         180 LOAD_CONST           (57)
+             182 STORE_NAME           (CMD_SET_POS_OFFSET)
+
+ 63:         184 LOAD_CONST           (58)
+             186 STORE_NAME           (CMD_GET_POS_OFFSET)
+
+ 64:         188 LOAD_CONST           (59)
+             190 STORE_NAME           (CMD_SET_PID_PARAM)
+
+ 65:         192 LOAD_CONST           (60)
+             194 STORE_NAME           (CMD_GET_PID_PARAM)
+
+ 66:         196 LOAD_CONST           (61)
+             198 STORE_NAME           (CMD_SET_TORQUE)
+
+ 67:         200 LOAD_CONST           (62)
+             202 STORE_NAME           (CMD_SET_BT_MODE)
+
+ 68:         204 LOAD_CONST           (63)
+             206 STORE_NAME           (CMD_SET_KINEMATICS_PARAM)
+
+ 69:         208 LOAD_CONST           (64)
+             210 STORE_NAME           (CMD_GET_KINEMATICS_PARAM)
+
+ 70:         212 LOAD_CONST           (65)
+             214 STORE_NAME           (CMD_GET_REAL_JOINT_ANGLES)
+
+ 71:         216 LOAD_CONST           (66)
+             218 STORE_NAME           (CMD_GET_REAL_TCP_POSE)
+
+ 73:         220 LOAD_CONST           (68)
+             222 STORE_NAME           (CMD_LEROBOT_MODE)
+
+ 74:         224 LOAD_CONST           (69)
+             226 STORE_NAME           (CMD_PC_SYNC_TEACH)
+
+ 77:         228 LOAD_CONST           (70)
+             230 STORE_NAME           (CMD_SYNC_WRITE_SERVOS)
+
+ 78:         232 LOAD_CONST           (71)
+             234 STORE_NAME           (CMD_SERVO_READ_OVERLOAD)
+
+ 79:         236 LOAD_CONST           (72)
+             238 STORE_NAME           (CMD_SERVO_WRITE_OVERLOAD)
+
+ 80:         240 LOAD_CONST           (73)
+             242 STORE_NAME           (CMD_SERVO_READ_BAUD)
+
+ 81:         244 LOAD_CONST           (74)
+             246 STORE_NAME           (CMD_SERVO_WRITE_BAUD)
+
+ 82:         248 LOAD_CONST           (75)
+             250 STORE_NAME           (CMD_SERVO_READ_MAX_TORQUE)
+
+ 83:         252 LOAD_CONST           (76)
+             254 STORE_NAME           (CMD_SERVO_WRITE_MAX_TORQUE)
+
+ 84:         256 LOAD_CONST           (77)
+             258 STORE_NAME           (CMD_SERVO_READ_ANGLE_LIMIT)
+
+ 85:         260 LOAD_CONST           (78)
+             262 STORE_NAME           (CMD_SERVO_WRITE_ANGLE_LIMIT)
+
+ 86:         264 LOAD_CONST           (79)
+             266 STORE_NAME           (CMD_SET_COORD_LIMITS)
+
+ 87:         268 LOAD_CONST           (80)
+             270 STORE_NAME           (CMD_GET_COORD_LIMITS)
+
+ 88:         272 LOAD_CONST           (88)
+             274 STORE_NAME           (CMD_SERVO_CALI_POS)
+
+ 89:         276 LOAD_CONST           (89)
+             278 STORE_NAME           (CMD_SET_INTERP_MODE)
+
+ 92:         280 LOAD_CONST           (120)
+             282 STORE_NAME           (CMD_ACTION_EDIT_ENTER)
+
+ 93:         284 LOAD_CONST           (121)
+             286 STORE_NAME           (CMD_ACTION_EDIT_EXIT)
+
+ 94:         288 LOAD_CONST           (122)
+             290 STORE_NAME           (CMD_ACTION_EDIT_START)
+
+ 95:         292 LOAD_CONST           (123)
+             294 STORE_NAME           (CMD_ACTION_EDIT_STOP)
+
+ 96:         296 LOAD_CONST           (124)
+             298 STORE_NAME           (CMD_ACTION_EDIT_PLAY)
+
+ 97:         300 LOAD_CONST           (125)
+             302 STORE_NAME           (CMD_ACTION_EDIT_PLAY_STOP)
+
+ 98:         304 LOAD_CONST           (126)
+             306 STORE_NAME           (CMD_ACTION_EDIT_CLEAR)
+
+ 99:         308 LOAD_CONST           (127)
+             310 STORE_NAME           (CMD_ACTION_EDIT_QUERY)
+
+102:         312 LOAD_CONST           (128)
+             314 STORE_NAME           (CMD_SYNC_TEACH_ENTER)
+
+103:         316 LOAD_CONST           (129)
+             318 STORE_NAME           (CMD_SYNC_TEACH_EXIT)
+
+104:         320 LOAD_CONST           (130)
+             322 STORE_NAME           (CMD_SYNC_TEACH_REC_START)
+
+105:         324 LOAD_CONST           (131)
+             326 STORE_NAME           (CMD_SYNC_TEACH_REC_STOP)
+
+106:         328 LOAD_CONST           (132)
+             330 STORE_NAME           (CMD_SYNC_TEACH_PLAY)
+
+107:         332 LOAD_CONST           (133)
+             334 STORE_NAME           (CMD_SYNC_TEACH_PLAY_STOP)
+
+108:         336 LOAD_CONST           (134)
+             338 STORE_NAME           (CMD_SYNC_TEACH_CLEAR)
+
+109:         340 LOAD_CONST           (135)
+             342 STORE_NAME           (CMD_SYNC_TEACH_QUERY)
+
+110:         344 LOAD_CONST           (90)
+             346 STORE_NAME           (CMD_FIRMWARE_UPDATE)
+
+111:         348 LOAD_CONST           (91)
+             350 STORE_NAME           (CMD_FW_START)
+
+112:         352 LOAD_CONST           (92)
+             354 STORE_NAME           (CMD_FW_DATA)
+
+113:         356 LOAD_CONST           (93)
+             358 STORE_NAME           (CMD_FW_END)
+
+114:         360 LOAD_CONST           (94)
+             362 STORE_NAME           (CMD_FW_QUERY)
+
+115:         364 LOAD_CONST           (81)
+             366 STORE_NAME           (CMD_GESTURE_TRACK)
+
+116:         368 LOAD_CONST           (82)
+             370 STORE_NAME           (CMD_MOVE_INC)
+
+117:         372 LOAD_CONST           (83)
+             374 STORE_NAME           (CMD_SET_PS3_MAC)
+
+118:         376 LOAD_CONST           (84)
+             378 STORE_NAME           (CMD_FACTORY_RESET)
+
+119:         380 LOAD_CONST           (85)
+             382 STORE_NAME           (CMD_SET_CHASSIS_CONFIG)
+
+120:         384 LOAD_CONST           (86)
+             386 STORE_NAME           (CMD_GET_CHASSIS_CONFIG)
+
+121:         388 LOAD_CONST           (87)
+             390 STORE_NAME           (CMD_SCAN_WIFI_CHANNELS)
+
+124:         392 LOAD_NAME            (CMD_STOP_ALL_MOTOR)
+             394 STORE_NAME           (CMD_MOTOR_STOP)
+
+125:         396 LOAD_NAME            (CMD_MECANUM_CONTROL)
+             398 STORE_NAME           (CMD_MECANUM_RUN)
+
+126:         400 LOAD_NAME            (CMD_TANK_CONTROL)
+             402 STORE_NAME           (CMD_TANK_RUN)
+
+127:         404 LOAD_NAME            (CMD_SET_ESPNOW_CHANNEL)
+             406 STORE_NAME           (CMD_ESPNOW_SET_CHANNEL)
+
+128:         408 LOAD_NAME            (CMD_SET_GLOBAL_ACC)
+             410 STORE_NAME           (CMD_ESPNOW_SET_ACC)
+
+129:         412 LOAD_NAME            (CMD_ESPNOW_SYNC_CTRL)
+             414 STORE_NAME           (CMD_ESPNOW_SET_ROLE)
+
+130:         416 LOAD_NAME            (CMD_ESPNOW_SYNC_CTRL)
+             418 STORE_NAME           (CMD_ESPNOW_ENABLE)
+
+131:         420 LOAD_NAME            (CMD_ESPNOW_SYNC_CTRL)
+             422 STORE_NAME           (CMD_ESPNOW_SYNC)
+
+132:         424 LOAD_NAME            (CMD_SET_PEER_MAC)
+             426 STORE_NAME           (CMD_ESPNOW_SET_MAC)
+
+133:         428 LOAD_NAME            (CMD_SCAN_WIFI_CHANNELS)
+             430 STORE_NAME           (CMD_ESPNOW_SCAN)
+
+134:         432 LOAD_NAME            (CMD_SCAN_WIFI_CHANNELS)
+             434 STORE_NAME           (CMD_ESPNOW_SCAN_CHANNEL)
+
+135:         436 LOAD_NAME            (CMD_STEPPER_DIV)
+             438 STORE_NAME           (CMD_STEPPER_SET_DIV)
+
+136:         440 LOAD_NAME            (CMD_SET_PS3_MAC)
+             442 STORE_NAME           (CMD_PS3_SET_MAC)
+
+137:         444 LOAD_NAME            (CMD_SYNC_WRITE_SERVOS)
+             446 STORE_NAME           (CMD_SYNC_MOVE_SERVOS)
+
+138:         448 LOAD_NAME            (CMD_SERVO_READ_OVERLOAD)
+             450 STORE_NAME           (CMD_READ_OVERLOAD)
+
+139:         452 LOAD_NAME            (CMD_SERVO_WRITE_OVERLOAD)
+             454 STORE_NAME           (CMD_SET_OVERLOAD)
+
+140:         456 LOAD_NAME            (CMD_SERVO_READ_BAUD)
+             458 STORE_NAME           (CMD_READ_BAUD)
+
+141:         460 LOAD_NAME            (CMD_SERVO_WRITE_BAUD)
+             462 STORE_NAME           (CMD_SET_BAUD)
+
+142:         464 LOAD_NAME            (CMD_SERVO_READ_MAX_TORQUE)
+             466 STORE_NAME           (CMD_READ_MAX_TORQUE)
+
+143:         468 LOAD_NAME            (CMD_SERVO_WRITE_MAX_TORQUE)
+             470 STORE_NAME           (CMD_SET_MAX_TORQUE)
+
+144:         472 LOAD_NAME            (CMD_SERVO_READ_ANGLE_LIMIT)
+             474 STORE_NAME           (CMD_READ_ANGLE_LIMIT)
+
+145:         476 LOAD_NAME            (CMD_SERVO_WRITE_ANGLE_LIMIT)
+             478 STORE_NAME           (CMD_SET_ANGLE_LIMIT)
+
+148:         480 LOAD_CONST           (90)
+             482 STORE_NAME           (AT32_SYS_ID)
+
+151:         484 LOAD_CONST           (2)
+             486 STORE_NAME           (SERVO_CMD_READ)
+
+152:         488 LOAD_CONST           (3)
+             490 STORE_NAME           (SERVO_CMD_WRITE)
+
+155:         492 LOAD_CONST           (40)
+             494 STORE_NAME           (SERVO_REG_TORQUE)
+
+156:         496 LOAD_CONST           (41)
+             498 STORE_NAME           (SERVO_REG_ACC)
+
+157:         500 LOAD_CONST           (42)
+             502 STORE_NAME           (SERVO_REG_GOAL_POS)
+
+158:         504 LOAD_CONST           (56)
+             506 STORE_NAME           (SERVO_REG_PRESENT_POS)
+             508 LOAD_CONST           (None)
+             510 RETURN_VALUE
+

@@ -1,0 +1,1835 @@
+# pydisasm version 6.3.0
+# CPython Python bytecode 3.8.0 (3413)
+#   Disassembled from CPython Python 3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]
+# Timestamp in code: 0 (1970-01-01 08:00:00)
+# Source code size mod 2**32: 0 bytes
+# Method Name:       <module>
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000040 (NOFREE)
+# First Line:        1
+# Constants:
+#    0: 0
+#    1: ('QWidget', 'QVBoxLayout', 'QHBoxLayout', 'QTextEdit', 'QSplitter', 'QGroupBox', 'QPushButton', 'QFileDialog', 'QMessageBox', 'QLabel')
+#    2: ('Qt',)
+#    3: ('QFont',)
+#    4: ('uic',)
+#    5: None
+#    6: ('STRINGS',)
+#    7: ('S',)
+#    8: <Code38 code object LogWidget at 0x242490b6350, file nexarm_qt\ui\log_widget.py>, line 9
+#    9: 'LogWidget'
+# Names:
+#    0: PyQt5.QtWidgets
+#    1: QWidget
+#    2: QVBoxLayout
+#    3: QHBoxLayout
+#    4: QTextEdit
+#    5: QSplitter
+#    6: QGroupBox
+#    7: QPushButton
+#    8: QFileDialog
+#    9: QMessageBox
+#   10: QLabel
+#   11: PyQt5.QtCore
+#   12: Qt
+#   13: PyQt5.QtGui
+#   14: QFont
+#   15: PyQt5
+#   16: uic
+#   17: os
+#   18: nexarm_qt.translations
+#   19: STRINGS
+#   20: nexarm_qt.styles
+#   21: S
+#   22: LogWidget
+
+  1:           0 LOAD_CONST           (0)
+               2 LOAD_CONST           (('QWidget', 'QVBoxLayout', 'QHBoxLayout', 'QTextEdit', 'QSplitter', 'QGroupBox', 'QPushButton', 'QFileDialog', 'QMessageBox', 'QLabel'))
+               4 IMPORT_NAME          (PyQt5.QtWidgets)
+               6 IMPORT_FROM          (QWidget)
+               8 STORE_NAME           (QWidget)
+              10 IMPORT_FROM          (QVBoxLayout)
+              12 STORE_NAME           (QVBoxLayout)
+              14 IMPORT_FROM          (QHBoxLayout)
+              16 STORE_NAME           (QHBoxLayout)
+              18 IMPORT_FROM          (QTextEdit)
+              20 STORE_NAME           (QTextEdit)
+              22 IMPORT_FROM          (QSplitter)
+              24 STORE_NAME           (QSplitter)
+              26 IMPORT_FROM          (QGroupBox)
+              28 STORE_NAME           (QGroupBox)
+              30 IMPORT_FROM          (QPushButton)
+              32 STORE_NAME           (QPushButton)
+              34 IMPORT_FROM          (QFileDialog)
+              36 STORE_NAME           (QFileDialog)
+              38 IMPORT_FROM          (QMessageBox)
+              40 STORE_NAME           (QMessageBox)
+              42 IMPORT_FROM          (QLabel)
+              44 STORE_NAME           (QLabel)
+              46 POP_TOP
+
+  2:          48 LOAD_CONST           (0)
+              50 LOAD_CONST           (('Qt',))
+              52 IMPORT_NAME          (PyQt5.QtCore)
+              54 IMPORT_FROM          (Qt)
+              56 STORE_NAME           (Qt)
+              58 POP_TOP
+
+  3:          60 LOAD_CONST           (0)
+              62 LOAD_CONST           (('QFont',))
+              64 IMPORT_NAME          (PyQt5.QtGui)
+              66 IMPORT_FROM          (QFont)
+              68 STORE_NAME           (QFont)
+              70 POP_TOP
+
+  4:          72 LOAD_CONST           (0)
+              74 LOAD_CONST           (('uic',))
+              76 IMPORT_NAME          (PyQt5)
+              78 IMPORT_FROM          (uic)
+              80 STORE_NAME           (uic)
+              82 POP_TOP
+
+  5:          84 LOAD_CONST           (0)
+              86 LOAD_CONST           (None)
+              88 IMPORT_NAME          (os)
+              90 STORE_NAME           (os)
+
+  6:          92 LOAD_CONST           (0)
+              94 LOAD_CONST           (('STRINGS',))
+              96 IMPORT_NAME          (nexarm_qt.translations)
+              98 IMPORT_FROM          (STRINGS)
+             100 STORE_NAME           (STRINGS)
+             102 POP_TOP
+
+  7:         104 LOAD_CONST           (0)
+             106 LOAD_CONST           (('S',))
+             108 IMPORT_NAME          (nexarm_qt.styles)
+             110 IMPORT_FROM          (S)
+             112 STORE_NAME           (S)
+             114 POP_TOP
+
+  9:         116 LOAD_BUILD_CLASS
+             118 LOAD_CONST           (<Code38 code object LogWidget at 0x242490b6350, file nexarm_qt\ui\log_widget.py>, line 9)
+             120 LOAD_CONST           ("LogWidget")
+             122 MAKE_FUNCTION        (No arguments)
+             124 LOAD_CONST           ("LogWidget")
+             126 LOAD_NAME            (QWidget)
+             128 CALL_FUNCTION        (3 positional arguments)
+             130 STORE_NAME           (LogWidget)
+             132 LOAD_CONST           (None)
+             134 RETURN_VALUE
+
+
+# Method Name:       LogWidget
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    0
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  0
+# Stack size:        4
+# Flags:             0x00000000 (0x0)
+# First Line:        9
+# Constants:
+#    0: 'LogWidget'
+#    1: 'zh'
+#    2: <Code38 code object __init__ at 0x2424a9acec0, file nexarm_qt\ui\log_widget.py>, line 10
+#    3: 'LogWidget.__init__'
+#    4: <Code38 code object update_language at 0x24249063250, file nexarm_qt\ui\log_widget.py>, line 31
+#    5: 'LogWidget.update_language'
+#    6: <Code38 code object setup_ui_from_file at 0x242490634d0, file nexarm_qt\ui\log_widget.py>, line 40
+#    7: 'LogWidget.setup_ui_from_file'
+#    8: <Code38 code object setup_ui_manual at 0x24249076650, file nexarm_qt\ui\log_widget.py>, line 44
+#    9: 'LogWidget.setup_ui_manual'
+#   10: <Code38 code object connect_signals at 0x242490763f0, file nexarm_qt\ui\log_widget.py>, line 117
+#   11: 'LogWidget.connect_signals'
+#   12: 500
+#   13: <Code38 code object append_hex_log at 0x24248ff7020, file nexarm_qt\ui\log_widget.py>, line 123
+#   14: 'LogWidget.append_hex_log'
+#   15: <Code38 code object append_text_log at 0x242490ac8d0, file nexarm_qt\ui\log_widget.py>, line 136
+#   16: 'LogWidget.append_text_log'
+#   17: <Code38 code object clear_hex_log at 0x242490b5450, file nexarm_qt\ui\log_widget.py>, line 147
+#   18: 'LogWidget.clear_hex_log'
+#   19: <Code38 code object export_hex_log at 0x242490b5e50, file nexarm_qt\ui\log_widget.py>, line 151
+#   20: 'LogWidget.export_hex_log'
+#   21: <Code38 code object clear_text_log at 0x242490b5f50, file nexarm_qt\ui\log_widget.py>, line 164
+#   22: 'LogWidget.clear_text_log'
+#   23: <Code38 code object export_text_log at 0x242490b6150, file nexarm_qt\ui\log_widget.py>, line 168
+#   24: 'LogWidget.export_text_log'
+#   25: ('zh',)
+# Names:
+#    0: __name__
+#    1: __module__
+#    2: __qualname__
+#    3: __init__
+#    4: update_language
+#    5: setup_ui_from_file
+#    6: setup_ui_manual
+#    7: connect_signals
+#    8: MAX_LOG_LINES
+#    9: append_hex_log
+#   10: append_text_log
+#   11: clear_hex_log
+#   12: export_hex_log
+#   13: clear_text_log
+#   14: export_text_log
+#   15: __classcell__
+# Free variables:
+#    0: __class__
+
+  9:           0 LOAD_NAME            (__name__)
+               2 STORE_NAME           (__module__)
+               4 LOAD_CONST           ("LogWidget")
+               6 STORE_NAME           (__qualname__)
+
+ 10:           8 LOAD_CONST           (('zh',))
+              10 LOAD_CLOSURE         (__class__)
+              12 BUILD_TUPLE          1
+              14 LOAD_CONST           (<Code38 code object __init__ at 0x2424a9acec0, file nexarm_qt\ui\log_widget.py>, line 10)
+              16 LOAD_CONST           ("LogWidget.__init__")
+              18 MAKE_FUNCTION        (default, closure)
+              20 STORE_NAME           (__init__)
+
+ 31:          22 LOAD_CONST           (<Code38 code object update_language at 0x24249063250, file nexarm_qt\ui\log_widget.py>, line 31)
+              24 LOAD_CONST           ("LogWidget.update_language")
+              26 MAKE_FUNCTION        (No arguments)
+              28 STORE_NAME           (update_language)
+
+ 40:          30 LOAD_CONST           (<Code38 code object setup_ui_from_file at 0x242490634d0, file nexarm_qt\ui\log_widget.py>, line 40)
+              32 LOAD_CONST           ("LogWidget.setup_ui_from_file")
+              34 MAKE_FUNCTION        (No arguments)
+              36 STORE_NAME           (setup_ui_from_file)
+
+ 44:          38 LOAD_CONST           (<Code38 code object setup_ui_manual at 0x24249076650, file nexarm_qt\ui\log_widget.py>, line 44)
+              40 LOAD_CONST           ("LogWidget.setup_ui_manual")
+              42 MAKE_FUNCTION        (No arguments)
+              44 STORE_NAME           (setup_ui_manual)
+
+117:          46 LOAD_CONST           (<Code38 code object connect_signals at 0x242490763f0, file nexarm_qt\ui\log_widget.py>, line 117)
+              48 LOAD_CONST           ("LogWidget.connect_signals")
+              50 MAKE_FUNCTION        (No arguments)
+              52 STORE_NAME           (connect_signals)
+
+121:          54 LOAD_CONST           (500)
+              56 STORE_NAME           (MAX_LOG_LINES)
+
+123:          58 LOAD_CONST           (<Code38 code object append_hex_log at 0x24248ff7020, file nexarm_qt\ui\log_widget.py>, line 123)
+              60 LOAD_CONST           ("LogWidget.append_hex_log")
+              62 MAKE_FUNCTION        (No arguments)
+              64 STORE_NAME           (append_hex_log)
+
+136:          66 LOAD_CONST           (<Code38 code object append_text_log at 0x242490ac8d0, file nexarm_qt\ui\log_widget.py>, line 136)
+              68 LOAD_CONST           ("LogWidget.append_text_log")
+              70 MAKE_FUNCTION        (No arguments)
+              72 STORE_NAME           (append_text_log)
+
+147:          74 LOAD_CONST           (<Code38 code object clear_hex_log at 0x242490b5450, file nexarm_qt\ui\log_widget.py>, line 147)
+              76 LOAD_CONST           ("LogWidget.clear_hex_log")
+              78 MAKE_FUNCTION        (No arguments)
+              80 STORE_NAME           (clear_hex_log)
+
+151:          82 LOAD_CONST           (<Code38 code object export_hex_log at 0x242490b5e50, file nexarm_qt\ui\log_widget.py>, line 151)
+              84 LOAD_CONST           ("LogWidget.export_hex_log")
+              86 MAKE_FUNCTION        (No arguments)
+              88 STORE_NAME           (export_hex_log)
+
+164:          90 LOAD_CONST           (<Code38 code object clear_text_log at 0x242490b5f50, file nexarm_qt\ui\log_widget.py>, line 164)
+              92 LOAD_CONST           ("LogWidget.clear_text_log")
+              94 MAKE_FUNCTION        (No arguments)
+              96 STORE_NAME           (clear_text_log)
+
+168:          98 LOAD_CONST           (<Code38 code object export_text_log at 0x242490b6150, file nexarm_qt\ui\log_widget.py>, line 168)
+             100 LOAD_CONST           ("LogWidget.export_text_log")
+             102 MAKE_FUNCTION        (No arguments)
+             104 STORE_NAME           (export_text_log)
+             106 LOAD_CLOSURE         (__class__)
+             108 DUP_TOP
+             110 STORE_NAME           (__classcell__)
+             112 RETURN_VALUE
+
+
+# Method Name:       __init__
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    3
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  5
+# Stack size:        10
+# Flags:             0x00000003 (NEWLOCALS | OPTIMIZED)
+# First Line:        10
+# Constants:
+#    0: None
+#    1: False
+#    2: 'ui_files'
+#    3: 'log_widget.ui'
+#    4: True
+#    5: 'Failed to load Log UI: '
+# Names:
+#    0: super
+#    1: __init__
+#    2: comm_manager
+#    3: lang
+#    4: ui_loaded
+#    5: os
+#    6: path
+#    7: join
+#    8: dirname
+#    9: abspath
+#   10: __file__
+#   11: exists
+#   12: uic
+#   13: loadUi
+#   14: setup_ui_from_file
+#   15: Exception
+#   16: print
+#   17: setup_ui_manual
+#   18: connect_signals
+# Varnames:
+#	self, comm_manager, lang, ui_path, e
+# Positional arguments:
+#	self, comm_manager, lang
+# Local variables:
+#    3: ui_path
+#    4: e
+# Cell variables:
+#    0: __class__
+
+ 11:           0 LOAD_GLOBAL          (super)
+               2 CALL_FUNCTION        (0 positional arguments)
+               4 LOAD_METHOD          (__init__)
+               6 CALL_METHOD          (0 positional arguments)
+               8 POP_TOP
+
+ 12:          10 LOAD_FAST            (comm_manager)
+              12 LOAD_FAST            (self)
+              14 STORE_ATTR           (comm_manager)
+
+ 13:          16 LOAD_FAST            (lang)
+              18 LOAD_FAST            (self)
+              20 STORE_ATTR           (lang)
+
+ 16:          22 LOAD_CONST           (False)
+              24 LOAD_FAST            (self)
+              26 STORE_ATTR           (ui_loaded)
+
+ 17:          28 LOAD_GLOBAL          (os)
+              30 LOAD_ATTR            (path)
+              32 LOAD_METHOD          (join)
+              34 LOAD_GLOBAL          (os)
+              36 LOAD_ATTR            (path)
+              38 LOAD_METHOD          (dirname)
+              40 LOAD_GLOBAL          (os)
+              42 LOAD_ATTR            (path)
+              44 LOAD_METHOD          (dirname)
+              46 LOAD_GLOBAL          (os)
+              48 LOAD_ATTR            (path)
+              50 LOAD_METHOD          (abspath)
+              52 LOAD_GLOBAL          (__file__)
+              54 CALL_METHOD          (1 positional argument)
+              56 CALL_METHOD          (1 positional argument)
+              58 CALL_METHOD          (1 positional argument)
+              60 LOAD_CONST           ("ui_files")
+              62 LOAD_CONST           ("log_widget.ui")
+              64 CALL_METHOD          (3 positional arguments)
+              66 STORE_FAST           (ui_path)
+
+ 18:          68 LOAD_GLOBAL          (os)
+              70 LOAD_ATTR            (path)
+              72 LOAD_METHOD          (exists)
+              74 LOAD_FAST            (ui_path)
+              76 CALL_METHOD          (1 positional argument)
+              78 POP_JUMP_IF_FALSE    (to 160)
+
+ 19:          80 SETUP_FINALLY        (to 112)
+
+ 20:          82 LOAD_GLOBAL          (uic)
+              84 LOAD_METHOD          (loadUi)
+              86 LOAD_FAST            (ui_path)
+              88 LOAD_FAST            (self)
+              90 CALL_METHOD          (2 positional arguments)
+              92 POP_TOP
+
+ 21:          94 LOAD_CONST           (True)
+              96 LOAD_FAST            (self)
+              98 STORE_ATTR           (ui_loaded)
+
+ 22:         100 LOAD_FAST            (self)
+             102 LOAD_METHOD          (setup_ui_from_file)
+             104 CALL_METHOD          (0 positional arguments)
+             106 POP_TOP
+             108 POP_BLOCK
+             110 JUMP_FORWARD         (to 160)
+
+ 23:     >>  112 DUP_TOP
+             114 LOAD_GLOBAL          (Exception)
+             116 COMPARE_OP           (exception-match)
+             118 POP_JUMP_IF_FALSE    (to 158)
+             120 POP_TOP
+             122 STORE_FAST           (e)
+             124 POP_TOP
+             126 SETUP_FINALLY        (to 146)
+
+ 24:         128 LOAD_GLOBAL          (print)
+             130 LOAD_CONST           ("Failed to load Log UI: ")
+             132 LOAD_FAST            (e)
+             134 FORMAT_VALUE         0
+             136 BUILD_STRING         2
+             138 CALL_FUNCTION        (1 positional argument)
+             140 POP_TOP
+             142 POP_BLOCK
+             144 BEGIN_FINALLY
+         >>  146 LOAD_CONST           (None)
+             148 STORE_FAST           (e)
+             150 DELETE_FAST          (e)
+             152 END_FINALLY
+             154 POP_EXCEPT
+             156 JUMP_FORWARD         (to 160)
+         >>  158 END_FINALLY
+
+ 26:     >>  160 LOAD_FAST            (self)
+             162 LOAD_ATTR            (ui_loaded)
+             164 POP_JUMP_IF_TRUE     (to 174)
+
+ 27:         166 LOAD_FAST            (self)
+             168 LOAD_METHOD          (setup_ui_manual)
+             170 CALL_METHOD          (0 positional arguments)
+             172 POP_TOP
+
+ 29:     >>  174 LOAD_FAST            (self)
+             176 LOAD_METHOD          (connect_signals)
+             178 CALL_METHOD          (0 positional arguments)
+             180 POP_TOP
+             182 LOAD_CONST           (None)
+             184 RETURN_VALUE
+
+
+# Method Name:       update_language
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        6
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        31
+# Constants:
+#    0: None
+#    1: 'lbl_hex_title'
+#    2: 'grp_hex_log'
+#    3: 'lbl_txt_title'
+#    4: 'grp_txt_log'
+#    5: 'btn_clear_hex'
+#    6: 'btn_clear_log'
+#    7: '一键清除'
+#    8: 'btn_export_hex'
+#    9: 'btn_export_log'
+#   10: '一键导出'
+#   11: 'btn_clear_txt'
+#   12: 'btn_export_txt'
+# Names:
+#    0: lang
+#    1: hasattr
+#    2: lbl_hex_title
+#    3: setText
+#    4: STRINGS
+#    5: lbl_txt_title
+#    6: btn_clear_hex
+#    7: get
+#    8: btn_export_hex
+#    9: btn_clear_txt
+#   10: btn_export_txt
+# Varnames:
+#	self, lang
+# Positional arguments:
+#	self, lang
+
+ 32:           0 LOAD_FAST            (lang)
+               2 LOAD_FAST            (self)
+               4 STORE_ATTR           (lang)
+
+ 33:           6 LOAD_GLOBAL          (hasattr)
+               8 LOAD_FAST            (self)
+              10 LOAD_CONST           ("lbl_hex_title")
+              12 CALL_FUNCTION        (2 positional arguments)
+              14 POP_JUMP_IF_FALSE    (to 36)
+
+ 33:          16 LOAD_FAST            (self)
+              18 LOAD_ATTR            (lbl_hex_title)
+              20 LOAD_METHOD          (setText)
+              22 LOAD_GLOBAL          (STRINGS)
+              24 LOAD_FAST            (lang)
+              26 BINARY_SUBSCR
+              28 LOAD_CONST           ("grp_hex_log")
+              30 BINARY_SUBSCR
+              32 CALL_METHOD          (1 positional argument)
+              34 POP_TOP
+
+ 34:     >>   36 LOAD_GLOBAL          (hasattr)
+              38 LOAD_FAST            (self)
+              40 LOAD_CONST           ("lbl_txt_title")
+              42 CALL_FUNCTION        (2 positional arguments)
+              44 POP_JUMP_IF_FALSE    (to 66)
+
+ 34:          46 LOAD_FAST            (self)
+              48 LOAD_ATTR            (lbl_txt_title)
+              50 LOAD_METHOD          (setText)
+              52 LOAD_GLOBAL          (STRINGS)
+              54 LOAD_FAST            (lang)
+              56 BINARY_SUBSCR
+              58 LOAD_CONST           ("grp_txt_log")
+              60 BINARY_SUBSCR
+              62 CALL_METHOD          (1 positional argument)
+              64 POP_TOP
+
+ 35:     >>   66 LOAD_GLOBAL          (hasattr)
+              68 LOAD_FAST            (self)
+              70 LOAD_CONST           ("btn_clear_hex")
+              72 CALL_FUNCTION        (2 positional arguments)
+              74 POP_JUMP_IF_FALSE    (to 100)
+
+ 35:          76 LOAD_FAST            (self)
+              78 LOAD_ATTR            (btn_clear_hex)
+              80 LOAD_METHOD          (setText)
+              82 LOAD_GLOBAL          (STRINGS)
+              84 LOAD_FAST            (lang)
+              86 BINARY_SUBSCR
+              88 LOAD_METHOD          (get)
+              90 LOAD_CONST           ("btn_clear_log")
+              92 LOAD_CONST           ("一键清除")
+              94 CALL_METHOD          (2 positional arguments)
+              96 CALL_METHOD          (1 positional argument)
+              98 POP_TOP
+
+ 36:     >>  100 LOAD_GLOBAL          (hasattr)
+             102 LOAD_FAST            (self)
+             104 LOAD_CONST           ("btn_export_hex")
+             106 CALL_FUNCTION        (2 positional arguments)
+             108 POP_JUMP_IF_FALSE    (to 134)
+
+ 36:         110 LOAD_FAST            (self)
+             112 LOAD_ATTR            (btn_export_hex)
+             114 LOAD_METHOD          (setText)
+             116 LOAD_GLOBAL          (STRINGS)
+             118 LOAD_FAST            (lang)
+             120 BINARY_SUBSCR
+             122 LOAD_METHOD          (get)
+             124 LOAD_CONST           ("btn_export_log")
+             126 LOAD_CONST           ("一键导出")
+             128 CALL_METHOD          (2 positional arguments)
+             130 CALL_METHOD          (1 positional argument)
+             132 POP_TOP
+
+ 37:     >>  134 LOAD_GLOBAL          (hasattr)
+             136 LOAD_FAST            (self)
+             138 LOAD_CONST           ("btn_clear_txt")
+             140 CALL_FUNCTION        (2 positional arguments)
+             142 POP_JUMP_IF_FALSE    (to 168)
+
+ 37:         144 LOAD_FAST            (self)
+             146 LOAD_ATTR            (btn_clear_txt)
+             148 LOAD_METHOD          (setText)
+             150 LOAD_GLOBAL          (STRINGS)
+             152 LOAD_FAST            (lang)
+             154 BINARY_SUBSCR
+             156 LOAD_METHOD          (get)
+             158 LOAD_CONST           ("btn_clear_log")
+             160 LOAD_CONST           ("一键清除")
+             162 CALL_METHOD          (2 positional arguments)
+             164 CALL_METHOD          (1 positional argument)
+             166 POP_TOP
+
+ 38:     >>  168 LOAD_GLOBAL          (hasattr)
+             170 LOAD_FAST            (self)
+             172 LOAD_CONST           ("btn_export_txt")
+             174 CALL_FUNCTION        (2 positional arguments)
+             176 POP_JUMP_IF_FALSE    (to 202)
+
+ 38:         178 LOAD_FAST            (self)
+             180 LOAD_ATTR            (btn_export_txt)
+             182 LOAD_METHOD          (setText)
+             184 LOAD_GLOBAL          (STRINGS)
+             186 LOAD_FAST            (lang)
+             188 BINARY_SUBSCR
+             190 LOAD_METHOD          (get)
+             192 LOAD_CONST           ("btn_export_log")
+             194 LOAD_CONST           ("一键导出")
+             196 CALL_METHOD          (2 positional arguments)
+             198 CALL_METHOD          (1 positional argument)
+             200 POP_TOP
+         >>  202 LOAD_CONST           (None)
+             204 RETURN_VALUE
+
+
+# Method Name:       setup_ui_from_file
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  1
+# Stack size:        1
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        40
+# Constants:
+#    0: None
+# Varnames:
+#	self
+# Positional arguments:
+#	self
+
+ 42:           0 LOAD_CONST           (None)
+               2 RETURN_VALUE
+
+
+# Method Name:       setup_ui_manual
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  7
+# Stack size:        6
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        44
+# Constants:
+#    0: None
+#    1: 5
+#    2: 0
+#    3: 10
+#    4: 'grp_hex_log'
+#    5: 'color: #FA8F01; font-weight: bold; font-size: 11pt; border: none;'
+#    6: 'btn_clear_log'
+#    7: '一键清除'
+#    8: 'btn_export_log'
+#    9: '一键导出'
+#   10: 75
+#   11: 24
+#   12: 'font-size: 9pt; min-height: 16pt; padding: 2px;'
+#   13: 'Consolas'
+#   14: 9
+#   15: True
+#   16: 'grp_txt_log'
+#   17: 20
+#   18: 1
+#   19: 100
+# Names:
+#    0: QVBoxLayout
+#    1: setContentsMargins
+#    2: QSplitter
+#    3: Qt
+#    4: Horizontal
+#    5: QWidget
+#    6: grp_hex
+#    7: QHBoxLayout
+#    8: setSpacing
+#    9: QLabel
+#   10: STRINGS
+#   11: lang
+#   12: lbl_hex_title
+#   13: setStyleSheet
+#   14: QPushButton
+#   15: get
+#   16: btn_clear_hex
+#   17: btn_export_hex
+#   18: setFixedSize
+#   19: S
+#   20: clicked
+#   21: connect
+#   22: clear_hex_log
+#   23: export_hex_log
+#   24: addWidget
+#   25: addStretch
+#   26: addLayout
+#   27: QTextEdit
+#   28: txt_hex
+#   29: setFont
+#   30: QFont
+#   31: setReadOnly
+#   32: grp_txt
+#   33: lbl_txt_title
+#   34: btn_clear_txt
+#   35: btn_export_txt
+#   36: clear_text_log
+#   37: export_text_log
+#   38: txt_log
+#   39: setHandleWidth
+#   40: setStretchFactor
+#   41: setMinimumHeight
+# Varnames:
+#	self, layout, splitter, layout_hex, toolbar_hex, layout_txt, toolbar_txt
+# Positional arguments:
+#	self
+# Local variables:
+#    1: layout
+#    2: splitter
+#    3: layout_hex
+#    4: toolbar_hex
+#    5: layout_txt
+#    6: toolbar_txt
+
+ 45:           0 LOAD_GLOBAL          (QVBoxLayout)
+               2 LOAD_FAST            (self)
+               4 CALL_FUNCTION        (1 positional argument)
+               6 STORE_FAST           (layout)
+
+ 46:           8 LOAD_FAST            (layout)
+              10 LOAD_METHOD          (setContentsMargins)
+              12 LOAD_CONST           (5)
+              14 LOAD_CONST           (5)
+              16 LOAD_CONST           (5)
+              18 LOAD_CONST           (5)
+              20 CALL_METHOD          (4 positional arguments)
+              22 POP_TOP
+
+ 48:          24 LOAD_GLOBAL          (QSplitter)
+              26 LOAD_GLOBAL          (Qt)
+              28 LOAD_ATTR            (Horizontal)
+              30 CALL_FUNCTION        (1 positional argument)
+              32 STORE_FAST           (splitter)
+
+ 51:          34 LOAD_GLOBAL          (QWidget)
+              36 CALL_FUNCTION        (0 positional arguments)
+              38 LOAD_FAST            (self)
+              40 STORE_ATTR           (grp_hex)
+
+ 52:          42 LOAD_GLOBAL          (QVBoxLayout)
+              44 LOAD_FAST            (self)
+              46 LOAD_ATTR            (grp_hex)
+              48 CALL_FUNCTION        (1 positional argument)
+              50 STORE_FAST           (layout_hex)
+
+ 53:          52 LOAD_FAST            (layout_hex)
+              54 LOAD_METHOD          (setContentsMargins)
+              56 LOAD_CONST           (0)
+              58 LOAD_CONST           (0)
+              60 LOAD_CONST           (0)
+              62 LOAD_CONST           (0)
+              64 CALL_METHOD          (4 positional arguments)
+              66 POP_TOP
+
+ 55:          68 LOAD_GLOBAL          (QHBoxLayout)
+              70 CALL_FUNCTION        (0 positional arguments)
+              72 STORE_FAST           (toolbar_hex)
+
+ 56:          74 LOAD_FAST            (toolbar_hex)
+              76 LOAD_METHOD          (setSpacing)
+              78 LOAD_CONST           (10)
+              80 CALL_METHOD          (1 positional argument)
+              82 POP_TOP
+
+ 57:          84 LOAD_GLOBAL          (QLabel)
+              86 LOAD_GLOBAL          (STRINGS)
+              88 LOAD_FAST            (self)
+              90 LOAD_ATTR            (lang)
+              92 BINARY_SUBSCR
+              94 LOAD_CONST           ("grp_hex_log")
+              96 BINARY_SUBSCR
+              98 CALL_FUNCTION        (1 positional argument)
+             100 LOAD_FAST            (self)
+             102 STORE_ATTR           (lbl_hex_title)
+
+ 58:         104 LOAD_FAST            (self)
+             106 LOAD_ATTR            (lbl_hex_title)
+             108 LOAD_METHOD          (setStyleSheet)
+             110 LOAD_CONST           ("color: #FA8F01; font-weight: bold; font-size: 11pt; border: none;")
+             112 CALL_METHOD          (1 positional argument)
+             114 POP_TOP
+
+ 59:         116 LOAD_GLOBAL          (QPushButton)
+             118 LOAD_GLOBAL          (STRINGS)
+             120 LOAD_FAST            (self)
+             122 LOAD_ATTR            (lang)
+             124 BINARY_SUBSCR
+             126 LOAD_METHOD          (get)
+             128 LOAD_CONST           ("btn_clear_log")
+             130 LOAD_CONST           ("一键清除")
+             132 CALL_METHOD          (2 positional arguments)
+             134 CALL_FUNCTION        (1 positional argument)
+             136 LOAD_FAST            (self)
+             138 STORE_ATTR           (btn_clear_hex)
+
+ 60:         140 LOAD_GLOBAL          (QPushButton)
+             142 LOAD_GLOBAL          (STRINGS)
+             144 LOAD_FAST            (self)
+             146 LOAD_ATTR            (lang)
+             148 BINARY_SUBSCR
+             150 LOAD_METHOD          (get)
+             152 LOAD_CONST           ("btn_export_log")
+             154 LOAD_CONST           ("一键导出")
+             156 CALL_METHOD          (2 positional arguments)
+             158 CALL_FUNCTION        (1 positional argument)
+             160 LOAD_FAST            (self)
+             162 STORE_ATTR           (btn_export_hex)
+
+ 61:         164 LOAD_FAST            (self)
+             166 LOAD_ATTR            (btn_clear_hex)
+             168 LOAD_METHOD          (setFixedSize)
+             170 LOAD_GLOBAL          (S)
+             172 LOAD_CONST           (75)
+             174 CALL_FUNCTION        (1 positional argument)
+             176 LOAD_GLOBAL          (S)
+             178 LOAD_CONST           (24)
+             180 CALL_FUNCTION        (1 positional argument)
+             182 CALL_METHOD          (2 positional arguments)
+             184 POP_TOP
+
+ 62:         186 LOAD_FAST            (self)
+             188 LOAD_ATTR            (btn_export_hex)
+             190 LOAD_METHOD          (setFixedSize)
+             192 LOAD_GLOBAL          (S)
+             194 LOAD_CONST           (75)
+             196 CALL_FUNCTION        (1 positional argument)
+             198 LOAD_GLOBAL          (S)
+             200 LOAD_CONST           (24)
+             202 CALL_FUNCTION        (1 positional argument)
+             204 CALL_METHOD          (2 positional arguments)
+             206 POP_TOP
+
+ 63:         208 LOAD_FAST            (self)
+             210 LOAD_ATTR            (btn_clear_hex)
+             212 LOAD_METHOD          (setStyleSheet)
+             214 LOAD_CONST           ("font-size: 9pt; min-height: 16pt; padding: 2px;")
+             216 CALL_METHOD          (1 positional argument)
+             218 POP_TOP
+
+ 64:         220 LOAD_FAST            (self)
+             222 LOAD_ATTR            (btn_export_hex)
+             224 LOAD_METHOD          (setStyleSheet)
+             226 LOAD_CONST           ("font-size: 9pt; min-height: 16pt; padding: 2px;")
+             228 CALL_METHOD          (1 positional argument)
+             230 POP_TOP
+
+ 65:         232 LOAD_FAST            (self)
+             234 LOAD_ATTR            (btn_clear_hex)
+             236 LOAD_ATTR            (clicked)
+             238 LOAD_METHOD          (connect)
+             240 LOAD_FAST            (self)
+             242 LOAD_ATTR            (clear_hex_log)
+             244 CALL_METHOD          (1 positional argument)
+             246 POP_TOP
+
+ 66:         248 LOAD_FAST            (self)
+             250 LOAD_ATTR            (btn_export_hex)
+             252 LOAD_ATTR            (clicked)
+             254 LOAD_METHOD          (connect)
+             256 LOAD_FAST            (self)
+             258 LOAD_ATTR            (export_hex_log)
+             260 CALL_METHOD          (1 positional argument)
+             262 POP_TOP
+
+ 68:         264 LOAD_FAST            (toolbar_hex)
+             266 LOAD_METHOD          (addWidget)
+             268 LOAD_FAST            (self)
+             270 LOAD_ATTR            (lbl_hex_title)
+             272 CALL_METHOD          (1 positional argument)
+             274 POP_TOP
+
+ 69:         276 LOAD_FAST            (toolbar_hex)
+             278 LOAD_METHOD          (addStretch)
+             280 CALL_METHOD          (0 positional arguments)
+             282 POP_TOP
+
+ 70:         284 LOAD_FAST            (toolbar_hex)
+             286 LOAD_METHOD          (addWidget)
+             288 LOAD_FAST            (self)
+             290 LOAD_ATTR            (btn_clear_hex)
+             292 CALL_METHOD          (1 positional argument)
+             294 POP_TOP
+
+ 71:         296 LOAD_FAST            (toolbar_hex)
+             298 LOAD_METHOD          (addWidget)
+             300 LOAD_FAST            (self)
+             302 LOAD_ATTR            (btn_export_hex)
+             304 CALL_METHOD          (1 positional argument)
+             306 POP_TOP
+
+ 72:         308 LOAD_FAST            (layout_hex)
+             310 LOAD_METHOD          (addLayout)
+             312 LOAD_FAST            (toolbar_hex)
+             314 CALL_METHOD          (1 positional argument)
+             316 POP_TOP
+
+ 74:         318 LOAD_GLOBAL          (QTextEdit)
+             320 CALL_FUNCTION        (0 positional arguments)
+             322 LOAD_FAST            (self)
+             324 STORE_ATTR           (txt_hex)
+
+ 75:         326 LOAD_FAST            (self)
+             328 LOAD_ATTR            (txt_hex)
+             330 LOAD_METHOD          (setFont)
+             332 LOAD_GLOBAL          (QFont)
+             334 LOAD_CONST           ("Consolas")
+             336 LOAD_CONST           (9)
+             338 CALL_FUNCTION        (2 positional arguments)
+             340 CALL_METHOD          (1 positional argument)
+             342 POP_TOP
+
+ 76:         344 LOAD_FAST            (self)
+             346 LOAD_ATTR            (txt_hex)
+             348 LOAD_METHOD          (setReadOnly)
+             350 LOAD_CONST           (True)
+             352 CALL_METHOD          (1 positional argument)
+             354 POP_TOP
+
+ 77:         356 LOAD_FAST            (layout_hex)
+             358 LOAD_METHOD          (addWidget)
+             360 LOAD_FAST            (self)
+             362 LOAD_ATTR            (txt_hex)
+             364 CALL_METHOD          (1 positional argument)
+             366 POP_TOP
+
+ 80:         368 LOAD_GLOBAL          (QWidget)
+             370 CALL_FUNCTION        (0 positional arguments)
+             372 LOAD_FAST            (self)
+             374 STORE_ATTR           (grp_txt)
+
+ 81:         376 LOAD_GLOBAL          (QVBoxLayout)
+             378 LOAD_FAST            (self)
+             380 LOAD_ATTR            (grp_txt)
+             382 CALL_FUNCTION        (1 positional argument)
+             384 STORE_FAST           (layout_txt)
+
+ 82:         386 LOAD_FAST            (layout_txt)
+             388 LOAD_METHOD          (setContentsMargins)
+             390 LOAD_CONST           (0)
+             392 LOAD_CONST           (0)
+             394 LOAD_CONST           (0)
+             396 LOAD_CONST           (0)
+             398 CALL_METHOD          (4 positional arguments)
+             400 POP_TOP
+
+ 84:         402 LOAD_GLOBAL          (QHBoxLayout)
+             404 CALL_FUNCTION        (0 positional arguments)
+             406 STORE_FAST           (toolbar_txt)
+
+ 85:         408 LOAD_FAST            (toolbar_txt)
+             410 LOAD_METHOD          (setSpacing)
+             412 LOAD_CONST           (10)
+             414 CALL_METHOD          (1 positional argument)
+             416 POP_TOP
+
+ 86:         418 LOAD_GLOBAL          (QLabel)
+             420 LOAD_GLOBAL          (STRINGS)
+             422 LOAD_FAST            (self)
+             424 LOAD_ATTR            (lang)
+             426 BINARY_SUBSCR
+             428 LOAD_CONST           ("grp_txt_log")
+             430 BINARY_SUBSCR
+             432 CALL_FUNCTION        (1 positional argument)
+             434 LOAD_FAST            (self)
+             436 STORE_ATTR           (lbl_txt_title)
+
+ 87:         438 LOAD_FAST            (self)
+             440 LOAD_ATTR            (lbl_txt_title)
+             442 LOAD_METHOD          (setStyleSheet)
+             444 LOAD_CONST           ("color: #FA8F01; font-weight: bold; font-size: 11pt; border: none;")
+             446 CALL_METHOD          (1 positional argument)
+             448 POP_TOP
+
+ 88:         450 LOAD_GLOBAL          (QPushButton)
+             452 LOAD_GLOBAL          (STRINGS)
+             454 LOAD_FAST            (self)
+             456 LOAD_ATTR            (lang)
+             458 BINARY_SUBSCR
+             460 LOAD_METHOD          (get)
+             462 LOAD_CONST           ("btn_clear_log")
+             464 LOAD_CONST           ("一键清除")
+             466 CALL_METHOD          (2 positional arguments)
+             468 CALL_FUNCTION        (1 positional argument)
+             470 LOAD_FAST            (self)
+             472 STORE_ATTR           (btn_clear_txt)
+
+ 89:         474 LOAD_GLOBAL          (QPushButton)
+             476 LOAD_GLOBAL          (STRINGS)
+             478 LOAD_FAST            (self)
+             480 LOAD_ATTR            (lang)
+             482 BINARY_SUBSCR
+             484 LOAD_METHOD          (get)
+             486 LOAD_CONST           ("btn_export_log")
+             488 LOAD_CONST           ("一键导出")
+             490 CALL_METHOD          (2 positional arguments)
+             492 CALL_FUNCTION        (1 positional argument)
+             494 LOAD_FAST            (self)
+             496 STORE_ATTR           (btn_export_txt)
+
+ 90:         498 LOAD_FAST            (self)
+             500 LOAD_ATTR            (btn_clear_txt)
+             502 LOAD_METHOD          (setFixedSize)
+             504 LOAD_GLOBAL          (S)
+             506 LOAD_CONST           (75)
+             508 CALL_FUNCTION        (1 positional argument)
+             510 LOAD_GLOBAL          (S)
+             512 LOAD_CONST           (24)
+             514 CALL_FUNCTION        (1 positional argument)
+             516 CALL_METHOD          (2 positional arguments)
+             518 POP_TOP
+
+ 91:         520 LOAD_FAST            (self)
+             522 LOAD_ATTR            (btn_export_txt)
+             524 LOAD_METHOD          (setFixedSize)
+             526 LOAD_GLOBAL          (S)
+             528 LOAD_CONST           (75)
+             530 CALL_FUNCTION        (1 positional argument)
+             532 LOAD_GLOBAL          (S)
+             534 LOAD_CONST           (24)
+             536 CALL_FUNCTION        (1 positional argument)
+             538 CALL_METHOD          (2 positional arguments)
+             540 POP_TOP
+
+ 92:         542 LOAD_FAST            (self)
+             544 LOAD_ATTR            (btn_clear_txt)
+             546 LOAD_METHOD          (setStyleSheet)
+             548 LOAD_CONST           ("font-size: 9pt; min-height: 16pt; padding: 2px;")
+             550 CALL_METHOD          (1 positional argument)
+             552 POP_TOP
+
+ 93:         554 LOAD_FAST            (self)
+             556 LOAD_ATTR            (btn_export_txt)
+             558 LOAD_METHOD          (setStyleSheet)
+             560 LOAD_CONST           ("font-size: 9pt; min-height: 16pt; padding: 2px;")
+             562 CALL_METHOD          (1 positional argument)
+             564 POP_TOP
+
+ 94:         566 LOAD_FAST            (self)
+             568 LOAD_ATTR            (btn_clear_txt)
+             570 LOAD_ATTR            (clicked)
+             572 LOAD_METHOD          (connect)
+             574 LOAD_FAST            (self)
+             576 LOAD_ATTR            (clear_text_log)
+             578 CALL_METHOD          (1 positional argument)
+             580 POP_TOP
+
+ 95:         582 LOAD_FAST            (self)
+             584 LOAD_ATTR            (btn_export_txt)
+             586 LOAD_ATTR            (clicked)
+             588 LOAD_METHOD          (connect)
+             590 LOAD_FAST            (self)
+             592 LOAD_ATTR            (export_text_log)
+             594 CALL_METHOD          (1 positional argument)
+             596 POP_TOP
+
+ 97:         598 LOAD_FAST            (toolbar_txt)
+             600 LOAD_METHOD          (addWidget)
+             602 LOAD_FAST            (self)
+             604 LOAD_ATTR            (lbl_txt_title)
+             606 CALL_METHOD          (1 positional argument)
+             608 POP_TOP
+
+ 98:         610 LOAD_FAST            (toolbar_txt)
+             612 LOAD_METHOD          (addStretch)
+             614 CALL_METHOD          (0 positional arguments)
+             616 POP_TOP
+
+ 99:         618 LOAD_FAST            (toolbar_txt)
+             620 LOAD_METHOD          (addWidget)
+             622 LOAD_FAST            (self)
+             624 LOAD_ATTR            (btn_clear_txt)
+             626 CALL_METHOD          (1 positional argument)
+             628 POP_TOP
+
+100:         630 LOAD_FAST            (toolbar_txt)
+             632 LOAD_METHOD          (addWidget)
+             634 LOAD_FAST            (self)
+             636 LOAD_ATTR            (btn_export_txt)
+             638 CALL_METHOD          (1 positional argument)
+             640 POP_TOP
+
+101:         642 LOAD_FAST            (layout_txt)
+             644 LOAD_METHOD          (addLayout)
+             646 LOAD_FAST            (toolbar_txt)
+             648 CALL_METHOD          (1 positional argument)
+             650 POP_TOP
+
+103:         652 LOAD_GLOBAL          (QTextEdit)
+             654 CALL_FUNCTION        (0 positional arguments)
+             656 LOAD_FAST            (self)
+             658 STORE_ATTR           (txt_log)
+
+104:         660 LOAD_FAST            (self)
+             662 LOAD_ATTR            (txt_log)
+             664 LOAD_METHOD          (setFont)
+             666 LOAD_GLOBAL          (QFont)
+             668 LOAD_CONST           ("Consolas")
+             670 LOAD_CONST           (9)
+             672 CALL_FUNCTION        (2 positional arguments)
+             674 CALL_METHOD          (1 positional argument)
+             676 POP_TOP
+
+105:         678 LOAD_FAST            (self)
+             680 LOAD_ATTR            (txt_log)
+             682 LOAD_METHOD          (setReadOnly)
+             684 LOAD_CONST           (True)
+             686 CALL_METHOD          (1 positional argument)
+             688 POP_TOP
+
+106:         690 LOAD_FAST            (layout_txt)
+             692 LOAD_METHOD          (addWidget)
+             694 LOAD_FAST            (self)
+             696 LOAD_ATTR            (txt_log)
+             698 CALL_METHOD          (1 positional argument)
+             700 POP_TOP
+
+108:         702 LOAD_FAST            (splitter)
+             704 LOAD_METHOD          (addWidget)
+             706 LOAD_FAST            (self)
+             708 LOAD_ATTR            (grp_hex)
+             710 CALL_METHOD          (1 positional argument)
+             712 POP_TOP
+
+109:         714 LOAD_FAST            (splitter)
+             716 LOAD_METHOD          (addWidget)
+             718 LOAD_FAST            (self)
+             720 LOAD_ATTR            (grp_txt)
+             722 CALL_METHOD          (1 positional argument)
+             724 POP_TOP
+
+110:         726 LOAD_FAST            (splitter)
+             728 LOAD_METHOD          (setHandleWidth)
+             730 LOAD_CONST           (20)
+             732 CALL_METHOD          (1 positional argument)
+             734 POP_TOP
+
+111:         736 LOAD_FAST            (splitter)
+             738 LOAD_METHOD          (setStretchFactor)
+             740 LOAD_CONST           (0)
+             742 LOAD_CONST           (1)
+             744 CALL_METHOD          (2 positional arguments)
+             746 POP_TOP
+
+112:         748 LOAD_FAST            (splitter)
+             750 LOAD_METHOD          (setStretchFactor)
+             752 LOAD_CONST           (1)
+             754 LOAD_CONST           (1)
+             756 CALL_METHOD          (2 positional arguments)
+             758 POP_TOP
+
+114:         760 LOAD_FAST            (layout)
+             762 LOAD_METHOD          (addWidget)
+             764 LOAD_FAST            (splitter)
+             766 CALL_METHOD          (1 positional argument)
+             768 POP_TOP
+
+115:         770 LOAD_FAST            (self)
+             772 LOAD_METHOD          (setMinimumHeight)
+             774 LOAD_CONST           (100)
+             776 CALL_METHOD          (1 positional argument)
+             778 POP_TOP
+             780 LOAD_CONST           (None)
+             782 RETURN_VALUE
+
+
+# Method Name:       connect_signals
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  1
+# Stack size:        3
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        117
+# Constants:
+#    0: None
+# Names:
+#    0: comm_manager
+#    1: hex_log_received
+#    2: connect
+#    3: append_hex_log
+#    4: log_message_received
+#    5: append_text_log
+# Varnames:
+#	self
+# Positional arguments:
+#	self
+
+118:           0 LOAD_FAST            (self)
+               2 LOAD_ATTR            (comm_manager)
+               4 LOAD_ATTR            (hex_log_received)
+               6 LOAD_METHOD          (connect)
+               8 LOAD_FAST            (self)
+              10 LOAD_ATTR            (append_hex_log)
+              12 CALL_METHOD          (1 positional argument)
+              14 POP_TOP
+
+119:          16 LOAD_FAST            (self)
+              18 LOAD_ATTR            (comm_manager)
+              20 LOAD_ATTR            (log_message_received)
+              22 LOAD_METHOD          (connect)
+              24 LOAD_FAST            (self)
+              26 LOAD_ATTR            (append_text_log)
+              28 CALL_METHOD          (1 positional argument)
+              30 POP_TOP
+              32 LOAD_CONST           (None)
+              34 RETURN_VALUE
+
+
+# Method Name:       append_hex_log
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    3
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  6
+# Stack size:        6
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        123
+# Constants:
+#    0: None
+#    1: 'txt_hex'
+#    2: ' '
+#    3: <Code38 code object <listcomp> at 0x2424a99cdd0, file nexarm_qt\ui\log_widget.py>, line 125
+#    4: 'LogWidget.append_hex_log.<locals>.<listcomp>'
+#    5: '['
+#    6: '] '
+# Names:
+#    0: hasattr
+#    1: join
+#    2: txt_hex
+#    3: append
+#    4: document
+#    5: blockCount
+#    6: MAX_LOG_LINES
+#    7: textCursor
+#    8: movePosition
+#    9: Start
+#   10: Down
+#   11: KeepAnchor
+#   12: removeSelectedText
+#   13: deleteChar
+# Varnames:
+#	self, prefix, data, hex_str, doc, cursor
+# Positional arguments:
+#	self, prefix, data
+# Local variables:
+#    3: hex_str
+#    4: doc
+#    5: cursor
+
+124:           0 LOAD_GLOBAL          (hasattr)
+               2 LOAD_FAST            (self)
+               4 LOAD_CONST           ("txt_hex")
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 POP_JUMP_IF_FALSE    (to 144)
+
+125:          10 LOAD_CONST           (" ")
+              12 LOAD_METHOD          (join)
+              14 LOAD_CONST           (<Code38 code object <listcomp> at 0x2424a99cdd0, file nexarm_qt\ui\log_widget.py>, line 125)
+              16 LOAD_CONST           ("LogWidget.append_hex_log.<locals>.<listcomp>")
+              18 MAKE_FUNCTION        (No arguments)
+              20 LOAD_FAST            (data)
+              22 GET_ITER
+              24 CALL_FUNCTION        (1 positional argument)
+              26 CALL_METHOD          (1 positional argument)
+              28 STORE_FAST           (hex_str)
+
+126:          30 LOAD_FAST            (self)
+              32 LOAD_ATTR            (txt_hex)
+              34 LOAD_METHOD          (append)
+              36 LOAD_CONST           ("[")
+              38 LOAD_FAST            (prefix)
+              40 FORMAT_VALUE         0
+              42 LOAD_CONST           ("] ")
+              44 LOAD_FAST            (hex_str)
+              46 FORMAT_VALUE         0
+              48 BUILD_STRING         4
+              50 CALL_METHOD          (1 positional argument)
+              52 POP_TOP
+
+128:          54 LOAD_FAST            (self)
+              56 LOAD_ATTR            (txt_hex)
+              58 LOAD_METHOD          (document)
+              60 CALL_METHOD          (0 positional arguments)
+              62 STORE_FAST           (doc)
+
+129:          64 LOAD_FAST            (doc)
+              66 LOAD_METHOD          (blockCount)
+              68 CALL_METHOD          (0 positional arguments)
+              70 LOAD_FAST            (self)
+              72 LOAD_ATTR            (MAX_LOG_LINES)
+              74 COMPARE_OP           (>)
+              76 POP_JUMP_IF_FALSE    (to 144)
+
+130:          78 LOAD_FAST            (self)
+              80 LOAD_ATTR            (txt_hex)
+              82 LOAD_METHOD          (textCursor)
+              84 CALL_METHOD          (0 positional arguments)
+              86 STORE_FAST           (cursor)
+
+131:          88 LOAD_FAST            (cursor)
+              90 LOAD_METHOD          (movePosition)
+              92 LOAD_FAST            (cursor)
+              94 LOAD_ATTR            (Start)
+              96 CALL_METHOD          (1 positional argument)
+              98 POP_TOP
+
+132:         100 LOAD_FAST            (cursor)
+             102 LOAD_METHOD          (movePosition)
+             104 LOAD_FAST            (cursor)
+             106 LOAD_ATTR            (Down)
+             108 LOAD_FAST            (cursor)
+             110 LOAD_ATTR            (KeepAnchor)
+             112 LOAD_FAST            (doc)
+             114 LOAD_METHOD          (blockCount)
+             116 CALL_METHOD          (0 positional arguments)
+             118 LOAD_FAST            (self)
+             120 LOAD_ATTR            (MAX_LOG_LINES)
+             122 BINARY_SUBTRACT
+             124 CALL_METHOD          (3 positional arguments)
+             126 POP_TOP
+
+133:         128 LOAD_FAST            (cursor)
+             130 LOAD_METHOD          (removeSelectedText)
+             132 CALL_METHOD          (0 positional arguments)
+             134 POP_TOP
+
+134:         136 LOAD_FAST            (cursor)
+             138 LOAD_METHOD          (deleteChar)
+             140 CALL_METHOD          (0 positional arguments)
+             142 POP_TOP
+         >>  144 LOAD_CONST           (None)
+             146 RETURN_VALUE
+
+
+# Method Name:       append_text_log
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    2
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  4
+# Stack size:        6
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        136
+# Constants:
+#    0: None
+#    1: 'txt_log'
+# Names:
+#    0: hasattr
+#    1: txt_log
+#    2: append
+#    3: document
+#    4: blockCount
+#    5: MAX_LOG_LINES
+#    6: textCursor
+#    7: movePosition
+#    8: Start
+#    9: Down
+#   10: KeepAnchor
+#   11: removeSelectedText
+#   12: deleteChar
+# Varnames:
+#	self, text, doc, cursor
+# Positional arguments:
+#	self, text
+# Local variables:
+#    2: doc
+#    3: cursor
+
+137:           0 LOAD_GLOBAL          (hasattr)
+               2 LOAD_FAST            (self)
+               4 LOAD_CONST           ("txt_log")
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 POP_JUMP_IF_FALSE    (to 112)
+
+138:          10 LOAD_FAST            (self)
+              12 LOAD_ATTR            (txt_log)
+              14 LOAD_METHOD          (append)
+              16 LOAD_FAST            (text)
+              18 CALL_METHOD          (1 positional argument)
+              20 POP_TOP
+
+139:          22 LOAD_FAST            (self)
+              24 LOAD_ATTR            (txt_log)
+              26 LOAD_METHOD          (document)
+              28 CALL_METHOD          (0 positional arguments)
+              30 STORE_FAST           (doc)
+
+140:          32 LOAD_FAST            (doc)
+              34 LOAD_METHOD          (blockCount)
+              36 CALL_METHOD          (0 positional arguments)
+              38 LOAD_FAST            (self)
+              40 LOAD_ATTR            (MAX_LOG_LINES)
+              42 COMPARE_OP           (>)
+              44 POP_JUMP_IF_FALSE    (to 112)
+
+141:          46 LOAD_FAST            (self)
+              48 LOAD_ATTR            (txt_log)
+              50 LOAD_METHOD          (textCursor)
+              52 CALL_METHOD          (0 positional arguments)
+              54 STORE_FAST           (cursor)
+
+142:          56 LOAD_FAST            (cursor)
+              58 LOAD_METHOD          (movePosition)
+              60 LOAD_FAST            (cursor)
+              62 LOAD_ATTR            (Start)
+              64 CALL_METHOD          (1 positional argument)
+              66 POP_TOP
+
+143:          68 LOAD_FAST            (cursor)
+              70 LOAD_METHOD          (movePosition)
+              72 LOAD_FAST            (cursor)
+              74 LOAD_ATTR            (Down)
+              76 LOAD_FAST            (cursor)
+              78 LOAD_ATTR            (KeepAnchor)
+              80 LOAD_FAST            (doc)
+              82 LOAD_METHOD          (blockCount)
+              84 CALL_METHOD          (0 positional arguments)
+              86 LOAD_FAST            (self)
+              88 LOAD_ATTR            (MAX_LOG_LINES)
+              90 BINARY_SUBTRACT
+              92 CALL_METHOD          (3 positional arguments)
+              94 POP_TOP
+
+144:          96 LOAD_FAST            (cursor)
+              98 LOAD_METHOD          (removeSelectedText)
+             100 CALL_METHOD          (0 positional arguments)
+             102 POP_TOP
+
+145:         104 LOAD_FAST            (cursor)
+             106 LOAD_METHOD          (deleteChar)
+             108 CALL_METHOD          (0 positional arguments)
+             110 POP_TOP
+         >>  112 LOAD_CONST           (None)
+             114 RETURN_VALUE
+
+
+# Method Name:       clear_hex_log
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  1
+# Stack size:        3
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        147
+# Constants:
+#    0: None
+#    1: 'txt_hex'
+# Names:
+#    0: hasattr
+#    1: txt_hex
+#    2: clear
+# Varnames:
+#	self
+# Positional arguments:
+#	self
+
+148:           0 LOAD_GLOBAL          (hasattr)
+               2 LOAD_FAST            (self)
+               4 LOAD_CONST           ("txt_hex")
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 POP_JUMP_IF_FALSE    (to 20)
+
+149:          10 LOAD_FAST            (self)
+              12 LOAD_ATTR            (txt_hex)
+              14 LOAD_METHOD          (clear)
+              16 CALL_METHOD          (0 positional arguments)
+              18 POP_TOP
+         >>   20 LOAD_CONST           (None)
+              22 RETURN_VALUE
+
+
+# Method Name:       export_hex_log
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  6
+# Stack size:        10
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        151
+# Constants:
+#    0: None
+#    1: 'txt_hex'
+#    2: 'Export Hex Log'
+#    3: ''
+#    4: 'Text Files (*.txt);;All Files (*)'
+#    5: ('options',)
+#    6: 'w'
+#    7: 'utf-8'
+#    8: ('encoding',)
+#    9: 'msg_save_success'
+#   10: 'Saved'
+#   11: 'HEX log saved to '
+#   12: 'msg_error'
+#   13: 'Error'
+#   14: 'Failed to save: '
+# Names:
+#    0: hasattr
+#    1: QFileDialog
+#    2: Options
+#    3: getSaveFileName
+#    4: open
+#    5: write
+#    6: txt_hex
+#    7: toPlainText
+#    8: QMessageBox
+#    9: information
+#   10: STRINGS
+#   11: lang
+#   12: get
+#   13: Exception
+#   14: critical
+#   15: str
+# Varnames:
+#	self, options, file_name, _, f, e
+# Positional arguments:
+#	self
+# Local variables:
+#    1: options
+#    2: file_name
+#    3: _
+#    4: f
+#    5: e
+
+152:           0 LOAD_GLOBAL          (hasattr)
+               2 LOAD_FAST            (self)
+               4 LOAD_CONST           ("txt_hex")
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 POP_JUMP_IF_TRUE     (to 14)
+
+153:          10 LOAD_CONST           (None)
+              12 RETURN_VALUE
+
+154:     >>   14 LOAD_GLOBAL          (QFileDialog)
+              16 LOAD_METHOD          (Options)
+              18 CALL_METHOD          (0 positional arguments)
+              20 STORE_FAST           (options)
+
+155:          22 LOAD_GLOBAL          (QFileDialog)
+              24 LOAD_ATTR            (getSaveFileName)
+              26 LOAD_FAST            (self)
+              28 LOAD_CONST           ("Export Hex Log")
+              30 LOAD_CONST           ("")
+              32 LOAD_CONST           ("Text Files (*.txt);;All Files (*)")
+              34 LOAD_FAST            (options)
+              36 LOAD_CONST           (('options',))
+              38 CALL_FUNCTION_KW     (5 total positional and keyword args)
+              40 UNPACK_SEQUENCE      2
+              42 STORE_FAST           (file_name)
+              44 STORE_FAST           (_)
+
+156:          46 LOAD_FAST            (file_name)
+              48 POP_JUMP_IF_FALSE    (to 204)
+
+157:          50 SETUP_FINALLY        (to 132)
+
+158:          52 LOAD_GLOBAL          (open)
+              54 LOAD_FAST            (file_name)
+              56 LOAD_CONST           ("w")
+              58 LOAD_CONST           ("utf-8")
+              60 LOAD_CONST           (('encoding',))
+              62 CALL_FUNCTION_KW     (3 total positional and keyword args)
+              64 SETUP_WITH           (to 88)
+              66 STORE_FAST           (f)
+
+159:          68 LOAD_FAST            (f)
+              70 LOAD_METHOD          (write)
+              72 LOAD_FAST            (self)
+              74 LOAD_ATTR            (txt_hex)
+              76 LOAD_METHOD          (toPlainText)
+              78 CALL_METHOD          (0 positional arguments)
+              80 CALL_METHOD          (1 positional argument)
+              82 POP_TOP
+              84 POP_BLOCK
+              86 BEGIN_FINALLY
+         >>   88 WITH_CLEANUP_START
+              90 WITH_CLEANUP_FINISH
+              92 END_FINALLY
+
+160:          94 LOAD_GLOBAL          (QMessageBox)
+              96 LOAD_METHOD          (information)
+              98 LOAD_FAST            (self)
+             100 LOAD_GLOBAL          (STRINGS)
+             102 LOAD_FAST            (self)
+             104 LOAD_ATTR            (lang)
+             106 BINARY_SUBSCR
+             108 LOAD_METHOD          (get)
+             110 LOAD_CONST           ("msg_save_success")
+             112 LOAD_CONST           ("Saved")
+             114 CALL_METHOD          (2 positional arguments)
+             116 LOAD_CONST           ("HEX log saved to ")
+             118 LOAD_FAST            (file_name)
+             120 FORMAT_VALUE         0
+             122 BUILD_STRING         2
+             124 CALL_METHOD          (3 positional arguments)
+             126 POP_TOP
+             128 POP_BLOCK
+             130 JUMP_FORWARD         (to 204)
+
+161:     >>  132 DUP_TOP
+             134 LOAD_GLOBAL          (Exception)
+             136 COMPARE_OP           (exception-match)
+             138 POP_JUMP_IF_FALSE    (to 202)
+             140 POP_TOP
+             142 STORE_FAST           (e)
+             144 POP_TOP
+             146 SETUP_FINALLY        (to 190)
+
+162:         148 LOAD_GLOBAL          (QMessageBox)
+             150 LOAD_METHOD          (critical)
+             152 LOAD_FAST            (self)
+             154 LOAD_GLOBAL          (STRINGS)
+             156 LOAD_FAST            (self)
+             158 LOAD_ATTR            (lang)
+             160 BINARY_SUBSCR
+             162 LOAD_METHOD          (get)
+             164 LOAD_CONST           ("msg_error")
+             166 LOAD_CONST           ("Error")
+             168 CALL_METHOD          (2 positional arguments)
+             170 LOAD_CONST           ("Failed to save: ")
+             172 LOAD_GLOBAL          (str)
+             174 LOAD_FAST            (e)
+             176 CALL_FUNCTION        (1 positional argument)
+             178 FORMAT_VALUE         0
+             180 BUILD_STRING         2
+             182 CALL_METHOD          (3 positional arguments)
+             184 POP_TOP
+             186 POP_BLOCK
+             188 BEGIN_FINALLY
+         >>  190 LOAD_CONST           (None)
+             192 STORE_FAST           (e)
+             194 DELETE_FAST          (e)
+             196 END_FINALLY
+             198 POP_EXCEPT
+             200 JUMP_FORWARD         (to 204)
+         >>  202 END_FINALLY
+         >>  204 LOAD_CONST           (None)
+             206 RETURN_VALUE
+
+
+# Method Name:       clear_text_log
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  1
+# Stack size:        3
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        164
+# Constants:
+#    0: None
+#    1: 'txt_log'
+# Names:
+#    0: hasattr
+#    1: txt_log
+#    2: clear
+# Varnames:
+#	self
+# Positional arguments:
+#	self
+
+165:           0 LOAD_GLOBAL          (hasattr)
+               2 LOAD_FAST            (self)
+               4 LOAD_CONST           ("txt_log")
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 POP_JUMP_IF_FALSE    (to 20)
+
+166:          10 LOAD_FAST            (self)
+              12 LOAD_ATTR            (txt_log)
+              14 LOAD_METHOD          (clear)
+              16 CALL_METHOD          (0 positional arguments)
+              18 POP_TOP
+         >>   20 LOAD_CONST           (None)
+              22 RETURN_VALUE
+
+
+# Method Name:       export_text_log
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  6
+# Stack size:        10
+# Flags:             0x00000043 (NOFREE | NEWLOCALS | OPTIMIZED)
+# First Line:        168
+# Constants:
+#    0: None
+#    1: 'txt_log'
+#    2: 'Export Text Log'
+#    3: ''
+#    4: 'Text Files (*.txt);;All Files (*)'
+#    5: ('options',)
+#    6: 'w'
+#    7: 'utf-8'
+#    8: ('encoding',)
+#    9: 'msg_save_success'
+#   10: 'Saved'
+#   11: 'Text log saved to '
+#   12: 'msg_error'
+#   13: 'Error'
+#   14: 'Failed to save: '
+# Names:
+#    0: hasattr
+#    1: QFileDialog
+#    2: Options
+#    3: getSaveFileName
+#    4: open
+#    5: write
+#    6: txt_log
+#    7: toPlainText
+#    8: QMessageBox
+#    9: information
+#   10: STRINGS
+#   11: lang
+#   12: get
+#   13: Exception
+#   14: critical
+#   15: str
+# Varnames:
+#	self, options, file_name, _, f, e
+# Positional arguments:
+#	self
+# Local variables:
+#    1: options
+#    2: file_name
+#    3: _
+#    4: f
+#    5: e
+
+169:           0 LOAD_GLOBAL          (hasattr)
+               2 LOAD_FAST            (self)
+               4 LOAD_CONST           ("txt_log")
+               6 CALL_FUNCTION        (2 positional arguments)
+               8 POP_JUMP_IF_TRUE     (to 14)
+
+170:          10 LOAD_CONST           (None)
+              12 RETURN_VALUE
+
+171:     >>   14 LOAD_GLOBAL          (QFileDialog)
+              16 LOAD_METHOD          (Options)
+              18 CALL_METHOD          (0 positional arguments)
+              20 STORE_FAST           (options)
+
+172:          22 LOAD_GLOBAL          (QFileDialog)
+              24 LOAD_ATTR            (getSaveFileName)
+              26 LOAD_FAST            (self)
+              28 LOAD_CONST           ("Export Text Log")
+              30 LOAD_CONST           ("")
+              32 LOAD_CONST           ("Text Files (*.txt);;All Files (*)")
+              34 LOAD_FAST            (options)
+              36 LOAD_CONST           (('options',))
+              38 CALL_FUNCTION_KW     (5 total positional and keyword args)
+              40 UNPACK_SEQUENCE      2
+              42 STORE_FAST           (file_name)
+              44 STORE_FAST           (_)
+
+173:          46 LOAD_FAST            (file_name)
+              48 POP_JUMP_IF_FALSE    (to 204)
+
+174:          50 SETUP_FINALLY        (to 132)
+
+175:          52 LOAD_GLOBAL          (open)
+              54 LOAD_FAST            (file_name)
+              56 LOAD_CONST           ("w")
+              58 LOAD_CONST           ("utf-8")
+              60 LOAD_CONST           (('encoding',))
+              62 CALL_FUNCTION_KW     (3 total positional and keyword args)
+              64 SETUP_WITH           (to 88)
+              66 STORE_FAST           (f)
+
+176:          68 LOAD_FAST            (f)
+              70 LOAD_METHOD          (write)
+              72 LOAD_FAST            (self)
+              74 LOAD_ATTR            (txt_log)
+              76 LOAD_METHOD          (toPlainText)
+              78 CALL_METHOD          (0 positional arguments)
+              80 CALL_METHOD          (1 positional argument)
+              82 POP_TOP
+              84 POP_BLOCK
+              86 BEGIN_FINALLY
+         >>   88 WITH_CLEANUP_START
+              90 WITH_CLEANUP_FINISH
+              92 END_FINALLY
+
+177:          94 LOAD_GLOBAL          (QMessageBox)
+              96 LOAD_METHOD          (information)
+              98 LOAD_FAST            (self)
+             100 LOAD_GLOBAL          (STRINGS)
+             102 LOAD_FAST            (self)
+             104 LOAD_ATTR            (lang)
+             106 BINARY_SUBSCR
+             108 LOAD_METHOD          (get)
+             110 LOAD_CONST           ("msg_save_success")
+             112 LOAD_CONST           ("Saved")
+             114 CALL_METHOD          (2 positional arguments)
+             116 LOAD_CONST           ("Text log saved to ")
+             118 LOAD_FAST            (file_name)
+             120 FORMAT_VALUE         0
+             122 BUILD_STRING         2
+             124 CALL_METHOD          (3 positional arguments)
+             126 POP_TOP
+             128 POP_BLOCK
+             130 JUMP_FORWARD         (to 204)
+
+178:     >>  132 DUP_TOP
+             134 LOAD_GLOBAL          (Exception)
+             136 COMPARE_OP           (exception-match)
+             138 POP_JUMP_IF_FALSE    (to 202)
+             140 POP_TOP
+             142 STORE_FAST           (e)
+             144 POP_TOP
+             146 SETUP_FINALLY        (to 190)
+
+179:         148 LOAD_GLOBAL          (QMessageBox)
+             150 LOAD_METHOD          (critical)
+             152 LOAD_FAST            (self)
+             154 LOAD_GLOBAL          (STRINGS)
+             156 LOAD_FAST            (self)
+             158 LOAD_ATTR            (lang)
+             160 BINARY_SUBSCR
+             162 LOAD_METHOD          (get)
+             164 LOAD_CONST           ("msg_error")
+             166 LOAD_CONST           ("Error")
+             168 CALL_METHOD          (2 positional arguments)
+             170 LOAD_CONST           ("Failed to save: ")
+             172 LOAD_GLOBAL          (str)
+             174 LOAD_FAST            (e)
+             176 CALL_FUNCTION        (1 positional argument)
+             178 FORMAT_VALUE         0
+             180 BUILD_STRING         2
+             182 CALL_METHOD          (3 positional arguments)
+             184 POP_TOP
+             186 POP_BLOCK
+             188 BEGIN_FINALLY
+         >>  190 LOAD_CONST           (None)
+             192 STORE_FAST           (e)
+             194 DELETE_FAST          (e)
+             196 END_FINALLY
+             198 POP_EXCEPT
+             200 JUMP_FORWARD         (to 204)
+         >>  202 END_FINALLY
+         >>  204 LOAD_CONST           (None)
+             206 RETURN_VALUE
+
+
+# Method Name:       <listcomp>
+# Filename:          nexarm_qt\ui\log_widget.py
+# Argument count:    1
+# Position-only argument count: 0
+# Keyword-only arguments: 0
+# Number of locals:  2
+# Stack size:        4
+# Flags:             0x00000053 (NOFREE | NESTED | NEWLOCALS | OPTIMIZED)
+# First Line:        125
+# Constants:
+#    0: '02X'
+# Varnames:
+#	.0, b
+# Positional arguments:
+#	.0
+# Local variables:
+#    1: b
+
+125:           0 BUILD_LIST           0
+               2 LOAD_FAST            (.0)
+         >>    4 FOR_ITER             (to 18)
+
+125:           6 STORE_FAST           (b)
+
+125:           8 LOAD_FAST            (b)
+              10 LOAD_CONST           ("02X")
+              12 FORMAT_VALUE         4
+              14 LIST_APPEND          2
+              16 JUMP_ABSOLUTE        (to 4)
+         >>   18 RETURN_VALUE
+

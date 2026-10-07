@@ -1,0 +1,28 @@
+{
+  "exe_sha256": "9c9a73ced672da10528b43a506186ff9829fdb61869660488789f4555b855f15",
+  "python": 308,
+  "selected": [
+    "nexarm_qt",
+    "nexarm_qt.comm_manager",
+    "nexarm_qt.constants",
+    "nexarm_qt.styles",
+    "nexarm_qt.translations",
+    "nexarm_qt.ui",
+    "nexarm_qt.ui.ai_calibration_widget",
+    "nexarm_qt.ui.ai_tab",
+    "nexarm_qt.ui.arm_3d_widget",
+    "nexarm_qt.ui.arm_3d_window",
+    "nexarm_qt.ui.coord_tab",
+    "nexarm_qt.ui.dpad_widget",
+    "nexarm_qt.ui.log_widget",
+    "nexarm_qt.ui.main_window",
+    "nexarm_qt.ui.peripheral_tab",
+    "nexarm_qt.ui.servo_advanced_tab",
+    "nexarm_qt.ui.servo_tab",
+    "nexarm_qt.ui.system_tab",
+    "nexarm_qt.ui.teach_tab",
+    "nexarm_qt.ui.urdf_parser"
+  ],
+  "module_count": 837,
+  "code_executed": false
+}

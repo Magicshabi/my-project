@@ -1,0 +1,15 @@
+{
+  "bytes": 5582,
+  "at32_update_guard_triggered": false,
+  "selected_boot_lines": [
+    "[OTA] Start: embedded=1.0.2 size=21848",
+    "[OTA] query: got=1 ver=1.0.42",
+    "[OTA] Up to date, skip.",
+    "[PID] NVS version 4 found, keeping current servo PID",
+    "[BT] current_bt_mode=0 (BLE)",
+    "Initializing BLE mode...",
+    "[PS3 Init] synced pose x=169.0 y=-8.0 z=169.0 p=-102.6 r=0.0 c=-60.0"
+  ],
+  "motion_commands_sent": false,
+  "external_servo_power": "user_confirmed_disconnected"
+}

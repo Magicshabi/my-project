@@ -1,0 +1,63 @@
+{"type": "session", "monotonic": 172606.0636179, "port": "COM9", "source_sha256": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22"}
+{"type": "version", "monotonic": 172606.1157236, "payload_hex": "01000201002a"}
+{"type": "actual65", "monotonic": 172606.1181647, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172606.2048081, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172606.3150197, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172606.4545859, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172606.5788664, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "segment_start", "monotonic": 172606.5789339, "label": "id6_open_probe", "start": [2080, 1991, 1947, 3058, 2048, 1367], "target": [2080, 1991, 1947, 3058, 2048, 1359], "steps": 1}
+{"type": "tx_attempt", "monotonic": 172606.5789801, "cmd": 51, "hex": "ffffff0733064f05e80381"}
+{"type": "tx_complete", "monotonic": 172606.5790803, "cmd": 51, "bytes": 11, "acknowledged": false}
+{"type": "actual65", "monotonic": 172606.6877822, "pulses": [2080, 1991, 1947, 3058, 2049, 1368]}
+{"type": "actual65", "monotonic": 172606.8117371, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172606.9524937, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.0892706, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.2116248, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.3367938, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.4471498, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.5870394, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.7269405, "pulses": [2080, 1991, 1947, 3058, 2048, 1367]}
+{"type": "actual65", "monotonic": 172607.8512513, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172607.9616169, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172608.1008297, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172608.2119289, "pulses": [2080, 1991, 1947, 3058, 2048, 1364]}
+{"type": "actual65", "monotonic": 172608.31928, "pulses": [2080, 1991, 1947, 3058, 2048, 1364]}
+{"type": "actual65", "monotonic": 172608.4444522, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172608.5690814, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172608.6935484, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172608.8121179, "pulses": [2080, 1991, 1947, 3058, 2048, 1364]}
+{"type": "actual65", "monotonic": 172608.9267265, "pulses": [2080, 1991, 1947, 3058, 2048, 1364]}
+{"type": "actual65", "monotonic": 172609.0496475, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.1597598, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.2847447, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.3936538, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.5322655, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.657592, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.7671002, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172609.8755445, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172610.0008624, "pulses": [2080, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172610.1250581, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172610.2495223, "pulses": [2079, 1991, 1947, 3058, 2048, 1364]}
+{"type": "actual65", "monotonic": 172610.3727643, "pulses": [2079, 1991, 1947, 3058, 2048, 1364]}
+{"type": "actual65", "monotonic": 172610.495773, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172610.6124132, "pulses": [2079, 1991, 1947, 3058, 2049, 1365]}
+{"type": "actual65", "monotonic": 172610.7130106, "pulses": [2079, 1991, 1947, 3058, 2049, 1365]}
+{"type": "actual65", "monotonic": 172610.8546641, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172610.9782116, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.0888375, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.1985873, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.3097557, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.4122304, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.5273953, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.6495992, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.7588524, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172611.8986196, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172612.0122109, "pulses": [2079, 1991, 1947, 3058, 2047, 1365]}
+{"type": "actual65", "monotonic": 172612.1154635, "pulses": [2079, 1991, 1947, 3058, 2047, 1365]}
+{"type": "actual65", "monotonic": 172612.2553996, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172612.3647122, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "actual65", "monotonic": 172612.4904339, "pulses": [2079, 1991, 1947, 3058, 2048, 1365]}
+{"type": "aborted", "monotonic": 172612.5960932, "error": "Target did not settle; no automatic retry"}
+{"type": "tx_attempt", "monotonic": 172612.5962058, "cmd": 51, "hex": "ffffff0733065505e8037b"}
+{"type": "tx_complete", "monotonic": 172612.5963329, "cmd": 51, "bytes": 11, "acknowledged": false}
+{"type": "hold_requested", "monotonic": 172612.5963751, "actual": [2079, 1991, 1947, 3058, 2048, 1365], "physical_stop_verified": false}

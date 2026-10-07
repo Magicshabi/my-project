@@ -1,0 +1,12 @@
+{
+  "mode": "inspect",
+  "success": false,
+  "full_playback_validated": false,
+  "operator_observation": "pending",
+  "source_sha256": "1f5d59c95b96d6346eb3244547a0aa847e4adb74b029b92486e0f6c456744c22",
+  "error": "No stable five-frame CMD65 baseline",
+  "motion_attempted": false,
+  "hold_attempted": false,
+  "versions": [],
+  "parser_bad_frames": 0
+}

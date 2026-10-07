@@ -1,0 +1,58 @@
+{
+  "post_command_samples": 49,
+  "ranges": [
+    [
+      2079,
+      2079
+    ],
+    [
+      1991,
+      1991
+    ],
+    [
+      1948,
+      1948
+    ],
+    [
+      3058,
+      3058
+    ],
+    [
+      2047,
+      2049
+    ],
+    [
+      1364,
+      1365
+    ]
+  ],
+  "tx": [
+    {
+      "type": "tx_attempt",
+      "monotonic": 172952.9929553,
+      "cmd": 3,
+      "servo_id": 6,
+      "position": 1356,
+      "acceleration": 100,
+      "speed": 2000,
+      "hex": "ffff060a0329644c050000d00737",
+      "interface": "NexArm.exe direct write reg41"
+    },
+    {
+      "type": "tx_attempt",
+      "monotonic": 172959.0060799,
+      "cmd": 3,
+      "servo_id": 6,
+      "position": 1364,
+      "acceleration": 100,
+      "speed": 2000,
+      "hex": "ffff060a03296454050000d0072f",
+      "interface": "NexArm.exe direct write reg41"
+    }
+  ],
+  "callbacks": [
+    "[CB] id=0x06 cmd=3 len=10"
+  ],
+  "external_power_confirmation": "pending",
+  "operator_observation": "pending"
+}

@@ -1,0 +1,267 @@
+#include <Arduino.h>
+#include <Wire.h>
+static const char* VERSION = "nexarm-k230-link-probe-r5";
+
+// P1 视觉链路连通验证（纯 I2C，不动臂）：
+// ESP32=主机，K230=从机 0x5F，4KB Mailbox v2（magic "WLM2" @addr0，
+// host meta@16，dev meta@24），帧 0xAA 0x55。
+// r4 关键修正：Wire1 真实引脚 = SDA 21 / SCL 22（Nex_Arm_Board.cpp MOTOR_SDA/SCL_PIN，
+// 电机/传送带/K230 共总线；esp32 变体无 SDA1 定义，无参 Wire1.begin() 会失败）。
+// 无任何舵机/UART1 代码，机械臂物理上不可能动作。
+
+#define K230_SDA_PIN 21
+#define K230_SCL_PIN 22
+
+#define K230_ADDR 0x5F
+#define MAILBOX_HEADER_SIZE 32
+#define HOST_SLOT_META_OFFSET 16
+#define DEV_SLOT_META_OFFSET  24
+#define FRAME_H0 0xAA
+#define FRAME_H1 0x55
+#define CMD_SET_MODE     0x01
+#define CMD_DISABLE_RUN  0x14
+#define RPT_HEARTBEAT    0x70
+#define RPT_DETECT_COLOR 0x75
+#define HB_READY 0x04
+#define APP_SINGLE_COLOR 21
+
+struct SlotMeta { uint8_t state, r0; uint16_t generation, frame_len; uint8_t frame_xor, r1; };
+
+enum Phase : uint8_t { SCAN, MAGIC, OBSERVE, DONE };
+static Phase phase = SCAN;
+static bool ready = false, link_ok = false, magic_ok = false;
+static uint8_t found[16], nfound = 0;
+static uint16_t slot_size = 0, host_slot_off = 0, dev_slot_off = 0;
+static uint16_t dev_gen = 0;
+static uint32_t hb_total = 0, color_total = 0, frame_total = 0, xor_err = 0, last_report = 0, phase_ms = 0;
+static uint8_t last_hb_mode = 0, last_hb_status = 0;
+static char host_line[32] = {}; static uint8_t host_used = 0; static bool host_overflow = false;
+
+static void evidence() {
+    Serial.printf("{\"type\":\"link_state\",\"firmware\":\"%s\",\"phase\":%u,\"k230_present\":%s,\"magic_ok\":%s,"
+                  "\"slot_size\":%u,\"frames\":%lu,\"heartbeats\":%lu,\"color_rpts\":%lu,\"xor_err\":%lu,"
+                  "\"last_hb_mode\":%u,\"last_hb_status\":\"0x%02X\",\"link_verified\":%s}\n",
+                  VERSION, (unsigned)phase, nfound ? "true" : "false", magic_ok ? "true" : "false",
+                  (unsigned)slot_size, (unsigned long)frame_total, (unsigned long)hb_total,
+                  (unsigned long)color_total, (unsigned long)xor_err,
+                  (unsigned)last_hb_mode, (unsigned)last_hb_status, link_ok ? "true" : "false");
+}
+
+// ── I2C 16-bit mem access (mirror of ColorGrabber) ──
+static void i2cWrite16(uint16_t memAddr, const uint8_t* data, uint16_t len) {
+    const uint16_t CHUNK = 30;
+    for (uint16_t off = 0; off < len; off += CHUNK) {
+        uint16_t n = min((uint16_t)CHUNK, (uint16_t)(len - off));
+        uint16_t addr = memAddr + off;
+        Wire1.beginTransmission(K230_ADDR);
+        Wire1.write((uint8_t)(addr >> 8)); Wire1.write((uint8_t)(addr & 0xFF));
+        Wire1.write(data + off, n);
+        Wire1.endTransmission();
+    }
+}
+static void i2cRead16(uint16_t memAddr, uint8_t* data, uint16_t len) {
+    const uint16_t CHUNK = 30;
+    for (uint16_t off = 0; off < len; off += CHUNK) {
+        uint16_t n = min((uint16_t)CHUNK, (uint16_t)(len - off));
+        uint16_t addr = memAddr + off;
+        Wire1.beginTransmission(K230_ADDR);
+        Wire1.write((uint8_t)(addr >> 8)); Wire1.write((uint8_t)(addr & 0xFF));
+        Wire1.endTransmission(false);
+        Wire1.requestFrom((uint8_t)K230_ADDR, (uint8_t)n);
+        for (uint16_t i = 0; i < n && Wire1.available(); i++) data[off + i] = Wire1.read();
+    }
+}
+static SlotMeta readMeta(uint16_t off) {
+    uint8_t raw[8]; i2cRead16(off, raw, 8);
+    return { raw[0], raw[1], (uint16_t)((raw[2]<<8)|raw[3]), (uint16_t)((raw[4]<<8)|raw[5]), raw[6], raw[7] };
+}
+static void writeMeta(uint16_t off, const SlotMeta& m) {
+    uint8_t raw[8] = { m.state, m.r0, (uint8_t)(m.generation>>8), (uint8_t)(m.generation&0xFF),
+                       (uint8_t)(m.frame_len>>8), (uint8_t)(m.frame_len&0xFF), m.frame_xor, m.r1 };
+    i2cWrite16(off, raw, 8);
+}
+static bool writeHostFrame(const uint8_t* frame, uint16_t len) {
+    if (!magic_ok || len > slot_size || slot_size == 0) return false;
+    SlotMeta hm = readMeta(HOST_SLOT_META_OFFSET);
+    if (hm.state != 0) return false;
+    static uint16_t host_gen = 0;
+    host_gen++;
+    writeMeta(HOST_SLOT_META_OFFSET, { 1, 0, host_gen, 0, 0, 0 });
+    i2cWrite16(host_slot_off, frame, len);
+    uint8_t xv = 0; for (uint16_t i = 0; i < len; i++) xv ^= frame[i];
+    writeMeta(HOST_SLOT_META_OFFSET, { 2, 0, host_gen, len, xv, 0 });
+    return true;
+}
+static uint8_t s_txn = 0;
+static bool sendK230Cmd(uint8_t func, const uint8_t* payload, uint16_t plen, const char* label) {
+    uint8_t frame[64];
+    frame[0] = FRAME_H0; frame[1] = FRAME_H1;
+    frame[2] = plen >> 8; frame[3] = plen & 0xFF;
+    frame[4] = 0x00; frame[5] = func;
+    s_txn++; if (!s_txn) s_txn = 1;
+    frame[6] = s_txn;
+    if (payload && plen) memcpy(&frame[7], payload, plen);
+    uint8_t xv = 0; for (uint16_t i = 2; i < 7 + plen; i++) xv ^= frame[i];
+    frame[7 + plen] = xv;
+    bool ok = writeHostFrame(frame, 8 + plen);
+    Serial.printf("{\"type\":\"k230_cmd\",\"label\":\"%s\",\"func\":\"0x%02X\",\"ok\":%s}\n",
+                  label, (unsigned)func, ok ? "true" : "false");
+    return ok;
+}
+
+static void parseDevFrame(const uint8_t* f, uint16_t len) {
+    if (len < 8 || f[0] != FRAME_H0 || f[1] != FRAME_H1) return;
+    uint16_t pl = (f[2] << 8) | f[3];
+    uint8_t ftype = f[4] & 0xC0, func = f[5];
+    char hex[96]; uint16_t n = pl > 44 ? 44 : pl;
+    for (uint16_t i = 0; i < n; i++) snprintf(hex + i*2, 3, "%02x", f[7 + i]);
+    hex[2*n] = 0;
+    Serial.printf("{\"type\":\"dev_frame\",\"ctrl\":\"0x%02X\",\"func\":\"0x%02X\",\"plen\":%u,\"payload\":\"%s\"}\n",
+                  (unsigned)ftype, (unsigned)func, (unsigned)pl, hex);
+    if (ftype == 0x80 && func == RPT_HEARTBEAT && pl >= 2) {
+        hb_total++;
+        last_hb_mode = f[7]; last_hb_status = f[8];
+        if (last_hb_mode == APP_SINGLE_COLOR && (last_hb_status & HB_READY) && !link_ok) {
+            link_ok = true;
+            Serial.println("[K230Probe] LINK VERIFIED: heartbeat mode=21 READY");
+        }
+    }
+    if (ftype == 0x80 && func == RPT_DETECT_COLOR) color_total++;
+}
+
+void setup() {
+    Serial.begin(1000000);
+    Serial.printf("[K230Probe] %s boot\n", VERSION);
+    delay(300);
+    // r2: 先测总线空闲电平——I2C 上拉正常时 SDA/SCL 都应读高；
+    // 若读低说明 K230 侧拉住总线或未供电（无外部上拉），
+    // 直接在低电平总线上跑 Wire1 事务可能永久阻塞（r1 就是挂在这）。
+    pinMode(K230_SDA_PIN, INPUT); pinMode(K230_SCL_PIN, INPUT);
+    delay(5);
+    int sda_raw = digitalRead(K230_SDA_PIN), scl_raw = digitalRead(K230_SCL_PIN);
+    Serial.printf("{\"type\":\"bus_level_raw\",\"sda21\":%d,\"scl22\":%d}\n", sda_raw, scl_raw);
+    pinMode(K230_SDA_PIN, INPUT_PULLUP); pinMode(K230_SCL_PIN, INPUT_PULLUP);
+    delay(10);
+    int sda_pu = digitalRead(K230_SDA_PIN), scl_pu = digitalRead(K230_SCL_PIN);
+    Serial.printf("{\"type\":\"bus_level_pullup\",\"sda21\":%d,\"scl22\":%d,\"verdict\":\"%s\"}\n",
+                  sda_pu, scl_pu,
+                  (sda_pu == 0 || scl_pu == 0) ? "bus_hard_low_no_transactions" : "bus_released_ok");
+    bool bus_blocked = (sda_pu == 0 || scl_pu == 0);
+    bool begun = Wire1.begin(K230_SDA_PIN, K230_SCL_PIN);   // r4: 显式引脚
+    Wire1.setClock(400000);
+    Wire1.setTimeOut(100);
+    Serial.printf("{\"type\":\"wire1_begin\",\"ok\":%s,\"sda\":%d,\"scl\":%d}\n",
+                  begun ? "true" : "false", K230_SDA_PIN, K230_SCL_PIN);
+    // r5: 多引脚组合扫描——定位 K230 实际挂在哪条总线上
+    {
+        const int8_t pairs[][2] = {{21,22},{22,21},{26,27},{27,26},{32,33},{33,32},{25,26}};
+        for (unsigned k = 0; k < sizeof(pairs)/sizeof(pairs[0]); k++) {
+            int sda = pairs[k][0], scl = pairs[k][1];
+            pinMode(sda, INPUT_PULLUP); pinMode(scl, INPUT_PULLUP);
+            delay(3);
+            int l_sda = digitalRead(sda), l_scl = digitalRead(scl);
+            Wire1.end();
+            bool ok = Wire1.begin(sda, scl);
+            Wire1.setClock(100000);   // 100k 提高长线容错
+            Wire1.setTimeOut(50);
+            char addrs[80] = {}; uint8_t p = 0, cnt = 0;
+            if (ok) {
+                for (uint8_t a = 0x08; a < 0x78; a++) {
+                    Wire1.beginTransmission(a);
+                    if (Wire1.endTransmission() == 0) {
+                        cnt++;
+                        if (p < sizeof(addrs) - 6) p += snprintf(addrs + p, 6, "0x%02X,", a);
+                        if (cnt >= 8) break;   // 有响应即早停，避免在共享总线上长时间占用
+                    }
+                }
+            }
+            Serial.printf("{\"type\":\"pair_scan\",\"sda\":%d,\"scl\":%d,\"idle_sda\":%d,\"idle_scl\":%d,\"begin_ok\":%s,\"count\":%u,\"addrs\":\"%s\"}\n",
+                          sda, scl, l_sda, l_scl, ok ? "true" : "false", (unsigned)cnt, addrs);
+            Wire1.end();
+        }
+        // 恢复 21/22 为主总线
+        Wire1.begin(K230_SDA_PIN, K230_SCL_PIN);
+        Wire1.setClock(400000);
+        Wire1.setTimeOut(100);
+    }
+    if (bus_blocked) {
+        Serial.println("[K230Probe] BUS BLOCKED: idle low; check K230 power + module-line socket; staying passive");
+        for (;;) {
+            Serial.printf("{\"type\":\"bus_blocked\",\"sda21\":%d,\"scl22\":%d}\n",
+                          (int)digitalRead(K230_SDA_PIN), (int)digitalRead(K230_SCL_PIN));
+            delay(2000);
+        }
+    }
+    ready = true;
+    Serial.printf("[K230Probe] %s READY; passive I2C only, arm cannot move\n", VERSION);
+    phase = SCAN; phase_ms = millis();
+    evidence();
+}
+
+void loop() {
+    if (!ready) { delay(10); return; }
+    for (unsigned i = 0; i < 64 && Serial.available(); ++i) {
+        char c = Serial.read();
+        if (c == '\n') {
+            host_line[host_used] = 0;
+            if (!host_overflow && !strcmp(host_line, "RESCAN")) { phase = SCAN; phase_ms = millis(); link_ok = false; }
+            if (!host_overflow && !strcmp(host_line, "SET_MODE21")) { const uint8_t p[1] = {APP_SINGLE_COLOR}; sendK230Cmd(CMD_SET_MODE, p, 1, "SET_MODE=21"); }
+            if (!host_overflow && !strcmp(host_line, "SET_MODE0"))  { const uint8_t p[1] = {0}; sendK230Cmd(CMD_SET_MODE, p, 1, "SET_MODE=0"); }
+            if (!host_overflow && !strcmp(host_line, "DISABLE_RUN1")) { const uint8_t p[1] = {1}; sendK230Cmd(CMD_DISABLE_RUN, p, 1, "DISABLE_RUN=1"); }
+            if (!host_overflow && !strcmp(host_line, "DISABLE_RUN0")) { const uint8_t p[1] = {0}; sendK230Cmd(CMD_DISABLE_RUN, p, 1, "DISABLE_RUN=0"); }
+            host_used = 0; host_overflow = false;
+        } else if (c != '\r') {
+            if (host_used < sizeof(host_line) - 1 && !host_overflow) host_line[host_used++] = c;
+            else host_overflow = true;
+        }
+    }
+    uint32_t now = millis();
+
+    if (phase == SCAN) {
+        nfound = 0;
+        for (uint8_t a = 0x08; a < 0x78 && nfound < sizeof(found); a++) {
+            if ((a & 0x0F) == 0x08) Serial.printf("{\"type\":\"scan_progress\",\"at\":\"0x%02X\"}\n", a);
+            Wire1.beginTransmission(a);
+            if (Wire1.endTransmission() == 0) found[nfound++] = a;
+        }
+        char list[80] = {}; uint8_t p = 0;
+        for (uint8_t i = 0; i < nfound && p < sizeof(list) - 6; i++) p += snprintf(list + p, 6, "0x%02X,", found[i]);
+        Serial.printf("{\"type\":\"i2c_scan\",\"count\":%u,\"addrs\":\"%s\"}\n", (unsigned)nfound, list);
+        phase = MAGIC; phase_ms = now;
+    } else if (phase == MAGIC) {
+        uint8_t header[8] = {};
+        i2cRead16(0, header, 8);
+        magic_ok = (header[0] == 0x57 && header[1] == 0x4C && header[2] == 0x4D && header[3] == 0x32); // "WLM2"
+        slot_size = (header[6] << 8) | header[7];
+        host_slot_off = MAILBOX_HEADER_SIZE;
+        dev_slot_off = MAILBOX_HEADER_SIZE + slot_size;
+        Serial.printf("{\"type\":\"mailbox_header\",\"magic_ok\":%s,\"slot_size\":%u,\"raw\":\"%02x%02x%02x%02x%02x%02x%02x%02x\"}\n",
+                      magic_ok ? "true" : "false", (unsigned)slot_size,
+                      header[0], header[1], header[2], header[3], header[4], header[5], header[6], header[7]);
+        if (magic_ok) {
+            SlotMeta hm = readMeta(HOST_SLOT_META_OFFSET), dm = readMeta(DEV_SLOT_META_OFFSET);
+            dev_gen = dm.generation;
+            Serial.printf("{\"type\":\"slot_meta\",\"host\":{\"state\":%u,\"gen\":%u},\"dev\":{\"state\":%u,\"gen\":%u,\"len\":%u}}\n",
+                          hm.state, hm.generation, dm.state, dm.generation, dm.frame_len);
+        }
+        phase = OBSERVE; phase_ms = now;
+    } else if (phase == OBSERVE) {
+        if (magic_ok && now - phase_ms >= 100) {
+            phase_ms = now;
+            SlotMeta dm = readMeta(DEV_SLOT_META_OFFSET);
+            if (dm.state == 2 && dm.generation != dev_gen) {
+                uint8_t buf[256];
+                uint16_t want = dm.frame_len > sizeof(buf) ? sizeof(buf) : dm.frame_len;
+                if (want) i2cRead16(dev_slot_off, buf, want);
+                uint8_t xv = 0; for (uint16_t i = 0; i < want; i++) xv ^= buf[i];
+                dev_gen = dm.generation;
+                writeMeta(DEV_SLOT_META_OFFSET, { 0, 0, dm.generation, 0, 0, 0 });
+                frame_total++;
+                if (xv != dm.frame_xor) xor_err++;
+                parseDevFrame(buf, want);
+            }
+        }
+    }
+    if (now - last_report >= 1000) { evidence(); last_report = now; }
+    delay(1);
+}

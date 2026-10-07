@@ -1,0 +1,11 @@
+{
+  "offline_tests_passed": 15,
+  "test_command": "python -B -m unittest -v test_official_replay",
+  "real_device_tested": false,
+  "firmware_flashed": false,
+  "files": {
+    "official_replay.py": "f45a74ab32732a6a5e716852136e6c1c1c17e4f9d1bf70b7c00745298c16f8ab",
+    "test_official_replay.py": "472ae53c6420a4fa2953b6656a4c116bc902d8b409e51f8c2a10e6dcac8d4e2e",
+    "prepare_points.py": "8beb0928f079f1d444afc9fdbae7a53e8e9ac50a9a0bd2af797a347196568a39"
+  }
+}

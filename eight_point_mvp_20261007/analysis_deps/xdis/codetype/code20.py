@@ -1,0 +1,191 @@
+# (C) Copyright 2017-2021, 2023-2025 by Rocky Bernstein
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 2
+#  of the License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+import types
+from copy import deepcopy
+from types import CodeType
+from typing import Any, Dict, Set, Tuple, Union
+
+from xdis.codetype.code15 import Code15, Code15FieldTypes
+from xdis.version_info import PYTHON_VERSION_TRIPLE, version_tuple_to_str
+
+# If there is a list of types, then any will work, but the 1st one is
+# the correct one for types.CodeType.
+Code2FieldTypes = deepcopy(Code15FieldTypes)
+Code2FieldTypes.update(
+    {
+        "co_freevars": (tuple, list),
+        "co_cellvars": (tuple, list),
+    }
+)
+
+# Byte code that is JVM, e.g. Pyston and Jython do provide a subset
+# of Pythons code fields.
+# For pyston, the fields it has are:
+#   co_argcount, co_filename, co_firstline, co_flags, co_name, co_varnames
+#
+# For Jython the fields it has are:
+#   co_argcount, co_cellvars, co_filename, co_firstline, co_flags, co_freevars,
+#   co_name, co_nlocals, co_varnames
+#
+
+class Code2(Code15):
+    """Class for a Python2 code object used when a Python 3 interpreter is
+    working on Python2 bytecode. It also functions as an object that can be used
+    to build or write a Python2 code object, since we allow mutable structures.
+    When done mutating, call method freeze().
+
+    For convenience in generating code objects, fields like
+    `co_consts`, co_names which are (immutable) tuples in the end-result can be stored
+    instead as (mutable) lists. Likewise, the line number table `co_lnotab`
+    can be stored as a simple list of offset, line_number tuples.
+    """
+
+    def __init__(
+        self,
+        co_argcount: int,
+        co_nlocals: int,
+        co_stacksize: int,
+        co_flags,
+        co_code,
+        co_consts,
+        co_names,
+        co_varnames,
+        co_filename,
+        co_name: str,
+        co_firstlineno: int,
+        co_lnotab,
+        co_freevars,
+        co_cellvars,
+        collection_order: Dict[Union[set, frozenset, dict], Tuple[Any]] = {},
+        reference_objects: Set[Any] = set(),
+        version_triple: Tuple[int, int, int] = (0, 0, 0)
+    ) -> None:
+        # Keyword argument parameters in the call below is more robust.
+        # Since things change around, robustness is good.
+        super().__init__(
+            co_argcount=co_argcount,
+            co_nlocals=co_nlocals,
+            co_stacksize=co_stacksize,
+            co_flags=co_flags,
+            co_code=co_code,
+            co_consts=co_consts,
+            co_names=co_names,
+            co_varnames=co_varnames,
+            co_filename=co_filename,
+            co_name=co_name,
+            co_firstlineno=co_firstlineno,
+            co_lnotab=co_lnotab,
+            version_triple=version_triple,
+        )
+        self.co_freevars = co_freevars
+        self.co_cellvars = co_cellvars
+        self.fieldtypes = Code2FieldTypes
+
+        # The following fields are mostly useful in marshaling a code object.
+        # Keeping marshal order exactly the same is useful in round-trip marshal
+        # testing; but it may also have other benefits.
+
+        # By saving the order in sets, frozensets, and dictionary keys,
+        # these collections can be written in the same order that appeared
+        # in unmarshalling (if that's how the code object was created).
+        self.collection_order = collection_order
+
+        # Keeping track of which objects were referenced, allows
+        self.reference_objects = reference_objects
+
+        if type(self) is Code2:
+            self.check()
+        return
+
+    def to_native(self, opts={}) -> CodeType:
+        if not (2, 0) <= PYTHON_VERSION_TRIPLE < (2, 8):
+            raise TypeError(
+                "Python Interpreter needs to be in range 2.0..2.7; is %s"
+                % version_tuple_to_str()
+            )
+
+        code = deepcopy(self)
+        code.freeze()
+        try:
+            code.check()
+        except AssertionError as e:
+            raise TypeError(e)
+
+        return types.CodeType(
+            code.co_argcount,
+            code.co_nlocals,
+            code.co_stacksize,
+            code.co_flags,
+            code.co_code,
+            code.co_consts,
+            code.co_names,
+            code.co_varnames,
+            code.co_filename,
+            code.co_name,
+            code.co_firstlineno,
+            code.co_lnotab,
+            code.co_freevars,
+            code.co_cellvars,
+        )
+
+
+class Code2Compat(Code2):
+    """A much more flexible version of Code. We don't require kwonlyargcount which
+    doesn't exist. You can also fill in what you want and leave the rest blank.
+
+    Call to_native() when done.
+    """
+
+    def __init__(
+        self,
+        co_argcount: int=0,
+        co_nlocals: int=0,
+        co_stacksize: int=0,
+        co_flags=[],
+        co_code=[],
+        co_consts=[],
+        co_names=[],
+        co_varnames=[],
+        co_filename: str="unknown",
+        co_name: str="unknown",
+        co_firstlineno: int=1,
+        co_lnotab: str="",
+        co_freevars=[],
+        co_cellvars=[],
+    ) -> None:
+        self.co_argcount = co_argcount
+        self.co_nlocals = co_nlocals
+        self.co_stacksize = co_stacksize
+        self.co_flags = co_flags
+        self.co_code = co_code
+        self.co_consts = co_consts
+        self.co_names = co_names
+        self.co_varnames = co_varnames
+        self.co_filename = co_filename
+        self.co_name = co_name
+        self.co_firstlineno = co_firstlineno
+        self.co_lnotab = co_lnotab
+        self.co_freevars = co_freevars
+        self.co_cellvars = co_cellvars
+
+    def __repr__(self) -> str:
+        return '<code2 object %s at 0x%0x, file "%s", line %d>' % (
+            self.co_name,
+            id(self),
+            self.co_filename,
+            self.co_firstlineno,
+        )
