@@ -175,7 +175,7 @@ class ArmController:
     def set_torque(self, enable: bool) -> None:
         """舵机力矩。掉电示教前必须关，运动前必须开。
 
-        注意：出厂固件不会自动上电，cmd 8/50 在力矩关闭时不会让臂动。
+        启动力矩行为取决于当前固件；发送成功不证明实际力矩状态。
         """
         if self.dry_run:
             self.plan.record("set_torque", enable=bool(enable))
@@ -216,7 +216,10 @@ class ArmController:
             self.transport.send(int(C.Cmd.COORDINATE_SET),
                                 C.pack_coord(x, y, z, pitch, roll, claw, time_ms))
         if wait and not self.dry_run:
-            self.wait_for(x, y, z, tol=tol, timeout=timeout)
+            if not self.wait_for(x, y, z, tol=tol, timeout=timeout,
+                                 pitch=pitch, roll=roll, claw=claw,
+                                 min_duration=time_ms / 1000.0):
+                raise TimeoutError("控制器报告未稳定到达完整目标位姿；停止后续点位")
 
     def jog(self, dx: float = 0.0, dy: float = 0.0, dz: float = 0.0,
             dpitch: float = 0.0, droll: float = 0.0, dclaw: float = 0.0,
@@ -245,7 +248,10 @@ class ArmController:
                      time_ms, wait=wait)
 
     def move_servo(self, servo_id: int, angle: float, time_ms: int = 800) -> None:
-        """单舵机绝对角度（cmd 51，'<BhH'）。绕过 IK，仅用于调试/标定。"""
+        """旧CMD51封装接口；angle参数实际承载位置计数，不是角度。
+
+        这不是EXE关节滑块的寄存器写接口；新适配使用move_joint_counts。
+        """
         self.gate.require()
         import struct
         if self.dry_run:
@@ -255,12 +261,29 @@ class ArmController:
         self.transport.send(int(C.Cmd.ARM_SERVO_SINGLE),
                             struct.pack("<BhH", int(servo_id), int(angle), int(time_ms)))
 
+    def move_joint_counts(self, servo_id: int, position: int,
+                          acceleration: int, speed: int) -> None:
+        """EXE关节滑块：单ID、CMD3、reg41。调用者须先核对起点、步长及现场。
+
+        不做IK，不发力矩命令；不自动等待、不证明实体到位。
+        """
+        self.gate.require()
+        if type(servo_id) is not int or not 1 <= servo_id <= 6:
+            raise ValueError('servo_id must be 1..6; broadcast motion refused')
+        payload=C.pack_joint_counts(position, acceleration, speed)
+        self.gate.pace()
+        if self.dry_run:
+            self.plan.record('move_joint_counts', servo_id=servo_id, position=position,
+                             acceleration=acceleration, speed=speed)
+        else:
+            self.transport.send(3, payload, target_id=servo_id)
+
     def move_path(self, waypoints: Iterable[Tuple[float, float, float]],
                   claw: Optional[float] = None, time_ms: int = 1200,
                   pitch: Optional[float] = None, wait: bool = True) -> None:
         """依次经过一串 (x, y, z) 路点。claw/pitch 不给就跟着当前位姿走。"""
         points = [(float(px), float(py), float(pz)) for px, py, pz in waypoints]
-        pose = self.get_pose()
+        pose = None if self.dry_run else self.get_pose()
         base_pitch = pose.pitch if (pitch is None and pose) else (pitch or 0.0)
         base_claw = pose.claw if (claw is None and pose) else (claw or 0.0)
         base_roll = pose.roll if pose else 0.0
@@ -271,19 +294,34 @@ class ArmController:
 
     # ------------------------------------------------------------------- wait
     def wait_for(self, x: float, y: float, z: float, tol: float = 8.0,
-                 timeout: float = 8.0, poll: float = 0.1) -> bool:
-        """轮询 cmd 11 直到位置落在容差内。返回是否到位。
+                 timeout: float = 8.0, poll: float = 0.1,
+                 pitch=None, roll=None, claw=None, angle_tol: float = 3.0,
+                 min_duration: float = 0.0) -> bool:
+        """等待至少三次完整位姿报告稳定；仅是控制器状态，不证明物理到位。
 
-        注意：cmd 11 上报的是 AT32 记录的坐标；历史上有"报幻象轨迹"的坑，
-        因此到位判定只看坐标，并额外用 get_real_joints() 复核时更稳。
+        不能用CMD65与CMD11一致作为独立物理验证。缺失报告会清空稳定计数。
         """
-        deadline = time.monotonic() + timeout
+        started = time.monotonic()
+        deadline = started + timeout
+        stable = 0
+        first_stable = None
         while time.monotonic() < deadline:
             pose = self.get_pose()
-            if pose is not None:
-                if (abs(pose.x - x) <= tol and abs(pose.y - y) <= tol
-                        and abs(pose.z - z) <= tol):
+            good = pose is not None and all(abs(getattr(pose, k)-v) <= tol
+                                           for k, v in (('x', x), ('y', y), ('z', z)))
+            if good:
+                good = all(v is None or abs(getattr(pose, k)-v) <= angle_tol
+                           for k, v in (('pitch', pitch), ('roll', roll), ('claw', claw)))
+            now = time.monotonic()
+            if good and now - started >= min_duration:
+                stable += 1
+                if first_stable is None:
+                    first_stable = now
+                if stable >= 3 and now-first_stable >= 0.2:
                     return True
+            else:
+                stable = 0
+                first_stable = None
             time.sleep(poll)
         self.log("等待到位超时：目标 (%.1f, %.1f, %.1f) tol=%.1f" % (x, y, z, tol))
         return False

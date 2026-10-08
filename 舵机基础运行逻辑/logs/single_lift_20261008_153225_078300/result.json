@@ -1,0 +1,42 @@
+{
+  "motion_write_completed": true,
+  "physical_motion_confirmed": false,
+  "return_sent": false,
+  "baseline": {
+    "x": 202.0,
+    "y": 1.0,
+    "z": 240.0,
+    "pitch": -20.7,
+    "roll": 0.0,
+    "claw": 0.0
+  },
+  "target": {
+    "x": 202.0,
+    "y": 1.0,
+    "z": 250.0,
+    "pitch": -20.7,
+    "roll": 0.0,
+    "claw": 0.0
+  },
+  "final": {
+    "x": 201,
+    "y": 1,
+    "z": 244,
+    "pitch": -22.0,
+    "roll": 0,
+    "claw": 0
+  },
+  "reported_z_change": 4.0,
+  "controller_within_3mm_3deg": false,
+  "stats": {
+    "connected": true,
+    "type": "serial",
+    "rx_frames": 122,
+    "rx_bytes": 6046,
+    "tx_frames": 93,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "physical_observation": "pending operator"
+}

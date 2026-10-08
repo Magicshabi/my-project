@@ -126,6 +126,22 @@ def pack_coord(x: float, y: float, z: float, pitch: float, roll: float,
                        int(roll), int(claw), int(time_ms) & 0xFFFF)
 
 
+def pack_joint_counts(position: int, acceleration: int, speed: int) -> bytes:
+    """EXE slider payload: reg41, acc, raw position, reserved zero, speed.
+
+    Verified against the user's HEX export. Position is encoder counts, not
+    degrees; speed is a servo protocol value, not motion duration or mm/s.
+    """
+    for name, value, low, high in (
+        ('position', position, 0, 4095),
+        ('acceleration', acceleration, 0, 254),
+        ('speed', speed, 1, 65535),
+    ):
+        if type(value) is not int or not low <= value <= high:
+            raise ValueError('%s must be an integer in [%d,%d]' % (name, low, high))
+    return struct.pack('<BBHHH', 41, acceleration, position, 0, speed)
+
+
 def pack_move_inc(dx: float, dy: float, dz: float, dpitch: float, droll: float,
                   dclaw: float, time_ms: int) -> bytes:
     """cmd 50 ARM_MOVE_INC 的 14 字节载荷（dpitch 放大 10 倍）。"""

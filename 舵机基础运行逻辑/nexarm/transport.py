@@ -45,11 +45,12 @@ class Transport:
         self.rx_bytes = 0
         self.tx_frames = 0
         self.other_id_frames = 0
+        self.rx_failure = None
 
     # ---------------------------------------------------------------- connect
     @property
     def connected(self) -> bool:
-        return bool(self._ser is not None or self._sock is not None)
+        return self.rx_failure is None and bool(self._ser is not None or self._sock is not None)
 
     def open_serial(self, port: str, baudrate: int = DEFAULT_BAUDRATE,
                     timeout: float = 0.02, write_timeout: float = 0.2) -> None:
@@ -87,6 +88,7 @@ class Transport:
         self._log("已连接 %s:%d" % (host, port))
 
     def _start_rx(self) -> None:
+        self.rx_failure = None
         self._stop.clear()
         self._parser.reset()
         self._gen += 1
@@ -129,6 +131,7 @@ class Transport:
                         time.sleep(idle)
                         continue
                     if not chunk:
+                        self.rx_failure = "remote closed"
                         self._log("远端关闭了连接")
                         self._stop.set()
                         break
@@ -141,6 +144,7 @@ class Transport:
                     self._dispatch(frame)
             except Exception as exc:  # 串口被拔 -> 抛错，退出线程
                 if gen == self._gen:
+                    self.rx_failure = str(exc)
                     self._log("接收线程异常: %s" % exc)
                 break
 
@@ -180,7 +184,10 @@ class Transport:
         data = build_frame(cmd, args, target_id)
         with self._tx_lock:
             if self._ser is not None:
-                self._ser.write(data)
+                written = self._ser.write(data)
+                if written != len(data):
+                    self.rx_failure = "short serial write"
+                    raise TransportError("串口短写：%s/%s；不自动重发" % (written, len(data)))
             elif self._sock is not None:
                 self._sock.sendall(data)
         self.tx_frames += 1
@@ -193,6 +200,8 @@ class Transport:
         done = threading.Event()
 
         def _cb(frame: Frame) -> None:
+            if frame.id not in (SYS_HEAD, AT32_SYS_ID):
+                return
             box.append(frame)
             done.set()
 

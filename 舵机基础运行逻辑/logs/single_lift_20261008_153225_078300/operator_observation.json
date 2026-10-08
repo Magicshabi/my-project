@@ -1,0 +1,11 @@
+{
+  "source": "user reply after this probe",
+  "observation": "完全没动，无红灯或异响",
+  "physical_motion_confirmed": false,
+  "physical_test_passed": false,
+  "controller_reported_z_change_mm": 4,
+  "requested_z_change_mm": 10,
+  "next_motion_sent": false,
+  "calibration_started": false,
+  "conclusion": "控制器报告变化与现场观察不一致；不能据此认定真实运动或采集通过。力矩状态及命令执行链路仍待核实。"
+}
