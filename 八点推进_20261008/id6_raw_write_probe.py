@@ -29,7 +29,7 @@ from nexarm.frames import build_frame  # noqa: E402
 
 SERVO_ID = 6
 SAFE_LO, SAFE_HI = 1100, 1900
-AMPLITUDE = 45
+AMPLITUDE = 45          # 默认 ±45 ticks（≈4°）；可用 --ticks N 覆盖
 MOVE_MS = 1000
 CYCLES = 2
 
@@ -37,6 +37,18 @@ SERVO_CMD_WRITE = 3      # 舵机帧 cmd：3 = 写寄存器
 SERVO_REG_ACC = 41       # 0x29，加速度寄存器（其后跟 acc,pos,PWM,speed）
 ACC = 100                # GUI 默认
 SPEED = 2000             # GUI 默认
+
+
+def parse_ticks(argv, default=AMPLITUDE):
+    if "--ticks" in argv:
+        return int(argv[argv.index("--ticks") + 1])
+    return default
+
+
+def parse_cycles(argv, default=CYCLES):
+    if "--cycles" in argv:
+        return int(argv[argv.index("--cycles") + 1])
+    return default
 
 
 def raw_args(pos, acc=ACC, speed=SPEED):
@@ -57,6 +69,9 @@ def main(argv):
         print("[ERR] 打开串口失败: %s（若是被占用，请关闭 NexArm.exe）" % exc)
         return 2
 
+    amp = parse_ticks(argv)
+    cycles = parse_cycles(argv)
+
     try:
         print("[S1] 版本: %s" % arm.get_version())
         j = arm.get_real_joints()
@@ -66,8 +81,9 @@ def main(argv):
             print("[ERR] 位置 %s 超出安全区间 [%d,%d]，终止" % (cur, SAFE_LO, SAFE_HI))
             return 3
 
-        lo = max(SAFE_LO, cur - AMPLITUDE)
-        hi = min(SAFE_HI, cur + AMPLITUDE)
+        lo = max(SAFE_LO, cur - amp)
+        hi = min(SAFE_HI, cur + amp)
+        print("[S3] 幅度 = ±%d ticks (≈%.1f°)，%d 个来回" % (amp, amp * 360.0 / 4096, cycles))
 
         for phase, target_id in (("A: ID=6（舵机号寻址）", SERVO_ID),
                                  ("B: ID=0xFF（广播寻址）", 0xFF)):
@@ -76,7 +92,7 @@ def main(argv):
             print("★ %s —— 接下来 8 秒请盯住夹爪 ★" % phase)
             print("=" * 62)
             time.sleep(2.0)
-            for i in range(CYCLES):
+            for i in range(cycles):
                 for name, pos in (("张开", lo), ("回位", hi)):
                     frame = build_frame(SERVO_CMD_WRITE, raw_args(pos), target_id)
                     print("[S3] %s 第%d轮 %s -> ID%d 目标 %d, TX %s"
