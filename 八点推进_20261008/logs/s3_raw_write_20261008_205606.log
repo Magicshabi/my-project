@@ -1,0 +1,16 @@
+[nexarm] 已连接 COM9 @ 1000000
+[S1] 版本: {'esp': (1, 0, 2), 'at32': (1, 0, 42), 'esp_str': '1.0.2', 'at32_str': '1.0.42'}
+[S1] ID6 当前位置 = 1837
+
+==============================================================
+★ A: ID=6（舵机号寻址） —— 接下来 8 秒请盯住夹爪 ★
+==============================================================
+[S3] A 第1轮 张开 -> ID6 目标 1792, TX ffff060a03296400070000d00781
+Traceback (most recent call last):
+  File "A:\NEXarm\Claude\八点推进_20261008\id6_raw_write_probe.py", line 108, in <module>
+    raise SystemExit(main(sys.argv))
+                     ~~~~^^^^^^^^^^
+  File "A:\NEXarm\Claude\八点推进_20261008\id6_raw_write_probe.py", line 87, in main
+    print("[S3]      读数: %s" % (j[SERVO_ID - 1] if j else None))
+          ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
