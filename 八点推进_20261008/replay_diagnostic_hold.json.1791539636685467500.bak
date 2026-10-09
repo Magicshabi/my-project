@@ -1,0 +1,48 @@
+{
+  "blocked": true,
+  "reason": "ID4 failed to settle to commanded target during first replay substep",
+  "requested_position": 3472,
+  "stable_reported_position": 3090,
+  "difference": -382,
+  "prior_position": 3510,
+  "operator_observation": "ID4偏移，末端向前伸；随后已静止，无红灯、异响或接触",
+  "post_stop_evidence": "logs/post_stop_20261009_171943_423500/result.json",
+  "read_limit_evidence": "logs/servo_limits_20261009_172233_732600/result.json",
+  "limit_query_result": "All six replies [id,1,1], actual limit interpretation unverified",
+  "static_exe_id4_slider_range": [
+    683,
+    3413
+  ],
+  "source_servo_driver": "positive position value copied little-endian into register41 payload; no host conversion added",
+  "replay_until_resolved": false,
+  "root_cause_verified": false,
+  "teaching_method_issue": "Confirmed all eight points positioned manually with NexArm.exe torque OFF; external supply stayed connected. Some reads occurred with torque still OFF. Not evidence of electronics power loss or stale feedback.",
+  "route_metadata_corrected_sha256": "6ac48d4a61b5550919c97a46f36e49501aae6ae3afaeef48cb200f1b250b7e5d",
+  "torque_state_before_first_replay": "operator confirmed enabled and self-holding",
+  "torque_preflight_verified": false,
+  "id4_register_query": {
+    "at": "2026-10-09T17:41:02.382527+08:00",
+    "evidence": "八点推进_20261008\\logs\\id4_register_read_1791538862382327000\\result.json",
+    "before": [
+      2358,
+      1555,
+      2859,
+      3090,
+      2414,
+      1251
+    ],
+    "after": [
+      2358,
+      1555,
+      2859,
+      3090,
+      2414,
+      1251
+    ],
+    "direct_reply_received": false,
+    "torque_state_verified": false,
+    "note": "No ID4 response; cannot infer torque OFF or servo failure. No motion/configuration/torque writes."
+  },
+  "torque_preflight_operator_confirmed": true,
+  "torque_note": "现场确认已开启且能保持；没有寄存器回读证据。不能把未开启力矩写成偏移根因。"
+}

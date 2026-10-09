@@ -27,10 +27,11 @@ def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def create_route(path):
+def create_route(path, require_powered_sliders=False):
     legacy = HERE.parent / 'validation_runs/readout_20261005_180008/eight_points.json'
     route = dict(schema=SCHEMA, units='raw_encoder_counts', servo_ids=list(range(1, 7)),
-                 created_at=timestamp(), method='NexArm.exe joint sliders + read-only host capture',
+                 created_at=timestamp(), method='NexArm.exe powered joint sliders + read-only host capture' if require_powered_sliders else 'Positioning method not yet confirmed',
+                 require_powered_sliders=require_powered_sliders,
                  legacy_source=dict(path=str(legacy), sha256=digest(legacy)),
                  configuration=None, complete=False, execution_verified=False, points=[])
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -53,6 +54,13 @@ def check_route(route, point):
         checked_counts(row.get('encoder_positions'))
         if row.get('physical_pose_confirmed') is not True:
             raise SafetyError('已有点位缺少现场确认')
+        if route.get('require_powered_sliders') and row.get('motor_driven_pose_confirmed_by_operator') is not True:
+            raise SafetyError('已有点位缺少电机主动到达的现场确认')
+
+
+def check_positioning_method(route, confirmed):
+    if route.get('require_powered_sliders') and confirmed is not True:
+        raise SafetyError('本轮只采电机主动到达的姿态；需用户确认保持力矩并用滑块摆位')
 
 
 def checked_counts(values):
@@ -105,8 +113,10 @@ def capture_stable(arm, emit):
     return samples[-1]['cmd65_counts'], samples
 
 
-def add_capture(route, point, counts, samples, config, observed, log_dir):
+def add_capture(route, point, counts, samples, config, observed, log_dir,
+                powered_sliders_confirmed=False):
     check_route(route, point)
+    check_positioning_method(route, powered_sliders_confirmed)
     checked_counts(counts)
     if not observed.strip():
         raise SafetyError('缺少现场姿态确认')
@@ -123,6 +133,7 @@ def add_capture(route, point, counts, samples, config, observed, log_dir):
         samples=samples, delta_from_previous=delta,
         large_joint_change_requires_review=bool(delta and max(map(abs, delta[:5])) > 350),
         evidence_dir=str(log_dir.resolve()), path_to_this_point_verified=False))
+    result['points'][-1]['motor_driven_pose_confirmed_by_operator'] = powered_sliders_confirmed is True
     result.update(configuration=config, complete=point == 8, execution_verified=False)
     return result
 
@@ -153,9 +164,13 @@ def main():
     ap.add_argument('--port', default='COM9')
     ap.add_argument('--point', type=int, choices=range(1, 9))
     ap.add_argument('--observed')
+    ap.add_argument('--require-powered-sliders', action='store_true',
+                    help='init: require explicit motor-driven positioning confirmation for each capture')
+    ap.add_argument('--powered-sliders-confirmed', action='store_true',
+                    help='capture: operator explicitly confirmed powered slider positioning, not manual dragging')
     a = ap.parse_args()
     if a.mode == 'init':
-        create_route(a.file)
+        create_route(a.file, a.require_powered_sliders)
         print('CREATED=' + str(a.file.resolve()))
         return
     if a.point is None or not a.observed or not a.observed.strip():
@@ -163,6 +178,7 @@ def main():
     original = a.file.read_bytes()
     route = json.loads(original.decode('utf-8'))
     check_route(route, a.point)
+    check_positioning_method(route, a.powered_sliders_confirmed)
     run = HERE / 'logs' / ('capture_' + datetime.now(timezone(timedelta(hours=8))).strftime('%Y%m%d_%H%M%S') + '_' + str(time.time_ns())[-6:])
     run.mkdir(parents=True)
     result = dict(point=a.point, saved=False, motion_commands=0, started_at=timestamp(),
@@ -187,7 +203,8 @@ def main():
             counts, samples = capture_stable(arm, emit)
             if transport.stats()['checksum_errors']:
                 raise SafetyError('采集出现坏帧；未保存')
-            updated = add_capture(route, a.point, counts, samples, config, a.observed, run)
+            updated = add_capture(route, a.point, counts, samples, config, a.observed, run,
+                                  powered_sliders_confirmed=a.powered_sliders_confirmed)
             save_revision(a.file, updated, original)
             result.update(saved=True, encoder_positions=counts, battery_mv=voltage,
                           configuration=config, file=str(a.file.resolve()), sha256=digest(a.file))

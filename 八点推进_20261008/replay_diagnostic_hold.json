@@ -44,5 +44,17 @@
     "note": "No ID4 response; cannot infer torque OFF or servo failure. No motion/configuration/torque writes."
   },
   "torque_preflight_operator_confirmed": true,
-  "torque_note": "现场确认已开启且能保持；没有寄存器回读证据。不能把未开启力矩写成偏移根因。"
+  "torque_note": "现场确认已开启且能保持；没有寄存器回读证据。不能把未开启力矩写成偏移根因。",
+  "id4_comparison_evidence": "id4_target_comparison_20261009.json",
+  "positive_control_targets": [
+    2940,
+    3090
+  ],
+  "higher_target_no_motion": {
+    "target": 3234,
+    "feedback": 3084,
+    "user_confirmed_no_motion": true,
+    "no_abnormality_reported": true
+  },
+  "latest_serial_closed": true
 }

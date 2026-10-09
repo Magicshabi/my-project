@@ -1,0 +1,23 @@
+{
+  "schema": "nexarm.joint-eight/1",
+  "units": "raw_encoder_counts",
+  "servo_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "created_at": "2026-10-09T17:59:01.737341+08:00",
+  "method": "NexArm.exe powered joint sliders + read-only host capture",
+  "require_powered_sliders": true,
+  "legacy_source": {
+    "path": "A:\\NEXarm\\Claude\\validation_runs\\readout_20261005_180008\\eight_points.json",
+    "sha256": "42089dca4d11eed26b24bcea909041c2833a6644544e63563cad032833672c34"
+  },
+  "configuration": null,
+  "complete": false,
+  "execution_verified": false,
+  "points": []
+}

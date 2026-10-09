@@ -21,6 +21,26 @@ def arm_at(counts):
 
 
 class CaptureTests(unittest.TestCase):
+    def test_powered_route_requires_operator_evidence_and_preserves_original(self):
+        r=route();r['require_powered_sliders']=True
+        with self.assertRaises(m.SafetyError):
+            m.add_capture(r,1,[2000]*6,[],{'v':1},'pose ready',Path('.'))
+        updated=m.add_capture(r,1,[2000]*6,[],{'v':1},'operator confirmed powered sliders',Path('.'),
+                              powered_sliders_confirmed=True)
+        self.assertTrue(updated['points'][0]['motor_driven_pose_confirmed_by_operator'])
+        self.assertEqual(r['points'],[])
+        updated['points'][0]['motor_driven_pose_confirmed_by_operator']=False
+        with self.assertRaises(m.SafetyError):m.check_route(updated,2)
+
+    def test_missing_powered_confirmation_blocks_before_serial_creation(self):
+        r=route();r['require_powered_sliders']=True
+        with tempfile.TemporaryDirectory(prefix='capture_powered_test_',dir=m.HERE) as folder:
+            p=Path(folder)/'route.json';p.write_text(json.dumps(r),encoding='utf-8')
+            args=['capture','capture','--file',str(p),'--point','1','--observed','ready']
+            with patch.object(m.sys,'argv',args),patch.object(m,'ArmController') as controller:
+                with self.assertRaises(m.SafetyError):m.main()
+                controller.assert_not_called()
+
     def test_only_exact_queries_can_be_transmitted(self):
         t=m.ReadOnlyTransport(Mock())
         with patch.object(m.Transport,'send') as send:

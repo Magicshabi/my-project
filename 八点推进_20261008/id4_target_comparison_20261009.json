@@ -1,0 +1,82 @@
+{
+  "recorded_at": "2026-10-09T17:53:56.683974+08:00",
+  "route_sha256": "6ac48d4a61b5550919c97a46f36e49501aae6ae3afaeef48cb200f1b250b7e5d",
+  "point_data_changed": false,
+  "positive_control": {
+    "requested": [
+      2940,
+      3090
+    ],
+    "reported": [
+      2948,
+      3084
+    ],
+    "operator_verified": true,
+    "log": "八点推进_20261008\\logs\\id4_lower_range_1791539311379914700"
+  },
+  "higher_target": {
+    "requested": 3234,
+    "feedback_range": [
+      3084,
+      3084
+    ],
+    "sample_count": 45,
+    "operator_statement": "完全没动，已静止，无异常",
+    "log": "八点推进_20261008\\logs\\id4_upper_range_1791539469556405500"
+  },
+  "physical_limit_verified": false,
+  "internal_angle_limits_read_successfully": false,
+  "limit_writes": 0,
+  "torque_writes": 0,
+  "root_cause": "unresolved: target handling or configured limits at higher values; not proof of a mechanical stop at 3090",
+  "point_id4_review": [
+    {
+      "point": 1,
+      "id4": 3448,
+      "outside_static_gui_range": true,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 2,
+      "id4": 3447,
+      "outside_static_gui_range": true,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 3,
+      "id4": 3448,
+      "outside_static_gui_range": true,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 4,
+      "id4": 3544,
+      "outside_static_gui_range": true,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 5,
+      "id4": 3474,
+      "outside_static_gui_range": true,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 6,
+      "id4": 3169,
+      "outside_static_gui_range": false,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 7,
+      "id4": 3169,
+      "outside_static_gui_range": false,
+      "actively_reached_in_this_teaching_session": false
+    },
+    {
+      "point": 8,
+      "id4": 3510,
+      "outside_static_gui_range": true,
+      "actively_reached_in_this_teaching_session": false
+    }
+  ]
+}
