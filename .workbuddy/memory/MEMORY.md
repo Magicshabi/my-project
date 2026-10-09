@@ -27,8 +27,32 @@
 
 ---
 
-## 一、目录与路径约定（2026-10-07 整理后）
-**当前根目录结构**（`A:\NEXarm\Claude`）：只保留 `README.md` / `PROJECT_STATE.md` / `INDEX.md` / `.gitignore`，
+## 〇之二、K230 视觉协作机制（读厂商源码所得，2026-10-09；**未实机验证**——本机 0x5F 不应答）
+
+- 物理：K230 是 **I2C 从机，地址 `0x5F`**，挂在 **Wire1（SDA21/SCL22）**，与电机/传送带共用总线；
+  ESP32 为主机。源码：`A:/NEXarm/视觉识别源码/01 颜色分拣/Color_Sorting/ColorGrabber.cpp`。
+- 通信：**双槽邮箱 v2（Mailbox v2）** —— 不是简单读写，而是共享内存式 IPC：
+  magic `57 4C 4D 32`("WLM2")；HOST 槽(ESP32→K230) + DEV 槽(K230→ESP32)；
+  每槽 8 字节元数据 `state/generation/frame_len/frame_xor`；状态机 EMPTY→WRITING→READY；
+  generation 防重读；XOR 校验；**I2C 分块 30 字节/次**；ESP32 **10ms 轮询**。
+- 报文：类型位在 byte4 高两位（`CMD=0x00 / RSP=0x40 / RPT=0x80`）。
+  下行命令：`0x01 SET_MODE`、`0x10 SET_CONF_THRESH`(置信度50)、`0x13 SET_SIMPLE_RESULT`、
+  `0x14 DISABLE_RUN`、`0x40 COLOR_SET_TARGET`（指定要找的颜色）。
+  上行上报：`0x70 HEARTBEAT`(mode/status, READY=0x04)、`0x72 DETECT_BBOX`、
+  `0x75 DETECT_COLOR`（`[组数] + 每组([颜色名]+[blob数]+blob×(cx,cy,w,h,angle))`）。
+- 协作：11 状态机 `INIT→SET_MODE→WAIT_READY→CONFIG→**SEARCH**→WRIST→DOWN→GRAB→LIFT→PLACE→RELEASE→RESET`。
+  **只有 SEARCH 是视觉闭环**（PD 视觉伺服），其余是**开环回放**（用录好的姿态 + X_COMP/Y_COMP/GRAB_Z 补偿）。
+- 闭环参数：死区 **±15px**（释放带 25px）、D 项限幅 **40**、每 **40ms** 发一次增量、
+  单次运动 **30ms**；对准后需**连续稳定 3 秒**才下压；**抓取点 = 稳定那一刻的机械臂坐标**。
+- **为什么视觉模式下上位机命令被屏蔽**：ESP32 的 loop 被该状态机占住并自行 `arm.move()` 驱动臂，
+  上位机同时发命令会互相打架；vendor 源码另有 teach-only 早退分支。
+- 对本项目的含义：① 主线（提手/篮体八点回放）**不需要 K230**；② 该环对**延迟极敏感**（25Hz 级增量修正）
+  → 这正是不能把云端 LLM 放进识别环的硬理由；③ 像素→机械臂的换算落在 `X_COMP/Y_COMP/GRAB_Z` 这类
+  **标定偏移**上，即手眼标定；④ 本机 K230 现不通，该链路起不来。
+
+---
+
+## 一、目录与路径约定（2026-10-07 整理后）**当前根目录结构**（`A:\NEXarm\Claude`）：只保留 `README.md` / `PROJECT_STATE.md` / `INDEX.md` / `.gitignore`，
 其余文件归入 6 个分类夹：`docs/`（人写文档）· `reference/`（厂商 PDF）· `scripts/`（可执行脚本）·
 `logs/`（编译/烧录/哈希）· `runs/`（实验采集，按实验分子目录）· `artifacts/`（产物归档）。
 分类依据与逐项归属见根目录 `INDEX.md`；全量 old→new 映射见 `_reorg/reorg_plan.txt`。
