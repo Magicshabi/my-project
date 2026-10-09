@@ -1,0 +1,108 @@
+import copy
+import json
+from collections import deque
+import unittest
+from unittest.mock import Mock,patch
+
+import replay_joint_points as m
+from nexarm.commands import Pose,pack_joint_counts
+
+
+class Clock:
+    def __init__(self):self.now=0
+    def monotonic(self):return self.now
+    def sleep(self,n):self.now+=n
+
+
+class ReplayTests(unittest.TestCase):
+    def setUp(self):
+        self.route=json.loads(m.SOURCE.read_text(encoding='utf-8'))
+        self.targets=m.resolve_route(self.route)
+
+    def arm(self,state,move=True):
+        arm=Mock()
+        arm.get_pose.side_effect=lambda:Pose(0,0,0,0,0,0,tuple(state))
+        arm.get_real_joints.side_effect=lambda:[(v,0) for v in state]
+        arm.transport.stats.return_value={'checksum_errors':0}
+        def update(sid,p,acc,speed):
+            expected=m.build_frame(3,pack_joint_counts(p,acc,speed),sid)
+            self.assertEqual(arm.transport.pending.popleft(),expected)
+            if move:state[sid-1]=p
+        arm.move_joint_counts.side_effect=update
+        return arm
+
+    def test_override_and_reject_unapproved_override(self):
+        self.assertEqual(self.targets[2],[1686,1392,3035,3448,2744,2029])
+        bad=copy.deepcopy(self.route)
+        bad['points'][2]['target_encoder_positions'][0]+=100
+        with self.assertRaises(m.SafetyError):m.resolve_route(bad)
+
+    def test_diagnostic_hold_blocks_before_connection(self):
+        hold=Mock();hold.exists.return_value=True
+        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load']),patch.object(m,'ArmController') as controller:
+            with self.assertRaisesRegex(m.SafetyError,'ID4'):
+                m.main()
+            controller.assert_not_called()
+
+    def test_all_steps_bounded_and_finish_exactly(self):
+        for a,b in zip(m.DEFAULT_POINTS,m.DEFAULT_POINTS[1:]):
+            previous=self.targets[a-1]
+            goals=m.interpolate(previous,self.targets[b-1])
+            for goal in goals:
+                self.assertLessEqual(max(abs(x-y) for x,y in zip(previous,goal)),40)
+                previous=goal
+            self.assertEqual(previous,self.targets[b-1])
+        with self.assertRaises(m.SafetyError):m.check_sequence([8,1])
+
+    def test_whitelist_and_failed_write_are_terminal(self):
+        t=m.ReplayTransport(Mock(),lambda:False)
+        p=pack_joint_counts(2800,100,2000)
+        t.pending=deque([m.build_frame(3,p,3)])
+        with patch.object(m.Transport,'send',side_effect=IOError('short write')) as send:
+            for sid in (255,2):
+                with self.assertRaises(m.SafetyError):t.send(3,p,sid)
+            send.assert_not_called()
+            with self.assertRaises(IOError):t.send(3,p,3)
+            with self.assertRaises(m.SafetyError):t.send(3,p,3)
+            self.assertEqual(send.call_count,1)
+
+    def test_stop_blocks_even_preapproved_frame(self):
+        t=m.ReplayTransport(Mock(),lambda:True)
+        p=pack_joint_counts(2800,100,2000)
+        t.pending=deque([m.build_frame(3,p,3)])
+        with patch.object(m.Transport,'send') as send:
+            with self.assertRaises(m.SafetyError):t.send(3,p,3)
+            send.assert_not_called()
+
+    def test_complete_segment_remains_operator_unconfirmed(self):
+        base=self.targets[7][:];state=base[:];arm=self.arm(state)
+        with patch.object(m,'capture_stable',return_value=(base,[])),patch.object(m,'time',Clock()):
+            result=m.execute_segment(arm,base,self.targets[6],Mock(),lambda:False)
+        self.assertEqual(state,self.targets[6])
+        self.assertFalse(result['operator_confirmed'])
+        self.assertEqual(result['steps'],9)
+
+    def test_start_mismatch_no_motion(self):
+        base=self.targets[7][:];wrong=base[:];wrong[0]+=13
+        arm=Mock()
+        with patch.object(m,'capture_stable',return_value=(wrong,[])):
+            with self.assertRaises(m.SafetyError):m.execute_segment(arm,base,self.targets[6],Mock(),lambda:False)
+        arm.move_joint_counts.assert_not_called()
+
+    def test_no_follow_timeout_no_later_steps(self):
+        base=self.targets[7][:];state=base[:];arm=self.arm(state,move=False)
+        with patch.object(m,'capture_stable',return_value=(base,[])),patch.object(m,'time',Clock()):
+            with self.assertRaises(TimeoutError):m.execute_segment(arm,base,self.targets[6],Mock(),lambda:False)
+        first=m.interpolate(base,self.targets[6])[0]
+        self.assertEqual(arm.move_joint_counts.call_count,sum(x!=y for x,y in zip(base,first)))
+
+    def test_drift_or_missing_feedback_aborts(self):
+        base=self.targets[7][:];bad=base[:];bad[0]+=30
+        arm=self.arm(bad)
+        with patch.object(m,'time',Clock()),self.assertRaises(m.SafetyError):
+            m.wait_step(arm,base,base,Mock(),lambda:False)
+        arm.get_pose.side_effect=None;arm.get_pose.return_value=None
+        with self.assertRaises(m.SafetyError):m.reads(arm)
+
+
+if __name__=='__main__':unittest.main()

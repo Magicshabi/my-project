@@ -1,0 +1,106 @@
+{
+  "purpose": "offline review only, not an executable or path-verified plan",
+  "source_sha256": "b39780d98da8557dde8e3b2096bf32c400e5678431b54ec38e9a396742b18a8d",
+  "execution_verified": false,
+  "pending_target_verification_points": [
+    3
+  ],
+  "points": [
+    {
+      "point": 1,
+      "stage": "red_above_open",
+      "encoder_target": [
+        1682,
+        1525,
+        2973,
+        3448,
+        2744,
+        1204
+      ]
+    },
+    {
+      "point": 2,
+      "stage": "red_down_open",
+      "encoder_target": [
+        1688,
+        1392,
+        3034,
+        3447,
+        2743,
+        1206
+      ]
+    },
+    {
+      "point": 3,
+      "stage": "red_down_grip",
+      "encoder_target": [
+        1686,
+        1392,
+        3035,
+        3448,
+        2744,
+        2029
+      ]
+    },
+    {
+      "point": 4,
+      "stage": "red_lift_grip",
+      "encoder_target": [
+        1675,
+        1601,
+        3022,
+        3544,
+        2784,
+        2029
+      ]
+    },
+    {
+      "point": 5,
+      "stage": "t0_above_grip",
+      "encoder_target": [
+        2348,
+        1656,
+        2809,
+        3474,
+        2408,
+        2029
+      ]
+    },
+    {
+      "point": 6,
+      "stage": "t0_down_grip",
+      "encoder_target": [
+        2359,
+        1534,
+        2641,
+        3169,
+        2417,
+        2030
+      ]
+    },
+    {
+      "point": 7,
+      "stage": "t0_down_open",
+      "encoder_target": [
+        2359,
+        1532,
+        2644,
+        3169,
+        2416,
+        1254
+      ]
+    },
+    {
+      "point": 8,
+      "stage": "t0_clear_open",
+      "encoder_target": [
+        2358,
+        1562,
+        2889,
+        3510,
+        2415,
+        1251
+      ]
+    }
+  ]
+}

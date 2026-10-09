@@ -1,0 +1,87 @@
+{
+  "read_only": true,
+  "motion_commands": 0,
+  "limits": {
+    "1": {
+      "id": 255,
+      "args_hex": "010101",
+      "bytes": [
+        1,
+        1,
+        1
+      ]
+    },
+    "2": {
+      "id": 255,
+      "args_hex": "020101",
+      "bytes": [
+        2,
+        1,
+        1
+      ]
+    },
+    "3": {
+      "id": 255,
+      "args_hex": "030101",
+      "bytes": [
+        3,
+        1,
+        1
+      ]
+    },
+    "4": {
+      "id": 255,
+      "args_hex": "040101",
+      "bytes": [
+        4,
+        1,
+        1
+      ]
+    },
+    "5": {
+      "id": 255,
+      "args_hex": "050101",
+      "bytes": [
+        5,
+        1,
+        1
+      ]
+    },
+    "6": {
+      "id": 255,
+      "args_hex": "060101",
+      "bytes": [
+        6,
+        1,
+        1
+      ]
+    }
+  },
+  "before": [
+    2358,
+    1555,
+    2859,
+    3090,
+    2414,
+    1251
+  ],
+  "after": [
+    2358,
+    1555,
+    2859,
+    3090,
+    2414,
+    1251
+  ],
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 12,
+    "rx_bytes": 442,
+    "tx_frames": 8,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "serial_closed": true
+}

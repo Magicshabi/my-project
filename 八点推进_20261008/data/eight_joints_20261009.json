@@ -10,7 +10,7 @@
     6
   ],
   "created_at": "2026-10-09T12:01:51.604172+08:00",
-  "method": "NexArm.exe joint sliders + read-only host capture",
+  "method": "八点全部通过NexArm.exe全部掉电/力矩关后手动摆位；外接电源保持接通；部分点在力矩仍关闭时只读采集。",
   "legacy_source": {
     "path": "A:\\NEXarm\\Claude\\validation_runs\\readout_20261005_180008\\eight_points.json",
     "sha256": "42089dca4d11eed26b24bcea909041c2833a6644544e63563cad032833672c34"
@@ -64,7 +64,7 @@
       "at32_str": "1.0.42"
     }
   },
-  "complete": false,
+  "complete": true,
   "execution_verified": false,
   "points": [
     {
@@ -1738,10 +1738,271 @@
       "large_joint_change_requires_review": false,
       "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_124206_017900",
       "path_to_this_point_verified": false
+    },
+    {
+      "point": 8,
+      "stage": "t0_clear_open",
+      "encoder_positions": [
+        2358,
+        1562,
+        2889,
+        3510,
+        2415,
+        1251
+      ],
+      "captured_at": "2026-10-09T17:06:45.341457+08:00",
+      "physical_pose_confirmed": true,
+      "observation": "用户确认：第8点已摆好，串口已断开，无异常；按第8点说明摆位（保持夹爪张开，抬离提手且夹指完全退出提手范围，未带起篮体，暂未返回初始位）。",
+      "samples": [
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2415,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2415,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2414,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2415,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2415,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        },
+        {
+          "cmd11_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2415,
+            1251
+          ],
+          "cmd65_counts": [
+            2358,
+            1562,
+            2889,
+            3510,
+            2415,
+            1251
+          ],
+          "controller_pose": {
+            "x": 255,
+            "y": -132,
+            "z": 197,
+            "pitch": -97.2,
+            "roll": 32,
+            "claw": -70
+          }
+        }
+      ],
+      "delta_from_previous": [
+        -1,
+        30,
+        245,
+        341,
+        -1,
+        -3
+      ],
+      "large_joint_change_requires_review": false,
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_170643_788200",
+      "path_to_this_point_verified": false
     }
   ],
   "execution_target_policy": "For each point use target_encoder_positions when present, otherwise encoder_positions. Pending target checks must be resolved before execution.",
   "pending_target_verification_points": [
     3
-  ]
+  ],
+  "teaching_method_correction": {
+    "recorded_at": "2026-10-09T17:39:31.334246+08:00",
+    "user_statement": "全部都是断电后手动摆的；在 NexArm.exe 点全部掉电/力矩关，外接电源线仍接通；有些点读取前未开启力矩",
+    "previous_method_claim": "NexArm.exe joint sliders + read-only host capture",
+    "previous_route_sha256": "b39780d98da8557dde8e3b2096bf32c400e5678431b54ec38e9a396742b18a8d",
+    "scope": "all eight points",
+    "powered_reachability_verified": false,
+    "measured_encoder_data_changed": false,
+    "clarification_history": [
+      {
+        "recorded_at": "2026-10-09T17:27:16.369879+08:00",
+        "user_statement": "我在使用的时候是直接断电后手动调整位置的，不知道有没有到舵机限位",
+        "previous_method_claim": "NexArm.exe joint sliders + read-only host capture",
+        "previous_route_sha256": "b39780d98da8557dde8e3b2096bf32c400e5678431b54ec38e9a396742b18a8d",
+        "scope": "points affected, torque/power switch and re-power sequence pending clarification",
+        "powered_reachability_verified": false,
+        "measured_encoder_data_changed": false
+      }
+    ],
+    "external_power_remained_connected": true,
+    "torque_disabled_for_positioning": true,
+    "some_captures_with_torque_disabled": true,
+    "feedback_assessment": "关闭力矩不等于切断舵机电子电源；不能仅据此判定反馈为缓存或判八点失效。稳定采样仍不证明每点能主动到达。",
+    "torque_state_before_first_replay": "awaiting operator clarification"
+  }
 }

@@ -1,0 +1,490 @@
+{
+  "updated_at": "2026-10-09T17:08:27.627104+08:00",
+  "source": "A:\\NEXarm\\Claude\\八点推进_20261008\\data\\eight_joints_20261009.json",
+  "source_sha256": "b39780d98da8557dde8e3b2096bf32c400e5678431b54ec38e9a396742b18a8d",
+  "recording_complete": true,
+  "execution_verified": false,
+  "pending_target_verification_points": [
+    3
+  ],
+  "points": [
+    {
+      "point": 1,
+      "stage": "red_above_open",
+      "captured": [
+        1682,
+        1525,
+        2973,
+        3448,
+        2744,
+        1204
+      ],
+      "execution_target": [
+        1682,
+        1525,
+        2973,
+        3448,
+        2744,
+        1204
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_120421_372300",
+      "target_physical_verification_pending": false
+    },
+    {
+      "point": 2,
+      "stage": "red_down_open",
+      "captured": [
+        1688,
+        1392,
+        3034,
+        3447,
+        2743,
+        1206
+      ],
+      "execution_target": [
+        1688,
+        1392,
+        3034,
+        3447,
+        2743,
+        1206
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_120735_460500",
+      "target_physical_verification_pending": false
+    },
+    {
+      "point": 3,
+      "stage": "red_down_grip",
+      "captured": [
+        1686,
+        1392,
+        3035,
+        3448,
+        2744,
+        1966
+      ],
+      "execution_target": [
+        1686,
+        1392,
+        3035,
+        3448,
+        2744,
+        2029
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_122609_778300",
+      "target_physical_verification_pending": true
+    },
+    {
+      "point": 4,
+      "stage": "red_lift_grip",
+      "captured": [
+        1675,
+        1601,
+        3022,
+        3544,
+        2784,
+        2029
+      ],
+      "execution_target": [
+        1675,
+        1601,
+        3022,
+        3544,
+        2784,
+        2029
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_123508_444000",
+      "target_physical_verification_pending": false
+    },
+    {
+      "point": 5,
+      "stage": "t0_above_grip",
+      "captured": [
+        2348,
+        1656,
+        2809,
+        3474,
+        2408,
+        2029
+      ],
+      "execution_target": [
+        2348,
+        1656,
+        2809,
+        3474,
+        2408,
+        2029
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_123925_451900",
+      "target_physical_verification_pending": false
+    },
+    {
+      "point": 6,
+      "stage": "t0_down_grip",
+      "captured": [
+        2359,
+        1534,
+        2641,
+        3169,
+        2417,
+        2030
+      ],
+      "execution_target": [
+        2359,
+        1534,
+        2641,
+        3169,
+        2417,
+        2030
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_124046_608700",
+      "target_physical_verification_pending": false
+    },
+    {
+      "point": 7,
+      "stage": "t0_down_open",
+      "captured": [
+        2359,
+        1532,
+        2644,
+        3169,
+        2416,
+        1254
+      ],
+      "execution_target": [
+        2359,
+        1532,
+        2644,
+        3169,
+        2416,
+        1254
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_124206_017900",
+      "target_physical_verification_pending": false
+    },
+    {
+      "point": 8,
+      "stage": "t0_clear_open",
+      "captured": [
+        2358,
+        1562,
+        2889,
+        3510,
+        2415,
+        1251
+      ],
+      "execution_target": [
+        2358,
+        1562,
+        2889,
+        3510,
+        2415,
+        1251
+      ],
+      "sample_spans": {
+        "cmd11_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "cmd65_counts": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_170643_788200",
+      "target_physical_verification_pending": false
+    }
+  ],
+  "segments": [
+    {
+      "from": 1,
+      "to": 2,
+      "target_joint_delta": [
+        6,
+        -133,
+        61,
+        -1,
+        -1,
+        2
+      ],
+      "controller_pose_delta": {
+        "x": 16,
+        "y": 6,
+        "z": -54,
+        "pitch": -6.200000000000003,
+        "roll": 0,
+        "claw": 0
+      },
+      "controller_horizontal_shift_mm": 17.08800749063506,
+      "physical_path_verified": false
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "target_joint_delta": [
+        -2,
+        0,
+        1,
+        1,
+        1,
+        823
+      ],
+      "controller_pose_delta": {
+        "x": -1,
+        "y": 1,
+        "z": 0,
+        "pitch": 0.0,
+        "roll": 0,
+        "claw": 67
+      },
+      "controller_horizontal_shift_mm": 1.4142135623730951,
+      "physical_path_verified": false
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "target_joint_delta": [
+        -11,
+        209,
+        -13,
+        96,
+        40,
+        0
+      ],
+      "controller_pose_delta": {
+        "x": -41,
+        "y": -20,
+        "z": 96,
+        "pitch": 8.800000000000011,
+        "roll": 4,
+        "claw": 5
+      },
+      "controller_horizontal_shift_mm": 45.617978911828175,
+      "physical_path_verified": false
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "target_joint_delta": [
+        673,
+        55,
+        -213,
+        -70,
+        -376,
+        0
+      ],
+      "controller_pose_delta": {
+        "x": 8,
+        "y": -274,
+        "z": -13,
+        "pitch": -7.800000000000011,
+        "roll": -33,
+        "claw": 0
+      },
+      "controller_horizontal_shift_mm": 274.11676344215067,
+      "physical_path_verified": false
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "target_joint_delta": [
+        11,
+        -122,
+        -168,
+        -305,
+        9,
+        1
+      ],
+      "controller_pose_delta": {
+        "x": 45,
+        "y": -29,
+        "z": -93,
+        "pitch": 1.4000000000000057,
+        "roll": 0,
+        "claw": 0
+      },
+      "controller_horizontal_shift_mm": 53.53503525729669,
+      "physical_path_verified": false
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "target_joint_delta": [
+        0,
+        -2,
+        3,
+        0,
+        -1,
+        -776
+      ],
+      "controller_pose_delta": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "pitch": 0.09999999999999432,
+        "roll": 0,
+        "claw": -68
+      },
+      "controller_horizontal_shift_mm": 0.0,
+      "physical_path_verified": false
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "target_joint_delta": [
+        -1,
+        30,
+        245,
+        341,
+        -1,
+        -3
+      ],
+      "controller_pose_delta": {
+        "x": -35,
+        "y": 18,
+        "z": 67,
+        "pitch": -5.799999999999997,
+        "roll": 0,
+        "claw": 0
+      },
+      "controller_horizontal_shift_mm": 39.35733730830886,
+      "physical_path_verified": false
+    }
+  ],
+  "total_query_transmissions": 208,
+  "total_motion_transmissions": 0
+}

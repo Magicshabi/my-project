@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-09T17:39:31.358448+08:00",
+  "change": "provenance metadata only",
+  "before_sha256": "7a85361dec4bc2a22db4b4f7b61e65eaae768f4f08733751f9ae786239288597",
+  "after_sha256": "35b609c48f2fe1135d9364ffd7fd4ba95799ab7eb14c67f2d3058d03fe52bc8c",
+  "all_eight_measured_points_unchanged": true,
+  "replay_blocked": true,
+  "serial_opened": false
+}

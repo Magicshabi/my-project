@@ -1,0 +1,116 @@
+{
+  "started_at": "2026-10-09T17:41:02.382527+08:00",
+  "read_only": true,
+  "motion_commands": 0,
+  "torque_writes": 0,
+  "configuration_writes": 0,
+  "raw_reads": [
+    {
+      "register": 40,
+      "requested_bytes": 8,
+      "replies": [
+        {
+          "arrived_monotonic": 339907.4524054,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        },
+        {
+          "arrived_monotonic": 339907.6521517,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        },
+        {
+          "arrived_monotonic": 339907.8515734,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        }
+      ],
+      "matching_id4_replies": []
+    },
+    {
+      "register": 56,
+      "requested_bytes": 2,
+      "replies": [
+        {
+          "arrived_monotonic": 339908.0528143,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        },
+        {
+          "arrived_monotonic": 339908.2524475,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        },
+        {
+          "arrived_monotonic": 339908.4563548,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        },
+        {
+          "arrived_monotonic": 339908.6511997,
+          "id": 255,
+          "cmd_or_status": 11,
+          "args_hex": "460158ffc80084fd2000baff360913062b0b120c6e09e304",
+          "args_length": 24
+        }
+      ],
+      "matching_id4_replies": []
+    }
+  ],
+  "torque_state_verified": false,
+  "source_sha256": "ffe49727c41e829edf9b9067f2ed544aa3dcb0231192e0c51ff306e59b4b9478",
+  "note": "Unknown reply formats are preserved, not interpreted as measured registers.",
+  "version": {
+    "esp": [
+      1,
+      0,
+      2
+    ],
+    "at32": [
+      1,
+      0,
+      42
+    ],
+    "esp_str": "1.0.2",
+    "at32_str": "1.0.42"
+  },
+  "before": [
+    2358,
+    1555,
+    2859,
+    3090,
+    2414,
+    1251
+  ],
+  "after": [
+    2358,
+    1555,
+    2859,
+    3090,
+    2414,
+    1251
+  ],
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 10,
+    "rx_bytes": 438,
+    "tx_frames": 5,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "serial_closed": true
+}

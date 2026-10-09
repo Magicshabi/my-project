@@ -1,0 +1,76 @@
+{
+  "status": "aborted_first_substep_no_point_reached",
+  "start": [
+    2358,
+    1562,
+    2890,
+    3510,
+    2415,
+    1251
+  ],
+  "target": [
+    2358,
+    1559,
+    2863,
+    3472,
+    2415,
+    1251
+  ],
+  "sent": [
+    {
+      "id": 2,
+      "register": 41,
+      "acceleration": 100,
+      "position": 1559,
+      "reserved": 0,
+      "speed": 2000,
+      "wire_hex": "ffff020a03296417060000d0076f"
+    },
+    {
+      "id": 3,
+      "register": 41,
+      "acceleration": 100,
+      "position": 2863,
+      "reserved": 0,
+      "speed": 2000,
+      "wire_hex": "ffff030a0329642f0b0000d00751"
+    },
+    {
+      "id": 4,
+      "register": 41,
+      "acceleration": 100,
+      "position": 3472,
+      "reserved": 0,
+      "speed": 2000,
+      "wire_hex": "ffff040a032964900d0000d007ed"
+    }
+  ],
+  "last_cmd11": [
+    2358,
+    1555,
+    2859,
+    3383,
+    2414,
+    1251
+  ],
+  "last_cmd65": [
+    2358,
+    1555,
+    2859,
+    3383,
+    2414,
+    1251
+  ],
+  "target_error": [
+    0,
+    -4,
+    -4,
+    -89,
+    -1,
+    0
+  ],
+  "physical_observation": "pending user",
+  "interpretation": "ID4 controller report 3383 fell below planned lower bound 3456 (target3472 minus16). Could be transient or lasting; no conclusion on physical overshoot or cause yet. No retry, no next substep, no automatic return.",
+  "motion_attempts": 3,
+  "physical_stop_verified": false
+}
