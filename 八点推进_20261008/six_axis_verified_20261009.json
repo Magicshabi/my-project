@@ -1,0 +1,410 @@
+{
+  "updated_at": "2026-10-09T11:57:44.195967+08:00",
+  "six_individual_axes_physically_confirmed": true,
+  "scope": "Individual empty-load movement and return only; not eight-point trajectory or loaded grasp acceptance.",
+  "protocol": {
+    "cmd": 3,
+    "register": 41,
+    "target_id": "individual servo ID 1..6",
+    "acceleration": 100,
+    "speed": 2000
+  },
+  "passed": [
+    {
+      "id": 1,
+      "start": 2006,
+      "target": 2156,
+      "delta": 150,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        2150,
+        2255,
+        1642,
+        2103,
+        1992,
+        1799
+      ],
+      "returned": [
+        2010,
+        2255,
+        1642,
+        2103,
+        1992,
+        1799
+      ],
+      "return_error": 4,
+      "controller_round_trip": true,
+      "operator_confirmed": true,
+      "operator_answer": "yes",
+      "run": "six_joints_20261009_115619_035400",
+      "started_at": "2026-10-09T11:56:19.721007+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff010a0329646c080000d00719",
+        "ffff010a032964d6070000d007b0"
+      ],
+      "result_sha256": "c3fe85c633a53369f69f79462c86d4a127661b2d7b330b69706a806fcfffd378"
+    },
+    {
+      "id": 2,
+      "start": 2259,
+      "target": 2109,
+      "delta": -150,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        2006,
+        2109,
+        1643,
+        2103,
+        1992,
+        1800
+      ],
+      "returned": [
+        2006,
+        2255,
+        1642,
+        2103,
+        1992,
+        1800
+      ],
+      "return_error": -4,
+      "controller_round_trip": true,
+      "operator_confirmed": true,
+      "operator_answer": "yes",
+      "run": "six_joints_20261009_115546_311400",
+      "started_at": "2026-10-09T11:55:46.278283+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff020a0329643d080000d00747",
+        "ffff020a032964d3080000d007b1"
+      ],
+      "result_sha256": "054eb642f2cbfdd80fbc2f2ac9fa597a897cd9aa92ee8a7cd88e83b0b2b779b7"
+    },
+    {
+      "id": 3,
+      "start": 1675,
+      "target": 1825,
+      "delta": 150,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        1971,
+        2003,
+        1814,
+        2104,
+        1994,
+        1801
+      ],
+      "returned": [
+        1971,
+        2003,
+        1676,
+        2104,
+        1994,
+        1802
+      ],
+      "return_error": 1,
+      "controller_round_trip": true,
+      "operator_confirmed": true,
+      "operator_answer": "yes",
+      "run": "six_joints_20261008_211853_661300",
+      "started_at": "2026-10-08T21:18:53.419633+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff030a03296421070000d00763",
+        "ffff030a0329648b060000d007fa"
+      ],
+      "result_sha256": "b323532870e0d8ad65d9361a60c2b9edd01b9553fa4414a5ce119b805497f56d"
+    },
+    {
+      "id": 4,
+      "start": 2104,
+      "target": 1954,
+      "delta": -150,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        1971,
+        2003,
+        1675,
+        1964,
+        1994,
+        1802
+      ],
+      "returned": [
+        1971,
+        2003,
+        1675,
+        2104,
+        1994,
+        1801
+      ],
+      "return_error": 0,
+      "controller_round_trip": true,
+      "operator_confirmed": true,
+      "operator_answer": "yes",
+      "run": "six_joints_20261008_211853_661300",
+      "started_at": "2026-10-08T21:18:53.419633+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff040a032964a2070000d007e1",
+        "ffff040a03296438080000d0074a"
+      ],
+      "result_sha256": "b323532870e0d8ad65d9361a60c2b9edd01b9553fa4414a5ce119b805497f56d"
+    },
+    {
+      "id": 5,
+      "start": 1994,
+      "target": 2144,
+      "delta": 150,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        1971,
+        2003,
+        1675,
+        2104,
+        2141,
+        1801
+      ],
+      "returned": [
+        1971,
+        2003,
+        1675,
+        2104,
+        1995,
+        1802
+      ],
+      "return_error": 1,
+      "controller_round_trip": true,
+      "operator_confirmed": true,
+      "operator_answer": "yes",
+      "run": "six_joints_20261008_211744_151700",
+      "started_at": "2026-10-08T21:17:44.304123+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff050a03296460080000d00721",
+        "ffff050a032964ca070000d007b8"
+      ],
+      "result_sha256": "65c5b2ec82ea967550d4f86b90fd015db4c3a497fe2e167f17493d2b6066a97b"
+    },
+    {
+      "id": 6,
+      "start": 1803,
+      "target": 1303,
+      "delta": -500,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        1972,
+        2003,
+        1675,
+        2104,
+        1989,
+        1306
+      ],
+      "returned": [
+        1972,
+        2003,
+        1675,
+        2104,
+        1989,
+        1801
+      ],
+      "return_error": -2,
+      "controller_round_trip": true,
+      "operator_confirmed": true,
+      "operator_answer": "yes",
+      "run": "six_joints_20261008_211344_105300",
+      "started_at": "2026-10-08T21:13:44.682072+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff060a03296417050000d0076c",
+        "ffff060a0329640b070000d00776"
+      ],
+      "result_sha256": "7730163a4643121497b717f10e5b9118aedaf526dd0fda4a49d1a3599a3b67d7"
+    }
+  ],
+  "unconfirmed_historical_trials": [
+    {
+      "id": 5,
+      "start": 1989,
+      "target": 2139,
+      "delta": 150,
+      "acceleration": 100,
+      "speed": 200,
+      "at_target": [
+        1972,
+        2003,
+        1675,
+        2104,
+        2137,
+        1801
+      ],
+      "returned": [
+        1972,
+        2003,
+        1675,
+        2104,
+        1992,
+        1801
+      ],
+      "return_error": 3,
+      "controller_round_trip": true,
+      "operator_confirmed": false,
+      "operator_answer": "not_confirmed",
+      "run": "six_joints_20261008_211344_105300",
+      "started_at": "2026-10-08T21:13:44.682072+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff050a0329645b080000c80035",
+        "ffff050a032964c5070000c800cc"
+      ],
+      "result_sha256": "7730163a4643121497b717f10e5b9118aedaf526dd0fda4a49d1a3599a3b67d7"
+    },
+    {
+      "id": 2,
+      "start": 2003,
+      "target": 2153,
+      "delta": 150,
+      "acceleration": 100,
+      "speed": 2000,
+      "at_target": [
+        1971,
+        2147,
+        1675,
+        2104,
+        1994,
+        1802
+      ],
+      "returned": [
+        1971,
+        2003,
+        1676,
+        2104,
+        1994,
+        1801
+      ],
+      "return_error": 0,
+      "controller_round_trip": true,
+      "operator_confirmed": false,
+      "operator_answer": "not_observed",
+      "run": "six_joints_20261008_211853_661300",
+      "started_at": "2026-10-08T21:18:53.419633+08:00",
+      "version": {
+        "esp": [
+          1,
+          0,
+          2
+        ],
+        "at32": [
+          1,
+          0,
+          42
+        ],
+        "esp_str": "1.0.2",
+        "at32_str": "1.0.42"
+      },
+      "raw_motion_frames": [
+        "ffff020a03296469080000d0071b",
+        "ffff020a032964d3070000d007b2"
+      ],
+      "result_sha256": "b323532870e0d8ad65d9361a60c2b9edd01b9553fa4414a5ce119b805497f56d"
+    }
+  ],
+  "physical_emergency_stop_verified": false,
+  "active_serial_session": false
+}

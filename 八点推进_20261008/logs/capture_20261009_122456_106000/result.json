@@ -1,0 +1,24 @@
+{
+  "point": 3,
+  "saved": false,
+  "motion_commands": 0,
+  "started_at": "2026-10-09T12:24:56.925313+08:00",
+  "sources": {
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\capture_joint_points.py": "68afb84d58573351c7db8482d01aebacb62035a09fc7e02d3031f0a8999334df",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\arm.py": "93c6b7e1ed176f3ae57f29bffe8451937510ca0dc01cc16de025f384f3b3b9f4",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\transport.py": "914e109ef8c7b23ef5b05d4232def9a8e4e4752b035682101e09d099668a8103",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\commands.py": "3450cf0eaaa1864d44cf6411a9868e4cf19d9b00983257a00405d9622e985558"
+  },
+  "error": "打开 COM9 失败: could not open port 'COM9': PermissionError(13, '拒绝访问。', None, 5)",
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 0,
+    "rx_bytes": 0,
+    "tx_frames": 0,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "serial_closed": true
+}

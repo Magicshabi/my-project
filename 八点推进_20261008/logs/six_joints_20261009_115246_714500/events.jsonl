@@ -1,0 +1,53 @@
+{"event": "transport", "t": 319011.5838415, "message": "已连接 COM9 @ 1000000"}
+{"event": "tx_attempt", "t": 319011.5841269, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 319011.5843798, "cmd": 80, "id": 255}
+{"event": "rx", "t": 319011.5891257, "id": 255, "cmd": 80, "args": "640090013efec2011400f4012cfc7800a6ff5a009cff5300"}
+{"event": "tx_attempt", "t": 319011.5892372, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 319011.5894501, "cmd": 64, "id": 255}
+{"event": "rx", "t": 319011.5947685, "id": 255, "cmd": 64, "args": "66e6dc420000614348e113420000114300000000e13a0243000000000000484200008d42"}
+{"event": "tx_attempt", "t": 319011.5949109, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 319011.5951175, "cmd": 58, "id": 255}
+{"event": "rx", "t": 319011.6004067, "id": 255, "cmd": 58, "args": "012e00"}
+{"event": "tx_attempt", "t": 319011.6508706, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 319011.6511381, "cmd": 58, "id": 255}
+{"event": "rx", "t": 319011.6540376, "id": 255, "cmd": 58, "args": "024200"}
+{"event": "rx", "t": 319011.6602774, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070707"}
+{"event": "tx_attempt", "t": 319011.704514, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 319011.704778, "cmd": 58, "id": 255}
+{"event": "rx", "t": 319011.7091406, "id": 255, "cmd": 58, "args": "038ffd"}
+{"event": "tx_attempt", "t": 319011.7596831, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 319011.7599438, "cmd": 58, "id": 255}
+{"event": "rx", "t": 319011.7627507, "id": 255, "cmd": 58, "args": "0463fd"}
+{"event": "tx_attempt", "t": 319011.8131195, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 319011.8133777, "cmd": 58, "id": 255}
+{"event": "rx", "t": 319011.8213297, "id": 255, "cmd": 58, "args": "05f5ff"}
+{"event": "rx", "t": 319011.8582797, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070807"}
+{"event": "tx_attempt", "t": 319011.8718001, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 319011.8720191, "cmd": 58, "id": 255}
+{"event": "rx", "t": 319011.8800232, "id": 255, "cmd": 58, "args": "063300"}
+{"event": "tx_attempt", "t": 319011.930219, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 319011.9305245, "cmd": 1, "id": 255}
+{"event": "rx", "t": 319011.9856481, "id": 255, "cmd": 1, "args": "01000201002a"}
+{"event": "tx_attempt", "t": 319011.985735, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 319011.9859988, "cmd": 2, "id": 255}
+{"event": "rx", "t": 319011.9913066, "id": 255, "cmd": 2, "args": "7630"}
+{"event": "tx_attempt", "t": 319011.9913855, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 319011.9916976, "cmd": 11, "id": 255}
+{"event": "rx", "t": 319011.9971469, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070807"}
+{"event": "rx", "t": 319012.0609993, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070707"}
+{"event": "tx_attempt", "t": 319012.0973318, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 319012.0975583, "cmd": 11, "id": 255}
+{"event": "rx", "t": 319012.104133, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070707"}
+{"event": "tx_attempt", "t": 319012.2044765, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 319012.2047117, "cmd": 11, "id": 255}
+{"event": "rx", "t": 319012.2112167, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070707"}
+{"event": "rx", "t": 319012.2601383, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070807"}
+{"event": "tx_attempt", "t": 319012.3115632, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 319012.3118688, "cmd": 11, "id": 255}
+{"event": "rx", "t": 319012.3207874, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070807"}
+{"event": "tx_attempt", "t": 319012.4211711, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 319012.4213471, "cmd": 11, "id": 255}
+{"event": "rx", "t": 319012.42757, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070807"}
+{"event": "rx", "t": 319012.4596029, "id": 255, "cmd": 11, "args": "df000e00f50027fffbffeaffd607d3086d063708c8070707"}
+{"event": "aborted", "t": 319012.5280352, "reason": "当前姿态已偏离本轮预检位置，需要重新评估", "physical_stop_verified": false}
+{"event": "library", "t": 319012.5281737, "message": "运动闸门 已关闭"}

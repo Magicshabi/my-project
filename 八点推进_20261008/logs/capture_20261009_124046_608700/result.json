@@ -1,0 +1,83 @@
+{
+  "point": 6,
+  "saved": true,
+  "motion_commands": 0,
+  "started_at": "2026-10-09T12:40:46.216809+08:00",
+  "sources": {
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\capture_joint_points.py": "68afb84d58573351c7db8482d01aebacb62035a09fc7e02d3031f0a8999334df",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\arm.py": "93c6b7e1ed176f3ae57f29bffe8451937510ca0dc01cc16de025f384f3b3b9f4",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\transport.py": "914e109ef8c7b23ef5b05d4232def9a8e4e4752b035682101e09d099668a8103",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\commands.py": "3450cf0eaaa1864d44cf6411a9868e4cf19d9b00983257a00405d9622e985558"
+  },
+  "encoder_positions": [
+    2359,
+    1534,
+    2641,
+    3169,
+    2417,
+    2030
+  ],
+  "battery_mv": 12262,
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "file": "A:\\NEXarm\\Claude\\八点推进_20261008\\data\\eight_joints_20261009.json",
+  "sha256": "acd879d27c17ff38f36ff1744e9e47fffcf7a3cc89573972228d166c8b272fe7",
+  "stats": {
+    "connected": true,
+    "type": "serial",
+    "rx_frames": 34,
+    "rx_bytes": 1651,
+    "tx_frames": 26,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "serial_closed": true
+}

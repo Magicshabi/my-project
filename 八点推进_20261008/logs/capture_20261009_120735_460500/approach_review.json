@@ -1,0 +1,18 @@
+{
+  "segment": [
+    1,
+    2
+  ],
+  "source": "CMD11 controller pose, not independent measurement",
+  "controller_delta": {
+    "x": 16,
+    "y": 6,
+    "z": -54,
+    "pitch": -6.200000000000003,
+    "roll": 0,
+    "claw": 0
+  },
+  "controller_horizontal_shift_mm": 17.08800749063506,
+  "requires_empty_load_path_review": true,
+  "note": "Reported descent includes horizontal movement and pitch change; endpoint recording does not establish a vertical or collision-free path."
+}

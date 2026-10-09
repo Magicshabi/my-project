@@ -1,0 +1,30 @@
+{
+  "recorded_points": 4,
+  "point3_captured_counts": [
+    1686,
+    1392,
+    3035,
+    3448,
+    2744,
+    1966
+  ],
+  "point3_execution_target": [
+    1686,
+    1392,
+    3035,
+    3448,
+    2744,
+    2029
+  ],
+  "point3_requires_physical_target_validation": true,
+  "point4_counts": [
+    1675,
+    1601,
+    3022,
+    3544,
+    2784,
+    2029
+  ],
+  "id6_change": 63,
+  "route_sha256_after_target_revision": "f681c66d8f05609ec44f9bd1bafa92c71d4a17ad1dfb02224e08e6098f85b10d"
+}

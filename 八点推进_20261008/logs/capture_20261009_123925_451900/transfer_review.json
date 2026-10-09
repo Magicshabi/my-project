@@ -1,0 +1,42 @@
+{
+  "point": 5,
+  "counts": [
+    2348,
+    1656,
+    2809,
+    3474,
+    2408,
+    2029
+  ],
+  "delta_from_point4": [
+    673,
+    55,
+    -213,
+    -70,
+    -376,
+    0
+  ],
+  "sample_spans": {
+    "cmd11_counts": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "cmd65_counts": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "gripper_difference": 0,
+  "large_joint_change_requires_review": true,
+  "log": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_123925_451900",
+  "physical_path_verified": false,
+  "note": "Point4 to point5 transfer has a large ID1 change; endpoints recorded, coordinated path must be segmented and checked before automatic replay."
+}

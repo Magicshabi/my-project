@@ -1,0 +1,49 @@
+{
+  "point": 6,
+  "counts": [
+    2359,
+    1534,
+    2641,
+    3169,
+    2417,
+    2030
+  ],
+  "delta_from_point5": [
+    11,
+    -122,
+    -168,
+    -305,
+    9,
+    1
+  ],
+  "sample_spans": {
+    "cmd11_counts": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "cmd65_counts": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "gripper_difference": 1,
+  "controller_pose_delta": {
+    "x": 45,
+    "y": -29,
+    "z": -93,
+    "pitch": 1.4000000000000057,
+    "roll": 0,
+    "claw": 0
+  },
+  "controller_horizontal_shift_mm": 53.53503525729669,
+  "path_physically_verified": false,
+  "log": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261009_124046_608700"
+}

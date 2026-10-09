@@ -1,0 +1,506 @@
+{"event": "transport", "t": 266509.0994212, "message": "已连接 COM9 @ 1000000"}
+{"event": "tx_attempt", "t": 266509.0995632, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 266509.0998057, "cmd": 80, "id": 255}
+{"event": "rx", "t": 266509.1048782, "id": 255, "cmd": 80, "args": "640090013efec2011400f4012cfc7800a6ff5a009cff5300"}
+{"event": "tx_attempt", "t": 266509.1049477, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 266509.10517, "cmd": 64, "id": 255}
+{"event": "rx", "t": 266509.1101674, "id": 255, "cmd": 64, "args": "66e6dc420000614348e113420000114300000000e13a0243000000000000484200008d42"}
+{"event": "tx_attempt", "t": 266509.1106849, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 266509.1108208, "cmd": 58, "id": 255}
+{"event": "rx", "t": 266509.1163619, "id": 255, "cmd": 58, "args": "012e00"}
+{"event": "tx_attempt", "t": 266509.1666259, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 266509.1668123, "cmd": 58, "id": 255}
+{"event": "rx", "t": 266509.1708483, "id": 255, "cmd": 58, "args": "024200"}
+{"event": "rx", "t": 266509.1764263, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb407d3078b063808c8070907"}
+{"event": "tx_attempt", "t": 266509.2213283, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 266509.2215534, "cmd": 58, "id": 255}
+{"event": "rx", "t": 266509.2244468, "id": 255, "cmd": 58, "args": "038ffd"}
+{"event": "tx_attempt", "t": 266509.2747684, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 266509.2749288, "cmd": 58, "id": 255}
+{"event": "rx", "t": 266509.2786408, "id": 255, "cmd": 58, "args": "0463fd"}
+{"event": "tx_attempt", "t": 266509.3288127, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 266509.3289778, "cmd": 58, "id": 255}
+{"event": "rx", "t": 266509.3329936, "id": 255, "cmd": 58, "args": "05f5ff"}
+{"event": "rx", "t": 266509.3764091, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb407d3078b063808c9070907"}
+{"event": "tx_attempt", "t": 266509.3834567, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 266509.3836194, "cmd": 58, "id": 255}
+{"event": "rx", "t": 266509.3876414, "id": 255, "cmd": 58, "args": "063300"}
+{"event": "tx_attempt", "t": 266509.4379878, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 266509.4381472, "cmd": 1, "id": 255}
+{"event": "rx", "t": 266509.4902622, "id": 255, "cmd": 1, "args": "01000201002a"}
+{"event": "tx_attempt", "t": 266509.4903582, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 266509.4905302, "cmd": 2, "id": 255}
+{"event": "rx", "t": 266509.4958199, "id": 255, "cmd": 2, "args": "8930"}
+{"event": "tx_attempt", "t": 266509.4958682, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266509.4959559, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266509.501475, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb407d3078b063808c9070907"}
+{"event": "rx", "t": 266509.5818445, "id": 255, "cmd": 11, "args": "09011f00a00062fefbffeaffb407d3078d063808c9070907"}
+{"event": "tx_attempt", "t": 266509.6019077, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266509.6020633, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266509.6091105, "id": 255, "cmd": 11, "args": "09011f00a00062fefbffeaffb407d3078d063808c9070907"}
+{"event": "tx_attempt", "t": 266509.7093247, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266509.7094849, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266509.713248, "id": 255, "cmd": 11, "args": "09011f00a00062fefbffeaffb407d3078d063808c9070907"}
+{"event": "rx", "t": 266509.7786191, "id": 255, "cmd": 11, "args": "080120009f005ffefbffeaffb107d3078a063808ca070907"}
+{"event": "tx_attempt", "t": 266509.8134571, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266509.8137166, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266509.822388, "id": 255, "cmd": 11, "args": "080120009f005ffefbffeaffb107d3078a063808ca070907"}
+{"event": "tx_attempt", "t": 266509.9227295, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266509.923008, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266509.9289216, "id": 255, "cmd": 11, "args": "080120009f005ffefbffeaffb107d3078a063808ca070907"}
+{"event": "rx", "t": 266509.9767498, "id": 255, "cmd": 11, "args": "09012000a00063fefbffeaffb107d3078f063808c9070907"}
+{"event": "library", "t": 266510.0307234, "message": "运动闸门 已开启"}
+{"event": "tx_attempt", "t": 266510.0307759, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.0308936, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.0350412, "id": 255, "cmd": 11, "args": "09012000a00063fefbffeaffb107d3078f063808c9070907"}
+{"event": "tx_attempt", "t": 266510.1355826, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.135742, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.1411809, "id": 255, "cmd": 11, "args": "09012000a00063fefbffeaffb107d3078f063808c9070907"}
+{"event": "rx", "t": 266510.1784812, "id": 255, "cmd": 11, "args": "080120009f0060fefbffeaffb107d3078b063808c8070907"}
+{"event": "tx_attempt", "t": 266510.2416982, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.2418518, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.2471162, "id": 255, "cmd": 11, "args": "080120009f0060fefbffeaffb107d3078b063808c8070907"}
+{"event": "tx_attempt", "t": 266510.3477076, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.3479345, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.3538283, "id": 255, "cmd": 11, "args": "080120009f0060fefbffeaffb107d3078b063808c8070907"}
+{"event": "rx", "t": 266510.3817032, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808c7070907"}
+{"event": "tx_attempt", "t": 266510.4542411, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.4543817, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.461695, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808c7070907"}
+{"event": "tx_attempt", "t": 266510.5626321, "cmd": 3, "id": 5, "wire_hex": "ffff050a03296460080000d00721"}
+{"event": "tx_complete", "t": 266510.562772, "cmd": 3, "id": 5}
+{"event": "tx_attempt", "t": 266510.5628524, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.5629381, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.568942, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808c7070907"}
+{"event": "sample", "t": 266510.5690286, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 1991, 1801]}
+{"event": "rx", "t": 266510.5802129, "id": 255, "cmd": 11, "args": "09011f00a00063fefbffeaffb307d3078f063808c6070907"}
+{"event": "tx_attempt", "t": 266510.6897362, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.6899228, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.6939604, "id": 255, "cmd": 11, "args": "09011f00a10064fefbffeaffb307d30790063808c4070907"}
+{"event": "sample", "t": 266510.6940183, "sid": 5, "target": 2144, "positions": [1971, 2003, 1680, 2104, 1988, 1801]}
+{"event": "rx", "t": 266510.7780016, "id": 255, "cmd": 11, "args": "08011f009f0061fe0000eaffb407d3078c06380803080a07"}
+{"event": "tx_attempt", "t": 266510.8144559, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.8146555, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.821051, "id": 255, "cmd": 11, "args": "08011f009f0061fe0000eaffb407d3078c06380803080a07"}
+{"event": "sample", "t": 266510.8211729, "sid": 5, "target": 2144, "positions": [1972, 2003, 1676, 2104, 2051, 1802]}
+{"event": "tx_attempt", "t": 266510.9416502, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266510.9418452, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266510.9494661, "id": 255, "cmd": 11, "args": "08011f009f0061fe0000eaffb407d3078c06380803080a07"}
+{"event": "sample", "t": 266510.9495553, "sid": 5, "target": 2144, "positions": [1972, 2003, 1676, 2104, 2051, 1802]}
+{"event": "rx", "t": 266510.9819885, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085b080907"}
+{"event": "tx_attempt", "t": 266511.0703399, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.0705247, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.0794819, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085b080907"}
+{"event": "sample", "t": 266511.0795808, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2139, 1801]}
+{"event": "rx", "t": 266511.1811477, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266511.1999214, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.2000842, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.2080404, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266511.2080898, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "tx_attempt", "t": 266511.3285897, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.3287274, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.333789, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266511.3338636, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266511.3808012, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "tx_attempt", "t": 266511.4543132, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.4544936, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.460415, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "sample", "t": 266511.4604594, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1802]}
+{"event": "tx_attempt", "t": 266511.5809334, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.5811071, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.5820379, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266511.5820755, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266511.5876287, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266511.703111, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.70337, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.7068151, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266511.7069013, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266511.7807467, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266511.8275949, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.8278722, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.8354518, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266511.8355268, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "tx_attempt", "t": 266511.9558898, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266511.9560469, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266511.959861, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266511.9599232, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266511.9813338, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "tx_attempt", "t": 266512.0801431, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.0803284, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.0884628, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "sample", "t": 266512.0885165, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1802]}
+{"event": "rx", "t": 266512.1800752, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266512.2088218, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.2090524, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.2133473, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266512.2134008, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "tx_attempt", "t": 266512.333871, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.334068, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.3406968, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266512.3408103, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266512.378309, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "tx_attempt", "t": 266512.4612857, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.4614716, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.4686922, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "sample", "t": 266512.4687352, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1802]}
+{"event": "rx", "t": 266512.5801885, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266512.5890376, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.5891821, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.5966857, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266512.5967324, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "tx_attempt", "t": 266512.717183, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.7173879, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.7238021, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266512.7240841, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266512.7797241, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266512.8445557, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.844764, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.8485275, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266512.8485815, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "tx_attempt", "t": 266512.9689644, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266512.9691671, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266512.9780395, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266512.9781412, "sid": 5, "target": 2144, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "rx", "t": 266512.9782212, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "rx", "t": 266513.1802403, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "rx", "t": 266513.378256, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "rx", "t": 266513.5791319, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "rx", "t": 266513.7781759, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "rx", "t": 266513.9794767, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "tx_attempt", "t": 266513.9826986, "cmd": 3, "id": 5, "wire_hex": "ffff050a032964ca070000d007b8"}
+{"event": "tx_complete", "t": 266513.9829672, "cmd": 3, "id": 5}
+{"event": "tx_attempt", "t": 266513.9830888, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266513.9834189, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266513.9900341, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080907"}
+{"event": "sample", "t": 266513.9905406, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 2141, 1801]}
+{"event": "tx_attempt", "t": 266514.1116654, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.1118758, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.1200812, "id": 255, "cmd": 11, "args": "08011f009f0060fe0800eaffb307d3078b0638085d080a07"}
+{"event": "sample", "t": 266514.1201276, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 2141, 1802]}
+{"event": "rx", "t": 266514.178041, "id": 255, "cmd": 11, "args": "08011f009f0060fe0100eaffb307d3078b0638080e080a07"}
+{"event": "tx_attempt", "t": 266514.2404079, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.2406029, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.2478348, "id": 255, "cmd": 11, "args": "08011f009f0060fe0100eaffb307d3078b0638080e080a07"}
+{"event": "sample", "t": 266514.2478948, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 2062, 1802]}
+{"event": "tx_attempt", "t": 266514.3681091, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.3682695, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.3763584, "id": 255, "cmd": 11, "args": "08011f009f0060fe0100eaffb307d3078b0638080e080a07"}
+{"event": "sample", "t": 266514.3764417, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 2062, 1802]}
+{"event": "rx", "t": 266514.3820924, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "tx_attempt", "t": 266514.4970103, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.4971997, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.502409, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266514.5024695, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "rx", "t": 266514.5824021, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "tx_attempt", "t": 266514.6228815, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.6230907, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.6306335, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "sample", "t": 266514.6307047, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1994, 1802]}
+{"event": "tx_attempt", "t": 266514.7509664, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.7511187, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.7581892, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "sample", "t": 266514.7582434, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1994, 1802]}
+{"event": "rx", "t": 266514.7799563, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "tx_attempt", "t": 266514.8786596, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266514.8788554, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266514.885409, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "sample", "t": 266514.885464, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1801]}
+{"event": "rx", "t": 266514.9792186, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "tx_attempt", "t": 266515.0059597, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.0062418, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.0105158, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266515.0105711, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "tx_attempt", "t": 266515.1309171, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.1311254, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.138013, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266515.1380736, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "rx", "t": 266515.18032, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "tx_attempt", "t": 266515.2587836, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.2589638, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.2643803, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266515.2644379, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "rx", "t": 266515.3825298, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "tx_attempt", "t": 266515.385199, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.385358, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.3946551, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "sample", "t": 266515.3947097, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1801]}
+{"event": "tx_attempt", "t": 266515.5150175, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.515234, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.5208002, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "sample", "t": 266515.5208592, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1801]}
+{"event": "rx", "t": 266515.5798035, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "tx_attempt", "t": 266515.6410829, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.6413367, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.649408, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "sample", "t": 266515.6494706, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1801]}
+{"event": "tx_attempt", "t": 266515.7700705, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.7703103, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.7758506, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "sample", "t": 266515.7759196, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1801]}
+{"event": "rx", "t": 266515.7814219, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "tx_attempt", "t": 266515.8961469, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266515.8962961, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266515.9043176, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266515.9043684, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "rx", "t": 266515.9780462, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "tx_attempt", "t": 266516.0252926, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266516.0258574, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266516.0337457, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266516.0337895, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "tx_attempt", "t": 266516.1541133, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266516.1543148, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266516.1596605, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266516.1597162, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "rx", "t": 266516.1812038, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "tx_attempt", "t": 266516.2799498, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266516.2800889, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266516.2845608, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "sample", "t": 266516.2846051, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1801]}
+{"event": "rx", "t": 266516.3803337, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "tx_attempt", "t": 266516.4051314, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266516.4053328, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266516.4126325, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "sample", "t": 266516.4126846, "sid": 5, "target": 1994, "positions": [1971, 2003, 1675, 2104, 1995, 1802]}
+{"event": "rx", "t": 266516.5813522, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266516.7803665, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266516.9801231, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266517.1807699, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266517.3813849, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266517.5828431, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266517.7788422, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266517.9815985, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266518.1817559, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266518.3832699, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266518.5815465, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266518.783438, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266518.9804933, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266519.1828822, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266519.3803648, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266519.5820342, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266519.7806948, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266519.9807243, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266520.1789668, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266520.380715, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266520.579624, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266520.7838251, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266520.9810138, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266521.1804654, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266521.3818022, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266521.5826726, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266521.7826661, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266521.9829188, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266522.1834276, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266522.3823904, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266522.581569, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266522.7818908, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266522.9843337, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266523.1829516, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266523.3837948, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266523.5843, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266523.7813236, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266523.9816986, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266524.1812962, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266524.3836744, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266524.584253, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266524.7824456, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266524.9802421, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266525.1842467, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266525.3812909, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266525.5812102, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266525.7820951, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266525.9847384, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266526.182021, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266526.3821415, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266526.5861666, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266526.7805773, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266526.9851584, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266527.1803475, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266527.3811431, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266527.5844098, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266527.7806003, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266527.9826725, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266528.1853035, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266528.3834632, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266528.5850941, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266528.7852294, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070a07"}
+{"event": "rx", "t": 266528.9835994, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266529.1835033, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266529.3827352, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266529.5824357, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266529.7809454, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266529.983727, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266530.1813322, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266530.3813849, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266530.5811722, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266530.7812908, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266530.9815434, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266531.1849738, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266531.3856483, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266531.5854203, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266531.7821938, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266531.9863866, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266532.1839235, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266532.3842324, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266532.5823774, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266532.782876, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266532.9843402, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266533.1880002, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266533.3811295, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266533.5857107, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266533.7819373, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266533.986426, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266534.1834758, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266534.3853299, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266534.5816178, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266534.7815598, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266534.9838297, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266535.1831592, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266535.3841356, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266535.5868258, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266535.7850278, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266535.9848449, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266536.183648, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266536.3815199, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266536.5820486, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266536.7864626, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266536.9837171, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266537.1861697, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266537.3815546, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266537.5834052, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266537.7856146, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266537.9855059, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266538.1832854, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266538.3833975, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266538.5846024, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266538.7856413, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266538.9837658, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266539.1863387, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266539.3868248, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070807"}
+{"event": "rx", "t": 266539.5847357, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266539.7823477, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266539.9837529, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266540.1866288, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266540.3871476, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266540.5822679, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266540.7824037, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266540.9866434, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266541.1829043, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266541.3846463, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266541.5845049, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266541.7850376, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266541.9822357, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808cb070907"}
+{"event": "rx", "t": 266542.1834292, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266542.3856896, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266542.5827804, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266542.7874681, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266542.9826705, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266543.1853842, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266543.3847391, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266543.5828453, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266543.7851723, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266543.9832531, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266544.1862663, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266544.3840855, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266544.5879763, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266544.7870559, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266544.9883302, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266545.1862178, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266545.3854494, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266545.586573, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266545.7852689, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266545.9883653, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266546.1834426, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266546.3856164, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266546.5871017, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266546.7873507, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266546.9859471, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266547.1858791, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266547.3852004, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266547.5837155, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266547.7872682, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266547.987787, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266548.1885561, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266548.3873395, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266548.5884172, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266548.7852701, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266548.9868738, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266549.1877982, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266549.3848083, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266549.5878505, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266549.7884006, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266549.9883794, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266550.1892446, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266550.3878005, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266550.5856031, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266550.7856644, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266550.9877965, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266551.1883288, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266551.3868939, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266551.5856619, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266551.7869496, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266551.9861025, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266552.187194, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266552.3892851, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266552.5877075, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266552.7865958, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266552.9870959, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266553.1877522, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266553.3878025, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266553.5851096, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266553.7891552, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266553.9865485, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266554.1870264, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266554.3854772, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266554.5895917, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266554.7883743, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266554.9849413, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266555.1856519, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266555.3893209, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266555.5871419, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266555.7856105, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266555.9888722, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266556.1853286, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266556.3891609, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808c9070a07"}
+{"event": "rx", "t": 266556.5860341, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266556.7887432, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266556.9887125, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266557.189819, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266557.3899001, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266557.5859955, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266557.785536, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266557.9870913, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266558.1893055, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266558.3858944, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266558.5926359, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266558.7865544, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266558.9860292, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266559.1854034, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266559.3873563, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266559.5884162, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266559.7857934, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266559.9890254, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266560.1896046, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266560.3858485, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266560.5876274, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070a07"}
+{"event": "rx", "t": 266560.7888142, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266560.9861764, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "operator_observation", "t": 266561.14767, "sid": 5, "answer": "yes"}
+{"event": "tx_attempt", "t": 266561.1482377, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266561.1483996, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266561.1567134, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266561.1886887, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "tx_attempt", "t": 266561.2572193, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266561.2574726, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266561.2648277, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "tx_attempt", "t": 266561.3657266, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266561.3659667, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266561.3726531, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266561.3887357, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "tx_attempt", "t": 266561.4734355, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266561.4737077, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266561.4791494, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "tx_attempt", "t": 266561.5799087, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 266561.5801272, "cmd": 11, "id": 255}
+{"event": "rx", "t": 266561.5874927, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "rx", "t": 266561.5875491, "id": 255, "cmd": 11, "args": "08011f009f0060fefbffeaffb307d3078b063808ca070907"}
+{"event": "library", "t": 266561.6880777, "message": "运动闸门 已关闭"}

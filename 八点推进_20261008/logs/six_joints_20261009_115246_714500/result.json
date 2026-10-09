@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-09T11:52:46.708683+08:00",
+  "complete": false,
+  "axes": [],
+  "requested_axes": [
+    2,
+    1
+  ],
+  "body_speed": 2000,
+  "physical_stop_verified": false,
+  "error": "当前姿态已偏离本轮预检位置，需要重新评估",
+  "motion_attempts": 0
+}

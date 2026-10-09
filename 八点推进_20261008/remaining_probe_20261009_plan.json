@@ -1,0 +1,32 @@
+{
+  "source_script": "八点推进_20261008\\verify_six_joints.py",
+  "source_sha256": "3d18497dae3ae7b82022983fcd454846787b839be6fb05bf03878bd2949852c3",
+  "probe_script": "八点推进_20261008\\verify_remaining_20261009.py",
+  "probe_sha256": "6b4e52df74d6905ad7e195713bf28e3167ab5b6d1c9682083337395b4e939674",
+  "expected_baseline": [
+    2006,
+    2259,
+    1645,
+    2103,
+    1992,
+    1799
+  ],
+  "max_baseline_deviation": 12,
+  "axes": [
+    {
+      "id": 2,
+      "delta": -150
+    },
+    {
+      "id": 1,
+      "delta": 150
+    }
+  ],
+  "acceleration": 100,
+  "speed": 2000,
+  "default_axes": [
+    2
+  ],
+  "reason": "New stable readout after changed starting pose; user requested direct continuation. Original probe preserved.",
+  "physical_stop_verified": false
+}
