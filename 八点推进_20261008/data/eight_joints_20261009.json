@@ -2003,6 +2003,8 @@
     "torque_disabled_for_positioning": true,
     "some_captures_with_torque_disabled": true,
     "feedback_assessment": "关闭力矩不等于切断舵机电子电源；不能仅据此判定反馈为缓存或判八点失效。稳定采样仍不证明每点能主动到达。",
-    "torque_state_before_first_replay": "awaiting operator clarification"
+    "torque_state_before_first_replay": "operator confirmed enabled and ID4 held its pose without manual support",
+    "torque_before_replay_operator_statement": "已经开启力矩，能自行保持",
+    "torque_before_replay_register_verified": false
   }
 }
