@@ -1,7 +1,7 @@
 {
   "started_at": "2026-10-09T17:48:31.380683+08:00",
-  "complete": false,
-  "operator_confirmed": false,
+  "complete": true,
+  "operator_confirmed": true,
   "limit_writes": 0,
   "torque_writes": 0,
   "physical_stop_verified": false,
@@ -78,5 +78,28 @@
     2948,
     2413,
     1251
-  ]
+  ],
+  "outward_operator_answer": "yes",
+  "returned": [
+    2358,
+    1555,
+    2858,
+    3084,
+    2414,
+    1251
+  ],
+  "controller_round_trip": true,
+  "return_operator_answer": "yes",
+  "motion_attempts": 2,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 432,
+    "rx_bytes": 14888,
+    "tx_frames": 75,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "serial_closed": true
 }

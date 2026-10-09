@@ -1,4 +1,4 @@
-"""One ID4 comparison toward center, operator pause, then planned return.
+"""One bounded ID4 comparison, operator pause, then planned return.
 
 This is not limit expansion or eight-point replay. The route diagnostic hold
 stays in place. No automatic return on failed feedback or operator observation.
@@ -19,19 +19,25 @@ from nexarm.eight_point import configuration, same_configuration
 
 ROOT = Path(__file__).resolve().parent
 EXPECTED = [2358, 1555, 2859, 3090, 2414, 1251]
+UPPER_BASELINE = [2358, 1555, 2858, 3084, 2414, 1251]
 
 
 class ProbeTransport(ReplayTransport):
     open_serial = RegisterQueries.open_serial
 
 
-def plan(base):
-    if len(base) != 6 or any(type(v) is not int or abs(v-e)>8 for v,e in zip(base,EXPECTED)):
+def plan(base, profile='lower'):
+    if profile not in ('lower', 'upper'):
+        raise SafetyError('未知对照方案')
+    expected = EXPECTED if profile == 'lower' else UPPER_BASELINE
+    if len(base) != 6 or any(type(v) is not int or abs(v-e)>8 for v,e in zip(base,expected)):
         raise SafetyError('当前姿态偏离已复查基线，零动作退出')
     goal = base[:]
-    goal[3] -= 150
+    goal[3] = base[3]-150 if profile == 'lower' else 3234
     # A test envelope, not a claim about the installed servo's real limits.
-    if not 2900 <= goal[3] < base[3] <= 3100:
+    if profile == 'lower' and not 2900 <= goal[3] < base[3] <= 3100:
+        raise SafetyError('超出本次已评估的单轴对照范围')
+    if profile == 'upper' and not 3076 <= base[3] <= 3092 < goal[3] == 3234:
         raise SafetyError('超出本次已评估的单轴对照范围')
     return goal
 
@@ -39,13 +45,15 @@ def plan(base):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--go', action='store_true')
+    ap.add_argument('--profile', choices=('lower','upper'), default='lower')
     a = ap.parse_args()
     if not a.go:
         ap.error('需要 --go；仅执行已告知用户的空载ID4对照')
-    run = ROOT/'logs'/('id4_lower_range_'+str(time.time_ns()))
+    run = ROOT/'logs'/('id4_'+a.profile+'_range_'+str(time.time_ns()))
     run.mkdir(parents=True)
+    (run/'probe_source.py').write_bytes(Path(__file__).read_bytes())
     print('RUN_DIR='+str(run),flush=True)
-    result = dict(started_at=timestamp(),complete=False,operator_confirmed=False,
+    result = dict(started_at=timestamp(),profile=a.profile,complete=False,operator_confirmed=False,
                   limit_writes=0,torque_writes=0,physical_stop_verified=False,
                   source_sha256=digest(__file__))
     def save():
@@ -67,7 +75,7 @@ def main():
             if not same_configuration(config,route['configuration']):
                 raise SafetyError('配置变化，零动作退出')
             base,_ = capture_stable(arm,emit)
-            goal = plan(base)
+            goal = plan(base,a.profile)
             if transport.stats()['checksum_errors']:
                 raise SafetyError('预检出现坏帧，零动作退出')
             result.update(configuration=config,baseline=base,target=goal)
