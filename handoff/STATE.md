@@ -1,10 +1,12 @@
-# 共享台账摘要 · 10-11 01:04 | 35 条 | 有效 20 | 否证 7
+# 共享台账摘要 · 10-11 01:26 | 37 条 | 有效 22 | 否证 7
 > 只读本文件即可开工；细节用主题名 grep `handoff/LEDGER.jsonl`。全量详版：`render.py --full`
 
 
 | topic | 结论 | 状态 |
 |---|---|---|
 | `cmd11-cmd65` | cmd11 与 cmd65 的 6 个 pulse 逐字节同源（含… | 实测 |
+| `context-reading` | 开工改用短摘要与指纹去重，不再每轮整读工程记忆和历史。 | 实测 |
+| `division-of-work` | 用户确认Claw负责常规采集，Codex负责代码设计、Bug审查和… | 实测 |
 | `emergency-stop` | 物理急停效果尚未单独验证，不能按已通过处理。 | 待验 |
 | `gui-limit-not-protection` | GUI范围不能证明主动可达或避障；真实硬限位仍未读出。 | 待验 |
 | `gui-range-constants` | 反编译常量与用户范围数值相符，但不能认证硬限位或无碰撞。 | 待验 |

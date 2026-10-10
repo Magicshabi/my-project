@@ -3,7 +3,7 @@
 <!-- NEXARM-HANDOFF-BEGIN PH-20261011-eight-point-02 -->
 ## 当前状态
 
-更新：2026-10-11；材料已核对，无新接手对话。本轮仅共享层与归档整理，未连接设备。
+更新：2026-10-11；材料已核对，无新接手对话。已完成共享接入与上下文精简，未连接设备。用户新分工：Claw负责常规采集，Codex负责代码适配、Bug审查和路径方案；Claw接手待回执。
 
 第一目标：八点主动示教与低速验证，完成固定红篮从上方夹提手、搬运至固定T0；先保证放置正确，再优化速度，视觉后置。
 
@@ -20,7 +20,7 @@
 
 ## 待办 / 未决问题
 
-1. 等用户明确新第3点摆好：ID1～5保持，仅ID6慢慢夹稳，篮子留桌面；退出上位机、保持供电且无异常后只读采集。目前没有完成确认。
+1. 由Claw按[采集任务卡](handoff/CLAW_CAPTURE_TASK.md)接续，Codex不逐点占用串口。等用户明确新第3点摆好：ID1～5保持，仅ID6慢慢夹稳，篮子留桌面；退出上位机、保持供电且无异常后只读采集。目前没有完成确认。
 2. 使用[capture_joint_points.py](八点推进_20261008/capture_joint_points.py)，明确`--port COM11 --point 3 --powered-sliders-confirmed`；开串口先查占用锁。默认COM9不可沿用。
 3. 复用[舵机基础逻辑](舵机基础运行逻辑/MOTION_LOGIC_SPEC.md)与`A:\NEXarm\运动控制`案例。完成8点后按空载分段、低速带载顺序验证，逐点到位不等于平滑避障。
 4. ID4的3413是GUI目标，反馈3084已获用户认可；真实内部限位未读出，不写329固定补偿。“3090～3234真实上限”超出历史对照证据范围，已在台账更正。
@@ -28,7 +28,7 @@
 
 ## 指针
 
-- 开工规则：[AGENTS.md](AGENTS.md)；先读[共享摘要](handoff/STATE.md)和[工程约定](.workbuddy/memory/MEMORY.md)，注意“已否证”。
+- 开工规则：[AGENTS.md](AGENTS.md)；只运行[brief.py](handoff/brief.py)，压缩后加`--refresh`。未变不重读背景；[当前分工](handoff/CURRENT.md)与[共享摘要](handoff/STATE.md)按需查。
 - [共享台账](handoff/LEDGER.jsonl)：按topic用rg查询；[写入规则](handoff/RULES.md)。仅追加，生成摘要后运行`render.py --check`；`--since`只输出增量。
 - [完整历史归档](PROJECT_STATE_ARCHIVE.md)、[归档核验与回填记录](handoff/adoption_20261011.md)。还原点`e459b5e`。不得整读历史作为开工步骤。
 - [六轴实测](八点推进_20261008/six_axis_verified_20261009.md)、[ID4对照](八点推进_20261008/id4_target_comparison_20261009.md)、[软件限位](八点推进_20261008/data/joint_limits_20261010.json)。

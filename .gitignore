@@ -23,3 +23,6 @@ Thumbs.db
 
 # 构建缓存（2026-10-07 从根目录收拢至此）
 .build-cache/
+
+# 会话短摘要指纹，不含原始对话
+handoff/.brief-cache/
