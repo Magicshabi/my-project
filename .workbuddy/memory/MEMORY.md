@@ -22,8 +22,14 @@
   导出留档 `validation_runs/readout_20261005_180008/eight_points.json`，
   逐点数值表见 `docs/notes/八点记录读取验收_20261005.md`。
 
-**协作约定**：两端都写记忆时，**以 `PROJECT_STATE.md` 为交接事实源、以本文件为工程约定源**；
-任一方向对方交付物下手前，先在本文件或 `INDEX.md` 显式登记，避免再次重复劳动。
+**协作约定（2026-10-11 升级为共享层）**：
+- **`handoff/` 是两端唯一的共享层**：`LEDGER.jsonl` 一行一条事实、**只追加**；
+  `STATE.md` 由 `render.py` 生成（**勿手改**）；`lock.py` 管串口占用；规则见 `handoff/RULES.md`。
+- 私有区各自独占写：`PROJECT_STATE.md` 归 Codex、本文件/`.workbuddy/memory/` 归 Claw，
+  **互不编辑对方文本**，要反驳就追加自己的块。
+- **权威顺序：物理实测 > 源码推断**；仅从源码推断的结论必须标 `hypothesis`。
+- **开工前先读 `handoff/STATE.md`**（尤其「已否证的结论」一节，避免重犯），并 `git status` 看对方是否在动。
+- 任一方向对方交付物下手前，先在本文件或 `INDEX.md` 显式登记，避免重复劳动。
 
 ---
 
