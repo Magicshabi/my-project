@@ -1,10 +1,11 @@
 # NEXarm 工程长期约定（跨会话必读）
 
-> **新会话请先读 `.workbuddy/memory/SESSION_CONTEXT.md`** —— 压缩版会话上下文（60 秒读完，
-> 含本线已完成成果、关键事实、我犯过的错、当前进度与下一步）。
-> 顺序：`AGENTS.md` → `handoff/STATE.md` → `SESSION_CONTEXT.md` → 动手。
+> **开工入口（2026-10-11 用户更新）**：先跑 `python handoff/brief.py`（共享精简摘要；同会话未变只报一行，
+> 接续/压缩恢复用 `--refresh`）——**替代旧的"双文件必读"流程**。
+> 需要背景时再按需读本文件 / `SESSION_CONTEXT.md` / 按 topic grep 台账；
+> 本文件旧表述（COM9、150 刻度等）**一律以最新台账为准**。
 
-## 〇、⚠️ 本项目同时存在两条独立工作线（2026-10-08 发现，务必先读）
+## 〇、历史背景：两条工作线的由来（2026-10-08 初记；**现状以「协作约定」与 `handoff/CURRENT.md` 为准**——2026-10-11 起两端统一走 handoff/ 共享层分工协作）
 
 | | 本条工作线（Claw / 本会话） | 另一条工作线（Codex 会话） |
 |---|---|---|
@@ -29,10 +30,13 @@
 **协作约定（2026-10-11 升级为共享层）**：
 - **`handoff/` 是两端唯一的共享层**：`LEDGER.jsonl` 一行一条事实、**只追加**；
   `STATE.md` 由 `render.py` 生成（**勿手改**）；`lock.py` 管串口占用；规则见 `handoff/RULES.md`。
+- **分工（2026-10-11 用户更新）**：Codex=协议/代码设计、Bug 审查与验收；**Claw=现场配合 + 只读采集 + 落盘**
+  （任务卡 `handoff/CLAW_CAPTURE_TASK.md`）。每点回执 ≤400 字（topic `powered-teaching`）；
+  点位数据随采导出 `handoff/points_powered/`（每点只增 `point_NN.json`）。
 - 私有区各自独占写：`PROJECT_STATE.md` 归 Codex、本文件/`.workbuddy/memory/` 归 Claw，
   **互不编辑对方文本**，要反驳就追加自己的块。
 - **权威顺序：物理实测 > 源码推断**；仅从源码推断的结论必须标 `hypothesis`。
-- **开工前先读 `handoff/STATE.md`**（尤其「已否证的结论」一节，避免重犯），并 `git status` 看对方是否在动。
+- **开工先跑 `python handoff/brief.py`**（见顶部「开工入口」；未变只报一行，详情按 topic 查），写文件前 `git status` 看对方是否在动。
 - 任一方向对方交付物下手前，先在本文件或 `INDEX.md` 显式登记，避免重复劳动。
 
 ---
@@ -94,22 +98,23 @@
    帧 `FF FF | ID=舵机号(1~6) | LEN=10 | CMD=3 | [0x29, acc=100, pos_i16LE, 0, 0, speed_i16LE] | XOR`
    → **实测可驱动机械臂**。`pos` 是舵机原始刻度（1 tick=0.08789°），**不是角度也不是 XYZ**；
    **`ID=0xFF` 广播对 `CMD=3` 无效**；本路径用 acc+speed 调速、**无 time 参数**。
-3. **验证幅度铁律**：任何"验证是否动了"的实验**幅度必须 ≥ ±150 ticks（≈13°）**；
-   ≤50 ticks 的"没动"结论一律无效（死区/回差 + 肉眼阈值）。Codex 早期 ±5~8 刻度的探针即因此无效。
+3. **验证幅度经验（2026-10-11 按台账修正）**：极小幅动作（≤数十刻度）的"没动"结论不可靠；
+   但"≥150 ticks 通用铁律"**已被否证**（有限样本不可推广；ID5 同幅度下 speed200 不动、speed2000 通过，
+   速度等参数同样起作用——见台账 `amplitude-threshold` refuted）。验证尽量用大幅动作 + **物理观测**，
+   不为凑阈值盲目加大动作。
 4. **`cmd 11` 与 `cmd 65` 同源**（实测逐字节相同），**不得**用两者一致或数值变化证明舵机真的动过；
-   但它们会**跟随**已执行的命令，可作为操作指示，**决定性判据仍是物理观测**。
-5. **`cmd 11` 与 `cmd 65` 同源**（实测逐字节相同），**不得**用两者一致来证明舵机真的动过；
-   判据必须来自物理观测。
-6. **增量指令（cmd 50）不可信精度**：实测 +10→+8、+30→+40、−30→−32，且会带动未指定自由度
+   它们会**跟随**已执行的命令，可作为操作指示；**决定性判据仍是物理观测**。
+5. **增量指令（cmd 50）不可信精度**：实测 +10→+8、+30→+40、−30→−32，且会带动未指定自由度
    （dz+10 引起 pitch 变化 3.4°）。需要精度一律用绝对坐标 `cmd 8` 闭环。
-7. 完整协议与边界见 `舵机基础运行逻辑/MOTION_LOGIC_SPEC.md` 与 `motion_profile.json`。
+6. 完整协议与边界见 `舵机基础运行逻辑/MOTION_LOGIC_SPEC.md` 与 `motion_profile.json`。
 
 ## 三、工具链与运行环境
 
 - 编译：`Bash` 调 `arduino-cli`，或直接跑 `scripts/build/*.ps1`（PowerShell，绝对路径）。
 - 烧录：`PYTHONPATH='A:\NEXarm\Claude\.toolchains\esptool-py-4.5.1' C:/Users/1/python.exe -m esptool
-  --chip esp32 --port COM9 --baud 230400 write_flash 0x10000 <bin>`。
-- 设备串口：**COM9（CH340, 1A86:7523）@1,000,000 bps**；烧录前必须**关闭 NexArm.exe**（它独占串口）。
+  --chip esp32 --port COM11 --baud 230400 write_flash 0x10000 <bin>`（端口已由 COM9 变更；烧录前关上位机）。
+- 设备串口：**COM11（CH340, 1A86:7523）@1,000,000 bps**（2026-10-10 由 COM9 变更，台账 `serial-port`）；
+  串口操作（烧录/采集）前确保 **NexArm.exe 已彻底退出**（它独占串口）。
 - Python 环境：`C:\Users\1\.workbuddy\binaries\python\envs\default\Scripts\python.exe`（含 pyserial）。
 
 ## 四、git 约定

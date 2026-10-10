@@ -1,14 +1,14 @@
-# Claw 会话上下文（压缩版 · 2026-10-11 01:07）
+# Claw 会话上下文（压缩版 · 2026-10-11 01:35）
 
 > 用途：新会话开工前 **60 秒读完**，替代翻整段对话历史。
-> 建议顺序：`AGENTS.md`（协作规则）→ `handoff/STATE.md`（共享事实）→ 本文件 → 动手。
+> 开工入口（2026-10-11 起）：先跑 `python handoff/brief.py`；需要背景时再来本文件 / 按 topic 查台账。
 
 ---
 
 ## 一、项目与分工
 
 - **项目**：NEXarm 六轴机械臂（ESP32 + AT32 + 6×HX-30HM 舵机），场地 `A:\NEXarm\Claude`
-- **两条工作线**：**Claw**（本线：协议 / 主机库 / 逆向 / 诊断）｜**Codex**（八点示教与回放主线）
+- **分工（2026-10-11 用户更新）**：**Claw**（本线：现场配合 + 只读采集 + 落盘；任务卡 `handoff/CLAW_CAPTURE_TASK.md`）｜**Codex**（协议/代码设计、Bug 审查与验收）；开工入口改为 `python handoff/brief.py`
 - **主线目标**：固定红篮从上方夹提手 → 搬至固定 T0；**先保证放置正确，视觉后置**
 - **共享层 `handoff/`** 已建成且被 Codex 接入（`AGENTS.md` 是双方入口规则）
 
@@ -21,7 +21,8 @@
 | 主机库 + 34 项离线自检 | `舵机基础运行逻辑/nexarm/`、`tests/test_codec.py` |
 | **★ 已验证写路径（黄金样本）** | `八点推进_20261008/golden_20261008_first_motion.md` |
 | exe 逆向全套（837 模块解析） | `nexarm_exe_re_20261007/` |
-| 共享台账 / 摘要 / 设备锁 | `handoff/{LEDGER.jsonl, STATE.md, lock.py}` |
+| 共享台账 / 摘要 / 设备锁 | `handoff/{LEDGER.jsonl, STATE.md, lock.py}`；开工摘要 `brief.py` |
+| 点位共享导出（每点只增） | `handoff/points_powered/`（第1/2点；schema `nexarm.shared-point/1`） |
 
 ## 三、最关键的三条技术事实
 
@@ -35,25 +36,30 @@
 
 - ❌「所烧为诊断版固件、力矩关闭、须按 KEY1」→ 仅从**源码快照**推断；设备当日已被刷回出厂程序
 - ❌「ID4 偏差是力矩未开 / 重力掉落」→ 被实测否证（力矩开着且能自保持）
-- ❌ 幅度 ≤50 刻度的「没动」结论一律无效（低于肉眼可辨阈值）
+- ❌ 极小幅度（≤50 刻度）的「没动」结论不可靠（低于肉眼阈值；且与速度等参数有关——见台账 `amplitude-threshold` 修正）
 
 > **教训**：能一次小步实测解决的问题，不要用推理链下结论；**源码快照 ≠ 在跑的二进制**。
 > 全部已否证条目见 `handoff/STATE.md` 的「已否证（勿重犯）」一行。
 
-## 五、当前进度与下一步（以 `PROJECT_STATE.md` 为准）
+## 五、当前进度与下一步（以 `brief.py` 输出与台账为准）
 
 - 新路线**带电示教 2/8 点已采**：点1「提手上方张开」/ 点2「下降到提手两侧，未夹紧」
 - 数据：`八点推进_20261008/data/eight_joints_powered_20261009.json`（**以 points 数组为准**）
-- **下一步**：等用户摆好**第 3 点**（ID1~5 保持，仅 ID6 慢慢夹稳，篮子留桌面）
+- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；第 1、2 点已导出；**Claw 采集接手回执已追加台账**。
+- **下一步**：等用户摆好**第 3 点**（ID1~5 未变、仅 ID6 夹稳提手、篮子留桌面；**"继续"≠摆位完成**）→
   ```
-  python handoff/lock.py status COM11                      # 先查占用
-  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 3 --powered-sliders-confirmed
+  python handoff/lock.py acquire COM11 --minutes 30 --purpose "第3点带电采集"
+  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 3 --powered-sliders-confirmed --observed "<现场确认>"
+  python handoff/lock.py release COM11
+  # 采完：导出 point_03.json → 台账回执（≤400字）→ render.py
   ```
 - **尚未验证**：整段搬运、物理急停、连续平滑 → 都是 `hypothesis`，不要标成功
 
 ## 六、高频命令
 
 ```bash
+python handoff/brief.py                   # ★开工入口（2026-10-11 起，替代双文件必读）
+python handoff/brief.py --refresh         # 接续/压缩恢复时强制展示
 python handoff/render.py                  # 刷共享摘要
 python handoff/render.py --check          # 校验台账
 python handoff/render.py --since <ISO>    # 只看增量
