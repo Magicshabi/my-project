@@ -88,3 +88,26 @@ python handoff/lock.py release COM11
 
 1. **读 `handoff/STATE.md`** —— 30 秒知道对方最新结论，尤其是 `refuted` 部分（别重犯）
 2. **`git status` + `ls` 目标目录** —— 确认对方没有正在改你准备动的文件
+
+---
+
+## 五、省 token 读取协议（2026-10-11 追加）
+
+**核心：写入用「追加」，读取用「摘要」。两者必须分离。**
+
+| 文件 | 字数 | 什么时候读 |
+|---|---:|---|
+| `handoff/STATE.md` | ~1.0k | ✅ **每次开工必读**，够了 |
+| `handoff/LEDGER.jsonl` | ~4.5k | ❌ 不整读；按主题 `grep <topic> handoff/LEDGER.jsonl` |
+| `PROJECT_STATE.md` | ~36k | ⚠️ **禁止整读**；只看「当前状态」一节或 grep |
+| `.workbuddy/memory/YYYY-MM-DD.md` | 3~12k | 只看**当天**；往期靠 MEMORY.md 的沉淀 |
+| `.workbuddy/memory/MEMORY.md` | ~5.5k | ✅ 开工必读（工程约定与红线） |
+
+**增量读取**（只取上次之后的新条目）：
+
+```
+python handoff/render.py --since 2026-10-10T00:00+08:00
+```
+
+**给 agent 的一句话**：开工读 `STATE.md` + `MEMORY.md`（合计约 1.5 万字符以内），
+需要细节再 `grep`；**不要顺手整读历史大文件**。
