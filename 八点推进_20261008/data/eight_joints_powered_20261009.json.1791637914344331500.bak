@@ -1,0 +1,87 @@
+{
+  "schema": "nexarm.joint-eight/1",
+  "units": "raw_encoder_counts",
+  "servo_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "created_at": "2026-10-09T17:59:01.737341+08:00",
+  "method": "NexArm.exe powered joint sliders + read-only host capture",
+  "require_powered_sliders": true,
+  "legacy_source": {
+    "path": "A:\\NEXarm\\Claude\\validation_runs\\readout_20261005_180008\\eight_points.json",
+    "sha256": "42089dca4d11eed26b24bcea909041c2833a6644544e63563cad032833672c34"
+  },
+  "configuration": null,
+  "complete": false,
+  "execution_verified": false,
+  "points": [],
+  "supersedes_for_future_teaching": {
+    "path": "八点推进_20261008\\data\\eight_joints_20261009.json",
+    "sha256": "6ac48d4a61b5550919c97a46f36e49501aae6ae3afaeef48cb200f1b250b7e5d",
+    "old_data_preserved": true
+  },
+  "method_status": "operator selected this method; zero powered points captured yet",
+  "preflight_notes": {
+    "id4_verified_command_targets": [
+      2940,
+      3090
+    ],
+    "id4_failed_command_targets": [
+      3234,
+      3472
+    ],
+    "actual_hardware_limits_known": false,
+    "no_automatic_clipping": true,
+    "requirements": "每点由用户确认力矩保持开启、使用关节滑块使实体主动到达；仅摆好/好的不能替代方法及完成确认。八点采集不等于路径验证。"
+  },
+  "host_joint_limits": {
+    "schema": "nexarm.host-joint-limits/1",
+    "units": "raw_encoder_counts",
+    "servo_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "bounds": [
+      [
+        341,
+        3755
+      ],
+      [
+        1195,
+        2901
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        683,
+        3413
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        1024,
+        2731
+      ]
+    ]
+  },
+  "latest_operator_update": {
+    "reported_on": "2026-10-10",
+    "servo_problem_resolved_by_operator": true,
+    "independently_retested_this_turn": false,
+    "limits_origin": "pending clarification",
+    "note": "Earlier ID4 comparison entries remain historical evidence, not a claim that the repaired servo still fails."
+  }
+}

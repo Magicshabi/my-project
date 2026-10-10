@@ -1,0 +1,124 @@
+{
+  "point": 1,
+  "saved": true,
+  "motion_commands": 0,
+  "started_at": "2026-10-10T21:11:52.535508+08:00",
+  "host_joint_limits": {
+    "schema": "nexarm.host-joint-limits/1",
+    "units": "raw_encoder_counts",
+    "servo_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "bounds": [
+      [
+        341,
+        3755
+      ],
+      [
+        1195,
+        2901
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        683,
+        3413
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        1024,
+        2731
+      ]
+    ]
+  },
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "sources": {
+    "capture_joint_points.py": "9d0d0a2753fce39111fcd29794a3cf8a22b515e6f317e2834b8900f318ed0cf6",
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\joint_limits.py": "503ecb97e8c17ddb0f88776ca065fdd1ba94d345e3c0771f26c1497562e73e13",
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\data\\joint_limits_20261010.json": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\arm.py": "93c6b7e1ed176f3ae57f29bffe8451937510ca0dc01cc16de025f384f3b3b9f4",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\transport.py": "914e109ef8c7b23ef5b05d4232def9a8e4e4752b035682101e09d099668a8103",
+    "A:\\NEXarm\\Claude\\舵机基础运行逻辑\\nexarm\\commands.py": "3450cf0eaaa1864d44cf6411a9868e4cf19d9b00983257a00405d9622e985558"
+  },
+  "encoder_positions": [
+    1607,
+    1653,
+    2586,
+    3084,
+    2707,
+    1461
+  ],
+  "battery_mv": 12369,
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "file": "A:\\NEXarm\\Claude\\八点推进_20261008\\data\\eight_joints_powered_20261009.json",
+  "sha256": "66270981c9c47a2922fa0ad07accd8c08e78c102e8356fd0192dfe37733316f0",
+  "stats": {
+    "connected": true,
+    "type": "serial",
+    "rx_frames": 34,
+    "rx_bytes": 1651,
+    "tx_frames": 26,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "serial_closed": true
+}
