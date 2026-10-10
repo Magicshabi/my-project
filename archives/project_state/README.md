@@ -34,3 +34,7 @@
 - 第539行：`<!-- CLAW-DIAG-END -->`
 - 第615行：`<!-- CLAW-HANDOFF-BEGIN 2026-10-11 共享层接入 -->`
 - 第664行：`<!-- CLAW-HANDOFF-END -->`
+
+## 2026-10-11 共享层接入后的入口
+
+用户指定的根目录归档已建立：[PROJECT_STATE_ARCHIVE.md](../../PROJECT_STATE_ARCHIVE.md)，包含本备份原文和首轮精简快照。本目录原始备份保留不改；[当前状态](../../PROJECT_STATE.md)与[回填核验](../../handoff/adoption_20261011.md)是接续入口。

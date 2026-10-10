@@ -2,7 +2,7 @@
 """把共享台账 LEDGER.jsonl 渲染成**极简**人读视图 STATE.md（默认省 token 模式）。
 
     python handoff/render.py                 # 默认：紧凑摘要表（目标 < 1KB）
-    python handoff/render.py --since 2026-10-10T00:00+08:00   # 只看新增条目
+    python handoff/render.py --since 2026-10-10T00:00+08:00   # 只输出新增条目，不改 STATE.md
     python handoff/render.py --full          # 全量详版（费 token，仅在需要时）
     python handoff/render.py --check         # 只校验台账格式
 
@@ -126,6 +126,9 @@ def main():
         rows = [r for r in rows if r["ts"] > since]
         print("过滤后：%d 条（ts > %s）" % (len(rows), since))
         text = render_compact(rows) if rows else "# 无新增条目\n"
+        # 增量查询不能把完整的共享摘要替换成局部视图。
+        print(text, end="")
+        return 0
     elif "--full" in argv:
         text = render_full(rows)
     else:

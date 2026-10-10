@@ -111,3 +111,9 @@ python handoff/render.py --since 2026-10-10T00:00+08:00
 
 **给 agent 的一句话**：开工读 `STATE.md` + `MEMORY.md`（合计约 1.5 万字符以内），
 需要细节再 `grep`；**不要顺手整读历史大文件**。
+
+### Codex 接入补充（2026-10-11）
+
+- 项目开工入口已写入根目录 `AGENTS.md`；当前进度见 `PROJECT_STATE.md` 的“当前状态”节，完整历史见 `PROJECT_STATE_ARCHIVE.md`。
+- `render.py --since <ISO时间>` 只输出增量，不写 `STATE.md`；无参数运行才刷新完整摘要，`--check` 只校验。
+- `verified` 必须与证据覆盖范围一致。软件测试通过、回包一致、单轴动作成功，均不能扩展成硬件限位、无碰撞或整段搬运已验证。
