@@ -14,9 +14,11 @@ LIB = HERE.parent / '舵机基础运行逻辑'
 sys.path.insert(0, str(LIB))
 from nexarm import ArmController, Transport, SafetyError, build_frame
 from nexarm.eight_point import STAGES, configuration, same_configuration
+from joint_limits import (DEFAULT_LIMITS, checked_counts, check_counts, check_binding,
+                          load_limits, snapshot)
 
 SCHEMA = 'nexarm.joint-eight/1'
-DEFAULT = HERE / 'data' / 'eight_joints_20261009.json'
+DEFAULT = HERE / 'data' / 'eight_joints_powered_20261009.json'
 
 
 def timestamp():
@@ -33,14 +35,16 @@ def create_route(path, require_powered_sliders=False):
                  created_at=timestamp(), method='NexArm.exe powered joint sliders + read-only host capture' if require_powered_sliders else 'Positioning method not yet confirmed',
                  require_powered_sliders=require_powered_sliders,
                  legacy_source=dict(path=str(legacy), sha256=digest(legacy)),
-                 configuration=None, complete=False, execution_verified=False, points=[])
+                 configuration=None, complete=False, execution_verified=False, points=[],
+                 host_joint_limits=snapshot(load_limits()))
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('x', encoding='utf-8') as f:
         json.dump(route, f, ensure_ascii=False, indent=2)
     return route
 
 
-def check_route(route, point):
+def check_route(route, point, limits=None):
+    limits = load_limits() if limits is None else limits
     if route.get('schema') != SCHEMA or route.get('units') != 'raw_encoder_counts':
         raise SafetyError('点位文件格式不匹配')
     if route.get('servo_ids') != list(range(1, 7)):
@@ -48,10 +52,12 @@ def check_route(route, point):
     rows = route.get('points')
     if not isinstance(rows, list) or not 1 <= point <= 8 or len(rows) != point - 1:
         raise SafetyError('只能依次新增下一个点；已有点不会自动覆盖')
+    check_binding(route, limits)
     for i, row in enumerate(rows):
         if row.get('point') != i + 1 or row.get('stage') != STAGES[i]:
             raise SafetyError('已有点位顺序不正确')
-        checked_counts(row.get('encoder_positions'))
+        raw = check_counts(row.get('encoder_positions'), limits, '第%d点原始值' % (i+1))
+        check_counts(row.get('target_encoder_positions', raw), limits, '第%d点执行目标' % (i+1))
         if row.get('physical_pose_confirmed') is not True:
             raise SafetyError('已有点位缺少现场确认')
         if route.get('require_powered_sliders') and row.get('motor_driven_pose_confirmed_by_operator') is not True:
@@ -61,14 +67,6 @@ def check_route(route, point):
 def check_positioning_method(route, confirmed):
     if route.get('require_powered_sliders') and confirmed is not True:
         raise SafetyError('本轮只采电机主动到达的姿态；需用户确认保持力矩并用滑块摆位')
-
-
-def checked_counts(values):
-    if not isinstance(values, (list, tuple)) or len(values) != 6:
-        raise SafetyError('必须有六轴位置反馈')
-    if any(type(v) is not int or not 0 <= v <= 4095 for v in values):
-        raise SafetyError('编码器反馈超出协议范围')
-    return list(values)
 
 
 class ReadOnlyTransport(Transport):
@@ -114,10 +112,14 @@ def capture_stable(arm, emit):
 
 
 def add_capture(route, point, counts, samples, config, observed, log_dir,
-                powered_sliders_confirmed=False):
-    check_route(route, point)
+                powered_sliders_confirmed=False, limits=None):
+    limits = load_limits() if limits is None else limits
+    check_route(route, point, limits)
     check_positioning_method(route, powered_sliders_confirmed)
-    checked_counts(counts)
+    counts = check_counts(counts, limits, '第%d点' % point)
+    for sample in samples:
+        for key in ('cmd11_counts', 'cmd65_counts'):
+            check_counts(sample.get(key), limits, '第%d点采样%s' % (point, key))
     if not observed.strip():
         raise SafetyError('缺少现场姿态确认')
     if route['configuration'] is not None and not same_configuration(route['configuration'], config):
@@ -128,6 +130,7 @@ def add_capture(route, point, counts, samples, config, observed, log_dir,
         if point in (3, 7) and any(abs(v) > 12 for v in delta[:5]):
             raise SafetyError('夹爪开合点的臂体姿态变化过大；需重新核对，未保存')
     result = json.loads(json.dumps(route))
+    result['host_joint_limits'] = snapshot(limits)
     result['points'].append(dict(point=point, stage=STAGES[point-1], encoder_positions=counts,
         captured_at=timestamp(), physical_pose_confirmed=True, observation=observed,
         samples=samples, delta_from_previous=delta,
@@ -177,12 +180,15 @@ def main():
         ap.error('capture 需要 --point 与明确的 --observed 现场确认')
     original = a.file.read_bytes()
     route = json.loads(original.decode('utf-8'))
-    check_route(route, a.point)
+    limits = load_limits()
+    limits_sha = digest(DEFAULT_LIMITS)
+    check_route(route, a.point, limits)
     check_positioning_method(route, a.powered_sliders_confirmed)
     run = HERE / 'logs' / ('capture_' + datetime.now(timezone(timedelta(hours=8))).strftime('%Y%m%d_%H%M%S') + '_' + str(time.time_ns())[-6:])
     run.mkdir(parents=True)
     result = dict(point=a.point, saved=False, motion_commands=0, started_at=timestamp(),
-                  sources={str(p): digest(p) for p in (Path(__file__), LIB/'nexarm/arm.py', LIB/'nexarm/transport.py', LIB/'nexarm/commands.py')})
+                  host_joint_limits=snapshot(limits), limits_sha256=limits_sha,
+                  sources={str(p): digest(p) for p in (Path(__file__), HERE/'joint_limits.py', DEFAULT_LIMITS, LIB/'nexarm/arm.py', LIB/'nexarm/transport.py', LIB/'nexarm/commands.py')})
     with (run/'events.jsonl').open('w', encoding='utf-8') as log:
         lock = threading.Lock()
         def emit(event, **data):
@@ -204,7 +210,9 @@ def main():
             if transport.stats()['checksum_errors']:
                 raise SafetyError('采集出现坏帧；未保存')
             updated = add_capture(route, a.point, counts, samples, config, a.observed, run,
-                                  powered_sliders_confirmed=a.powered_sliders_confirmed)
+                                  powered_sliders_confirmed=a.powered_sliders_confirmed, limits=limits)
+            if digest(DEFAULT_LIMITS) != limits_sha:
+                raise SafetyError('采集中限位文件发生变化；未保存')
             save_revision(a.file, updated, original)
             result.update(saved=True, encoder_positions=counts, battery_mv=voltage,
                           configuration=config, file=str(a.file.resolve()), sha256=digest(a.file))

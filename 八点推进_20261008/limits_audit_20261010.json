@@ -1,0 +1,261 @@
+{
+  "scope": "offline numeric check only; not motion or collision validation",
+  "host_joint_limits": {
+    "schema": "nexarm.host-joint-limits/1",
+    "units": "raw_encoder_counts",
+    "servo_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "bounds": [
+      [
+        341,
+        3755
+      ],
+      [
+        1195,
+        2901
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        683,
+        3413
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        1024,
+        2731
+      ]
+    ]
+  },
+  "captured_points": 8,
+  "all_targets_within_limits": false,
+  "eight_points_recorded": true,
+  "binding_issue": "已有点位未绑定当前软件限位；先离线复核，不自动迁移",
+  "hardware_test_performed": false,
+  "points": [
+    {
+      "point": 1,
+      "stage": "red_above_open",
+      "raw": [
+        1682,
+        1525,
+        2973,
+        3448,
+        2744,
+        1204
+      ],
+      "target": [
+        1682,
+        1525,
+        2973,
+        3448,
+        2744,
+        1204
+      ],
+      "violations": [
+        {
+          "servo_id": 4,
+          "value": 3448,
+          "lower": 683,
+          "upper": 3413
+        }
+      ]
+    },
+    {
+      "point": 2,
+      "stage": "red_down_open",
+      "raw": [
+        1688,
+        1392,
+        3034,
+        3447,
+        2743,
+        1206
+      ],
+      "target": [
+        1688,
+        1392,
+        3034,
+        3447,
+        2743,
+        1206
+      ],
+      "violations": [
+        {
+          "servo_id": 4,
+          "value": 3447,
+          "lower": 683,
+          "upper": 3413
+        }
+      ]
+    },
+    {
+      "point": 3,
+      "stage": "red_down_grip",
+      "raw": [
+        1686,
+        1392,
+        3035,
+        3448,
+        2744,
+        1966
+      ],
+      "target": [
+        1686,
+        1392,
+        3035,
+        3448,
+        2744,
+        2029
+      ],
+      "violations": [
+        {
+          "servo_id": 4,
+          "value": 3448,
+          "lower": 683,
+          "upper": 3413
+        }
+      ]
+    },
+    {
+      "point": 4,
+      "stage": "red_lift_grip",
+      "raw": [
+        1675,
+        1601,
+        3022,
+        3544,
+        2784,
+        2029
+      ],
+      "target": [
+        1675,
+        1601,
+        3022,
+        3544,
+        2784,
+        2029
+      ],
+      "violations": [
+        {
+          "servo_id": 4,
+          "value": 3544,
+          "lower": 683,
+          "upper": 3413
+        }
+      ]
+    },
+    {
+      "point": 5,
+      "stage": "t0_above_grip",
+      "raw": [
+        2348,
+        1656,
+        2809,
+        3474,
+        2408,
+        2029
+      ],
+      "target": [
+        2348,
+        1656,
+        2809,
+        3474,
+        2408,
+        2029
+      ],
+      "violations": [
+        {
+          "servo_id": 4,
+          "value": 3474,
+          "lower": 683,
+          "upper": 3413
+        }
+      ]
+    },
+    {
+      "point": 6,
+      "stage": "t0_down_grip",
+      "raw": [
+        2359,
+        1534,
+        2641,
+        3169,
+        2417,
+        2030
+      ],
+      "target": [
+        2359,
+        1534,
+        2641,
+        3169,
+        2417,
+        2030
+      ],
+      "violations": []
+    },
+    {
+      "point": 7,
+      "stage": "t0_down_open",
+      "raw": [
+        2359,
+        1532,
+        2644,
+        3169,
+        2416,
+        1254
+      ],
+      "target": [
+        2359,
+        1532,
+        2644,
+        3169,
+        2416,
+        1254
+      ],
+      "violations": []
+    },
+    {
+      "point": 8,
+      "stage": "t0_clear_open",
+      "raw": [
+        2358,
+        1562,
+        2889,
+        3510,
+        2415,
+        1251
+      ],
+      "target": [
+        2358,
+        1562,
+        2889,
+        3510,
+        2415,
+        1251
+      ],
+      "violations": [
+        {
+          "servo_id": 4,
+          "value": 3510,
+          "lower": 683,
+          "upper": 3413
+        }
+      ]
+    }
+  ],
+  "source_file": "A:\\NEXarm\\Claude\\八点推进_20261008\\data\\eight_joints_20261009.json",
+  "source_sha256": "6ac48d4a61b5550919c97a46f36e49501aae6ae3afaeef48cb200f1b250b7e5d",
+  "audited_at": "2026-10-10T18:30:05.602227+08:00"
+}

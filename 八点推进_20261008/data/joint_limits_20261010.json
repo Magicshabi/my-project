@@ -1,0 +1,11 @@
+{
+  "schema": "nexarm.host-joint-limits/1",
+  "units": "raw_encoder_counts",
+  "servo_ids": [1, 2, 3, 4, 5, 6],
+  "bounds": [[341, 3755], [1195, 2901], [1024, 3072], [683, 3413], [1024, 3072], [1024, 2731]],
+  "reported_on": "2026-10-10",
+  "source": "user_report",
+  "source_detail": "pending: GUI input bounds or internal servo configuration",
+  "application": "host target rejection only; does not configure servo limits",
+  "mechanical_clearance_verified": false
+}

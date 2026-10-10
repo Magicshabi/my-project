@@ -1,0 +1,36 @@
+test_all_axis_boundaries_and_one_count_outside (test_joint_limits.JointLimitTests) ... ok
+test_empty_new_route_is_not_reported_as_success (test_joint_limits.JointLimitTests) ... ok
+test_invalid_or_misordered_limit_config_fails_closed (test_joint_limits.JointLimitTests) ... ok
+test_real_old_route_audit_preserves_bytes_and_reports_all_six_points (test_joint_limits.JointLimitTests) ... ok
+test_backup_readback_and_concurrent_change (test_capture_joint_points.CaptureTests) ... ok
+test_existing_out_of_range_point_blocks_before_serial_creation (test_capture_joint_points.CaptureTests) ... ok
+test_missing_or_disagreeing_feedback_rejected (test_capture_joint_points.CaptureTests) ... ok
+test_missing_powered_confirmation_blocks_before_serial_creation (test_capture_joint_points.CaptureTests) ... ok
+test_only_exact_queries_can_be_transmitted (test_capture_joint_points.CaptureTests) ... ok
+test_order_overwrite_config_and_grip_pose_guard (test_capture_joint_points.CaptureTests) ... ok
+test_out_of_range_capture_does_not_clamp_or_mutate (test_capture_joint_points.CaptureTests) ... ok
+test_out_of_range_sample_blocks_even_if_final_sample_is_valid (test_capture_joint_points.CaptureTests) ... ok
+test_powered_route_requires_operator_evidence_and_preserves_original (test_capture_joint_points.CaptureTests) ... ok
+test_session_binds_limits_and_rejects_later_changes (test_capture_joint_points.CaptureTests) ... ok
+test_stable_capture_reads_only_and_preserves_raw_counts (test_capture_joint_points.CaptureTests) ... ok
+test_unstable_readings_rejected (test_capture_joint_points.CaptureTests) ... ok
+test_all_steps_bounded_and_finish_exactly (test_replay_joint_points.ReplayTests) ... ok
+test_complete_segment_remains_operator_unconfirmed (test_replay_joint_points.ReplayTests) ... ok
+test_diagnostic_hold_blocks_before_connection (test_replay_joint_points.ReplayTests) ... ok
+test_drift_or_missing_feedback_aborts (test_replay_joint_points.ReplayTests) ... ok
+test_limit_file_change_aborts_before_motion (test_replay_joint_points.ReplayTests) ... ok
+test_no_follow_timeout_no_later_steps (test_replay_joint_points.ReplayTests) ... ok
+test_old_real_route_is_rejected_before_serial_connection (test_replay_joint_points.ReplayTests) ... ok
+test_out_of_range_target_blocks_even_direct_segment_call (test_replay_joint_points.ReplayTests) ... ok
+test_override_and_reject_unapproved_override (test_replay_joint_points.ReplayTests) ... ok
+test_source_bytes_must_match_reviewed_fingerprint_before_serial (test_replay_joint_points.ReplayTests) ... ok
+test_start_mismatch_no_motion (test_replay_joint_points.ReplayTests) ... ok
+test_stop_blocks_even_preapproved_frame (test_replay_joint_points.ReplayTests) ... ok
+test_whitelist_and_failed_write_are_terminal (test_replay_joint_points.ReplayTests) ... ok
+test_whitelisted_out_of_range_frame_is_not_transmitted (test_replay_joint_points.ReplayTests) ... ok
+test_wrong_units_and_unconfirmed_powered_pose_rejected (test_replay_joint_points.ReplayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.063s
+
+OK

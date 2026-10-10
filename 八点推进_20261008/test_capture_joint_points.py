@@ -21,6 +21,38 @@ def arm_at(counts):
 
 
 class CaptureTests(unittest.TestCase):
+    def test_out_of_range_capture_does_not_clamp_or_mutate(self):
+        r=route();counts=[2000,2000,2000,3448,2000,1200]
+        with self.assertRaisesRegex(m.SafetyError,'ID4=3448'):
+            m.add_capture(r,1,counts,[],{'v':1},'ready',Path('.'))
+        self.assertEqual(r['points'],[])
+        self.assertEqual(counts[3],3448)
+
+    def test_out_of_range_sample_blocks_even_if_final_sample_is_valid(self):
+        sample=dict(cmd11_counts=[2000,2000,2000,3414,2000,1200],
+                    cmd65_counts=[2000,2000,2000,3413,2000,1200])
+        with self.assertRaisesRegex(m.SafetyError,'ID4=3414'):
+            m.add_capture(route(),1,[2000]*6,[sample],{'v':1},'ready',Path('.'))
+
+    def test_session_binds_limits_and_rejects_later_changes(self):
+        original=route()
+        updated=m.add_capture(original,1,[2000]*6,[],{'v':1},'ready',Path('.'))
+        self.assertNotIn('host_joint_limits',original)
+        self.assertEqual(updated['host_joint_limits']['bounds'][3],[683,3413])
+        changed=list(m.load_limits());changed[3]=(683,3500)
+        with self.assertRaisesRegex(m.SafetyError,'限位与采集会话不同'):
+            m.check_route(updated,2,tuple(changed))
+
+    def test_existing_out_of_range_point_blocks_before_serial_creation(self):
+        r=m.add_capture(route(),1,[2000]*6,[],{'v':1},'ready',Path('.'))
+        r['points'][0]['encoder_positions'][3]=3448
+        with tempfile.TemporaryDirectory(prefix='capture_limits_test_',dir=m.HERE) as folder:
+            p=Path(folder)/'route.json';p.write_text(json.dumps(r),encoding='utf-8')
+            args=['capture','capture','--file',str(p),'--point','2','--observed','ready']
+            with patch.object(m.sys,'argv',args),patch.object(m,'ArmController') as controller:
+                with self.assertRaisesRegex(m.SafetyError,'ID4=3448'):m.main()
+                controller.assert_not_called()
+
     def test_powered_route_requires_operator_evidence_and_preserves_original(self):
         r=route();r['require_powered_sliders']=True
         with self.assertRaises(m.SafetyError):

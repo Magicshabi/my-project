@@ -1,0 +1,30 @@
+[
+  {
+    "file": "capture_joint_points.py",
+    "sha256": "8C1D5BBBC239668069BFC03E89AE5B17FF7E54CE4949924411BF530AA854C77F"
+  },
+  {
+    "file": "replay_joint_points.py",
+    "sha256": "5273FE290E58CE70EB4CDC3CB07DE4B53295F280A0967958DFA3CEB6025F1D9D"
+  },
+  {
+    "file": "test_capture_joint_points.py",
+    "sha256": "4A1D6F4D32C1CCC556CEBA1B63E68DD6B2E2E99AE88DF27F5FCDAD4CB9E47F2B"
+  },
+  {
+    "file": "test_replay_joint_points.py",
+    "sha256": "A28096BF097EC6C0E41D48426743A493EB6C743E02BA31F10C052A320E474F24"
+  },
+  {
+    "file": "data\\eight_joints_20261009.json",
+    "sha256": "6AC48D4A61B5550919C97A46F36E49501AAE6AE3AFAEEF48CB200F1B250B7E5D"
+  },
+  {
+    "file": "data\\eight_joints_powered_20261009.json",
+    "sha256": "28C7997CED85E4C4B0F871DCEF40CA1F555EAEF8233E79E8CE7D0DB8CA07AD33"
+  },
+  {
+    "file": "replay_diagnostic_hold.json",
+    "sha256": "5F0650785E895C1882B7EFF2061E66FBBF01BB89936390580DABADF9635247C9"
+  }
+]
