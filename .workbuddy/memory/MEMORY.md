@@ -1,5 +1,9 @@
 # NEXarm 工程长期约定（跨会话必读）
 
+> **新会话请先读 `.workbuddy/memory/SESSION_CONTEXT.md`** —— 压缩版会话上下文（60 秒读完，
+> 含本线已完成成果、关键事实、我犯过的错、当前进度与下一步）。
+> 顺序：`AGENTS.md` → `handoff/STATE.md` → `SESSION_CONTEXT.md` → 动手。
+
 ## 〇、⚠️ 本项目同时存在两条独立工作线（2026-10-08 发现，务必先读）
 
 | | 本条工作线（Claw / 本会话） | 另一条工作线（Codex 会话） |
