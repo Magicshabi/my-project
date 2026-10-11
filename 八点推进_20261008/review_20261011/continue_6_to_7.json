@@ -1,0 +1,35 @@
+{
+  "schema": "nexarm.empty-setup-trial/1",
+  "created_at": "2026-10-11T19:18:54.517294+08:00",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+  "empty_load_only": true,
+  "scope": "Empty-load P6 to P7, ID6 opens with body held at measured pose",
+  "operator_confirmation": "User confirmed physical descent to P6 correct, stationary and no abnormality.",
+  "review_evidence": "powered_route_review.json",
+  "tests_evidence": "tests.txt",
+  "tilt_note": "User confirms point4 is deliberately tilted to clear neighboring baskets, grip remained secure; preserve original data. This trial does not include that segment.",
+  "allowed_legs": [
+    "segment"
+  ],
+  "expected_start": [
+    2404,
+    1604,
+    2418,
+    3085,
+    2456,
+    2017
+  ],
+  "start_evidence": "logs/setup_20261011_191800_846000/result.json",
+  "settle_tolerances": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "from_point": 6,
+  "to_point": 7
+}

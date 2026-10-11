@@ -1,0 +1,47 @@
+{
+  "schema": "nexarm.empty-cycle/1",
+  "created_at": "2026-10-11T19:33:20.903216+08:00",
+  "empty_load_only": true,
+  "sequence": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "cycles": 1,
+  "settle_tolerances": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "pins": {
+    "route": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+    "limits": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+    "hold": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+    "runner": "e0290e65a95dfb1b2930f3cf5b5b9ca8df35ab9398190ed08d3476ee7748fc57",
+    "setup": "b3c5a9a0738cd627685dce3e6cb31b9b3062cbab2b5324dfaf2675fc5ba5106e",
+    "replay": "779b675e2a9a85dfdfcd2b2357cb9a95bf6fdda5b1b070bb7968b0584b2bd03f"
+  },
+  "expected_start": [
+    1618,
+    1649,
+    2564,
+    3086,
+    2704,
+    1457
+  ],
+  "start_evidence": "logs/cycle_20261011_192954_117300/events.jsonl",
+  "operator_confirmation": "User: 姿态可接受，无异常，继续第2→8点. ID3 start error22 explicitly accepted only as empty-load initial pose, no point data or movement tolerance change.",
+  "evidence": "review_20261011/continue_p5_p8_1920.md",
+  "tests": "review_20261011/cycle_tests_v3.txt",
+  "scope": "One sequence P2-P8 from physically accepted measured P1 pose; no repeat P1 or base, no retry, goal tolerance20.",
+  "preparation": "accepted-p1",
+  "operator_accepted_p1": true
+}

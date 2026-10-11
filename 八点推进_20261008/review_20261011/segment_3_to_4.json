@@ -1,0 +1,35 @@
+{
+  "schema": "nexarm.empty-setup-trial/1",
+  "created_at": "2026-10-11T13:59:03.366587+08:00",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+  "empty_load_only": true,
+  "scope": "Empty-load P3 to P4 intentional tilt, bounded450counts batches, transient20counts settled tolerance; no loaded accuracy claim",
+  "operator_confirmation": "User confirms gripper closed normally, body unchanged, stopped and no abnormality; inclination explicitly required for obstacle clearance",
+  "review_evidence": "powered_route_review.json",
+  "tests_evidence": "tests.txt",
+  "tilt_note": "User confirms point4 is deliberately tilted to clear neighboring baskets, grip remained secure; preserve original data. This trial does not include that segment.",
+  "allowed_legs": [
+    "segment"
+  ],
+  "expected_start": [
+    1617,
+    1555,
+    2617,
+    3087,
+    2678,
+    1980
+  ],
+  "start_evidence": "logs/setup_20261011_141858_412000/events.jsonl",
+  "settle_tolerances": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "from_point": 3,
+  "to_point": 4
+}

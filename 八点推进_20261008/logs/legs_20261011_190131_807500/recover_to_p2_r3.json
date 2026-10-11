@@ -1,0 +1,132 @@
+{
+  "schema": "nexarm.reviewed-legs/1",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+  "empty_load_only": true,
+  "created_at": "2026-10-11T19:00+08:00",
+  "author": "claude",
+  "revision": "r3：18:52重启后舵机均有力，按18:55回读重新规划",
+  "scope": "上电后从只读回读姿态空载回到第2点；每次只跑一段，现场yes后才跑下一段；不证明避障、平滑、急停或带载",
+  "readback_evidence": "logs/pose_20261011_185523_996900/result.json",
+  "operator_request": "2026-10-11 17:38 用户：刚通电，姿势不正确，先回到第二点",
+  "supersedes_plan": "recover_to_p2_r2.json（未运行：ID2回读冻结，重启后恢复）",
+  "legs": [
+    {
+      "name": "1-raise-to-p8",
+      "expected_start": [
+        2302,
+        2253,
+        1807,
+        2773,
+        2206,
+        1075
+      ],
+      "target": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "start_tolerance": 16,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "重启后姿态(控制器x149,y-61,z208,半径161mm,方位-22°,夹爪已开)展开到第8点高位(z318,半径213mm,方位-31°)。ID3+614主导抬升外展，ID2-160；线性估计全程z单调上升，经过机身与T0之间的空区。分2块下发。"
+    },
+    {
+      "name": "2-turn",
+      "expected_start": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "target": [
+        1607,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "高位仅转底座到第1点方位；与14:06现场确认的base段同路径。"
+    },
+    {
+      "name": "3-approach-p1",
+      "expected_start": [
+        1607,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "target": [
+        1607,
+        1653,
+        2586,
+        3084,
+        2707,
+        1461
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "高位下降到第1点(红篮提手上方)；与14:12现场接受的direct-p1路径基本相同。"
+    },
+    {
+      "name": "4-p1-to-p2",
+      "expected_start": [
+        1607,
+        1653,
+        2586,
+        3084,
+        2707,
+        1461
+      ],
+      "target": [
+        1612,
+        1557,
+        2622,
+        3088,
+        2675,
+        1071
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "与14:15现场确认yes的1→2段相同。"
+    }
+  ]
+}

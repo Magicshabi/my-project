@@ -1,0 +1,35 @@
+{
+  "schema": "nexarm.empty-setup-trial/1",
+  "created_at": "2026-10-11T19:17:49.595377+08:00",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+  "empty_load_only": true,
+  "scope": "Empty-load P5 to P6 descent over cleared T0",
+  "operator_confirmation": "User confirmed physically at P5, stationary with no abnormality, then explicitly requested continuation; existing empty-load scene remains in force.",
+  "review_evidence": "powered_route_review.json",
+  "tests_evidence": "tests.txt",
+  "tilt_note": "User confirms point4 is deliberately tilted to clear neighboring baskets, grip remained secure; preserve original data. This trial does not include that segment.",
+  "allowed_legs": [
+    "segment"
+  ],
+  "expected_start": [
+    2418,
+    1677,
+    2415,
+    3086,
+    2482,
+    2017
+  ],
+  "start_evidence": "logs/setup_20261011_191016_274400/result.json",
+  "settle_tolerances": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "from_point": 5,
+  "to_point": 6
+}

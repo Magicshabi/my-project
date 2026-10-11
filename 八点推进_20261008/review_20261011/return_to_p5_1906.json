@@ -1,0 +1,33 @@
+{
+  "schema": "nexarm.empty-setup-trial/1",
+  "created_at": "2026-10-11T13:59:03.366587+08:00",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+  "empty_load_only": true,
+  "scope": "User-directed return from currently observed high pose near P8 to taught P5 only; empty load, bounded450counts groups, tolerance20counts",
+  "operator_confirmation": "User adjusted pose and requested return to P5; confirms empty-load, stationary, no abnormality, NexArm disconnected",
+  "review_evidence": "powered_route_review.json",
+  "tests_evidence": "tests.txt",
+  "tilt_note": "User confirms point4 is deliberately tilted to clear neighboring baskets, grip remained secure; preserve original data. This trial does not include that segment.",
+  "allowed_legs": [
+    "direct-p5"
+  ],
+  "expected_start": [
+    2399,
+    2092,
+    2397,
+    3086,
+    2451,
+    1075
+  ],
+  "start_evidence": "logs/pose_20261011_190601_047700/result.json",
+  "settle_tolerances": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ]
+}

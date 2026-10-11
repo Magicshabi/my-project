@@ -1,0 +1,78 @@
+{
+  "started_at": "2026-10-11T17:57:24.673241+08:00",
+  "leg": "1-lift",
+  "leg_index": 1,
+  "leg_count": 5,
+  "plan_sha256": "a85661c75595609faae9bb193f4112dfbf66135f74b0357396cd5791411828f7",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "empty_load": true,
+  "complete": false,
+  "operator_confirmed": false,
+  "physical_stop_verified": false,
+  "collision_checked": false,
+  "port": "COM11",
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "battery_mv": 12406,
+  "error": "小步位置未稳定到位；不重试、不自动回位",
+  "motion_attempts": 3,
+  "serial_closed": true,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 220,
+    "rx_bytes": 10897,
+    "tx_frames": 167,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  }
+}

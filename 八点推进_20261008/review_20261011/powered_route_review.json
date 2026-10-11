@@ -1,0 +1,311 @@
+{
+  "schema": "nexarm.powered-review/1",
+  "data_integrity_passed": true,
+  "all_points_within_host_limits": true,
+  "hardware_test_performed": false,
+  "motion_authorized": false,
+  "collision_checked": false,
+  "continuous_replay_verified": false,
+  "note": "Endpoint evidence only; matching controller channels are not independent physical measurement.",
+  "points": [
+    {
+      "point": 1,
+      "stage": "red_above_open",
+      "counts": [
+        1607,
+        1653,
+        2586,
+        3084,
+        2707,
+        1461
+      ],
+      "max_sample_spread": 0
+    },
+    {
+      "point": 2,
+      "stage": "red_down_open",
+      "counts": [
+        1612,
+        1557,
+        2622,
+        3088,
+        2675,
+        1071
+      ],
+      "max_sample_spread": 1
+    },
+    {
+      "point": 3,
+      "stage": "red_down_grip",
+      "counts": [
+        1616,
+        1545,
+        2625,
+        3087,
+        2678,
+        1993
+      ],
+      "max_sample_spread": 1
+    },
+    {
+      "point": 4,
+      "stage": "red_lift_grip",
+      "counts": [
+        1615,
+        1542,
+        2612,
+        1981,
+        2673,
+        1999
+      ],
+      "max_sample_spread": 0
+    },
+    {
+      "point": 5,
+      "stage": "t0_above_grip",
+      "counts": [
+        2425,
+        1680,
+        2431,
+        3083,
+        2485,
+        2020
+      ],
+      "max_sample_spread": 1
+    },
+    {
+      "point": 6,
+      "stage": "t0_down_grip",
+      "counts": [
+        2407,
+        1607,
+        2430,
+        3087,
+        2454,
+        2020
+      ],
+      "max_sample_spread": 1
+    },
+    {
+      "point": 7,
+      "stage": "t0_down_open",
+      "counts": [
+        2407,
+        1607,
+        2430,
+        3087,
+        2454,
+        1070
+      ],
+      "max_sample_spread": 1
+    },
+    {
+      "point": 8,
+      "stage": "t0_clear_open",
+      "counts": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "max_sample_spread": 1
+    }
+  ],
+  "segments": [
+    {
+      "from_point": 1,
+      "to_point": 2,
+      "event": "transport",
+      "delta_counts": [
+        5,
+        -96,
+        36,
+        4,
+        -32,
+        -390
+      ],
+      "controller_reported_pose_delta": {
+        "x": 11,
+        "y": 6,
+        "z": -40,
+        "pitch": -5.7,
+        "roll": -3
+      },
+      "review_flags": [
+        "claw_changes_during_transport"
+      ],
+      "legacy_40_count_steps": 10,
+      "path_verified": false,
+      "physical_trial_passed": false
+    },
+    {
+      "from_point": 2,
+      "to_point": 3,
+      "event": "grip",
+      "delta_counts": [
+        4,
+        -12,
+        3,
+        -1,
+        3,
+        922
+      ],
+      "controller_reported_pose_delta": {
+        "x": 2,
+        "y": -1,
+        "z": -5,
+        "pitch": -0.7,
+        "roll": 0
+      },
+      "review_flags": [
+        "body_drift_at_gripper_event"
+      ],
+      "legacy_40_count_steps": 24,
+      "path_verified": false,
+      "physical_trial_passed": false
+    },
+    {
+      "from_point": 3,
+      "to_point": 4,
+      "event": "transport",
+      "delta_counts": [
+        -1,
+        -3,
+        -13,
+        -1106,
+        -5,
+        6
+      ],
+      "controller_reported_pose_delta": {
+        "x": 92,
+        "y": 72,
+        "z": 150,
+        "pitch": 95.7,
+        "roll": 0
+      },
+      "review_flags": [
+        "large_body_joint_change",
+        "claw_changes_during_transport"
+      ],
+      "legacy_40_count_steps": 28,
+      "path_verified": false,
+      "physical_trial_passed": false
+    },
+    {
+      "from_point": 4,
+      "to_point": 5,
+      "event": "transport",
+      "delta_counts": [
+        810,
+        138,
+        -181,
+        1102,
+        -188,
+        21
+      ],
+      "controller_reported_pose_delta": {
+        "x": -110,
+        "y": -444,
+        "z": -129,
+        "pitch": -100.5,
+        "roll": -17
+      },
+      "review_flags": [
+        "large_body_joint_change",
+        "claw_changes_during_transport"
+      ],
+      "legacy_40_count_steps": 28,
+      "path_verified": false,
+      "physical_trial_passed": false
+    },
+    {
+      "from_point": 5,
+      "to_point": 6,
+      "event": "transport",
+      "delta_counts": [
+        -18,
+        -73,
+        -1,
+        4,
+        -31,
+        0
+      ],
+      "controller_reported_pose_delta": {
+        "x": 6,
+        "y": 6,
+        "z": -34,
+        "pitch": -6.9,
+        "roll": -2
+      },
+      "review_flags": [],
+      "legacy_40_count_steps": 2,
+      "path_verified": false,
+      "physical_trial_passed": false
+    },
+    {
+      "from_point": 6,
+      "to_point": 7,
+      "event": "release",
+      "delta_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -950
+      ],
+      "controller_reported_pose_delta": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "pitch": 0.0,
+        "roll": 0
+      },
+      "review_flags": [],
+      "legacy_40_count_steps": 24,
+      "path_verified": false,
+      "physical_trial_passed": false
+    },
+    {
+      "from_point": 7,
+      "to_point": 8,
+      "event": "transport",
+      "delta_counts": [
+        -4,
+        486,
+        -9,
+        0,
+        -1,
+        0
+      ],
+      "controller_reported_pose_delta": {
+        "x": -73,
+        "y": 47,
+        "z": 198,
+        "pitch": 42.0,
+        "roll": 0
+      },
+      "review_flags": [
+        "large_body_joint_change"
+      ],
+      "legacy_40_count_steps": 13,
+      "path_verified": false,
+      "physical_trial_passed": false
+    }
+  ],
+  "source_file": "A:\\NEXarm\\Claude\\八点推进_20261008\\data\\eight_joints_powered_20261009.json",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "export_sha256": {
+    "point_01.json": "0f5757ca63574daf77a779a0f2849ab3aa0ce053f53ec50d38a0d5d10c6657d7",
+    "point_02.json": "0efbd263b0b3190a650af8c3450fef8caed4e15b798dd4b8a023b00272be3aa6",
+    "point_03.json": "0f6dc55327bcd2906a1756e2f230b9478d822f60032b9416d9d5e1578e7ceb92",
+    "point_04.json": "35bd941257f8a032809ed2e91f11a95ad947be82a79a48ad5056a8483153721b",
+    "point_05.json": "5fe833d5128fd7ef20afcd16fbb6d87e6a404266ec7de55238434b1f60e6d96f",
+    "point_06.json": "ad929c94e74cf5d10daeeac00506df6a5271f3dac0d22548bb09f266ad34aebc",
+    "point_07.json": "74a3f426b7da1a24432c0a9036d6b71f195bfcdd91de3e460542d96cbc7e1b82",
+    "point_08.json": "cf4c7523a67510a55ef22223b2f8202adf7954bfd584dd8da48cabf989f1ffc6"
+  }
+}

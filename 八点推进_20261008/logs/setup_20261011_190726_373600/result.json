@@ -1,0 +1,131 @@
+{
+  "leg": "direct-p5",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "expected_start": [
+    2399,
+    2092,
+    2397,
+    3086,
+    2451,
+    1075
+  ],
+  "target": [
+    2425,
+    1680,
+    2431,
+    3083,
+    2485,
+    2020
+  ],
+  "empty_load": true,
+  "plan": {
+    "schema": "nexarm.empty-setup-trial/1",
+    "created_at": "2026-10-11T13:59:03.366587+08:00",
+    "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+    "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+    "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+    "empty_load_only": true,
+    "scope": "User-directed return from currently observed high pose near P8 to taught P5 only; empty load, bounded450counts groups, tolerance20counts",
+    "operator_confirmation": "User adjusted pose and requested return to P5; confirms empty-load, stationary, no abnormality, NexArm disconnected",
+    "review_evidence": "powered_route_review.json",
+    "tests_evidence": "tests.txt",
+    "tilt_note": "User confirms point4 is deliberately tilted to clear neighboring baskets, grip remained secure; preserve original data. This trial does not include that segment.",
+    "allowed_legs": [
+      "direct-p5"
+    ],
+    "expected_start": [
+      2399,
+      2092,
+      2397,
+      3086,
+      2451,
+      1075
+    ],
+    "start_evidence": "logs/pose_20261011_190601_047700/result.json",
+    "settle_tolerances": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ]
+  },
+  "complete": false,
+  "operator_confirmed": false,
+  "physical_stop_verified": false,
+  "collision_checked": false,
+  "port": "COM11",
+  "settle_tolerances": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "battery_mv": 12377,
+  "error": "小步位置未稳定到位；不重试、不自动回位",
+  "motion_attempts": 9,
+  "serial_closed": true,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 245,
+    "rx_bytes": 12271,
+    "tx_frames": 191,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  }
+}

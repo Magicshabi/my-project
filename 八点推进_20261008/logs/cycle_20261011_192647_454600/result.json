@@ -1,0 +1,119 @@
+{
+  "plan": {
+    "schema": "nexarm.empty-cycle/1",
+    "created_at": "2026-10-11T19:26:33.553796+08:00",
+    "empty_load_only": true,
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "cycles": 1,
+    "settle_tolerances": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "pins": {
+      "route": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+      "limits": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+      "hold": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+      "runner": "986cd31072ac79a425c510bf5f5fad11edc05d1f7ff13c7e886a556da27eb9ee",
+      "setup": "b3c5a9a0738cd627685dce3e6cb31b9b3062cbab2b5324dfaf2675fc5ba5106e",
+      "replay": "e5ccdb1506c935e164cd37f9337160c646730ae9d0f23a6d4a4c8b624f10444c"
+    },
+    "expected_start": [
+      2404,
+      2085,
+      2416,
+      3085,
+      2454,
+      1080
+    ],
+    "start_evidence": "logs/setup_20261011_192007_178100/result.json",
+    "operator_confirmation": "User confirmed P8 retreat correct, stationary and without abnormality, then explicitly authorized full empty-load cycle. Prior empty-load cleared scene remains in force.",
+    "evidence": "review_20261011/continue_p5_p8_1920.md",
+    "tests": "review_20261011/cycle_tests.txt",
+    "scope": "One P8 high base-only return, approach P1, then P1-P8 with settled waypoints. No load, smoothing, retry, loop or torque writes."
+  },
+  "port": "COM11",
+  "stages": [],
+  "controller_complete": false,
+  "operator_confirmed": false,
+  "complete": false,
+  "empty_load": true,
+  "physical_stop_verified": false,
+  "collision_checked": false,
+  "smooth_blending": false,
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "battery_mv": 12364,
+  "error": "小步位置未稳定到位；不重试、不自动回位",
+  "serial_closed": true,
+  "motion_attempts": 20,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 550,
+    "rx_bytes": 27895,
+    "tx_frames": 440,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  }
+}

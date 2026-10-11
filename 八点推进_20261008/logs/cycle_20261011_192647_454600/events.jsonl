@@ -1,0 +1,1128 @@
+{"event": "transport", "t": 113690.562, "message": "已连接 COM11 @ 1000000"}
+{"event": "tx_attempt", "t": 113690.562, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 113690.562, "cmd": 80, "id": 255}
+{"event": "tx_attempt", "t": 113690.578, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 113690.578, "cmd": 64, "id": 255}
+{"event": "tx_attempt", "t": 113690.609, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 113690.609, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 113690.671, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 113690.671, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 113690.734, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 113690.734, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 113690.796, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 113690.796, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 113690.843, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 113690.843, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 113690.906, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 113690.906, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 113690.953, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 113690.968, "cmd": 1, "id": 255}
+{"event": "tx_attempt", "t": 113691.015, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 113691.015, "cmd": 2, "id": 255}
+{"event": "library", "t": 113691.031, "message": "运动闸门 已开启"}
+{"event": "tx_attempt", "t": 113691.031, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113691.031, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113691.031, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113691.031, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113691.046, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113691.187, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113691.187, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113691.203, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113691.203, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113691.203, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113691.359, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113691.359, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113691.359, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113691.359, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113691.375, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113691.515, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113691.515, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113691.531, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113691.531, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113691.531, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113691.687, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113691.687, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113691.687, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113691.687, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113691.687, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113691.843, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113691.843, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113691.843, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113691.843, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113691.859, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113692.0, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.0, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.015, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.015, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.015, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 113692.171, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.171, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.171, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.171, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.171, "cmd11_counts": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65_counts": [2404, 2085, 2416, 3085, 2454, 1080], "controller_pose": {"x": 184, "y": -112, "z": 314, "pitch": -55.5, "roll": 36, "claw": -85}}
+{"event": "step_begin", "t": 113692.328, "index": 1, "count": 20, "start": [2404, 2085, 2416, 3085, 2454, 1080], "target": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113692.328, "cmd": 3, "id": 1, "wire_hex": "ffff010a0329643c090000d00748"}
+{"event": "tx_complete", "t": 113692.328, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113692.328, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.328, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.343, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.343, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.343, "cmd11": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65": [2404, 2085, 2416, 3085, 2454, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113692.468, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.468, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.468, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.468, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.468, "cmd11": [2404, 2085, 2416, 3085, 2454, 1080], "cmd65": [2404, 2085, 2416, 3085, 2454, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113692.593, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.593, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.609, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.609, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.609, "cmd11": [2361, 2085, 2416, 3085, 2454, 1080], "cmd65": [2361, 2085, 2416, 3085, 2454, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113692.734, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.734, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.734, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.734, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.75, "cmd11": [2360, 2085, 2415, 3085, 2453, 1080], "cmd65": [2360, 2085, 2415, 3085, 2453, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113692.859, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113692.859, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113692.875, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113692.875, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113692.875, "cmd11": [2360, 2085, 2415, 3085, 2453, 1080], "cmd65": [2360, 2085, 2415, 3085, 2453, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.0, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.0, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.0, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.0, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.015, "cmd11": [2363, 2085, 2415, 3085, 2452, 1080], "cmd65": [2363, 2085, 2415, 3085, 2452, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.125, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.125, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.14, "cmd11": [2363, 2085, 2415, 3085, 2453, 1080], "cmd65": [2363, 2085, 2415, 3085, 2453, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.265, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.265, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.281, "cmd11": [2363, 2085, 2415, 3085, 2453, 1080], "cmd65": [2363, 2085, 2415, 3085, 2453, 1080], "goal": [2364, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113693.281, "index": 1, "positions": [2363, 2085, 2415, 3085, 2453, 1080]}
+{"event": "step_begin", "t": 113693.281, "index": 2, "count": 20, "start": [2363, 2085, 2415, 3085, 2453, 1080], "target": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.281, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296414090000d00770"}
+{"event": "tx_complete", "t": 113693.281, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113693.281, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.281, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.281, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.296, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.296, "cmd11": [2363, 2085, 2415, 3085, 2453, 1080], "cmd65": [2363, 2085, 2415, 3085, 2453, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.421, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.421, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.421, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.421, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.421, "cmd11": [2363, 2085, 2415, 3085, 2453, 1080], "cmd65": [2363, 2085, 2415, 3085, 2453, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.546, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.546, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.562, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.562, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.562, "cmd11": [2327, 2085, 2415, 3085, 2452, 1080], "cmd65": [2327, 2085, 2415, 3085, 2452, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.687, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.687, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.687, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.687, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.703, "cmd11": [2327, 2085, 2415, 3085, 2452, 1080], "cmd65": [2327, 2085, 2415, 3085, 2452, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.812, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.812, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.828, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.828, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.828, "cmd11": [2323, 2085, 2415, 3085, 2452, 1080], "cmd65": [2323, 2085, 2415, 3085, 2452, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113693.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113693.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113693.968, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113693.968, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113693.968, "cmd11": [2325, 2085, 2415, 3085, 2452, 1080], "cmd65": [2325, 2085, 2415, 3085, 2452, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.093, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.093, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.093, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.093, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.093, "cmd11": [2325, 2085, 2415, 3085, 2452, 1080], "cmd65": [2325, 2085, 2415, 3085, 2452, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.218, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.218, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.234, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.234, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.234, "cmd11": [2325, 2085, 2415, 3085, 2453, 1080], "cmd65": [2325, 2085, 2415, 3085, 2453, 1080], "goal": [2324, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113694.234, "index": 2, "positions": [2325, 2085, 2415, 3085, 2453, 1080]}
+{"event": "step_begin", "t": 113694.234, "index": 3, "count": 20, "start": [2325, 2085, 2415, 3085, 2453, 1080], "target": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.234, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964ec080000d00799"}
+{"event": "tx_complete", "t": 113694.234, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113694.234, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.234, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.25, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.25, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.25, "cmd11": [2325, 2085, 2415, 3085, 2453, 1080], "cmd65": [2325, 2085, 2415, 3085, 2453, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.375, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.375, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.39, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.39, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.39, "cmd11": [2317, 2085, 2415, 3085, 2452, 1080], "cmd65": [2317, 2085, 2415, 3085, 2452, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.515, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.515, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.515, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.515, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.531, "cmd11": [2317, 2085, 2415, 3085, 2452, 1080], "cmd65": [2317, 2085, 2415, 3085, 2452, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.64, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.64, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.656, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.656, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.656, "cmd11": [2285, 2085, 2415, 3085, 2453, 1080], "cmd65": [2285, 2085, 2415, 3085, 2453, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.781, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.781, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.796, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.796, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.796, "cmd11": [2285, 2085, 2415, 3085, 2453, 1080], "cmd65": [2285, 2085, 2415, 3085, 2453, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113694.921, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113694.921, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113694.921, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113694.921, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113694.937, "cmd11": [2285, 2085, 2415, 3085, 2453, 1080], "cmd65": [2286, 2085, 2415, 3085, 2453, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.062, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.062, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.062, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.062, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.062, "cmd11": [2286, 2085, 2415, 3085, 2453, 1080], "cmd65": [2286, 2085, 2415, 3085, 2453, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.187, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.187, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.203, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.203, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.203, "cmd11": [2286, 2085, 2415, 3085, 2452, 1080], "cmd65": [2286, 2085, 2415, 3085, 2452, 1080], "goal": [2284, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113695.203, "index": 3, "positions": [2286, 2085, 2415, 3085, 2452, 1080]}
+{"event": "step_begin", "t": 113695.203, "index": 4, "count": 20, "start": [2286, 2085, 2415, 3085, 2452, 1080], "target": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.203, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964c5080000d007c0"}
+{"event": "tx_complete", "t": 113695.203, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113695.203, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.203, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.218, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.218, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.218, "cmd11": [2286, 2085, 2415, 3085, 2452, 1080], "cmd65": [2286, 2085, 2415, 3085, 2452, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.343, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.343, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.343, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.359, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.359, "cmd11": [2268, 2085, 2415, 3085, 2452, 1080], "cmd65": [2268, 2085, 2415, 3085, 2452, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.484, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.484, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.484, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.484, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.5, "cmd11": [2268, 2085, 2415, 3085, 2452, 1080], "cmd65": [2268, 2085, 2415, 3085, 2452, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.609, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.609, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.625, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.625, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.625, "cmd11": [2247, 2085, 2415, 3086, 2452, 1080], "cmd65": [2247, 2085, 2415, 3086, 2452, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.75, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.75, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.765, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.765, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.765, "cmd11": [2247, 2085, 2415, 3086, 2453, 1080], "cmd65": [2247, 2085, 2415, 3086, 2453, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113695.89, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113695.89, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113695.89, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113695.89, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113695.89, "cmd11": [2247, 2085, 2415, 3086, 2453, 1080], "cmd65": [2247, 2085, 2415, 3086, 2453, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.015, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.015, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.031, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.031, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.031, "cmd11": [2247, 2085, 2415, 3086, 2452, 1080], "cmd65": [2247, 2085, 2415, 3086, 2452, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.156, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.156, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.156, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.156, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.171, "cmd11": [2247, 2085, 2415, 3086, 2452, 1080], "cmd65": [2247, 2085, 2415, 3086, 2452, 1080], "goal": [2245, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113696.171, "index": 4, "positions": [2247, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113696.171, "index": 5, "count": 20, "start": [2247, 2085, 2415, 3086, 2452, 1080], "target": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.171, "cmd": 3, "id": 1, "wire_hex": "ffff010a0329649d080000d007e8"}
+{"event": "tx_complete", "t": 113696.171, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113696.171, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.171, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.187, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.187, "cmd11": [2247, 2085, 2415, 3086, 2452, 1080], "cmd65": [2247, 2085, 2415, 3086, 2452, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.312, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.312, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.312, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.312, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.312, "cmd11": [2247, 2085, 2415, 3086, 2453, 1080], "cmd65": [2247, 2085, 2415, 3086, 2453, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.437, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.437, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.453, "cmd11": [2216, 2085, 2415, 3086, 2452, 1080], "cmd65": [2216, 2085, 2415, 3086, 2452, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.578, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.578, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.578, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.578, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.593, "cmd11": [2208, 2085, 2415, 3086, 2452, 1080], "cmd65": [2208, 2085, 2415, 3086, 2452, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.703, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.703, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.718, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.718, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.718, "cmd11": [2208, 2085, 2415, 3086, 2452, 1080], "cmd65": [2208, 2085, 2415, 3086, 2452, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.843, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.843, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.859, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.859, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113696.859, "cmd11": [2208, 2085, 2415, 3086, 2452, 1079], "cmd65": [2208, 2085, 2415, 3086, 2452, 1079], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113696.984, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113696.984, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113696.984, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113696.984, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.0, "cmd11": [2208, 2085, 2415, 3086, 2452, 1080], "cmd65": [2208, 2085, 2415, 3086, 2452, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.109, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.109, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.125, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.125, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.125, "cmd11": [2208, 2085, 2415, 3086, 2452, 1080], "cmd65": [2208, 2085, 2415, 3086, 2452, 1080], "goal": [2205, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113697.125, "index": 5, "positions": [2208, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113697.125, "index": 6, "count": 20, "start": [2208, 2085, 2415, 3086, 2452, 1080], "target": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.14, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296475080000d00710"}
+{"event": "tx_complete", "t": 113697.14, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113697.14, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.14, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.156, "cmd11": [2208, 2085, 2415, 3086, 2452, 1080], "cmd65": [2208, 2085, 2415, 3086, 2452, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.281, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.281, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.281, "cmd11": [2208, 2085, 2415, 3086, 2453, 1080], "cmd65": [2208, 2085, 2415, 3086, 2453, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.406, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.406, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.421, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.421, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.421, "cmd11": [2169, 2085, 2415, 3086, 2453, 1080], "cmd65": [2169, 2085, 2415, 3086, 2453, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.546, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.546, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.546, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.546, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.562, "cmd11": [2168, 2085, 2415, 3086, 2453, 1080], "cmd65": [2168, 2085, 2415, 3086, 2453, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.671, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.687, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.687, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.687, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.687, "cmd11": [2168, 2085, 2415, 3086, 2453, 1080], "cmd65": [2168, 2085, 2415, 3086, 2453, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.812, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.812, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.828, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.828, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.843, "cmd11": [2168, 2085, 2415, 3086, 2453, 1080], "cmd65": [2168, 2085, 2415, 3086, 2453, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113697.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113697.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113697.968, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113697.968, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113697.968, "cmd11": [2168, 2085, 2415, 3086, 2452, 1080], "cmd65": [2168, 2085, 2415, 3086, 2452, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.093, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.093, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.109, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.109, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.109, "cmd11": [2168, 2085, 2415, 3086, 2452, 1080], "cmd65": [2168, 2085, 2415, 3086, 2452, 1080], "goal": [2165, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113698.109, "index": 6, "positions": [2168, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113698.109, "index": 7, "count": 20, "start": [2168, 2085, 2415, 3086, 2452, 1080], "target": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.125, "cmd": 3, "id": 1, "wire_hex": "ffff010a0329644d080000d00738"}
+{"event": "tx_complete", "t": 113698.125, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113698.125, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.125, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.14, "cmd11": [2168, 2085, 2415, 3086, 2452, 1080], "cmd65": [2168, 2085, 2415, 3086, 2452, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.265, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.281, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.281, "cmd11": [2168, 2085, 2415, 3086, 2452, 1080], "cmd65": [2168, 2085, 2415, 3086, 2452, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.406, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.406, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.421, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.421, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.421, "cmd11": [2128, 2085, 2415, 3086, 2452, 1080], "cmd65": [2128, 2085, 2415, 3086, 2452, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.546, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.546, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.562, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.562, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.562, "cmd11": [2128, 2085, 2415, 3086, 2452, 1080], "cmd65": [2128, 2085, 2415, 3086, 2452, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.687, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.687, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.687, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.687, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.703, "cmd11": [2128, 2085, 2415, 3086, 2452, 1080], "cmd65": [2128, 2085, 2415, 3086, 2452, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.812, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.812, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.828, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.828, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.828, "cmd11": [2128, 2085, 2415, 3086, 2453, 1080], "cmd65": [2128, 2085, 2415, 3086, 2453, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113698.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113698.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113698.953, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113698.953, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113698.953, "cmd11": [2128, 2085, 2415, 3086, 2453, 1080], "cmd65": [2128, 2085, 2415, 3086, 2453, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.078, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.078, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.093, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.093, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.093, "cmd11": [2128, 2085, 2415, 3086, 2453, 1080], "cmd65": [2128, 2085, 2415, 3086, 2453, 1080], "goal": [2125, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113699.093, "index": 7, "positions": [2128, 2085, 2415, 3086, 2453, 1080]}
+{"event": "step_begin", "t": 113699.093, "index": 8, "count": 20, "start": [2128, 2085, 2415, 3086, 2453, 1080], "target": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.093, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296425080000d00760"}
+{"event": "tx_complete", "t": 113699.093, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113699.093, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.093, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.109, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.109, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.109, "cmd11": [2128, 2085, 2415, 3086, 2453, 1080], "cmd65": [2128, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.234, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.234, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.25, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.25, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.25, "cmd11": [2128, 2085, 2415, 3086, 2453, 1080], "cmd65": [2128, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.375, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.375, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.375, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.375, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.39, "cmd11": [2088, 2085, 2415, 3086, 2453, 1080], "cmd65": [2088, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.515, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.515, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.515, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.515, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.515, "cmd11": [2088, 2085, 2415, 3086, 2453, 1080], "cmd65": [2088, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.64, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.64, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.64, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.64, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.656, "cmd11": [2088, 2085, 2415, 3086, 2453, 1080], "cmd65": [2088, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.781, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.781, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.781, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.781, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.781, "cmd11": [2088, 2085, 2415, 3086, 2453, 1080], "cmd65": [2088, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113699.906, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113699.906, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113699.921, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113699.921, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113699.921, "cmd11": [2088, 2085, 2415, 3086, 2453, 1080], "cmd65": [2088, 2085, 2415, 3086, 2453, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.046, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.046, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.046, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.046, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.062, "cmd11": [2088, 2085, 2415, 3086, 2452, 1080], "cmd65": [2088, 2085, 2415, 3086, 2452, 1080], "goal": [2085, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113700.062, "index": 8, "positions": [2088, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113700.062, "index": 9, "count": 20, "start": [2088, 2085, 2415, 3086, 2452, 1080], "target": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.062, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964fd070000d00789"}
+{"event": "tx_complete", "t": 113700.062, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113700.062, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.062, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.078, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.078, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.078, "cmd11": [2088, 2085, 2415, 3086, 2452, 1080], "cmd65": [2088, 2085, 2415, 3086, 2452, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.203, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.203, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.203, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.203, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.218, "cmd11": [2086, 2085, 2415, 3086, 2453, 1080], "cmd65": [2086, 2085, 2415, 3086, 2453, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.343, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.343, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.343, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.343, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.359, "cmd11": [2049, 2085, 2415, 3086, 2453, 1080], "cmd65": [2049, 2085, 2415, 3086, 2453, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.468, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.468, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.484, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.484, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.484, "cmd11": [2049, 2085, 2415, 3086, 2453, 1080], "cmd65": [2049, 2085, 2415, 3086, 2453, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.609, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.609, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.609, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.609, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.625, "cmd11": [2049, 2085, 2415, 3086, 2452, 1080], "cmd65": [2049, 2085, 2415, 3086, 2452, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.75, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.75, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.75, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.75, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.75, "cmd11": [2049, 2085, 2415, 3086, 2452, 1080], "cmd65": [2049, 2085, 2415, 3086, 2452, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113700.875, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113700.875, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113700.89, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113700.89, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113700.89, "cmd11": [2049, 2085, 2415, 3086, 2452, 1080], "cmd65": [2049, 2085, 2415, 3086, 2452, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.015, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.015, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.031, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.031, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.031, "cmd11": [2049, 2085, 2415, 3086, 2453, 1080], "cmd65": [2049, 2085, 2415, 3086, 2453, 1080], "goal": [2045, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113701.031, "index": 9, "positions": [2049, 2085, 2415, 3086, 2453, 1080]}
+{"event": "step_begin", "t": 113701.031, "index": 10, "count": 20, "start": [2049, 2085, 2415, 3086, 2453, 1080], "target": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.031, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964d6070000d007b0"}
+{"event": "tx_complete", "t": 113701.031, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113701.031, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.031, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.046, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.046, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.046, "cmd11": [2049, 2085, 2415, 3086, 2453, 1080], "cmd65": [2049, 2085, 2415, 3086, 2453, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.171, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.171, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.187, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.187, "cmd11": [2040, 2085, 2415, 3086, 2453, 1080], "cmd65": [2040, 2085, 2415, 3086, 2453, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.312, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.312, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.312, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.312, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.328, "cmd11": [2040, 2085, 2415, 3086, 2453, 1080], "cmd65": [2040, 2085, 2415, 3086, 2453, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.437, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.437, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.453, "cmd11": [2010, 2085, 2415, 3086, 2453, 1079], "cmd65": [2010, 2085, 2415, 3086, 2453, 1079], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.578, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.578, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.578, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.578, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.593, "cmd11": [2010, 2085, 2415, 3086, 2453, 1080], "cmd65": [2010, 2085, 2415, 3086, 2453, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.703, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.703, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.718, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.718, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.718, "cmd11": [2010, 2085, 2415, 3086, 2453, 1080], "cmd65": [2010, 2085, 2415, 3086, 2453, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.843, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.843, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.859, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.859, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113701.859, "cmd11": [2010, 2085, 2415, 3086, 2452, 1080], "cmd65": [2010, 2085, 2415, 3086, 2452, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113701.984, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113701.984, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113701.984, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113701.984, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.0, "cmd11": [2010, 2085, 2415, 3086, 2452, 1080], "cmd65": [2010, 2085, 2415, 3086, 2452, 1080], "goal": [2006, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113702.0, "index": 10, "positions": [2010, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113702.0, "index": 11, "count": 20, "start": [2010, 2085, 2415, 3086, 2452, 1080], "target": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.0, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964ae070000d007d8"}
+{"event": "tx_complete", "t": 113702.0, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113702.0, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.0, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.0, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.0, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.015, "cmd11": [2010, 2085, 2415, 3086, 2452, 1080], "cmd65": [2010, 2085, 2415, 3086, 2452, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.125, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.125, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.14, "cmd11": [1987, 2085, 2415, 3086, 2453, 1080], "cmd65": [1987, 2085, 2415, 3086, 2453, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.265, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.265, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.281, "cmd11": [1987, 2085, 2415, 3086, 2453, 1080], "cmd65": [1987, 2085, 2415, 3086, 2453, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.39, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.39, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.406, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.406, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.406, "cmd11": [1970, 2085, 2415, 3086, 2452, 1080], "cmd65": [1970, 2085, 2415, 3086, 2452, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.531, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.531, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.531, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.531, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.546, "cmd11": [1970, 2085, 2415, 3086, 2452, 1080], "cmd65": [1970, 2085, 2415, 3086, 2452, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.656, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.656, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.671, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.671, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.671, "cmd11": [1970, 2085, 2415, 3086, 2452, 1080], "cmd65": [1970, 2085, 2415, 3086, 2452, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.796, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.796, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.796, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.796, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.812, "cmd11": [1970, 2085, 2415, 3086, 2453, 1080], "cmd65": [1970, 2085, 2415, 3086, 2453, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.937, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.937, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.937, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.937, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.937, "cmd11": [1970, 2085, 2415, 3086, 2452, 1080], "cmd65": [1970, 2085, 2415, 3086, 2452, 1080], "goal": [1966, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113702.937, "index": 11, "positions": [1970, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113702.937, "index": 12, "count": 20, "start": [1970, 2085, 2415, 3086, 2452, 1080], "target": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113702.937, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296486070000d00700"}
+{"event": "tx_complete", "t": 113702.953, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113702.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113702.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113702.953, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113702.953, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113702.953, "cmd11": [1970, 2085, 2415, 3086, 2452, 1080], "cmd65": [1970, 2085, 2415, 3086, 2452, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.078, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.078, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.093, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.093, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.093, "cmd11": [1970, 2085, 2415, 3086, 2453, 1080], "cmd65": [1970, 2085, 2415, 3086, 2453, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.218, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.218, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.218, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.218, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.234, "cmd11": [1933, 2085, 2415, 3086, 2453, 1080], "cmd65": [1933, 2085, 2415, 3086, 2453, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.343, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.343, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.359, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.359, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.359, "cmd11": [1930, 2085, 2415, 3086, 2452, 1080], "cmd65": [1930, 2085, 2415, 3086, 2452, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.484, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.484, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.5, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.5, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.5, "cmd11": [1930, 2085, 2415, 3086, 2452, 1080], "cmd65": [1930, 2085, 2415, 3086, 2452, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.625, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.625, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.625, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.625, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.64, "cmd11": [1930, 2085, 2415, 3086, 2453, 1080], "cmd65": [1930, 2085, 2415, 3086, 2453, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.75, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.75, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.765, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.765, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.765, "cmd11": [1930, 2085, 2415, 3086, 2452, 1080], "cmd65": [1930, 2085, 2415, 3086, 2452, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.89, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.89, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.89, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.89, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.906, "cmd11": [1930, 2085, 2415, 3086, 2452, 1080], "cmd65": [1930, 2085, 2415, 3086, 2452, 1080], "goal": [1926, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113703.906, "index": 12, "positions": [1930, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113703.906, "index": 13, "count": 20, "start": [1930, 2085, 2415, 3086, 2452, 1080], "target": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113703.906, "cmd": 3, "id": 1, "wire_hex": "ffff010a0329645e070000d00728"}
+{"event": "tx_complete", "t": 113703.906, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113703.906, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113703.906, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113703.906, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113703.906, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113703.921, "cmd11": [1930, 2085, 2415, 3086, 2452, 1080], "cmd65": [1930, 2085, 2415, 3086, 2452, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.046, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.046, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.046, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.046, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.046, "cmd11": [1930, 2085, 2415, 3086, 2453, 1080], "cmd65": [1930, 2085, 2415, 3086, 2453, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.171, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.171, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.187, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.187, "cmd11": [1891, 2085, 2415, 3086, 2453, 1080], "cmd65": [1891, 2085, 2415, 3086, 2453, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.312, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.312, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.312, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.312, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.328, "cmd11": [1891, 2085, 2415, 3086, 2453, 1080], "cmd65": [1891, 2085, 2415, 3086, 2453, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.437, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.437, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.453, "cmd11": [1891, 2085, 2415, 3086, 2452, 1080], "cmd65": [1891, 2085, 2415, 3086, 2452, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.578, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.578, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.578, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.578, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.593, "cmd11": [1891, 2085, 2415, 3086, 2452, 1080], "cmd65": [1891, 2085, 2415, 3086, 2452, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.703, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.703, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.718, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.718, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.718, "cmd11": [1891, 2085, 2415, 3086, 2452, 1080], "cmd65": [1891, 2085, 2415, 3086, 2452, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.843, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.843, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.843, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.843, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.859, "cmd11": [1891, 2085, 2415, 3086, 2452, 1080], "cmd65": [1891, 2085, 2415, 3086, 2452, 1080], "goal": [1886, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113704.859, "index": 13, "positions": [1891, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113704.859, "index": 14, "count": 20, "start": [1891, 2085, 2415, 3086, 2452, 1080], "target": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113704.859, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296436070000d00750"}
+{"event": "tx_complete", "t": 113704.859, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113704.859, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113704.859, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113704.859, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113704.859, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113704.875, "cmd11": [1891, 2085, 2415, 3086, 2452, 1080], "cmd65": [1891, 2085, 2415, 3086, 2452, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.0, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.0, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.0, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.0, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.0, "cmd11": [1886, 2085, 2415, 3086, 2453, 1080], "cmd65": [1886, 2085, 2415, 3086, 2453, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.125, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.125, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.14, "cmd11": [1886, 2085, 2415, 3086, 2453, 1080], "cmd65": [1852, 2085, 2415, 3086, 2453, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.265, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.265, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.281, "cmd11": [1852, 2085, 2415, 3086, 2453, 1080], "cmd65": [1852, 2085, 2415, 3086, 2453, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.39, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.39, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.406, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.406, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.406, "cmd11": [1852, 2085, 2415, 3086, 2452, 1080], "cmd65": [1852, 2085, 2415, 3086, 2452, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.531, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.531, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.531, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.531, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.546, "cmd11": [1851, 2085, 2415, 3086, 2452, 1080], "cmd65": [1851, 2085, 2415, 3086, 2452, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.671, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.671, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.671, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.671, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.671, "cmd11": [1851, 2085, 2415, 3086, 2452, 1080], "cmd65": [1851, 2085, 2415, 3086, 2452, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.796, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.796, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.812, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.812, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.812, "cmd11": [1851, 2085, 2415, 3086, 2452, 1080], "cmd65": [1851, 2085, 2415, 3086, 2452, 1080], "goal": [1846, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113705.812, "index": 14, "positions": [1851, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113705.812, "index": 15, "count": 20, "start": [1851, 2085, 2415, 3086, 2452, 1080], "target": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.812, "cmd": 3, "id": 1, "wire_hex": "ffff010a0329640e070000d00778"}
+{"event": "tx_complete", "t": 113705.812, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113705.812, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.812, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.828, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.828, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.828, "cmd11": [1851, 2085, 2415, 3086, 2452, 1080], "cmd65": [1851, 2085, 2415, 3086, 2452, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113705.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113705.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113705.953, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113705.953, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113705.968, "cmd11": [1835, 2085, 2415, 3086, 2453, 1080], "cmd65": [1835, 2085, 2415, 3086, 2453, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.093, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.093, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.093, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.093, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.093, "cmd11": [1835, 2085, 2415, 3086, 2453, 1080], "cmd65": [1835, 2085, 2415, 3086, 2453, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.218, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.218, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.234, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.234, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.234, "cmd11": [1812, 2085, 2415, 3086, 2453, 1079], "cmd65": [1812, 2085, 2415, 3086, 2453, 1079], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.359, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.359, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.359, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.359, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.359, "cmd11": [1812, 2085, 2415, 3086, 2452, 1080], "cmd65": [1812, 2085, 2415, 3086, 2452, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.484, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.484, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.484, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.484, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.5, "cmd11": [1812, 2085, 2415, 3086, 2452, 1080], "cmd65": [1812, 2085, 2415, 3086, 2452, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.625, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.625, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.625, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.625, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.625, "cmd11": [1812, 2085, 2415, 3086, 2452, 1080], "cmd65": [1812, 2085, 2415, 3086, 2452, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.75, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.75, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.765, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.765, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.765, "cmd11": [1812, 2085, 2415, 3086, 2453, 1080], "cmd65": [1812, 2085, 2415, 3086, 2453, 1080], "goal": [1806, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113706.765, "index": 15, "positions": [1812, 2085, 2415, 3086, 2453, 1080]}
+{"event": "step_begin", "t": 113706.765, "index": 16, "count": 20, "start": [1812, 2085, 2415, 3086, 2453, 1080], "target": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.765, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964e6060000d007a1"}
+{"event": "tx_complete", "t": 113706.765, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113706.765, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.765, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.781, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.781, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.781, "cmd11": [1812, 2085, 2415, 3086, 2453, 1080], "cmd65": [1812, 2085, 2415, 3086, 2453, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113706.906, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113706.906, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113706.921, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113706.921, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113706.921, "cmd11": [1812, 2085, 2415, 3086, 2453, 1080], "cmd65": [1812, 2085, 2415, 3086, 2453, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.046, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.046, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.046, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.046, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.046, "cmd11": [1782, 2085, 2415, 3086, 2452, 1080], "cmd65": [1782, 2085, 2415, 3086, 2452, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.171, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.171, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.187, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.187, "cmd11": [1773, 2085, 2415, 3086, 2452, 1080], "cmd65": [1773, 2085, 2415, 3086, 2452, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.312, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.312, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.312, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.312, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.328, "cmd11": [1773, 2085, 2415, 3086, 2452, 1080], "cmd65": [1773, 2085, 2415, 3086, 2452, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.437, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.437, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.453, "cmd11": [1773, 2085, 2415, 3086, 2453, 1080], "cmd65": [1773, 2085, 2415, 3086, 2453, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.578, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.578, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.593, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.593, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.593, "cmd11": [1773, 2085, 2415, 3086, 2452, 1080], "cmd65": [1773, 2085, 2415, 3086, 2452, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.718, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.718, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.718, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.718, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.734, "cmd11": [1773, 2085, 2415, 3086, 2452, 1080], "cmd65": [1773, 2085, 2415, 3086, 2452, 1080], "goal": [1766, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113707.734, "index": 16, "positions": [1773, 2085, 2415, 3086, 2452, 1080]}
+{"event": "step_begin", "t": 113707.734, "index": 17, "count": 20, "start": [1773, 2085, 2415, 3086, 2452, 1080], "target": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.734, "cmd": 3, "id": 1, "wire_hex": "ffff010a032964bf060000d007c8"}
+{"event": "tx_complete", "t": 113707.734, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113707.734, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.734, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.734, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.734, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.734, "cmd11": [1773, 2085, 2415, 3086, 2453, 1080], "cmd65": [1773, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113707.859, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113707.859, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113707.875, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113707.875, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113707.875, "cmd11": [1773, 2085, 2415, 3086, 2453, 1080], "cmd65": [1773, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.0, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.0, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.0, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.0, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.015, "cmd11": [1737, 2085, 2415, 3086, 2453, 1080], "cmd65": [1737, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.14, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.14, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.14, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.265, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.265, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.281, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.39, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.39, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.406, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.406, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.406, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.531, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.531, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.531, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.531, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.546, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.656, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.656, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.671, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.671, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.671, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1727, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113708.671, "index": 17, "positions": [1735, 2085, 2415, 3086, 2453, 1080]}
+{"event": "step_begin", "t": 113708.671, "index": 18, "count": 20, "start": [1735, 2085, 2415, 3086, 2453, 1080], "target": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.687, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296497060000d007f0"}
+{"event": "tx_complete", "t": 113708.687, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113708.687, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.687, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.687, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.687, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.687, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.812, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.812, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.828, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.828, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.828, "cmd11": [1735, 2085, 2415, 3086, 2453, 1080], "cmd65": [1735, 2085, 2415, 3086, 2453, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113708.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113708.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113708.953, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113708.953, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113708.968, "cmd11": [1695, 2085, 2415, 3086, 2453, 1080], "cmd65": [1695, 2085, 2415, 3086, 2453, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.078, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.078, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.093, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.093, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.093, "cmd11": [1695, 2085, 2415, 3086, 2453, 1080], "cmd65": [1695, 2085, 2415, 3086, 2453, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.218, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.218, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.234, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.234, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.234, "cmd11": [1695, 2085, 2415, 3086, 2453, 1080], "cmd65": [1695, 2085, 2415, 3086, 2453, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.359, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.359, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.375, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.375, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.375, "cmd11": [1695, 2085, 2415, 3086, 2452, 1080], "cmd65": [1695, 2085, 2415, 3086, 2452, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.5, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.5, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.5, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.5, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.515, "cmd11": [1695, 2085, 2415, 3086, 2452, 1080], "cmd65": [1695, 2085, 2415, 3086, 2452, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.625, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.625, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.64, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.64, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.64, "cmd11": [1695, 2085, 2415, 3086, 2453, 1080], "cmd65": [1695, 2085, 2415, 3086, 2453, 1080], "goal": [1687, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113709.64, "index": 18, "positions": [1695, 2085, 2415, 3086, 2453, 1080]}
+{"event": "step_begin", "t": 113709.64, "index": 19, "count": 20, "start": [1695, 2085, 2415, 3086, 2453, 1080], "target": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.64, "cmd": 3, "id": 1, "wire_hex": "ffff010a0329646f060000d00718"}
+{"event": "tx_complete", "t": 113709.64, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113709.64, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.64, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.656, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.656, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.656, "cmd11": [1695, 2085, 2415, 3086, 2453, 1080], "cmd65": [1695, 2085, 2415, 3086, 2453, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.781, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.781, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.781, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.781, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.796, "cmd11": [1689, 2085, 2415, 3086, 2452, 1080], "cmd65": [1689, 2085, 2415, 3086, 2452, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113709.921, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113709.921, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113709.921, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113709.921, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113709.921, "cmd11": [1689, 2085, 2415, 3086, 2452, 1080], "cmd65": [1689, 2085, 2415, 3086, 2452, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.046, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.046, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.062, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.062, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.062, "cmd11": [1657, 2085, 2415, 3086, 2453, 1080], "cmd65": [1657, 2085, 2415, 3086, 2453, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.187, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.187, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.187, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.203, "cmd11": [1657, 2085, 2415, 3086, 2453, 1080], "cmd65": [1657, 2085, 2415, 3086, 2453, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.312, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.312, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.328, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.328, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.328, "cmd11": [1657, 2085, 2415, 3086, 2453, 1080], "cmd65": [1657, 2085, 2415, 3086, 2453, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.453, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.453, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.468, "cmd11": [1657, 2085, 2415, 3086, 2453, 1080], "cmd65": [1657, 2085, 2415, 3086, 2453, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.593, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.593, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.593, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.593, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.593, "cmd11": [1657, 2085, 2415, 3086, 2453, 1080], "cmd65": [1657, 2085, 2415, 3086, 2453, 1080], "goal": [1647, 2085, 2416, 3085, 2454, 1080]}
+{"event": "step_converged", "t": 113710.593, "index": 19, "positions": [1657, 2085, 2415, 3086, 2453, 1080]}
+{"event": "step_begin", "t": 113710.609, "index": 20, "count": 20, "start": [1657, 2085, 2415, 3086, 2453, 1080], "target": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.609, "cmd": 3, "id": 1, "wire_hex": "ffff010a03296447060000d00740"}
+{"event": "tx_complete", "t": 113710.609, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 113710.609, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.609, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.609, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.609, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.625, "cmd11": [1657, 2085, 2415, 3086, 2453, 1080], "cmd65": [1657, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.734, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.734, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.75, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.75, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.75, "cmd11": [1636, 2085, 2415, 3086, 2453, 1080], "cmd65": [1636, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113710.875, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113710.875, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113710.89, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113710.89, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113710.89, "cmd11": [1636, 2085, 2415, 3086, 2453, 1080], "cmd65": [1636, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.015, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.015, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.015, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.015, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.031, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.156, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.156, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.156, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.156, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.156, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.281, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.281, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.296, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.296, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.296, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.421, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.421, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.421, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.421, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.437, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.562, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.562, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.562, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.562, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.562, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.687, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.687, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.703, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.703, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.703, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.828, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.828, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.843, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.843, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.843, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113711.968, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113711.968, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113711.968, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113711.968, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113711.984, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.093, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.093, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.109, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.109, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.109, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.234, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.234, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.25, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.25, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.25, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.375, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.375, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.375, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.375, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.39, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.5, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.5, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.515, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.515, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.515, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.64, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.64, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.656, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.656, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.656, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.781, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.781, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.781, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.781, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.781, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113712.906, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113712.906, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113712.921, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113712.921, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113712.921, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.046, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.046, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.046, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.046, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.062, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.187, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.187, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.187, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.187, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.312, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.312, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.312, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.312, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.328, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.453, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.453, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.453, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.578, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.578, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.593, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.593, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.593, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.718, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.718, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.718, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.718, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.734, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.859, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.859, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113713.859, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113713.859, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113713.859, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113713.984, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113713.984, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.0, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.0, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.0, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.125, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.125, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.125, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.125, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.14, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.265, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.265, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.265, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.265, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.281, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.406, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.406, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.406, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.406, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.421, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.531, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.531, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.531, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.546, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.546, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.671, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.671, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.671, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.671, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.671, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.796, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.796, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.812, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.812, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.812, "cmd11": [1618, 2085, 2415, 3086, 2452, 1079], "cmd65": [1618, 2085, 2415, 3086, 2452, 1079], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113714.937, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113714.937, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113714.937, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113714.937, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113714.953, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.078, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.078, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.078, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.078, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.078, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.203, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.203, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.218, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.218, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.218, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.343, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.343, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.343, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.343, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.359, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.468, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.468, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.484, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.484, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.484, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.609, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.609, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.609, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.609, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.625, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.75, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.75, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.75, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.75, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.75, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113715.875, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113715.875, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113715.89, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113715.89, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113715.89, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113716.015, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113716.015, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113716.015, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113716.015, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113716.031, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113716.156, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113716.156, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113716.156, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113716.156, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113716.156, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113716.281, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113716.281, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113716.296, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113716.296, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113716.296, "cmd11": [1618, 2085, 2415, 3086, 2453, 1080], "cmd65": [1618, 2085, 2415, 3086, 2453, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113716.421, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113716.421, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113716.421, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113716.421, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113716.437, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "tx_attempt", "t": 113716.546, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 113716.546, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 113716.562, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 113716.562, "cmd": 65, "id": 255}
+{"event": "sample", "t": 113716.562, "cmd11": [1618, 2085, 2415, 3086, 2452, 1080], "cmd65": [1618, 2085, 2415, 3086, 2452, 1080], "goal": [1607, 2085, 2416, 3085, 2454, 1080]}
+{"event": "aborted", "t": 113716.687, "reason": "小步位置未稳定到位；不重试、不自动回位"}
+{"event": "library", "t": 113716.687, "message": "运动闸门 已关闭"}

@@ -1,0 +1,159 @@
+{
+  "schema": "nexarm.reviewed-legs/1",
+  "created_at": "2026-10-11T17:58+08:00",
+  "author": "claude",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "historical_hold_sha256": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+  "empty_load_only": true,
+  "scope": "上电后从只读回读姿态空载回到第2点；每次只跑一段，现场yes后才跑下一段；不证明避障、平滑、急停或带载",
+  "readback_evidence": "logs/pose_20261011_174817_373600/result.json",
+  "operator_request": "2026-10-11 17:38 用户：刚通电，姿势不正确，先回到第二点",
+  "legs": [
+    {
+      "name": "1-lift",
+      "expected_start": [
+        2395,
+        1898,
+        1994,
+        3034,
+        2451,
+        2016
+      ],
+      "target": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        2016
+      ],
+      "start_tolerance": 16,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "T0方位原地抬到第8点高位臂型；夹爪不动。控制器位姿z150→318，水平半径约193→213mm。"
+    },
+    {
+      "name": "2-open",
+      "expected_start": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        2016
+      ],
+      "target": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "高位只张开夹爪到第8点开度，臂体不动。"
+    },
+    {
+      "name": "3-turn",
+      "expected_start": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "target": [
+        1607,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "高位仅转底座到第1点方位；与14:06已获现场确认的base段相同路径，这次分2块下发。"
+    },
+    {
+      "name": "4-approach-p1",
+      "expected_start": [
+        1607,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "target": [
+        1607,
+        1653,
+        2586,
+        3084,
+        2707,
+        1461
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "高位下降到第1点（红篮提手上方，z318→178）；与14:12现场接受的direct-p1路径基本相同。"
+    },
+    {
+      "name": "5-p1-to-p2",
+      "expected_start": [
+        1607,
+        1653,
+        2586,
+        3084,
+        2707,
+        1461
+      ],
+      "target": [
+        1612,
+        1557,
+        2622,
+        3088,
+        2675,
+        1071
+      ],
+      "start_tolerance": 24,
+      "settle_tolerances": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "与14:15现场确认yes的1→2段相同：下探到提手并张大夹爪。"
+    }
+  ]
+}

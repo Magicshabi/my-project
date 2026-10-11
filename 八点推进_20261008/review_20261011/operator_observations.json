@@ -1,0 +1,12 @@
+{
+  "p1": {
+    "log": "setup_20261011_141240_438200",
+    "confirmed": true,
+    "note": "User accepts actual P1 with ID3 error19; original strict software result preserved"
+  },
+  "p3": {
+    "log": "setup_20261011_141858_412000",
+    "confirmed": true,
+    "note": "User confirms gripper closed, no body movement, no abnormality; original strict10-count failure preserved, actual ID6 error13"
+  }
+}

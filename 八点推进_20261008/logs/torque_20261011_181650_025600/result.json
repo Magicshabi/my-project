@@ -1,0 +1,51 @@
+{
+  "started_at": "2026-10-11T18:16:50.572025+08:00",
+  "port": "COM11",
+  "empty_load": true,
+  "complete": false,
+  "operator_confirmed": false,
+  "cause_diagnosed": false,
+  "battery_mv": 12314,
+  "torque": {
+    "before": [
+      2394,
+      1898,
+      2067,
+      3052,
+      2259,
+      2022
+    ],
+    "after_hold_goals": [
+      2394,
+      1898,
+      2063,
+      3052,
+      2259,
+      2021
+    ],
+    "after_torque": [
+      2394,
+      1898,
+      2063,
+      3052,
+      2260,
+      2021
+    ],
+    "max_change": 4,
+    "torque_command_sent": true
+  },
+  "motion_attempts": 6,
+  "torque_commands": 1,
+  "serial_closed": true,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 87,
+    "rx_bytes": 4255,
+    "tx_frames": 65,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "operator_answer": "no observation"
+}
