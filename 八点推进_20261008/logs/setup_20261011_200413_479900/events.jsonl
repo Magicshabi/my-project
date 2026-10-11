@@ -1,0 +1,64 @@
+{"event": "transport", "t": 115936.656, "message": "已连接 COM11 @ 1000000"}
+{"event": "tx_attempt", "t": 115936.671, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 115936.671, "cmd": 80, "id": 255}
+{"event": "tx_attempt", "t": 115936.671, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 115936.671, "cmd": 64, "id": 255}
+{"event": "tx_attempt", "t": 115936.671, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 115936.671, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115936.734, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 115936.734, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115936.781, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 115936.781, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115936.843, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 115936.843, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115936.89, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 115936.89, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115936.953, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 115936.953, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115937.0, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 115937.0, "cmd": 1, "id": 255}
+{"event": "tx_attempt", "t": 115937.062, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 115937.062, "cmd": 2, "id": 255}
+{"event": "library", "t": 115937.078, "message": "运动闸门 已开启"}
+{"event": "tx_attempt", "t": 115937.078, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115937.078, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115937.078, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115937.078, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115937.078, "cmd11_counts": [2423, 1675, 2424, 3087, 2484, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2484, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115937.234, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115937.234, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115937.234, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115937.234, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115937.25, "cmd11_counts": [2423, 1675, 2424, 3087, 2484, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2484, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115937.39, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115937.39, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115937.406, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115937.406, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115937.406, "cmd11_counts": [2423, 1675, 2424, 3087, 2484, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2484, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115937.562, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115937.562, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115937.562, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115937.562, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115937.578, "cmd11_counts": [2423, 1675, 2424, 3087, 2485, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2485, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115937.718, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115937.718, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115937.734, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115937.734, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115937.734, "cmd11_counts": [2423, 1675, 2424, 3087, 2485, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2485, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115937.89, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115937.89, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115937.89, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115937.89, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115937.906, "cmd11_counts": [2423, 1675, 2424, 3087, 2484, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2484, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115938.046, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115938.046, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115938.062, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115938.062, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115938.062, "cmd11_counts": [2423, 1675, 2424, 3087, 2484, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2484, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "tx_attempt", "t": 115938.218, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115938.218, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115938.218, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115938.218, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115938.218, "cmd11_counts": [2423, 1675, 2424, 3087, 2484, 2017], "cmd65_counts": [2423, 1675, 2424, 3087, 2484, 2017], "controller_pose": {"x": 248, "y": -161, "z": 150, "pitch": -91.0, "roll": 38, "claw": -3}}
+{"event": "aborted", "t": 115938.375, "reason": "直接定位起点改变"}
+{"event": "library", "t": 115938.375, "message": "运动闸门 已关闭"}

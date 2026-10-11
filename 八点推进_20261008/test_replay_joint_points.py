@@ -55,7 +55,7 @@ class ReplayTests(unittest.TestCase):
 
     def test_diagnostic_hold_blocks_before_connection(self):
         hold=Mock();hold.exists.return_value=True
-        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load']),patch.object(m,'ArmController') as controller:
+        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load','--port','COM11','--points','1','2','--expected-sha','test']),patch.object(m,'ArmController') as controller:
             with self.assertRaisesRegex(m.SafetyError,'ID4'):
                 m.main()
             controller.assert_not_called()
@@ -100,17 +100,56 @@ class ReplayTests(unittest.TestCase):
 
     def test_old_real_route_is_rejected_before_serial_connection(self):
         hold=Mock();hold.exists.return_value=False
-        pin=m.hashlib.sha256(m.SOURCE.read_bytes()).hexdigest()
-        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load','--expected-sha',pin]),patch.object(m,'ArmController') as controller:
+        old=m.HERE/'data/eight_joints_20261009.json'
+        pin=m.hashlib.sha256(old.read_bytes()).hexdigest()
+        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load','--file',str(old),'--port','COM11','--points','1','2','--expected-sha',pin]),patch.object(m,'ArmController') as controller:
             with self.assertRaisesRegex(m.SafetyError,'第1点执行目标.*ID4=3448'):
                 m.main()
             controller.assert_not_called()
 
     def test_source_bytes_must_match_reviewed_fingerprint_before_serial(self):
         hold=Mock();hold.exists.return_value=False
-        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load','--expected-sha','incorrect']),patch.object(m,'ArmController') as controller:
+        with patch.object(m,'DIAGNOSTIC_HOLD',hold),patch.object(m.sys,'argv',['probe','--go','--empty-load','--port','COM11','--points','1','2','--expected-sha','incorrect']),patch.object(m,'ArmController') as controller:
             with self.assertRaisesRegex(m.SafetyError,'指纹改变'):m.main()
             controller.assert_not_called()
+
+    def test_first_trial_rejects_reverse_and_multiple_segments(self):
+        for points in ([8,7],[1,2,3],[8,1]):
+            with self.assertRaises(m.SafetyError):
+                m.check_sequence(points,forward_trial=True)
+        m.check_sequence([1,2],forward_trial=True)
+
+    def test_trial_plan_rejects_different_route_or_segment(self):
+        path=m.HERE/'test-plan-unused.json'
+        plan=dict(schema='nexarm.empty-segment-trial/1',source_sha256='route',
+                  limits_sha256='limits',empty_load_only=True,allowed_segments=[[1,2]],
+                  historical_hold_sha256=m.EXPECTED_SHA)
+        with patch.object(m.Path,'read_text',return_value=json.dumps(plan)):
+            m.validate_trial_plan(path,'route','limits',[1,2])
+            for source,points in [('wrong',[1,2]),('route',[3,4])]:
+                with self.assertRaises(m.SafetyError):m.validate_trial_plan(path,source,'limits',points)
+
+    def test_device_lease_rejects_missing_foreign_and_expired(self):
+        path=m.LOCKS/'COM11.lock'
+        with patch.object(m.Path,'read_text',side_effect=FileNotFoundError):
+            with self.assertRaises(m.SafetyError):m.require_device_lease('COM11',holder='codex')
+        lease=dict(holder='claw',device='COM11',since=m.datetime.now(m.timezone.utc).isoformat(),ttl_min=30)
+        with patch.object(m.Path,'read_text',return_value=json.dumps(lease)):
+            with self.assertRaises(m.SafetyError):m.require_device_lease('COM11',holder='codex')
+        lease['holder']='codex'
+        with patch.object(m.Path,'read_text',return_value=json.dumps(lease)):
+            self.assertEqual(m.require_device_lease('COM11',holder='codex')[0],path)
+            with self.assertRaises(m.SafetyError):m.require_device_lease('COM11',holder='claude')
+        lease['holder']='claude'
+        with patch.object(m.Path,'read_text',return_value=json.dumps(lease)):
+            self.assertEqual(m.require_device_lease('COM11',holder='claude')[0],path)
+            with self.assertRaises(m.SafetyError):m.require_device_lease('COM11',holder='codex')
+        lease['holder']='codex';lease['ttl_min']=-1
+        with patch.object(m.Path,'read_text',return_value=json.dumps(lease)):
+            with self.assertRaises(m.SafetyError):m.require_device_lease('COM11',holder='codex')
+        lease['ttl_min']=30
+        with patch.object(m.Path,'read_text',return_value=json.dumps(lease)):
+            self.assertEqual(m.require_device_lease('COM11',holder='codex')[0],path)
 
     def test_out_of_range_target_blocks_even_direct_segment_call(self):
         bad=self.targets[7][:];bad[3]=3414
@@ -152,6 +191,15 @@ class ReplayTests(unittest.TestCase):
             with self.assertRaises(m.SafetyError):m.execute_segment(arm,base,self.targets[6],Mock(),lambda:False)
         arm.move_joint_counts.assert_not_called()
 
+    def test_base_only_trial_does_not_correct_small_other_axis_drift(self):
+        base=self.targets[7][:];state=base[:];state[4]+=1
+        target=base[:];target[0]-=40
+        arm=self.arm(state)
+        with patch.object(m,'capture_stable',return_value=(state[:],[])),patch.object(m,'time',Clock()):
+            m.execute_segment(arm,base,target,Mock(),lambda:False,active_axes=(1,))
+        self.assertTrue(arm.move_joint_counts.called)
+        self.assertTrue(all(call.args[0]==1 for call in arm.move_joint_counts.call_args_list))
+
     def test_no_follow_timeout_no_later_steps(self):
         base=self.targets[7][:];state=base[:];arm=self.arm(state,move=False)
         with patch.object(m,'capture_stable',return_value=(base,[])),patch.object(m,'time',Clock()):
@@ -166,6 +214,18 @@ class ReplayTests(unittest.TestCase):
             m.wait_step(arm,base,base,Mock(),lambda:False)
         arm.get_pose.side_effect=None;arm.get_pose.return_value=None
         with self.assertRaises(m.SafetyError):m.reads(arm)
+
+    def test_trial_tolerance_only_changes_explicit_axis(self):
+        goal=self.targets[0][:];start=goal[:];start[2]-=100
+        state=goal[:];state[2]-=19
+        with patch.object(m,'time',Clock()):
+            self.assertEqual(m.wait_step(self.arm(state),start,goal,Mock(),lambda:False,
+                             tolerances=[10,10,20,10,10,10]),state)
+        with patch.object(m,'time',Clock()),self.assertRaises(TimeoutError):
+            m.wait_step(self.arm(state),start,goal,Mock(),lambda:False)
+        state[1]-=11
+        with patch.object(m,'time',Clock()),self.assertRaises(TimeoutError):
+            m.wait_step(self.arm(state),start,goal,Mock(),lambda:False,tolerances=[10,10,20,10,10,10])
 
 
 if __name__=='__main__':unittest.main()

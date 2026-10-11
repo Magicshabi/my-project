@@ -93,7 +93,7 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("action", choices=("status", "acquire", "release"))
     ap.add_argument("device")
-    ap.add_argument("--holder", default="claw", choices=("claw", "codex"))
+    ap.add_argument("--holder", default="claw", choices=("claw", "codex", "claude"))
     ap.add_argument("--minutes", type=int, default=30)
     ap.add_argument("--purpose", default="")
     ap.add_argument("--force", action="store_true")

@@ -1,0 +1,357 @@
+{
+  "plan": {
+    "schema": "nexarm.smooth-cycle/1",
+    "created_at": "2026-10-11T20:46+08:00",
+    "author": "claude",
+    "empty_load_only": false,
+    "cycles": 1,
+    "start_mode": "home",
+    "profile": "gentle",
+    "pins": {
+      "route": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+      "limits": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+      "hold": "5f0650785e895c1882b7eff2061e66fbbf01bb89936390580dabadf9635247c9",
+      "runner": "5273d0930b31cedd160d4e139015c18380b5286d2c232f536205056baffc6ec0",
+      "replay": "779b675e2a9a85dfdfcd2b2357cb9a95bf6fdda5b1b070bb7968b0584b2bd03f",
+      "home": "75349feb8a6d75eee72abcf53ebd949a26b63b50b7eb0b285273028666d66ae9"
+    },
+    "scope": "带篮一圈：[P8→初始位置]→初始位置转底座到P1方位→P1→P2→P3合爪(夹紧)→…→P7张爪→P8；gentle；不证明避障、急停",
+    "note": "用户2026-10-11 20:44 摆定初始位置(data/home_pose_20261011.json)，要求每次开始先回初始位置。",
+    "load": "basket"
+  },
+  "port": "COM11",
+  "steps": [
+    {
+      "name": "p8-to-home",
+      "planned_T": 1.871,
+      "elapsed": 1.984,
+      "feedback": [
+        2051,
+        2024,
+        2074,
+        2145,
+        2102,
+        1080
+      ],
+      "target": [
+        2045,
+        2025,
+        2075,
+        2135,
+        2100,
+        1079
+      ]
+    },
+    {
+      "name": "home-base-to-p1-azimuth",
+      "planned_T": 1.08,
+      "elapsed": 1.141,
+      "feedback": [
+        1641,
+        2024,
+        2072,
+        2145,
+        2102,
+        1080
+      ],
+      "target": [
+        1607,
+        2025,
+        2075,
+        2135,
+        2100,
+        1079
+      ]
+    },
+    {
+      "name": "to-p1",
+      "planned_T": 1.866,
+      "elapsed": 1.984,
+      "feedback": [
+        1618,
+        1654,
+        2556,
+        3072,
+        2694,
+        1446
+      ],
+      "target": [
+        1607,
+        1653,
+        2586,
+        3084,
+        2707,
+        1461
+      ]
+    },
+    {
+      "name": "p2",
+      "planned_T": 1.677,
+      "elapsed": 1.657,
+      "feedback": [
+        1618,
+        1562,
+        2602,
+        3083,
+        2676,
+        1081
+      ],
+      "target": [
+        1612,
+        1557,
+        2622,
+        3088,
+        2675,
+        1071
+      ]
+    },
+    {
+      "name": "p3-grip-close",
+      "planned_T": 2.132,
+      "elapsed": 2.5,
+      "feedback": [
+        1618,
+        1555,
+        2613,
+        3081,
+        2677,
+        2059
+      ],
+      "target": [
+        1612,
+        1557,
+        2622,
+        3088,
+        2675,
+        2193
+      ]
+    },
+    {
+      "name": "p4",
+      "planned_T": 2.109,
+      "elapsed": 2.125,
+      "feedback": [
+        1618,
+        1538,
+        2609,
+        2003,
+        2676,
+        2077
+      ],
+      "target": [
+        1615,
+        1542,
+        2612,
+        1981,
+        2673,
+        1999
+      ]
+    },
+    {
+      "name": "p5",
+      "planned_T": 2.102,
+      "elapsed": 2.203,
+      "feedback": [
+        2407,
+        1656,
+        2431,
+        3078,
+        2487,
+        2078
+      ],
+      "target": [
+        2425,
+        1680,
+        2431,
+        3083,
+        2485,
+        2020
+      ]
+    },
+    {
+      "name": "p6",
+      "planned_T": 1.0,
+      "elapsed": 0.766,
+      "feedback": [
+        2408,
+        1627,
+        2435,
+        3088,
+        2467,
+        2078
+      ],
+      "target": [
+        2407,
+        1607,
+        2430,
+        3087,
+        2454,
+        2020
+      ]
+    },
+    {
+      "name": "p7-grip-open",
+      "planned_T": 2.134,
+      "elapsed": 2.406,
+      "feedback": [
+        2405,
+        1604,
+        2425,
+        3088,
+        2458,
+        1080
+      ],
+      "target": [
+        2407,
+        1607,
+        2430,
+        3087,
+        2454,
+        1070
+      ]
+    },
+    {
+      "name": "p8",
+      "planned_T": 1.154,
+      "elapsed": 1.219,
+      "feedback": [
+        2405,
+        2076,
+        2418,
+        3088,
+        2457,
+        1080
+      ],
+      "target": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ]
+    }
+  ],
+  "controller_complete": true,
+  "operator_confirmed": true,
+  "complete": true,
+  "empty_load": false,
+  "physical_stop_verified": false,
+  "collision_checked": false,
+  "smooth_blending": "synchronized-trapezoid, stop-at-each-point",
+  "grip_squeeze": 200,
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "battery_mv": 12276,
+  "start": [
+    2404,
+    2081,
+    2418,
+    3087,
+    2456,
+    1080
+  ],
+  "planned": [
+    {
+      "name": "p8-to-home",
+      "T": 1.871
+    },
+    {
+      "name": "home-base-to-p1-azimuth",
+      "T": 1.08
+    },
+    {
+      "name": "to-p1",
+      "T": 1.866
+    },
+    {
+      "name": "p2",
+      "T": 1.677
+    },
+    {
+      "name": "p3-grip-close",
+      "T": 2.132
+    },
+    {
+      "name": "p4",
+      "T": 2.109
+    },
+    {
+      "name": "p5",
+      "T": 2.102
+    },
+    {
+      "name": "p6",
+      "T": 1.0
+    },
+    {
+      "name": "p7-grip-open",
+      "T": 2.134
+    },
+    {
+      "name": "p8",
+      "T": 1.154
+    }
+  ],
+  "total_s": 18.0,
+  "serial_closed": true,
+  "motion_attempts": 34,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 381,
+    "rx_bytes": 19601,
+    "tx_frames": 316,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  },
+  "operator_answer": "yes"
+}

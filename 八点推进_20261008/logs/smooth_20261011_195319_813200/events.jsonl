@@ -1,0 +1,63 @@
+{"event": "transport", "t": 115282.546, "message": "已连接 COM11 @ 1000000"}
+{"event": "tx_attempt", "t": 115282.546, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 115282.546, "cmd": 80, "id": 255}
+{"event": "tx_attempt", "t": 115282.546, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 115282.546, "cmd": 64, "id": 255}
+{"event": "tx_attempt", "t": 115282.546, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 115282.546, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115282.609, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 115282.609, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115282.671, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 115282.671, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115282.718, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 115282.718, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115282.781, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 115282.781, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115282.828, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 115282.828, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 115282.89, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 115282.89, "cmd": 1, "id": 255}
+{"event": "tx_attempt", "t": 115282.937, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 115282.953, "cmd": 2, "id": 255}
+{"event": "tx_attempt", "t": 115282.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115282.953, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115282.953, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115282.953, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115282.968, "cmd11_counts": [2422, 1663, 2429, 3085, 2485, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2485, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115283.109, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115283.109, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115283.125, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115283.125, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115283.125, "cmd11_counts": [2422, 1663, 2429, 3085, 2486, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2486, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115283.281, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115283.281, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115283.281, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115283.281, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115283.281, "cmd11_counts": [2422, 1663, 2429, 3085, 2485, 1996], "cmd65_counts": [2422, 1663, 2429, 3085, 2485, 1996], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115283.437, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115283.437, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115283.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115283.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115283.453, "cmd11_counts": [2422, 1663, 2429, 3085, 2486, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2486, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115283.609, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115283.609, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115283.609, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115283.609, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115283.625, "cmd11_counts": [2422, 1663, 2429, 3085, 2486, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2486, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115283.765, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115283.765, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115283.781, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115283.781, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115283.781, "cmd11_counts": [2422, 1663, 2429, 3085, 2486, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2486, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115283.937, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115283.937, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115283.937, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115283.937, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115283.953, "cmd11_counts": [2422, 1663, 2429, 3085, 2486, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2486, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "tx_attempt", "t": 115284.093, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 115284.093, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 115284.109, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 115284.109, "cmd": 65, "id": 255}
+{"event": "sample", "t": 115284.109, "cmd11_counts": [2422, 1663, 2429, 3085, 2485, 1995], "cmd65_counts": [2422, 1663, 2429, 3085, 2485, 1995], "controller_pose": {"x": 250, "y": -162, "z": 146, "pitch": -91.4, "roll": 38, "claw": -5}}
+{"event": "aborted", "t": 115284.265, "reason": "起点偏离P8 925刻度；不自动追赶"}
+{"event": "library", "t": 115284.265, "message": "运动闸门 已关闭"}

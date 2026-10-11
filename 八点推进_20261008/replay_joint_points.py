@@ -24,16 +24,48 @@ from capture_joint_points import checked_counts, capture_stable
 from joint_limits import (DEFAULT_LIMITS, check_counts, check_axis, check_binding,
                           load_limits, snapshot)
 
-SOURCE = HERE / 'data/eight_joints_20261009.json'
+SOURCE = HERE / 'data/eight_joints_powered_20261009.json'
 DIAGNOSTIC_HOLD = HERE / 'replay_diagnostic_hold.json'
 EXPECTED_SHA = 'b39780d98da8557dde8e3b2096bf32c400e5678431b54ec38e9a396742b18a8d'
 MAX_STEP = 40
 TOLERANCE = 10
-DEFAULT_POINTS = [8,7,6,5,4,3,2,1,2,3,4,5,6,7,8]
+DEFAULT_POINTS = list(range(1, 9))  # Offline test coverage, never an automatic run.
+LOCKS = HERE.parent / 'handoff/locks'
 
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def validate_trial_plan(path, source_sha, limits_sha, points):
+    plan=json.loads(Path(path).read_text(encoding='utf-8'))
+    if (plan.get('schema') != 'nexarm.empty-segment-trial/1'
+            or plan.get('source_sha256') != source_sha
+            or plan.get('limits_sha256') != limits_sha
+            or plan.get('empty_load_only') is not True
+            or points not in plan.get('allowed_segments', [])
+            or plan.get('historical_hold_sha256') != sha(DIAGNOSTIC_HOLD)):
+        raise SafetyError('单段试验计划不匹配；不解除历史故障锁')
+    return plan
+
+
+LEASE_HOLDER = 'claude'  # 2026-10-11: Claude took over the former Codex test role.
+
+
+def require_device_lease(port, holder=LEASE_HOLDER):
+    if not port.upper().startswith('COM') or not port[3:].isdigit():
+        raise SafetyError('需要明确的Windows COM端口')
+    path=LOCKS/(port.upper()+'.lock')
+    try:
+        lease=json.loads(path.read_text(encoding='utf-8'))
+        since=datetime.fromisoformat(lease['since'])
+        expires=since+timedelta(minutes=lease['ttl_min'])
+        if (lease.get('holder') != holder or lease.get('device') != port.upper()
+                or since.tzinfo is None or datetime.now(timezone.utc) >= expires):
+            raise ValueError('wrong owner or expired')
+    except (OSError,ValueError,KeyError,TypeError) as exc:
+        raise SafetyError('先通过handoff/lock.py登记有效的%s设备锁'%holder) from exc
+    return path,sha(path),expires
 
 
 def resolve_route(route, limits=None):
@@ -59,11 +91,13 @@ def resolve_route(route, limits=None):
     return targets
 
 
-def check_sequence(points):
+def check_sequence(points, *, forward_trial=False):
     if len(points) < 2 or any(type(p) is not int or not 1<=p<=8 for p in points):
         raise SafetyError('点序列无效')
     if any(abs(a-b) != 1 for a,b in zip(points,points[1:])):
         raise SafetyError('首轮仅允许相邻点，不跨点或自动回零')
+    if forward_trial and (len(points) != 2 or points[1] != points[0]+1):
+        raise SafetyError('首轮每次仅执行一个正向相邻段，不反向复演夹持事件')
 
 
 def interpolate(start, target, limits=None):
@@ -117,8 +151,12 @@ class ReplayTransport(Transport):
         self.emit('tx_complete', cmd=cmd, id=target_id)
 
 
-def wait_step(arm, start, goal, emit, cancelled, timeout=6, limits=None):
+def wait_step(arm, start, goal, emit, cancelled, timeout=6, limits=None, tolerances=None):
     limits = load_limits() if limits is None else limits
+    tolerances = [TOLERANCE]*6 if tolerances is None else tolerances
+    if (not isinstance(tolerances,(list,tuple)) or len(tolerances)!=6
+            or any(type(v) is not int or not 1<=v<=20 for v in tolerances)):
+        raise SafetyError('到位容差需为六轴1..20刻度的明确值')
     begun = time.monotonic()
     stable = []
     while time.monotonic()-begun < timeout:
@@ -133,8 +171,8 @@ def wait_step(arm, start, goal, emit, cancelled, timeout=6, limits=None):
                 raise SafetyError('反馈偏离当前小步区间，不再推进')
         if (time.monotonic()-begun >= .5
             and max(abs(x-y) for x,y in zip(a,b)) <= 6
-            and max(abs(x-y) for x,y in zip(a,goal)) <= TOLERANCE
-            and max(abs(x-y) for x,y in zip(b,goal)) <= TOLERANCE):
+            and all(abs(x-y)<=t for x,y,t in zip(a,goal,tolerances))
+            and all(abs(x-y)<=t for x,y,t in zip(b,goal,tolerances))):
             stable.append((a,b)); stable=stable[-4:]
             if len(stable)==4 and all(max(s[j][i] for s in stable)-min(s[j][i] for s in stable)<=4
                                      for j in (0,1) for i in range(6)):
@@ -146,7 +184,8 @@ def wait_step(arm, start, goal, emit, cancelled, timeout=6, limits=None):
 
 
 def execute_segment(arm, expected_start, target, emit, cancelled, *,
-                    source=SOURCE, expected_sha=EXPECTED_SHA, limits=None, limits_sha=None):
+                    source=SOURCE, expected_sha=EXPECTED_SHA, limits=None, limits_sha=None,
+                    active_axes=None, tolerances=None):
     limits = load_limits() if limits is None else limits
     check_counts(expected_start, limits, '计划起点')
     check_counts(target, limits, '计划终点')
@@ -166,7 +205,8 @@ def execute_segment(arm, expected_start, target, emit, cancelled, *,
         check_counts(goal, limits, '当前小步目标')
         if max(abs(a-b) for a,b in zip(actual,goal)) > MAX_STEP+12:
             raise SafetyError('单步目标相对反馈过大')
-        moves = [(i+1,v) for i,v in enumerate(goal) if v != actual[i]]
+        moves = [(i+1,v) for i,v in enumerate(goal) if v != actual[i]
+                 and (active_axes is None or i+1 in active_axes)]
         arm.transport.pending=deque(build_frame(3,pack_joint_counts(v,100,2000),sid) for sid,v in moves)
         emit('step_begin', index=index+1, count=len(goals), start=actual, target=goal)
         for sid,value in moves:
@@ -175,7 +215,7 @@ def execute_segment(arm, expected_start, target, emit, cancelled, *,
             arm.move_joint_counts(sid,value,100,2000)
         if arm.transport.pending:
             raise SafetyError('当前小步存在未发送帧')
-        actual=wait_step(arm,actual,goal,emit,cancelled,limits=limits)
+        actual=wait_step(arm,actual,goal,emit,cancelled,limits=limits,tolerances=tolerances)
         emit('step_converged', index=index+1, positions=actual)
     return dict(start=before, target=target, returned_report=actual, steps=len(goals),
                 controller_converged=True, operator_confirmed=False)
@@ -183,19 +223,20 @@ def execute_segment(arm, expected_start, target, emit, cancelled, *,
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--port', default='COM9')
+    ap.add_argument('--port', required=True, help='显式指定已核对端口，当前记录COM11')
     ap.add_argument('--file', type=Path, default=SOURCE)
-    ap.add_argument('--expected-sha', help='经审核的点位文件SHA256；新文件必须明确提供')
-    ap.add_argument('--points',type=int,nargs='+',default=DEFAULT_POINTS)
+    ap.add_argument('--expected-sha', required=True, help='本次经审核文件的SHA256')
+    ap.add_argument('--points',type=int,nargs=2,required=True,help='单个正向段，例如1 2')
     ap.add_argument('--go',action='store_true')
     ap.add_argument('--empty-load',action='store_true')
+    ap.add_argument('--trial-plan',type=Path,help='针对新路线的限定空载单段试验计划')
     a=ap.parse_args()
-    check_sequence(a.points)
+    check_sequence(a.points, forward_trial=True)
     if not a.go or not a.empty_load:
         ap.error('首次验证必须 --go --empty-load，并现场确认空载清障')
-    if DIAGNOSTIC_HOLD.exists():
+    if DIAGNOSTIC_HOLD.exists() and a.trial_plan is None:
         raise SafetyError('旧ID4故障回放入口仍暂停；用户已报告舵机修复，需核验新点位与路径后再更新执行入口。')
-    expected_sha = a.expected_sha or (EXPECTED_SHA if a.file.resolve() == SOURCE.resolve() else None)
+    expected_sha = a.expected_sha
     source_bytes = a.file.read_bytes()
     if expected_sha is None or hashlib.sha256(source_bytes).hexdigest() != expected_sha:
         raise SafetyError('点位文件指纹改变，先核对')
@@ -204,6 +245,11 @@ def main():
     limits_sha=sha(DEFAULT_LIMITS)
     targets=resolve_route(route,limits)
     check_binding(route,limits)
+    trial_plan=None
+    if a.trial_plan is not None:
+        trial_plan=validate_trial_plan(a.trial_plan,expected_sha,limits_sha,a.points)
+    lease_path,lease_sha,lease_expires=require_device_lease(a.port)
+    trial_sha=sha(a.trial_plan) if a.trial_plan is not None else None
     now=datetime.now(timezone(timedelta(hours=8)))
     run=HERE/'logs'/('replay_'+now.strftime('%Y%m%d_%H%M%S')+'_'+str(time.time_ns())[-6:])
     run.mkdir(parents=True)
@@ -213,10 +259,18 @@ def main():
                 source_file=str(a.file.resolve()),host_joint_limits=snapshot(limits),limits_sha256=limits_sha,
                 empty_load=True,complete=False,segments=[],physical_stop_verified=False,
                 synchronized_bus_write=False,limits_note='bounded joint increments are not collision proof',
+                trial_plan=trial_plan,port=a.port,device_lease_sha256=lease_sha,
                 sources={str(p):sha(p) for p in (Path(__file__),HERE/'capture_joint_points.py',HERE/'joint_limits.py',DEFAULT_LIMITS,LIB/'nexarm/arm.py',LIB/'nexarm/commands.py',LIB/'nexarm/transport.py')})
     def save():
         (run/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
-    cancelled=lambda:(run/'STOP').exists()
+    def cancelled():
+        try:
+            return ((run/'STOP').exists() or datetime.now(timezone.utc)>=lease_expires
+                    or sha(lease_path)!=lease_sha
+                    or (a.trial_plan is not None and (sha(a.trial_plan)!=trial_sha
+                        or sha(DIAGNOSTIC_HOLD)!=trial_plan['historical_hold_sha256'])))
+        except OSError:
+            return True
     lock=threading.Lock()
     with (run/'events.jsonl').open('w',encoding='utf-8') as log:
         def emit(kind,**data):
@@ -267,7 +321,10 @@ def main():
             arm.enable_motion(False)
             arm.close()
             result.update(motion_attempts=transport.motion_attempts,stats=transport.stats(),serial_closed=True)
-            save();print('RESULT='+json.dumps(result,ensure_ascii=False),flush=True)
+            save()
+            print('RESULT='+json.dumps(dict(complete=result['complete'],
+                  error=result.get('error'),motion_attempts=transport.motion_attempts,
+                  serial_closed=True,result_file=str(run/'result.json')),ensure_ascii=False),flush=True)
 
 
 if __name__=='__main__':main()

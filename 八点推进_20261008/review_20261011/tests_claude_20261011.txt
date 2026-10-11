@@ -1,0 +1,8 @@
+....................................................RUN_DIR=C:\Users\1\AppData\Local\Temp\tmp9o_vy8ea\logs\legs_20261011_174543_811500
+LEG_DONE=[1607, 2093, 2421, 3087, 2453, 2016]
+RESULT={"leg": "turn", "complete": true, "error": null, "motion_attempts": 0, "result_file": "C:\\Users\\1\\AppData\\Local\\Temp\\tmp9o_vy8ea\\logs\\legs_20261011_174543_811500\\result.json"}
+........
+----------------------------------------------------------------------
+Ran 60 tests in 0.137s
+
+OK

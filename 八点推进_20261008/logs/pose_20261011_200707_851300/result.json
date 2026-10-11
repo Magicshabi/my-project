@@ -1,0 +1,187 @@
+{
+  "started_at": "2026-10-11T20:07:07.768851+08:00",
+  "port": "COM11",
+  "read_only": true,
+  "motion_commands": 0,
+  "operator_note": "smooth gentle 崩溃后（首段底座转动已下发）",
+  "source_sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "configuration": {
+    "limits": [
+      100,
+      400,
+      -450,
+      450,
+      20,
+      500,
+      -98.0,
+      12.0,
+      -90,
+      90,
+      -100,
+      83
+    ],
+    "kinematics": [
+      110.44999694824219,
+      225.0,
+      36.970001220703125,
+      145.0,
+      0.0,
+      130.22999572753906,
+      0.0,
+      50.0,
+      70.5
+    ],
+    "offsets": {
+      "1": 46,
+      "2": 66,
+      "3": -625,
+      "4": -669,
+      "5": -11,
+      "6": 51
+    },
+    "version": {
+      "esp": [
+        1,
+        0,
+        2
+      ],
+      "at32": [
+        1,
+        0,
+        42
+      ],
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    }
+  },
+  "configuration_matches_route": true,
+  "battery_mv": 12281,
+  "counts": [
+    1620,
+    2085,
+    2422,
+    3087,
+    2456,
+    1080
+  ],
+  "controller_pose": {
+    "x": 171,
+    "y": 132,
+    "z": 316,
+    "pitch": -55.1,
+    "roll": 36,
+    "claw": -85
+  },
+  "within_software_limits": true,
+  "nearest_points": [
+    {
+      "point": 1,
+      "max_delta": 432,
+      "delta": [
+        -13,
+        -432,
+        164,
+        -3,
+        251,
+        381
+      ]
+    },
+    {
+      "point": 2,
+      "max_delta": 528,
+      "delta": [
+        -8,
+        -528,
+        200,
+        1,
+        219,
+        -9
+      ]
+    },
+    {
+      "point": 8,
+      "max_delta": 783,
+      "delta": [
+        783,
+        8,
+        -1,
+        0,
+        -3,
+        -10
+      ]
+    },
+    {
+      "point": 7,
+      "max_delta": 787,
+      "delta": [
+        787,
+        -478,
+        8,
+        0,
+        -2,
+        -10
+      ]
+    },
+    {
+      "point": 3,
+      "max_delta": 913,
+      "delta": [
+        -4,
+        -540,
+        203,
+        0,
+        222,
+        913
+      ]
+    },
+    {
+      "point": 5,
+      "max_delta": 940,
+      "delta": [
+        805,
+        -405,
+        9,
+        -4,
+        29,
+        940
+      ]
+    },
+    {
+      "point": 6,
+      "max_delta": 940,
+      "delta": [
+        787,
+        -478,
+        8,
+        0,
+        -2,
+        940
+      ]
+    },
+    {
+      "point": 4,
+      "max_delta": 1106,
+      "delta": [
+        -5,
+        -543,
+        190,
+        -1106,
+        217,
+        919
+      ]
+    }
+  ],
+  "checksum_errors": 0,
+  "serial_closed": true,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 34,
+    "rx_bytes": 1651,
+    "tx_frames": 26,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  }
+}

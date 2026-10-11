@@ -1,0 +1,75 @@
+{"event": "transport", "t": 116009.39, "message": "已连接 COM11 @ 1000000"}
+{"event": "tx_attempt", "t": 116009.406, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 116009.406, "cmd": 80, "id": 255}
+{"event": "tx_attempt", "t": 116009.406, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 116009.406, "cmd": 64, "id": 255}
+{"event": "tx_attempt", "t": 116009.406, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 116009.406, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 116009.468, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 116009.468, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 116009.515, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 116009.515, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 116009.578, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 116009.578, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 116009.625, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 116009.625, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 116009.687, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 116009.687, "cmd": 58, "id": 255}
+{"event": "tx_attempt", "t": 116009.734, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 116009.734, "cmd": 1, "id": 255}
+{"event": "tx_attempt", "t": 116009.796, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 116009.796, "cmd": 2, "id": 255}
+{"event": "tx_attempt", "t": 116009.796, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116009.796, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116009.796, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116009.796, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116009.812, "cmd11_counts": [2404, 2085, 2422, 3087, 2456, 1079], "cmd65_counts": [2404, 2085, 2422, 3087, 2456, 1079], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116009.953, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116009.968, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116009.968, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116009.968, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116009.968, "cmd11_counts": [2404, 2085, 2422, 3087, 2456, 1080], "cmd65_counts": [2404, 2085, 2422, 3087, 2456, 1080], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116010.125, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116010.125, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116010.14, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116010.14, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116010.14, "cmd11_counts": [2404, 2085, 2422, 3087, 2456, 1080], "cmd65_counts": [2404, 2085, 2422, 3087, 2456, 1080], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116010.296, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116010.296, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116010.296, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116010.296, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116010.296, "cmd11_counts": [2404, 2085, 2422, 3087, 2456, 1080], "cmd65_counts": [2404, 2085, 2422, 3087, 2456, 1080], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116010.453, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116010.453, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116010.453, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116010.453, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116010.468, "cmd11_counts": [2404, 2085, 2422, 3087, 2456, 1079], "cmd65_counts": [2404, 2085, 2422, 3087, 2456, 1079], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116010.609, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116010.609, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116010.625, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116010.625, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116010.625, "cmd11_counts": [2404, 2085, 2422, 3087, 2456, 1079], "cmd65_counts": [2404, 2085, 2422, 3087, 2456, 1079], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116010.781, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116010.781, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116010.781, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116010.781, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116010.796, "cmd11_counts": [2404, 2085, 2422, 3087, 2457, 1080], "cmd65_counts": [2404, 2085, 2422, 3087, 2457, 1080], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "tx_attempt", "t": 116010.937, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 116010.937, "cmd": 11, "id": 255}
+{"event": "tx_attempt", "t": 116010.953, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116010.953, "cmd": 65, "id": 255}
+{"event": "sample", "t": 116010.953, "cmd11_counts": [2404, 2085, 2422, 3087, 2457, 1079], "cmd65_counts": [2404, 2085, 2422, 3087, 2457, 1079], "controller_pose": {"x": 184, "y": -112, "z": 316, "pitch": -55.1, "roll": 36, "claw": -85}}
+{"event": "library", "t": 116011.109, "message": "运动闸门 已开启"}
+{"event": "step_begin", "t": 116011.109, "name": "p8-base-to-p1-azimuth", "T": 1.632, "ta": 0.406, "joints": [{"id": 1, "target": 1607, "delta": -797, "speed": 650, "acc": 16}, {"id": 2, "target": 2093, "delta": 8, "speed": 7, "acc": 1}, {"id": 5, "target": 2453, "delta": -4, "speed": 3, "acc": 1}, {"id": 6, "target": 1070, "delta": -9, "speed": 7, "acc": 1}], "start": [2404, 2085, 2422, 3087, 2457, 1079], "target": [1607, 2093, 2421, 3087, 2453, 1070]}
+{"event": "tx_attempt", "t": 116011.109, "cmd": 3, "id": 1, "wire_hex": "ffff010a032910470600008a02df"}
+{"event": "tx_complete", "t": 116011.109, "cmd": 3, "id": 1}
+{"event": "tx_attempt", "t": 116011.125, "cmd": 3, "id": 2, "wire_hex": "ffff020a0329012d08000007008a"}
+{"event": "tx_complete", "t": 116011.125, "cmd": 3, "id": 2}
+{"event": "tx_attempt", "t": 116011.125, "cmd": 3, "id": 5, "wire_hex": "ffff050a03290195090000030022"}
+{"event": "tx_complete", "t": 116011.125, "cmd": 3, "id": 5}
+{"event": "tx_attempt", "t": 116011.125, "cmd": 3, "id": 6, "wire_hex": "ffff060a0329012e040000070089"}
+{"event": "tx_complete", "t": 116011.125, "cmd": 3, "id": 6}
+{"event": "tx_attempt", "t": 116011.187, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 116011.187, "cmd": 65, "id": 255}
+{"event": "aborted", "t": 116011.203, "reason": "dict() got multiple values for keyword argument 't'"}
+{"event": "library", "t": 116011.203, "message": "运动闸门 已关闭"}
