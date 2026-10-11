@@ -1,4 +1,4 @@
-# Claw 会话上下文（压缩版 · 2026-10-11 13:44）
+# Claw 会话上下文（压缩版 · 2026-10-11 13:46）
 
 > 用途：新会话开工前 **60 秒读完**，替代翻整段对话历史。
 > 开工入口（2026-10-11 起）：先跑 `python handoff/brief.py`；需要背景时再来本文件 / 按 topic 查台账。
@@ -43,17 +43,11 @@
 
 ## 五、当前进度与下一步（以 `brief.py` 输出与台账为准）
 
-- 新路线**带电示教 7/8 点已采**：点1「提手上方张开」/ 点2「下降到提手两侧，未夹紧」/ 点3「夹紧提手」（[1616,1545,2625,3087,2678,1993]）/ 点4「提起」（[1615,1542,2612,1981,2673,1999]）/ 点5「转运至 T0 上方」（[2425,1680,2431,3083,2485,2020]）/ 点6「下降落地」（[2407,1607,2430,3087,2454,2020]）/ 点7「松爪」（[2407,1607,2430,3087,2454,1070]）
+- 新路线**带电示教 8/8 已采完（complete=true，13:45）**：全部刻度见 `handoff/points_powered/point_01~08.json` 与数据文件（**以 points 数组为准**）；汇总条目见台账 topic `powered-teaching`。
 - 数据：`八点推进_20261008/data/eight_joints_powered_20261009.json`（**以 points 数组为准**）
-- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；第 1~7 点已导出；台账 `powered-teaching` 回执随点追加（当前 47 条，含 Codex 条目）。
-- **下一步**：等用户摆好**第 8 点（退出：抬离撤离，夹爪保持张开）**→ 最后一点（换 `--point 8`）：
-  ```
-  python handoff/lock.py acquire COM11 --minutes 30 --purpose "第8点带电采集"
-  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 8 --powered-sliders-confirmed --observed "<现场确认>"
-  python handoff/lock.py release COM11
-  # 采完：导出 point_08.json → 台账回执 → render.py → commit → 8/8 汇总交 Codex（任务卡要求）
-  ```
-- 采集注意：抬升时别蹭到篮子；**点8 完成后 route complete=true**，需向 Codex 提交 8 点汇总供代码/路径审查。
+- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；**第 1~8 点全部导出**；台账 `powered-teaching` 回执+汇总已提交（当前 49 条，含 Codex 条目）。
+- **采集阶段完成（2026-10-11 13:45）**：8 点汇总已按任务卡提交台账（供 Codex 代码/路径审查）。Codex 侧接下来做协议适配/代码/路径方案；现场验证阶梯（空载逐段→急停→低速带载，不跳级）在其后。
+- 待命事项：若某点需重采（用户重摆位），流程同前（`--point N`；点3/7 有 ≤12 刻度硬约束）；采集前先探测串口空闲、取锁、备份、采后导出+回执+render+commit。
 - **尚未验证**：整段搬运、物理急停、连续平滑 → 都是 `hypothesis`，不要标成功
 
 ## 六、高频命令
