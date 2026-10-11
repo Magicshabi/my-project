@@ -1,0 +1,94 @@
+{"event": "transport", "t": 92980.5103983, "message": "已连接 COM11 @ 1000000"}
+{"event": "tx_attempt", "t": 92980.5105918, "cmd": 80, "id": 255, "wire_hex": "ffffff0250ae"}
+{"event": "tx_complete", "t": 92980.510787, "cmd": 80, "id": 255}
+{"event": "rx", "t": 92980.5162346, "id": 255, "cmd": 80, "args": "640090013efec2011400f4012cfc7800a6ff5a009cff5300"}
+{"event": "tx_attempt", "t": 92980.516388, "cmd": 64, "id": 255, "wire_hex": "ffffff0240be"}
+{"event": "tx_complete", "t": 92980.5165788, "cmd": 64, "id": 255}
+{"event": "rx", "t": 92980.5219124, "id": 255, "cmd": 64, "args": "66e6dc420000614348e113420000114300000000e13a0243000000000000484200008d42"}
+{"event": "tx_attempt", "t": 92980.5221842, "cmd": 58, "id": 255, "wire_hex": "ffffff033a01c2"}
+{"event": "tx_complete", "t": 92980.5223531, "cmd": 58, "id": 255}
+{"event": "rx", "t": 92980.5273942, "id": 255, "cmd": 58, "args": "012e00"}
+{"event": "tx_attempt", "t": 92980.5775928, "cmd": 58, "id": 255, "wire_hex": "ffffff033a02c1"}
+{"event": "tx_complete", "t": 92980.5778954, "cmd": 58, "id": 255}
+{"event": "rx", "t": 92980.5814438, "id": 255, "cmd": 58, "args": "024200"}
+{"event": "tx_attempt", "t": 92980.6317319, "cmd": 58, "id": 255, "wire_hex": "ffffff033a03c0"}
+{"event": "tx_complete", "t": 92980.6320998, "cmd": 58, "id": 255}
+{"event": "rx", "t": 92980.6361237, "id": 255, "cmd": 58, "args": "038ffd"}
+{"event": "rx", "t": 92980.6858438, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92980.6867245, "cmd": 58, "id": 255, "wire_hex": "ffffff033a04bf"}
+{"event": "tx_complete", "t": 92980.6869151, "cmd": 58, "id": 255}
+{"event": "rx", "t": 92980.6915618, "id": 255, "cmd": 58, "args": "0463fd"}
+{"event": "tx_attempt", "t": 92980.7417392, "cmd": 58, "id": 255, "wire_hex": "ffffff033a05be"}
+{"event": "tx_complete", "t": 92980.7419572, "cmd": 58, "id": 255}
+{"event": "rx", "t": 92980.7458221, "id": 255, "cmd": 58, "args": "05f5ff"}
+{"event": "tx_attempt", "t": 92980.7960482, "cmd": 58, "id": 255, "wire_hex": "ffffff033a06bd"}
+{"event": "tx_complete", "t": 92980.7962773, "cmd": 58, "id": 255}
+{"event": "rx", "t": 92980.8007144, "id": 255, "cmd": 58, "args": "063300"}
+{"event": "tx_attempt", "t": 92980.8509122, "cmd": 1, "id": 255, "wire_hex": "ffffff0201fd"}
+{"event": "tx_complete", "t": 92980.8511016, "cmd": 1, "id": 255}
+{"event": "rx", "t": 92980.905034, "id": 255, "cmd": 1, "args": "01000201002a"}
+{"event": "tx_attempt", "t": 92980.9051434, "cmd": 2, "id": 255, "wire_hex": "ffffff0202fc"}
+{"event": "tx_complete", "t": 92980.905306, "cmd": 2, "id": 255}
+{"event": "rx", "t": 92980.910991, "id": 255, "cmd": 2, "args": "2230"}
+{"event": "tx_attempt", "t": 92980.9111977, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92980.9113576, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92980.9167829, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092f04"}
+{"event": "tx_attempt", "t": 92980.9169118, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92980.9170685, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92980.9223776, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012f04a6fc"}
+{"event": "sample", "t": 92980.9225484, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1071], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1071], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "tx_attempt", "t": 92981.0727819, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92981.0729894, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92981.0800466, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092f04"}
+{"event": "tx_attempt", "t": 92981.0801632, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92981.0803259, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92981.0856018, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "rx", "t": 92981.0856717, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012e04a5fc"}
+{"event": "sample", "t": 92981.0857491, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1071], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1070], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "tx_attempt", "t": 92981.2360949, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92981.2362722, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92981.2417229, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.2418163, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92981.2420286, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92981.2471274, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012e04a5fc"}
+{"event": "sample", "t": 92981.247237, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1070], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1070], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "rx", "t": 92981.2853036, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.3974598, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92981.3976349, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92981.4062369, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.4063306, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92981.4065184, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92981.411935, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012e04a5fc"}
+{"event": "sample", "t": 92981.4120272, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1070], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1070], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "rx", "t": 92981.4886959, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.5622251, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92981.562436, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92981.5708975, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.5709939, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92981.5711997, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92981.5761714, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012e04a5fc"}
+{"event": "sample", "t": 92981.5762683, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1070], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1070], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "rx", "t": 92981.6856012, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092f04"}
+{"event": "tx_attempt", "t": 92981.7264891, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92981.726668, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92981.7351235, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092f04"}
+{"event": "tx_attempt", "t": 92981.7352134, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92981.7354019, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92981.7406857, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012f04a6fc"}
+{"event": "sample", "t": 92981.740787, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1071], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1071], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "rx", "t": 92981.8887773, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.8915023, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92981.8918042, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92981.899547, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92981.8996539, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92981.8998138, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92981.9050197, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012e04a5fc"}
+{"event": "sample", "t": 92981.9051232, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1070], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1070], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "tx_attempt", "t": 92982.0556491, "cmd": 11, "id": 255, "wire_hex": "ffffff020bf3"}
+{"event": "tx_complete", "t": 92982.0558211, "cmd": 11, "id": 255}
+{"event": "rx", "t": 92982.0618915, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
+{"event": "tx_attempt", "t": 92982.0619893, "cmd": 65, "id": 255, "wire_hex": "ffffff0241bd"}
+{"event": "tx_complete", "t": 92982.0621953, "cmd": 65, "id": 255}
+{"event": "rx", "t": 92982.0676656, "id": 255, "cmd": 65, "args": "67093b01470600027e09ccfd0f0c6ffc960964012e04a5fc"}
+{"event": "sample", "t": 92982.0677605, "cmd11_counts": [2407, 1607, 2430, 3087, 2454, 1070], "cmd65_counts": [2407, 1607, 2430, 3087, 2454, 1070], "controller_pose": {"x": 255, "y": -157, "z": 120, "pitch": -96.5, "roll": 36, "claw": -86}}
+{"event": "rx", "t": 92982.0891134, "id": 255, "cmd": 11, "args": "ff0063ff78003bfc2400aaff670947067e090f0c96092e04"}
