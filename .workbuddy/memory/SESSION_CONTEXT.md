@@ -1,4 +1,4 @@
-# Claw 会话上下文（压缩版 · 2026-10-11 01:35）
+# Claw 会话上下文（压缩版 · 2026-10-11 13:30）
 
 > 用途：新会话开工前 **60 秒读完**，替代翻整段对话历史。
 > 开工入口（2026-10-11 起）：先跑 `python handoff/brief.py`；需要背景时再来本文件 / 按 topic 查台账。
@@ -43,16 +43,17 @@
 
 ## 五、当前进度与下一步（以 `brief.py` 输出与台账为准）
 
-- 新路线**带电示教 2/8 点已采**：点1「提手上方张开」/ 点2「下降到提手两侧，未夹紧」
+- 新路线**带电示教 3/8 点已采**：点1「提手上方张开」/ 点2「下降到提手两侧，未夹紧」/ 点3「夹紧提手」（[1616,1545,2625,3087,2678,1993]）
 - 数据：`八点推进_20261008/data/eight_joints_powered_20261009.json`（**以 points 数组为准**）
-- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；第 1、2 点已导出；**Claw 采集接手回执已追加台账**。
-- **下一步**：等用户摆好**第 3 点**（ID1~5 未变、仅 ID6 夹稳提手、篮子留桌面；**"继续"≠摆位完成**）→
+- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；第 1~3 点已导出；台账 `powered-teaching` 回执随点追加（40 条）。
+- **下一步**：等用户摆好**第 4 点（提起：带篮抬到越障高度）**→ 同一套流程（换 `--point 4`）：
   ```
-  python handoff/lock.py acquire COM11 --minutes 30 --purpose "第3点带电采集"
-  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 3 --powered-sliders-confirmed --observed "<现场确认>"
+  python handoff/lock.py acquire COM11 --minutes 30 --purpose "第4点带电采集"
+  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 4 --powered-sliders-confirmed --observed "<现场确认>"
   python handoff/lock.py release COM11
-  # 采完：导出 point_03.json → 台账回执（≤400字）→ render.py
+  # 采完：导出 point_04.json → 台账回执（≤400字）→ render.py → commit
   ```
+- 采集注意：点3起 ID6 已夹稳提手，摆位时**篮子会随臂移动**；上位机进程有没有开着不是硬条件，**只要串口未被占用**即可采集（本次已验证）。
 - **尚未验证**：整段搬运、物理急停、连续平滑 → 都是 `hypothesis`，不要标成功
 
 ## 六、高频命令
