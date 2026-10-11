@@ -1,0 +1,3 @@
+# Evidence copies must retain original bytes across Git checkout on Windows.
+reference/models/battery_prop_20261011/*.stp -text
+archives/technical_plan/*_before_20261011.md -text
