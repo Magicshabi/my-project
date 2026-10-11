@@ -1,4 +1,4 @@
-# 共享台账摘要 · 10-11 13:27 | 40 条 | 有效 23 | 否证 7
+# 共享台账摘要 · 10-11 13:31 | 41 条 | 有效 23 | 否证 7
 > 只读本文件即可开工；细节用主题名 grep `handoff/LEDGER.jsonl`。全量详版：`render.py --full`
 
 
@@ -18,7 +18,7 @@
 | `old-points-review` | 旧八点ID4的1/2/3/4/5/8点超过软件上限3413。 | 实测 |
 | `path-validation` | 新路线点间避障与到达精度待验，未取得路径通过结论。 | 待验 |
 | `points-export` | 带电示教点位开始随采随写入共享目录 handoff/points_… | 实测 |
-| `powered-teaching` | 第3点 red_down_grip 已采集：刻度 [1616,15… | 实测 |
+| `powered-teaching` | 第4点 red_lift_grip 已采集：刻度 [1615,15… | 实测 |
 | `project-state-archive` | 历史归档到根目录文件，主状态保持3000字符以内。 | 实测 |
 | `serial-port` | 机械臂串口已由 COM9 变为 COM11（CH340, VID:… | 实测 |
 | `servo-addressing` | 原始舵机写帧的 ID 必须用舵机号；ID=0xFF 广播对 CMD… | 实测 |
