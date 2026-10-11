@@ -26,3 +26,6 @@ Thumbs.db
 
 # 会话短摘要指纹，不含原始对话
 handoff/.brief-cache/
+
+# STEP实体读取依赖（可重装，不提交二进制库）
+.runtime_deps/cad_step/

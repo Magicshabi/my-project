@@ -1,0 +1,54 @@
+{
+  "source": "reference\\models\\battery_prop_20261011\\电池道具.stp",
+  "source_sha256": "534c0892b173f1dc7e198648672784bfd221ecb35741f93dab98248399544a50",
+  "units": "mm",
+  "engine": "OpenCascade/OCP 8.0.1.1",
+  "valid_solid": true,
+  "solid_count": 1,
+  "face_count": 64,
+  "cad_bounds_mm": [
+    -35.0,
+    -40.0,
+    -30.0,
+    35.0,
+    40.0,
+    50.0000001
+  ],
+  "overall_xyz_mm": [
+    70.0,
+    80.0,
+    80.0
+  ],
+  "body_midsection_xy_mm": [
+    70.0,
+    80.0
+  ],
+  "body_center_height_mm": 50.0,
+  "handle_protrusion_height_mm": 30.0,
+  "crossbar_midsection_xy_mm": [
+    70.0,
+    26.0
+  ],
+  "crossbar_center_thickness_mm": 10.0,
+  "opening_width_at_cad_z_minus10_mm": 50.0,
+  "centerline_surface_z_mm": [
+    -30.0,
+    -20.0,
+    0.0,
+    50.0
+  ],
+  "opening_center_height_mm": 20.0,
+  "crossbar_center_height_above_base_mm": 75.0,
+  "upright_model_transform": "X'=X; Y'=-Y; Z'=50-Z (display only; not robot calibration)",
+  "interpretation": "Dimensions are nominal CAD geometry; rounded opening is not a full clear rectangle; no physical tolerance or mass measured.",
+  "site_report": {
+    "source": "user 2026-10-11",
+    "total_baskets": 4,
+    "neighboring_obstacle_baskets": 3,
+    "approximate_gap_mm": 10,
+    "gap_measured": false,
+    "placement_uncertainty_mm": null,
+    "layout_and_minimum_gap_surveyed": false
+  },
+  "preview_triangles": 3504
+}

@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-11T13:40:54+08:00",
+  "source_copy_sha256_matches": true,
+  "archive_sha256_matches": true,
+  "local_document_links_exist": true,
+  "characters": {
+    "八点推进_20261008/固定场地搬运_示教与轨迹规划_20261010.md": 2170,
+    "PROJECT_STATE.md": 1616,
+    "artifacts/model_battery_20261011/README.md": 1770
+  },
+  "measurement_script_passed": true,
+  "preview_visually_checked": true,
+  "hardware_access": false,
+  "scope": "documents and offline CAD only; live capture is owned by Claw"
+}

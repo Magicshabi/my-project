@@ -1,36 +1,27 @@
 # NEXarm 当前状态
 
-<!-- NEXARM-HANDOFF-BEGIN PH-20261011-eight-point-02 -->
+<!-- NEXARM-HANDOFF-BEGIN PH-20261011-eight-point-03 -->
 ## 当前状态
 
-更新：2026-10-11；材料已核对，无新接手对话。已完成共享接入与上下文精简，未连接设备。用户新分工：Claw负责常规采集，Codex负责代码适配、Bug审查和路径方案；Claw接手待回执。
+更新：2026-10-11。第一目标：固定红篮从上方夹提手并搬到固定T0，先保证正确放置，再优化连贯性和速度，视觉后置。
 
-第一目标：八点主动示教与低速验证，完成固定红篮从上方夹提手、搬运至固定T0；先保证放置正确，再优化速度，视觉后置。
+Claw已接手现场主动摆位、只读采集及落盘；Codex负责代码适配、Bug检查、轨迹审查与验收。新路线正在持续采集，点数和执行标记由`python handoff/brief.py`读取[数据JSON](八点推进_20261008/data/eight_joints_powered_20261009.json)及台账，本文件不再复制易过期的逐点数字。旧8/8不是当前路线。
 
-**新路线2/8，未回放。** 用户用NexArm.exe保持力矩开启、关节滑块摆位，再退出上位机，只读采集。当前六轴原始刻度：
+六轴单独动作/回位已实机验证；整段路径、带载搬运、连续平滑及物理急停仍待验。本轮仅整理文档与离线模型，不接设备。最后记录端口COM11，现场状态以负责测试方当次确认与设备锁为准。
 
-| 点 | 姿态 | ID1～6 |
-|---|---|---|
-| 1 | 提手上方张开 | 1607,1653,2586,3084,2707,1461 |
-| 2 | 下降到提手两侧，未夹紧 | 1612,1557,2622,3088,2675,1071 |
-
-两点各8组稳定反馈；用户确认第2点ID6是主动张大。数据见[新路线](八点推进_20261008/data/eight_joints_powered_20261009.json)，以points数组为准（method_status仍有旧零点描述）。complete和execution_verified均为false；旧8/8不是当前进度。
-
-最后记录串口COM11、1Mbps，读取后已关闭；ESP1.0.2/AT32 1.0.42为10月10日报告。现场供电、姿态与占用未在本轮重查。六轴单独动作/回位已验证，整段搬运未验证。
+[技术方案](八点推进_20261008/固定场地搬运_示教与轨迹规划_20261010.md)已精简，原文完整归档。电池STEP已核验为有效实体，外形70×80×80毫米；详见[测量记录](artifacts/model_battery_20261011/README.md)。用户说明四篮相邻、邻篮间距约10毫米；这是估计，非实测避障余量。
 
 ## 待办 / 未决问题
 
-1. 由Claw按[采集任务卡](handoff/CLAW_CAPTURE_TASK.md)接续，Codex不逐点占用串口。等用户明确新第3点摆好：ID1～5保持，仅ID6慢慢夹稳，篮子留桌面；退出上位机、保持供电且无异常后只读采集。目前没有完成确认。
-2. 使用[capture_joint_points.py](八点推进_20261008/capture_joint_points.py)，明确`--port COM11 --point 3 --powered-sliders-confirmed`；开串口先查占用锁。默认COM9不可沿用。
-3. 复用[舵机基础逻辑](舵机基础运行逻辑/MOTION_LOGIC_SPEC.md)与`A:\NEXarm\运动控制`案例。完成8点后按空载分段、低速带载顺序验证，逐点到位不等于平滑避障。
-4. ID4的3413是GUI目标，反馈3084已获用户认可；真实内部限位未读出，不写329固定补偿。“3090～3234真实上限”超出历史对照证据范围，已在台账更正。
-5. 软件范围仅作拒绝检查，不证明硬限位或路径安全。保持[回放诊断锁](八点推进_20261008/replay_diagnostic_hold.json)；旧数据不裁剪后运行，物理急停和连续平滑效果仍待验。
+1. Claw按[采集任务卡](handoff/CLAW_CAPTURE_TASK.md)完成后提交短回执与数据指针；Codex审查阶段、点间变化、夹爪事件及必要过渡点，不重复逐点问答。
+2. 优先检查提起和转运段的腕部大幅变化，结合夹爪与带篮包络审查净空；采集成功不代表整段路径通过。
+3. 复用[已验证逻辑](舵机基础运行逻辑/MOTION_LOGIC_SPEC.md)及`A:\NEXarm\运动控制`案例。连续插值、控制器同步性和停机效果先验证，再逐步开展空载/带载测试。
+4. GUI目标不等于反馈，软件范围不证明真实限位或避障；不写固定偏差补偿，不把历史单次拒动推为真实上限。保留[回放诊断锁](八点推进_20261008/replay_diagnostic_hold.json)，不裁剪旧数据后运行。
 
 ## 指针
 
-- 开工规则：[AGENTS.md](AGENTS.md)；只运行[brief.py](handoff/brief.py)，压缩后加`--refresh`。未变不重读背景；[当前分工](handoff/CURRENT.md)与[共享摘要](handoff/STATE.md)按需查。
-- [共享台账](handoff/LEDGER.jsonl)：按topic用rg查询；[写入规则](handoff/RULES.md)。仅追加，生成摘要后运行`render.py --check`；`--since`只输出增量。
-- [完整历史归档](PROJECT_STATE_ARCHIVE.md)、[归档核验与回填记录](handoff/adoption_20261011.md)。还原点`e459b5e`。不得整读历史作为开工步骤。
-- [六轴实测](八点推进_20261008/six_axis_verified_20261009.md)、[ID4对照](八点推进_20261008/id4_target_comparison_20261009.md)、[软件限位](八点推进_20261008/data/joint_limits_20261010.json)。
-
-<!-- NEXARM-HANDOFF-END PH-20261011-eight-point-02 -->
+- 开工：[AGENTS.md](AGENTS.md)、[brief.py](handoff/brief.py)；压缩后加`--refresh`，未变不重读。分工见[CURRENT](handoff/CURRENT.md)。
+- 共享：[STATE](handoff/STATE.md)、[LEDGER](handoff/LEDGER.jsonl)、[RULES](handoff/RULES.md)；台账按topic查，只追加，STATE由render生成并校验。
+- 证据：[六轴验证](八点推进_20261008/six_axis_verified_20261009.md)、[ID4对照](八点推进_20261008/id4_target_comparison_20261009.md)、[软件范围](八点推进_20261008/data/joint_limits_20261010.json)。
+- 历史：[PROJECT_STATE_ARCHIVE](PROJECT_STATE_ARCHIVE.md)、[共享接入记录](handoff/adoption_20261011.md)、[原技术方案](archives/technical_plan/固定场地搬运_示教与轨迹规划_20261010_before_20261011.md)。仅按需定位，不整读。
+<!-- NEXARM-HANDOFF-END PH-20261011-eight-point-03 -->
