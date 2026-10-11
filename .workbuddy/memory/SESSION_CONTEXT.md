@@ -1,4 +1,4 @@
-# Claw 会话上下文（压缩版 · 2026-10-11 13:33）
+# Claw 会话上下文（压缩版 · 2026-10-11 13:37）
 
 > 用途：新会话开工前 **60 秒读完**，替代翻整段对话历史。
 > 开工入口（2026-10-11 起）：先跑 `python handoff/brief.py`；需要背景时再来本文件 / 按 topic 查台账。
@@ -43,17 +43,17 @@
 
 ## 五、当前进度与下一步（以 `brief.py` 输出与台账为准）
 
-- 新路线**带电示教 4/8 点已采**：点1「提手上方张开」/ 点2「下降到提手两侧，未夹紧」/ 点3「夹紧提手」（[1616,1545,2625,3087,2678,1993]）/ 点4「提起」（[1615,1542,2612,1981,2673,1999]）
+- 新路线**带电示教 5/8 点已采**：点1「提手上方张开」/ 点2「下降到提手两侧，未夹紧」/ 点3「夹紧提手」（[1616,1545,2625,3087,2678,1993]）/ 点4「提起」（[1615,1542,2612,1981,2673,1999]）/ 点5「转运至 T0 上方」（[2425,1680,2431,3083,2485,2020]）
 - 数据：`八点推进_20261008/data/eight_joints_powered_20261009.json`（**以 points 数组为准**）
-- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；第 1~4 点已导出；台账 `powered-teaching` 回执随点追加（41 条）。
-- **下一步**：等用户摆好**第 5 点（转运：带篮移到 T0 上方）**→ 同一套流程（换 `--point 5`）：
+- ✅ **共享导出启用（2026-10-11）**：`handoff/points_powered/point_NN.json`（每点只增，schema `nexarm.shared-point/1`）；第 1~5 点已导出；台账 `powered-teaching` 回执随点追加（42 条）。
+- **下一步**：等用户摆好**第 6 点（下降落地：带篮降到 T0 放置面）**→ 同一套流程（换 `--point 6`）：
   ```
-  python handoff/lock.py acquire COM11 --minutes 30 --purpose "第5点带电采集"
-  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 5 --powered-sliders-confirmed --observed "<现场确认>"
+  python handoff/lock.py acquire COM11 --minutes 30 --purpose "第6点带电采集"
+  python 八点推进_20261008/capture_joint_points.py capture --port COM11 --point 6 --powered-sliders-confirmed --observed "<现场确认>"
   python handoff/lock.py release COM11
-  # 采完：导出 point_05.json → 台账回执（≤400字）→ render.py → commit
+  # 采完：导出 point_06.json → 台账回执（≤400字）→ render.py → commit
   ```
-- 采集注意：篮子已夹住会随臂移动，摆位慢速、注意障碍与线缆；上位机开着不是硬条件，**只要串口未被占用**即可采集。
+- 采集注意：篮子已夹住会随臂移动；**落地段尤其慢**，避免压桌/滑手；上位机开着不是硬条件，**只要串口未被占用**即可采集。
 - **尚未验证**：整段搬运、物理急停、连续平滑 → 都是 `hypothesis`，不要标成功
 
 ## 六、高频命令
