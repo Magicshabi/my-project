@@ -1,0 +1,109 @@
+{
+  "schema": "nexarm.shared-point/1",
+  "exported_by": "claw",
+  "exported_at": "2026-10-11T13:45:13+08:00",
+  "units": "raw_encoder_counts",
+  "servo_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "point": 8,
+  "stage": "t0_clear_open",
+  "encoder_positions": [
+    2403,
+    2093,
+    2421,
+    3087,
+    2453,
+    1070
+  ],
+  "captured_at": "2026-10-11T13:44:56.743047+08:00",
+  "physical_pose_confirmed": true,
+  "motor_driven_pose_confirmed_by_operator": true,
+  "observation": "用户确认：第8点已由电机主动摆好（退出：抬离撤离，夹爪保持张开）；采集侧核验：串口空闲、供电正常、样本稳定、无坏帧。",
+  "delta_from_previous": [
+    -4,
+    486,
+    -9,
+    0,
+    -1,
+    0
+  ],
+  "stability": {
+    "sample_count": 8,
+    "max_drift_ticks": {
+      "cmd11": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "cmd65": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "large_joint_change_requires_review": true,
+  "path_to_this_point_verified": false,
+  "controller_pose_last_sample": {
+    "x": 182,
+    "y": -110,
+    "z": 318,
+    "pitch": -54.5,
+    "roll": 36,
+    "claw": -86
+  },
+  "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261011_134454_569500",
+  "context": {
+    "method": "NexArm.exe powered joint sliders + read-only host capture",
+    "require_powered_sliders": true,
+    "firmware": {
+      "esp_str": "1.0.2",
+      "at32_str": "1.0.42"
+    },
+    "host_joint_limits_bounds": [
+      [
+        341,
+        3755
+      ],
+      [
+        1195,
+        2901
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        683,
+        3413
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        1024,
+        2731
+      ]
+    ]
+  },
+  "source": {
+    "file": "八点推进_20261008/data/eight_joints_powered_20261009.json",
+    "sha256": "c0d8ba46c71c872dc63590c601e4aef0f6aad9cd66d42bafdd9ff31ded6471cb",
+    "route_points_count": 8,
+    "route_complete": true
+  },
+  "note": "要点字段导出；完整 8 次稳定性采样序列见源文件与该点 evidence_dir。"
+}

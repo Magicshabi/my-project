@@ -65,7 +65,7 @@
       "at32_str": "1.0.42"
     }
   },
-  "complete": false,
+  "complete": true,
   "execution_verified": false,
   "points": [
     {
@@ -1717,6 +1717,243 @@
       ],
       "large_joint_change_requires_review": false,
       "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261011_134135_261200",
+      "path_to_this_point_verified": false,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 8,
+      "stage": "t0_clear_open",
+      "encoder_positions": [
+        2403,
+        2093,
+        2421,
+        3087,
+        2453,
+        1070
+      ],
+      "captured_at": "2026-10-11T13:44:56.743047+08:00",
+      "physical_pose_confirmed": true,
+      "observation": "用户确认：第8点已由电机主动摆好（退出：抬离撤离，夹爪保持张开）；采集侧核验：串口空闲、供电正常、样本稳定、无坏帧。",
+      "samples": [
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2452,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2452,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        },
+        {
+          "cmd11_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "cmd65_counts": [
+            2403,
+            2093,
+            2421,
+            3087,
+            2453,
+            1070
+          ],
+          "controller_pose": {
+            "x": 182,
+            "y": -110,
+            "z": 318,
+            "pitch": -54.5,
+            "roll": 36,
+            "claw": -86
+          }
+        }
+      ],
+      "delta_from_previous": [
+        -4,
+        486,
+        -9,
+        0,
+        -1,
+        0
+      ],
+      "large_joint_change_requires_review": true,
+      "evidence_dir": "A:\\NEXarm\\Claude\\八点推进_20261008\\logs\\capture_20261011_134454_569500",
       "path_to_this_point_verified": false,
       "motor_driven_pose_confirmed_by_operator": true
     }
