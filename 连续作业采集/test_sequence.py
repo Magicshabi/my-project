@@ -148,5 +148,62 @@ class RunBatchTests(unittest.TestCase):
         self.assertEqual(arm.pos[:5], seq.goal_of(routes[('黄', 'P3')]['points'][7])[:5])
 
 
+class RunAllCombosTests(unittest.TestCase):
+    def test_return_stages_end_at_p0_and_move_named_joints_only(self):
+        import run_all_combos as rc
+        home, routes, _ = seq.load_routes()
+        p0 = home['points'][0]['encoder_positions']
+        s8 = seq.goal_of(routes[('绿', 'P3')]['points'][7])
+        stages = rc.return_stages(s8, p0)
+        self.assertEqual(stages[-1]['target'], p0)
+        prev = s8
+        for st in stages:
+            moved = {i + 1 for i in range(6) if st['target'][i] != prev[i]}
+            self.assertLessEqual(moved, set(st['axes']))
+            prev = st['target']
+
+    def test_two_batches_with_return_on_fake_arm(self):
+        from unittest.mock import patch
+        from datetime import datetime, timezone, timedelta
+        import run_all_combos as rc
+        home, _, _ = seq.load_routes()
+        p0 = home['points'][0]['encoder_positions']
+        arm = FakeArm(p0)
+
+        def make_arm(transport, log):
+            arm.transport = transport
+            return arm
+
+        def stable(*_):
+            return arm.pos[:], []
+        import shutil
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d) / 'data'
+            root.mkdir()
+            shutil.copy(c.ROOT / 'scene.json', root)
+            for path, _, _ in c.paths(c.ROOT):
+                dst = root / path.relative_to(c.ROOT)
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy(path, dst)
+            lease = Path(d) / 'lease'
+            lease.write_text('x')
+            exp = datetime.now(timezone.utc) + timedelta(minutes=5)
+            answers = iter(['', 'yes', 'y', 'y', 'yes'])
+            with patch.object(ex.r, 'require_device_lease', return_value=(lease, c.sha(lease), exp)), \
+                 patch.object(ex.r, 'ArmController', side_effect=make_arm), \
+                 patch.object(ex.r, 'configuration', return_value=home['configuration']), \
+                 patch.object(ex.r, 'capture_stable', side_effect=stable), \
+                 patch('time.sleep'), patch('builtins.input', side_effect=lambda *_: next(answers)), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                code = rc.main(['--root', str(root), '--port', 'COM11', '--go', '--loaded',
+                                '--only', '红-蓝-黄', '绿-黄-红'])
+            summaries = sorted((root / 'logs').glob('combos_*/summary.json'))
+            s = json.loads(summaries[-1].read_text(encoding='utf-8'))
+        self.assertEqual(code, 0)
+        self.assertEqual([b['command'] for b in s['batches']], ['红-蓝-黄', '绿-黄-红'])
+        self.assertTrue(s['batches'][0]['return']['complete'])
+        self.assertEqual(s['passed'], 2)
+
+
 if __name__ == '__main__':
     unittest.main()
