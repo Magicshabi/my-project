@@ -112,8 +112,15 @@ def run_batch(a, colors):
         try:
             arm.connect_serial(a.port)
             live = r.configuration(arm)
+            result['configuration'] = live
             if not r.same_configuration(home['configuration'], live):
-                raise r.SafetyError('设备配置与P0采集时不同')
+                # 2026-10-13 用户要求：配置与P0采集时不同不再拦截，只记录并提示
+                diff = {k: dict(p0=home['configuration'].get(k), live=live.get(k))
+                        for k in set(live) | set(home['configuration'])
+                        if json.dumps(live.get(k), sort_keys=True) != json.dumps(home['configuration'].get(k), sort_keys=True)}
+                result['configuration_diff'] = diff
+                print('注意：设备配置与P0采集时不同（仅记录，不拦截）：'
+                      + json.dumps(diff, ensure_ascii=False), flush=True)
             battery = arm.get_battery_mv()
             if battery is None:
                 raise r.SafetyError('缺少供电报告')
