@@ -28,8 +28,11 @@ if ($Check) {
 
 $load = if ($Empty) { '--empty-load' } else { '--loaded' }
 
+# 2026-10-13 用户要求：不再因锁被占用而拒绝，直接接管锁。
+# 串口本身是独占的：若别的程序（上位机等）真的开着COM11，连接会失败，不会两边同时控制。
+& $py $lock release COM11 --holder claude --force | Out-Null
 & $py $lock acquire COM11 --holder claude --minutes 120 --purpose '连续作业'
-if ($LASTEXITCODE -ne 0) { throw 'COM11 被占用，先确认谁在用，或等对方释放' }
+if ($LASTEXITCODE -ne 0) { throw '取锁失败' }
 try {
     if ($All) {
         & $py run_all_combos.py --port COM11 --go $load
