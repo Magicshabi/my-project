@@ -75,6 +75,7 @@ class CompileTests(unittest.TestCase):
         p0 = steps[0]['target']
         self.assertIs(ex.start_steps(steps, p0, self.routes, False), steps)
         s8 = seq.goal_of(self.routes[('绿', 'P3')]['points'][7])
+        s8[3], s8[5] = 3083, 1072          # where the real arm rests: ID4 top, ID6 open stop
         with self.assertRaisesRegex(Exception, 'from-s8'):
             ex.start_steps(steps, s8, self.routes, False)
         got = ex.start_steps(steps, s8, self.routes, True)
@@ -106,9 +107,18 @@ class FakeArm:
         return 12300
 
     def move_joint_counts(self, sid, value, acc, speed):
+        """Models the real arm seen 2026-10-13: ID4 tops out at 3083, ID6 opens only to 1072,
+        ID6 stalls on the handle at 2209, ID1/ID3 stop ~24 short of long moves."""
         self.writes.append((sid, value))
         self.transport.pending.popleft()
-        self.pos[sid - 1] = min(value, 2209) if sid == 6 and value > 2209 else value
+        cur = self.pos[sid - 1]
+        if sid == 4:
+            value = min(value, 3083)
+        if sid == 6:
+            value = min(max(value, 1072), 2209)
+        if sid in (1, 3) and abs(value - cur) > 300:
+            value -= 24 if value > cur else -24
+        self.pos[sid - 1] = value
 
     def get_real_joints(self):
         return [(v, 0) for v in self.pos]
@@ -145,7 +155,26 @@ class RunBatchTests(unittest.TestCase):
         # ID6 is written only for open/close/plain moves, never while carrying
         grip_writes = [v for sid, v in arm.writes if sid == 6]
         self.assertEqual(grip_writes.count(2409), 3)
-        self.assertEqual(arm.pos[:5], seq.goal_of(routes[('黄', 'P3')]['points'][7])[:5])
+        end = seq.goal_of(routes[('黄', 'P3')]['points'][7])
+        self.assertTrue(all(abs(a - b) <= ex.STALL_TOL for a, b in zip(arm.pos, end)))
+        self.assertTrue(all(v <= ex.ID4_REACH for sid, v in arm.writes if sid == 4))
+
+    def test_real_stall_from_20261013_is_accepted(self):
+        """红→P1 S1 on 2026-10-13 stopped at [1542,1664,2681,3083,2573,1072] for target
+        [1518,1667,2704,3188,2575,1024]; with the ID4 clamp this segment must now complete."""
+        from unittest.mock import patch
+        step = dict(name='红→P1 S1', point=1, kind='move', axes=None, carry=False,
+                    target=[1518, 1667, 2704, 3188, 2575, 1024])
+        start = [2022, 2166, 1727, 1977, 1918, 1068]
+        arm = FakeArm(start)
+        arm.transport = type('T', (), {'pending': None, 'failed': False})()
+        events = []
+        with patch('time.sleep'):
+            end = ex.drive(arm, arm.transport, [step], start, 'gentle',
+                           lambda e, **d: events.append((e, d)), lambda: False, ex.r.load_limits())
+        self.assertEqual(end, [1542, 1667, 2680, 3083, 2575, 1072])
+        self.assertIn('id4_clamped', [e for e, _ in events])
+        self.assertIn('stall_accepted', [e for e, _ in events])
 
 
 class RunAllCombosTests(unittest.TestCase):

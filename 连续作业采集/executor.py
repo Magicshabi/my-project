@@ -35,6 +35,104 @@ import smooth_route as sr  # noqa: E402
 
 CAREFUL_POINTS = {2: (0.6, 1.0), 6: (0.6, 1.0)}   # descending onto the handle / into the area
 START_TOL = sr.START_TOL
+# 2026-10-13 user choice A: a joint that stops short of a host-recorded target is accepted at its
+# reachable position (the host software plays the same files without complaint).
+STALL_TOL = 120
+# ID4 was never measured above ~3088 powered, and a 3234 goal once left it frozen (ledger id4-limit).
+# Commands are clamped here so ID4 moves to its reachable top instead of risking no motion at all;
+# route files keep the recorded values.
+ID4_REACH = 3085
+
+
+def stall_ok(joint, fb, target):
+    return abs(fb - target) <= STALL_TOL
+
+
+def run_step(arm, transport, step, emit, cancelled, limits, clock=time.monotonic, sleep=time.sleep):
+    """smooth_route.run_step, plus: after the planned time, joints that have stopped short are
+    accepted if stall_ok (logged as 'stall_accepted'). Box and timeout checks are unchanged."""
+    prof = step['profile']
+    if not prof['joints']:
+        emit('step_skip', name=step['name'])
+        return None
+    if cancelled():
+        raise r.SafetyError('停止后续段')
+    start, target = step['start'], step['target']
+    ids = [j['id'] - 1 for j in prof['joints']]
+    lo = [min(a, b) - sr.BOX_MARGIN for a, b in zip(start, target)]
+    hi = [max(a, b) + sr.BOX_MARGIN for a, b in zip(start, target)]
+    emit('step_begin', name=step['name'], T=round(prof['T'], 3), joints=prof['joints'], start=start, target=target)
+    grip_goal = start[5] if step.get('carry') else None
+    t0 = clock()
+    sr.send_joints(arm, transport, prof['joints'])
+    history = []
+    stalled = {}
+    while True:
+        sleep(0.06)
+        fb = sr.read_feedback(arm, limits)
+        t = clock() - t0
+        emit('sample', name=step['name'], dt=round(t, 3), cmd65=fb)
+        history = (history + [fb])[-3:]
+        if any(not lo[i] <= fb[i] <= hi[i] for i in range(6)):
+            sr.hold_here(arm, transport, fb, emit, grip_goal)
+            raise sr.SmoothAbort('%s：关节越出本段区间%s，已写入原地保持' % (step['name'], fb))
+        err = [abs(fb[i] - target[i]) for i in ids]
+        stopped = len(history) == 3 and all(
+            max(h[i] for h in history) - min(h[i] for h in history) <= sr.STOPPED_COUNTS for i in ids)
+        if step['kind'] == 'close' and t >= prof['T'] and stopped:
+            break
+        if max(err) <= sr.ARRIVE_TOL:
+            break
+        if t >= prof['T'] and stopped and all(stall_ok(i + 1, fb[i], target[i]) for i in ids):
+            stalled = {i + 1: fb[i] - target[i] for i in ids if abs(fb[i] - target[i]) > sr.ARRIVE_TOL}
+            emit('stall_accepted', name=step['name'], short=stalled)
+            break
+        if t >= prof['T'] + sr.ARRIVE_TIMEOUT:
+            sr.hold_here(arm, transport, fb, emit, grip_goal)
+            raise sr.SmoothAbort('%s：%.1fs内未到位(误差%s)，已写入原地保持' % (step['name'], t, err))
+    dwell = sr.GRIP_DWELL.get(step['kind'], 0.0)
+    if dwell:
+        sleep(dwell)
+    elapsed = clock() - t0
+    emit('step_done', name=step['name'], elapsed=round(elapsed, 3), feedback=fb)
+    return dict(name=step['name'], planned_T=round(prof['T'], 3), elapsed=round(elapsed, 3),
+                feedback=fb, target=target, short=stalled)
+
+
+def drive(arm, transport, steps, start, profile, emit, cancelled, limits, on_done=lambda d: None):
+    """Run steps in order, planning each segment from the measured pose (so a joint accepted short
+    of its target starts the next segment from where it really is).
+
+    Carrying (S4..S6): ID6 is not commanded; its box expects the measured close stall and
+    hold-on-fault re-writes the squeezed close goal.
+    """
+    vmax, amax = sr.PROFILES[profile]
+    current = start[:]
+    stall6 = None
+    for step in steps:
+        target = step['target'][:]
+        if target[3] > ID4_REACH:
+            emit('id4_clamped', name=step['name'], recorded=target[3], commanded=ID4_REACH)
+            target[3] = ID4_REACH
+        box_start = current[:]
+        if step['carry']:
+            if stall6 is None:
+                raise r.SafetyError('缺少本篮合爪后的ID6反馈，拒绝带篮运动')
+            box_start[5] = step['target'][5]      # squeezed goal: what hold-on-fault re-writes
+            target[5] = stall6
+        scale, min_t = CAREFUL_POINTS.get(step['point'], (1.0, 0.0))
+        prof = sr.segment_profile(current, target, vmax * scale, amax * scale * scale, min_t, step['axes'])
+        done = run_step(arm, transport, dict(step, target=target, start=box_start, profile=prof),
+                        emit, cancelled, limits)
+        if not done:
+            continue
+        current = done['feedback'][:]
+        if step['kind'] == 'close':
+            stall6 = current[5]
+        elif step['kind'] == 'open':
+            stall6 = None
+        on_done(done)
+    return current
 
 
 def plan_motion(steps, start, profile):
@@ -58,7 +156,12 @@ def start_steps(steps, start, routes, from_s8):
     p0 = steps[0]['target']
     if gap(p0) <= START_TOL:
         return steps
-    near = [(k, gap(seq.goal_of(doc['points'][7]))) for k, doc in routes.items()]
+    def s8_gap(doc):   # recorded S8 as actually reachable (ID4 clamp); ID6 may rest short when open
+        ref = seq.goal_of(doc['points'][7])
+        ref[3] = min(ref[3], ID4_REACH)
+        return max(abs(x - y) if i != 5 else max(0, abs(x - y) - STALL_TOL)
+                   for i, (x, y) in enumerate(zip(start, ref)))
+    near = [(k, s8_gap(doc)) for k, doc in routes.items()]
     k, d = min(near, key=lambda kd: kd[1])
     if d <= START_TOL and from_s8:
         return [dict(name=f'{k[0]}→{k[1]} S8→P0', route=k, point=0, kind='move', axes=None,
@@ -125,29 +228,20 @@ def run_batch(a, colors):
             if battery is None:
                 raise r.SafetyError('缺少供电报告')
             start, _ = r.capture_stable(arm, emit)
-            planned = plan_motion(start_steps(steps, start, routes, a.from_s8), start, a.profile)
+            steps_run = start_steps(steps, start, routes, a.from_s8)
+            planned = plan_motion(steps_run, start, a.profile)      # time estimates for the record
             result.update(battery_mv=battery, start=start,
                           planned=[dict(name=s['name'], T=round(s['profile']['T'], 3)) for s in planned])
             save()
             arm.enable_motion(True)
             t_run = time.monotonic()
-            stall = None
-            for step in planned:
-                if step['carry']:
-                    # Jaws stop on the handle short of the squeezed goal: the box check must expect the
-                    # measured stall, while hold-on-fault keeps start[5] (the squeezed goal).
-                    if stall is None:
-                        raise r.SafetyError('缺少本篮合爪后的ID6反馈，拒绝带篮运动')
-                    step = dict(step, target=step['target'][:5] + [stall])
-                done = sr.run_step(arm, transport, step, emit, cancelled, limits)
-                if step['kind'] == 'close':
-                    stall = (done or {}).get('feedback', [None] * 6)[5]
-                elif step['kind'] == 'open':
-                    stall = None
-                if done:
-                    result['steps'].append(done)
-                    save()
-                    print(f"STEP_DONE={done['name']} {done['elapsed']}s", flush=True)
+
+            def on_done(done):
+                result['steps'].append(done)
+                save()
+                short = f" 未到位已接受{done['short']}" if done['short'] else ''
+                print(f"STEP_DONE={done['name']} {done['elapsed']}s{short}", flush=True)
+            drive(arm, transport, steps_run, start, a.profile, emit, cancelled, limits, on_done)
             result.update(controller_complete=True, total_s=round(time.monotonic() - t_run, 2))
         except BaseException as exc:
             result['error'] = str(exc) or type(exc).__name__

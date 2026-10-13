@@ -74,12 +74,9 @@ def return_to_p0(a, start_pose, p0, emit_name):
             start, _ = r.capture_stable(arm, emit)
             if max(abs(x - y) for x, y in zip(start, start_pose)) > ex.START_TOL:
                 raise r.SafetyError(f'回位前姿态{start}与预期S8{start_pose}不符；不自动追赶')
-            planned = ex.plan_motion(return_stages(start, p0), start, 'gentle')
             arm.enable_motion(True)
-            for step in planned:
-                done = sr.run_step(arm, transport, step, emit, cancelled, limits)
-                if done:
-                    result['steps'].append(done)
+            ex.drive(arm, transport, return_stages(start, p0), start, 'gentle', emit, cancelled, limits,
+                     result['steps'].append)
             result['complete'] = True
             result['final'], _ = r.capture_stable(arm, emit)
         except BaseException as exc:
@@ -166,7 +163,7 @@ def main(argv=None):
             if n == len(orders):
                 break
             ask('复位：把三个篮子放回源位、清空P1/P2/P3，人离开工作区。完成输入 y: ', ('y',))
-            end = seq.goal_of(routes[(cols[2], 'P3')]['points'][7])
+            end = res['steps'][-1]['feedback']      # where the arm really stopped (may be short of S8)
             if first_return:
                 print('第一次回P0（S8→P0未验证过），请盯着机械臂，异常立即断电')
             ret = return_to_p0(a, end, p0, f'return_after_{name}')
