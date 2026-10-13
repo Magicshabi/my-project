@@ -1,0 +1,19 @@
+{
+  "schema": "nexarm.continuous-scene/1",
+  "layout_id": "continuous-20261012-v1",
+  "created_at": "2026-10-12T16:47:32.411921+08:00",
+  "source_colors": [
+    "红",
+    "黄",
+    "蓝",
+    "绿"
+  ],
+  "destinations": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "batch_rule": "three_distinct_colors_to_P1_P2_P3",
+  "initial_occupancy": "all_sources_present_and_all_destinations_empty",
+  "finish_policy": "hold_at_last_point8_until_return_path_is_verified"
+}

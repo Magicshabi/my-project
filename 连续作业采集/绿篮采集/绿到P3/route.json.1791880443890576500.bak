@@ -1,0 +1,22 @@
+{
+  "schema": "nexarm.continuous-collection/1",
+  "kind": "route",
+  "color": "绿",
+  "destination": "P3",
+  "layout_id": "continuous-20261012-v1",
+  "scene_sha256": "c8af5063d8a4996cfa2bea1a2cd1458eff0ada3e63ea852f5d8796732555a4ea",
+  "units": "raw_encoder_counts",
+  "servo_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "configuration": null,
+  "points": [],
+  "complete": false,
+  "execution_verified": false
+}

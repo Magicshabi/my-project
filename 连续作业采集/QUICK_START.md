@@ -16,7 +16,21 @@ $env:PYTHONIOENCODING = 'utf-8'
 & $py "$task\progress_tracker.py"
 ```
 
-## 批量采集命令
+## d6a离线导入（推荐）
+
+```powershell
+# 先检查（不写文件）
+& $py "$task\import_d6a.py" 红到P1.d6a --color 红 --target P1 --dry-run
+# 分批录入：按顺序传多个文件
+& $py "$task\import_d6a.py" 红到P1_前半.d6a 红到P1_后半.d6a --color 红 --target P1 --observed '上位机试运行无碰撞'
+# P0
+& $py "$task\import_d6a.py" P0.d6a --home --observed '...'
+```
+
+S3夹紧目标自动=示教ID6+200（封顶2731），S4～S6继承；只写空路线。
+
+## 批量串口采集命令（无d6a时）
+
 
 ### P0 初始位
 

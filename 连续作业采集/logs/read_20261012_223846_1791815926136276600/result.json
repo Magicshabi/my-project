@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-10-12T22:38:46.136276+08:00",
+  "port": "COM11",
+  "holder": "claw",
+  "read_only": true,
+  "motion_commands": 0,
+  "operator_note": "回P0动作组：起始帧读取",
+  "lease": "A:\\NEXarm\\Claude\\handoff\\locks\\COM11.lock",
+  "lease_sha256": "92fb26bd17604fd4146d9f46a4ef8ddb4c3b2845a893ba176f7874f05703fe09",
+  "sources": {
+    "A:\\NEXarm\\Claude\\连续作业采集\\read_position.py": "0ae54f4d269078e3b057321ed0f7d5df89d0d3fbd534f46523b405a005727d6f",
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\capture_joint_points.py": "9d0d0a2753fce39111fcd29794a3cf8a22b515e6f317e2834b8900f318ed0cf6",
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\replay_joint_points.py": "779b675e2a9a85dfdfcd2b2357cb9a95bf6fdda5b1b070bb7968b0584b2bd03f"
+  },
+  "error": "打开 COM11 失败: could not open port 'COM11': PermissionError(13, '拒绝访问。', None, 5)",
+  "serial_closed": true,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 0,
+    "rx_bytes": 0,
+    "tx_frames": 0,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  }
+}

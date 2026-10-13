@@ -15,7 +15,7 @@ def check_progress(root=c.ROOT):
                 continue
             doc = c.read(path)
             n = c.validate(doc, root, color, target)
-            if n:
+            if n and doc['configuration'] is not None:
                 if configuration is None:
                     configuration = doc['configuration']
                 c.require(configuration == doc['configuration'], '跨路线设备配置不一致')
@@ -38,7 +38,8 @@ def verify_path(color=None, target=None, root=c.ROOT):
             if path.exists():
                 other = c.read(path)
                 c.validate(other, root, other_color, other_target)
-                if other['points']:
+                if (other['points'] and other['configuration'] is not None
+                        and doc['configuration'] is not None):
                     c.require(other['configuration'] == doc['configuration'], '跨路线设备配置不一致')
         print('数据校验通过；单路线、衔接段及组合实测仍须独立验收')
         return True

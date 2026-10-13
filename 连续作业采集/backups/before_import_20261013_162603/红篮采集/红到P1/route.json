@@ -1,0 +1,231 @@
+{
+  "schema": "nexarm.continuous-collection/1",
+  "kind": "route",
+  "color": "红",
+  "destination": "P1",
+  "layout_id": "continuous-20261012-v1",
+  "scene_sha256": "c8af5063d8a4996cfa2bea1a2cd1458eff0ada3e63ea852f5d8796732555a4ea",
+  "units": "raw_encoder_counts",
+  "servo_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
+  "configuration": null,
+  "points": [
+    {
+      "point": 1,
+      "stage": "source_above_open",
+      "encoder_positions": [
+        1518,
+        1667,
+        2704,
+        3188,
+        2575,
+        2048
+      ],
+      "gripper_target_counts": 2048,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 1,
+        "sha256": "9591a742f23ae66ce927619cb2fba92027541dcf252f68665a96c00cd0917ea5"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 2,
+      "stage": "source_down_open",
+      "encoder_positions": [
+        1518,
+        1493,
+        2754,
+        3188,
+        2575,
+        2048
+      ],
+      "gripper_target_counts": 2048,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 2,
+        "sha256": "9591a742f23ae66ce927619cb2fba92027541dcf252f68665a96c00cd0917ea5"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 3,
+      "stage": "source_grip",
+      "encoder_positions": [
+        1518,
+        1493,
+        2754,
+        3188,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 3,
+        "sha256": "9591a742f23ae66ce927619cb2fba92027541dcf252f68665a96c00cd0917ea5"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 4,
+      "stage": "source_clear",
+      "encoder_positions": [
+        1518,
+        1750,
+        2754,
+        3188,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": true,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 4,
+        "sha256": "9591a742f23ae66ce927619cb2fba92027541dcf252f68665a96c00cd0917ea5"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 5,
+      "stage": "destination_above",
+      "encoder_positions": [
+        2197,
+        1800,
+        2535,
+        3188,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": true,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P1后四.d6a",
+        "frame": 1,
+        "sha256": "4c733fe6bd425127803f6d55457d97c4e968efbabef23bf67406cfbd376cad8e"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红到P1后四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 6,
+      "stage": "destination_down",
+      "encoder_positions": [
+        2147,
+        1601,
+        2366,
+        2790,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": true,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P1后四.d6a",
+        "frame": 2,
+        "sha256": "4c733fe6bd425127803f6d55457d97c4e968efbabef23bf67406cfbd376cad8e"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红到P1后四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 7,
+      "stage": "destination_release",
+      "encoder_positions": [
+        2147,
+        1601,
+        2366,
+        2790,
+        2575,
+        1123
+      ],
+      "gripper_target_counts": 1123,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P1后四.d6a",
+        "frame": 3,
+        "sha256": "4c733fe6bd425127803f6d55457d97c4e968efbabef23bf67406cfbd376cad8e"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红到P1后四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 8,
+      "stage": "destination_clear",
+      "encoder_positions": [
+        2147,
+        1907,
+        2366,
+        2790,
+        2575,
+        1123
+      ],
+      "gripper_target_counts": 1123,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P1后四.d6a",
+        "frame": 4,
+        "sha256": "4c733fe6bd425127803f6d55457d97c4e968efbabef23bf67406cfbd376cad8e"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T11:44:56.186381+08:00",
+      "evidence_dir": "d6a:红到P1后四.d6a",
+      "observation": "用户确认：前四+后四拼接，待上位机验证连接",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    }
+  ],
+  "complete": true,
+  "execution_verified": false
+}

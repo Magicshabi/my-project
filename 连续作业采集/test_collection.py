@@ -231,5 +231,121 @@ class CollectionTests(unittest.TestCase):
                 transport.send(cmd, b'\x01')
 
 
+def d6a_frames(n=8, grip=1990, open_=1070):
+    frames = []
+    for i in range(1, n + 1):
+        pos = COUNTS[:]
+        pos[1] += 10 * i if i not in (3, 7) else 10 * (i - 1)  # S3/S7 only move ID6
+        pos[5] = grip if 3 <= i <= 6 else open_
+        frames.append({'time': 1000, 'servos': [{'pos': v, 'acc': 100} for v in pos]})
+    return frames
+
+
+class D6aImportTests(unittest.TestCase):
+    def setUp(self):
+        import import_d6a
+        self.imp = import_d6a
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        c.init(self.root, 'offline-fixture')
+
+    def write(self, name, frames):
+        path = self.root / name
+        path.write_text(json.dumps(frames), encoding='utf-8')
+        return str(path)
+
+    def run_import(self, *args):
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            return self.imp.main(['--root', str(self.root), *args])
+
+    def test_split_files_import_with_squeeze_rule(self):
+        frames = d6a_frames()
+        a, b = self.write('a.d6a', frames[:3]), self.write('b.d6a', frames[3:])
+        self.assertEqual(self.run_import(a, b, '--color', '红', '--target', 'P1', '--observed', '试运行'), 0)
+        doc = c.read(c.route_path(self.root, '红', 'P1'))
+        self.assertEqual([r['gripper_target_counts'] for r in doc['points']],
+                         [1070, 1070, 2190, 2190, 2190, 2190, 1070, 1070])
+        self.assertEqual(doc['points'][3]['d6a']['file'], 'b.d6a')
+        self.assertFalse(doc['execution_verified'])
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertTrue(tracker.verify_path('红', 'P1', self.root))
+
+    def test_squeeze_capped_at_software_limit(self):
+        path = self.write('r.d6a', d6a_frames(grip=2650))
+        self.assertEqual(self.run_import(path, '--color', '红', '--target', 'P1', '--observed', 'x'), 0)
+        doc = c.read(c.route_path(self.root, '红', 'P1'))
+        self.assertEqual(doc['points'][2]['gripper_target_counts'], c.limits()[5][1])
+
+    def test_rejects_existing_points_wrong_count_and_dry_run_writes_nothing(self):
+        path = self.write('r.d6a', d6a_frames())
+        target = c.route_path(self.root, '红', 'P1')
+        before = target.read_bytes()
+        self.assertEqual(self.run_import(path, '--color', '红', '--target', 'P1', '--dry-run'), 0)
+        self.assertEqual(target.read_bytes(), before)
+        self.assertEqual(self.run_import(self.write('s.d6a', d6a_frames(7)), '--color', '红',
+                                         '--target', 'P1', '--observed', 'x'), 1)
+        self.assertEqual(self.run_import(path, '--color', '红', '--target', 'P1'), 1)  # no --observed
+        self.assertEqual(self.run_import(path, '--color', '红', '--target', 'P1', '--observed', 'x'), 0)
+        after = target.read_bytes()
+        self.assertEqual(self.run_import(path, '--color', '红', '--target', 'P1', '--observed', 'x'), 1)
+        self.assertEqual(target.read_bytes(), after)
+
+    def test_rejects_out_of_range_and_grip_event_body_motion(self):
+        bad = d6a_frames()
+        bad[0]['servos'][0]['pos'] = 9999
+        self.assertEqual(self.run_import(self.write('a.d6a', bad), '--color', '红', '--target', 'P1',
+                                         '--observed', 'x'), 1)
+        moved = d6a_frames()
+        moved[2]['servos'][0]['pos'] += 13
+        self.assertEqual(self.run_import(self.write('b.d6a', moved), '--color', '红', '--target', 'P1',
+                                         '--observed', 'x'), 1)
+
+    def test_tampered_d6a_rows_rejected(self):
+        path = self.write('r.d6a', d6a_frames())
+        self.run_import(path, '--color', '红', '--target', 'P1', '--observed', 'x')
+        good = c.read(c.route_path(self.root, '红', 'P1'))
+        for mutate in (
+            lambda d: d['points'][2].update(gripper_target_counts=2000),
+            lambda d: d['points'][0].update(gripper_target_counts=1200),
+            lambda d: d['points'][0].update(samples=samples(COUNTS)),
+            lambda d: d['points'][0].pop('d6a'),
+            lambda d: d.update(configuration=CONFIG),
+            lambda d: d['points'][1].update(source='serial_capture'),
+        ):
+            doc = copy.deepcopy(good)
+            mutate(doc)
+            with self.subTest(mutate=mutate), self.assertRaises((ValueError, TypeError, KeyError)):
+                c.validate(doc, self.root, '红', 'P1')
+
+    def test_drop_frame_and_recorded_s7_waiver(self):
+        frames = d6a_frames()
+        extra = copy.deepcopy(frames[2])
+        extra['servos'][0]['pos'] += 66
+        front = self.write('front.d6a', frames[:3] + [extra] + frames[3:4])
+        back = d6a_frames()[4:]
+        back[2]['servos'][1]['pos'] -= 50  # S7 releases while the body moves
+        back = self.write('back.d6a', back)
+        base = [front, back, '--color', '黄', '--target', 'P1', '--observed', 'x']
+        self.assertEqual(self.run_import(*base), 1)                                # 9 frames
+        self.assertEqual(self.run_import(*base, '--drop', 'front.d6a#9'), 1)       # unmatched drop
+        self.assertEqual(self.run_import(*base, '--drop', 'front.d6a#4'), 1)       # S7 body motion
+        self.assertEqual(self.run_import(*base, '--drop', 'front.d6a#4', '--s7-body-motion', '用户确认'), 0)
+        doc = c.read(c.route_path(self.root, '黄', 'P1'))
+        self.assertEqual(doc['points'][3]['d6a']['frame'], 5)
+        self.assertEqual(doc['points'][6]['body_motion_waiver'], '用户确认')
+        doc['points'][6].pop('body_motion_waiver')
+        with self.assertRaisesRegex(ValueError, '臂体'):
+            c.validate(doc, self.root, '黄', 'P1')
+
+    def test_d6a_and_serial_routes_coexist_in_progress(self):
+        home = cap.add_point(c.template(self.root), self.root, None, None, 1, COUNTS,
+                             samples(COUNTS), CONFIG, 1079, 'fixture', 'fixture')
+        c.route_path(self.root).write_text(json.dumps(home), encoding='utf-8')
+        self.run_import(self.write('r.d6a', d6a_frames()), '--color', '蓝', '--target', 'P2', '--observed', 'x')
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(tracker.check_progress(self.root), (9, []))
+
+
 if __name__ == '__main__':
     unittest.main()

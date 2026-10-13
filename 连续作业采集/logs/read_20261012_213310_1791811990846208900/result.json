@@ -1,0 +1,48 @@
+{
+  "started_at": "2026-10-12T21:33:10.846208+08:00",
+  "port": "COM11",
+  "holder": "claw",
+  "read_only": true,
+  "motion_commands": 0,
+  "operator_note": "read_position工具首次现场实测",
+  "lease": "A:\\NEXarm\\Claude\\handoff\\locks\\COM11.lock",
+  "lease_sha256": "f52e20b0a0aaebe87896e655a23999d65a9faa3e73de23d868d9971c3a51824d",
+  "sources": {
+    "A:\\NEXarm\\Claude\\连续作业采集\\read_position.py": "0ae54f4d269078e3b057321ed0f7d5df89d0d3fbd534f46523b405a005727d6f",
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\capture_joint_points.py": "9d0d0a2753fce39111fcd29794a3cf8a22b515e6f317e2834b8900f318ed0cf6",
+    "A:\\NEXarm\\Claude\\八点推进_20261008\\replay_joint_points.py": "779b675e2a9a85dfdfcd2b2357cb9a95bf6fdda5b1b070bb7968b0584b2bd03f"
+  },
+  "counts": [
+    1508,
+    1572,
+    2771,
+    3084,
+    2523,
+    1068
+  ],
+  "controller_pose": {
+    "x": 242,
+    "y": 264,
+    "z": 185,
+    "pitch": -69.3,
+    "roll": 42,
+    "claw": -86
+  },
+  "battery_mv": 12316,
+  "span_max": 1,
+  "within_limits": true,
+  "violations": [],
+  "samples": 8,
+  "checksum_errors": 0,
+  "serial_closed": true,
+  "stats": {
+    "connected": false,
+    "type": null,
+    "rx_frames": 24,
+    "rx_bytes": 1139,
+    "tx_frames": 17,
+    "other_id_frames": 0,
+    "checksum_errors": 0,
+    "resyncs": 0
+  }
+}

@@ -16,7 +16,217 @@
   ],
   "limits_sha256": "87fd22690b12075eb9204b011509ddef7e91e6b4046d7099f27b1209b1823323",
   "configuration": null,
-  "points": [],
-  "complete": false,
+  "points": [
+    {
+      "point": 1,
+      "stage": "source_above_open",
+      "encoder_positions": [
+        1518,
+        1667,
+        2704,
+        3188,
+        2575,
+        1024
+      ],
+      "gripper_target_counts": 1024,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 1,
+        "sha256": "2cbf79c1392c0343377d2d9d621086b9dbcac65951214058489b462e6dbf0e55"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 2,
+      "stage": "source_down_open",
+      "encoder_positions": [
+        1518,
+        1493,
+        2754,
+        3188,
+        2575,
+        1024
+      ],
+      "gripper_target_counts": 1024,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 2,
+        "sha256": "2cbf79c1392c0343377d2d9d621086b9dbcac65951214058489b462e6dbf0e55"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 3,
+      "stage": "source_grip",
+      "encoder_positions": [
+        1518,
+        1493,
+        2754,
+        3188,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 3,
+        "sha256": "2cbf79c1392c0343377d2d9d621086b9dbcac65951214058489b462e6dbf0e55"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 4,
+      "stage": "source_clear",
+      "encoder_positions": [
+        1518,
+        1750,
+        2754,
+        3188,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": true,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红篮前四.d6a",
+        "frame": 4,
+        "sha256": "2cbf79c1392c0343377d2d9d621086b9dbcac65951214058489b462e6dbf0e55"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红篮前四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 5,
+      "stage": "destination_above",
+      "encoder_positions": [
+        2529,
+        1750,
+        2704,
+        3188,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": true,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P2后四.d6a",
+        "frame": 1,
+        "sha256": "8e75c73ef8f5e6707bb49325382a74cf241cf67a609b9c697bad55c52b005c4f"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红到P2后四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 6,
+      "stage": "destination_down",
+      "encoder_positions": [
+        2495,
+        1443,
+        2863,
+        3267,
+        2575,
+        2209
+      ],
+      "gripper_target_counts": 2409,
+      "keep_gripper_goal": true,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P2后四.d6a",
+        "frame": 2,
+        "sha256": "8e75c73ef8f5e6707bb49325382a74cf241cf67a609b9c697bad55c52b005c4f"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红到P2后四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    },
+    {
+      "point": 7,
+      "stage": "destination_release",
+      "encoder_positions": [
+        2495,
+        1452,
+        2814,
+        3267,
+        2575,
+        1024
+      ],
+      "gripper_target_counts": 1024,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P2后四.d6a",
+        "frame": 3,
+        "sha256": "8e75c73ef8f5e6707bb49325382a74cf241cf67a609b9c697bad55c52b005c4f"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红到P2后四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true,
+      "body_motion_waiver": "2026-10-13 用户确认：松爪同时臂体微调为有意录制，按普通运动点执行"
+    },
+    {
+      "point": 8,
+      "stage": "destination_clear",
+      "encoder_positions": [
+        2495,
+        1708,
+        2814,
+        3267,
+        2575,
+        1024
+      ],
+      "gripper_target_counts": 1024,
+      "keep_gripper_goal": false,
+      "source": "d6a_import",
+      "d6a": {
+        "file": "红到P2后四.d6a",
+        "frame": 4,
+        "sha256": "8e75c73ef8f5e6707bb49325382a74cf241cf67a609b9c697bad55c52b005c4f"
+      },
+      "samples": null,
+      "captured_at": "2026-10-13T16:34:03.766614+08:00",
+      "evidence_dir": "d6a:红到P2后四.d6a",
+      "observation": "2026-10-13 用户确认：上位机逐段试运行，各段衔接合理，未碰其他篮体",
+      "physical_pose_confirmed": true,
+      "motor_driven_pose_confirmed_by_operator": true
+    }
+  ],
+  "complete": true,
   "execution_verified": false
 }

@@ -12,6 +12,8 @@ TARGETS = ('P1', 'P2', 'P3')
 STAGES = ('source_above_open', 'source_down_open', 'source_grip', 'source_clear',
           'destination_above', 'destination_down', 'destination_release', 'destination_clear')
 SCHEMA = 'nexarm.continuous-collection/1'
+D6A = 'd6a_import'
+GRIP_SQUEEZE = 200  # d6a导入：S3夹紧目标=示教ID6+200（封顶软件上限），执行器不再叠加
 
 
 def now():
@@ -104,7 +106,11 @@ def validate(doc, root, color=None, target=None, complete=False):
     require(doc.get('execution_verified') is False, '采集主文件不得自行标记运动验收通过')
     if complete:
         require(len(rows) == expected, f'需要{expected}个点，实际{len(rows)}')
-    if rows:
+    sources = {r.get('source', 'serial_capture') for r in rows if isinstance(r, dict)}
+    require(len(sources) <= 1, '同一路线不得混用串口采集与d6a导入')
+    if sources == {D6A}:
+        require(doc.get('configuration') is None, 'd6a导入不得伪造设备配置')
+    elif rows:
         cfg = doc.get('configuration')
         require(isinstance(cfg, dict) and bool(cfg), '缺少设备配置')
         require(isinstance(cfg.get('version'), dict)
@@ -130,6 +136,29 @@ def validate(doc, root, color=None, target=None, complete=False):
                 and isinstance(row.get('observation'), str) and row['observation'].strip(), '缺少摆位依据')
         require(isinstance(row.get('captured_at'), str) and bool(row['captured_at'])
                 and isinstance(row.get('evidence_dir'), str) and bool(row['evidence_dir']), '缺少时间/采样证据')
+        source = row.get('source', 'serial_capture')
+        require(source in ('serial_capture', D6A), '点位来源未知')
+        if source == D6A:
+            # 上位机动作组目标值；无串口样本，实测反馈留给执行器到位后检查
+            d6a = row.get('d6a')
+            require(isinstance(d6a, dict) and isinstance(d6a.get('file'), str)
+                    and type(d6a.get('frame')) is int and isinstance(d6a.get('sha256'), str)
+                    and len(d6a['sha256']) == 64, 'd6a来源信息不完整')
+            require(row.get('samples') is None, 'd6a点不得伪造串口样本')
+            if color is not None:
+                waived = i == 7 and isinstance(row.get('body_motion_waiver'), str) and row['body_motion_waiver'].strip()
+                if i in (3, 7) and not waived:
+                    require(max(abs(a-b) for a, b in zip(actual[:5], rows[i-2]['encoder_positions'][:5])) <= 12,
+                            '夹爪事件的臂体变化超过12刻度')
+                if i == 3:
+                    close_target = goal
+                    require(goal == min(actual[5] + GRIP_SQUEEZE, limits()[5][1]), 'S3夹紧目标须为示教ID6+200')
+                elif 4 <= i <= 6:
+                    require(goal == close_target and row.get('keep_gripper_goal') is True,
+                            '搬运段必须保留第3点夹紧目标')
+                else:
+                    require(goal == actual[5], '非夹紧点ID6目标须等于示教值')
+            continue
         samples = row.get('samples')
         require(isinstance(samples, list) and len(samples) == 8, '每点必须有8个稳定样本')
         for sample in samples:

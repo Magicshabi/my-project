@@ -6,27 +6,19 @@
 
 ## 执行模式
 
-**优先使用批量模式**（推荐）：
+**优先：d6a离线导入**（不连串口、不动机械臂）。用户在上位机录入并试运行后给出 `.d6a`（可分批多个文件）：
 
 ```powershell
-# P0初始位
-& $py “$task\capture_collection.py” batch --home --port COM11 --holder claw --grip-target 1800
-
-# 完整路线（例如红→P1）
-& $py “$task\capture_collection.py” batch --color 红 --target P1 --port COM11 --holder claw --grip-open 1800 --grip-close 2000
+& $py "$task\import_d6a.py" 前半.d6a 后半.d6a --color 红 --target P1 --dry-run
+& $py "$task\import_d6a.py" 前半.d6a 后半.d6a --color 红 --target P1 --observed '<用户给的试运行结论>'
 ```
 
-批量模式优势：
-- 整条路线只取锁一次，启动时自动取锁，结束时自动释放
-- 夹爪目标只输入一次（`--grip-open` 用于S1/S2/S7/S8，`--grip-close` 用于S3，S4/S5/S6自动继承）
-- 每点只需：摆位 → 断开上位机 → 按回车
-- 采完立即显示数据，可选 `[回车]继续`、`[r]重采`、`[s]跳过`、`[q]退出`
-- 按 Ctrl+C 随时退出，自动释放锁
-- 中断后重启自动从下一点继续
+- 先 `--dry-run` 把每点六轴和ID6目标回给用户核对，再正式写入。
+- ID6自动：S3=示教+200（封顶2731），S4～S6继承，其余=示教值。不要手工再加200。
+- 只写空路线；已有点位（含串口采集的）拒绝。`--observed` 必须来自用户的真实试运行结论。
+- d6a点是上位机目标值，不是实测；不得写成采集实测或运动验收通过。
 
-**单点模式**（补采或修正用）：
-
-用于批量模式跳过的点或需要重新采集的点。需要手动取锁和释放锁，命令格式见 `采集指南.md` 第3节。
+**备选：batch / capture 串口只读采集**（无d6a时），命令见 `采集指南.md` 第3、4节。
 
 ## 执行约定
 
