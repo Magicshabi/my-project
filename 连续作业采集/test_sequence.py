@@ -60,7 +60,7 @@ class CompileTests(unittest.TestCase):
                 self.assertEqual(seq.main(['绿-黄-红', '--d6a', str(out)]), 0)
             frames = json.loads(out.read_text(encoding='utf-8'))
             self.assertEqual(len(frames), 25)
-            self.assertTrue(all(len(f['servos']) == 6 and f['time'] == 1000 for f in frames))
+            self.assertTrue(all(len(f['servos']) == 6 and f['time'] == 500 and f['servos'][0]['acc'] == 255 for f in frames))
 
     def test_motion_plan_keeps_squeezed_grip_while_carrying(self):
         steps = seq.compile_plan(['红', '蓝', '黄'], self.home, self.routes)
